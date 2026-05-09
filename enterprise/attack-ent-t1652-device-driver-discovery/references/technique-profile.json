@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1652",
+  "name": "Device Driver Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1652",
+  "stix_id": "attack-pattern--215d9700-5881-48b8-8265-6449dbb7195d",
+  "attack_version": "1.0",
+  "created": "2023-03-28T20:14:49.087Z",
+  "modified": "2025-04-15T22:17:22.391Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "HOPLIGHT (malware)",
+    "INC Ransomware (malware)",
+    "Medusa Group (intrusion-set)",
+    "Remsec (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to enumerate local device drivers on a victim host. Information about device drivers may highlight various insights that shape follow-on behaviors, such as the function/purpose of the host, present security tools (i.e. [Security Software Discovery](https://attack.mitre.org/techniques/T1518/001)) or other defenses (e.g., [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497)), as well as potential exploitable vulnerabilities (e.g., [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068)).\n\nMany OS utilities may provide information about local device drivers, such as `driverquery.exe` and the `EnumDeviceDrivers()` API function on Windows.(Citation: Microsoft Driverquery)(Citation: Microsoft EnumDeviceDrivers) Information about device drivers (as well as associated services, i.e., [System Service Discovery](https://attack.mitre.org/techniques/T1007)) may also be available in the Registry.(Citation: Microsoft Registry Drivers)\n\nOn Linux/macOS, device drivers (in the form of kernel modules) may be visible within `/dev` or using utilities such as `lsmod` and `modinfo`.(Citation: Linux Kernel Programming)(Citation: lsmod man)(Citation: modinfo man)"
+}

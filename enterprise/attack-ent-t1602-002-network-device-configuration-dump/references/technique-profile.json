@@ -1,0 +1,36 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1602.002",
+  "name": "Network Device Configuration Dump",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1602/002",
+  "stix_id": "attack-pattern--52759bf1-fe12-4052-ace6-c5b0cf7dd7fd",
+  "attack_version": "1.1",
+  "created": "2020-10-20T00:08:21.745Z",
+  "modified": "2025-10-24T17:48:47.219Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Network Devices"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Encrypt Sensitive Information",
+    "Filter Network Traffic",
+    "Network Intrusion Prevention",
+    "Network Segmentation",
+    "Software Configuration",
+    "Update Software"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "GlassWorm (malware)",
+    "Salt Typhoon (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may access network configuration files to collect sensitive data about the device and the network. The network configuration is a file containing parameters that determine the operation of the device. The device typically stores an in-memory copy of the configuration while operating, and a separate configuration on non-volatile storage to load after device reset. Adversaries can inspect the configuration files to reveal information about the target network and its layout, the network device and its software, or identifying legitimate accounts and credentials for later use.\n\nAdversaries can use common management tools and protocols, such as Simple Network Management Protocol (SNMP) and Smart Install (SMI), to access network configuration files.(Citation: US-CERT TA18-106A Network Infrastructure Devices 2018)(Citation: Cisco Blog Legacy Device Attacks) These tools may be used to query specific data from a configuration repository or configure the device to export the configuration for later analysis."
+}

@@ -1,0 +1,48 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1620",
+  "name": "Reflective Code Loading",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1620",
+  "stix_id": "attack-pattern--4933e63b-9b77-476e-ab29-761bc5b7d15a",
+  "attack_version": "2.0",
+  "created": "2021-10-05T01:15:06.293Z",
+  "modified": "2026-04-15T22:32:18.632Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "3CX Supply Chain Attack (campaign)",
+    "BADHATCH (malware)",
+    "BRUSHFIRE (malware)",
+    "Brute Ratel C4 (tool)",
+    "Cobalt Strike (malware)",
+    "Cuba (malware)",
+    "Donut (tool)",
+    "Emotet (malware)",
+    "FIN7 (intrusion-set)",
+    "FoggyWeb (malware)",
+    "Fooder (malware)",
+    "Gamaredon Group (intrusion-set)",
+    "Gelsemium (malware)",
+    "IceApple (malware)",
+    "Kimsuky (intrusion-set)",
+    "Lazarus Group (intrusion-set)",
+    "Lizar (malware)",
+    "Lokibot (malware)",
+    "Lumma Stealer (malware)",
+    "LunarLoader (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may reflectively load code into a process in order to conceal the execution of malicious payloads. Reflective loading involves allocating then executing payloads directly within the memory of the process, vice creating a thread or process backed by a file path on disk (e.g., [Shared Modules](https://attack.mitre.org/techniques/T1129)).\n\nReflectively loaded payloads may be compiled binaries, anonymous files (only present in RAM), or just snubs of fileless executable code (ex: position-independent shellcode).(Citation: Introducing Donut)(Citation: S1 Custom Shellcode Tool)(Citation: Stuart ELF Memory)(Citation: 00sec Droppers)(Citation: Mandiant BYOL) For example, the `Assembly.Load()` method executed by [PowerShell](https://attack.mitre.org/techniques/T1059/001) may be abused to load raw code into the running process.(Citation: Microsoft AssemblyLoad)\n\nReflective code injection is very similar to [Process Injection](https://attack.mitre.org/techniques/T1055) except that the \u201cinjection\u201d loads code into the processes\u2019 own memory instead of that of a separate process. Reflective loading may evade process-based detections since the execution of the arbitrary code may be masked within a legitimate or otherwise benign process. Reflectively loading payloads directly into memory may also avoid creating files or other artifacts on disk, while also enabling malware to keep these payloads encrypted (or otherwise obfuscated) until execution.(Citation: Stuart ELF Memory)(Citation: 00sec Droppers)(Citation: Intezer ACBackdoor)(Citation: S1 Old Rat New Tricks)"
+}

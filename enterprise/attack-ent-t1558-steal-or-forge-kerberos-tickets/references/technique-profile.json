@@ -1,0 +1,37 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1558",
+  "name": "Steal or Forge Kerberos Tickets",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1558",
+  "stix_id": "attack-pattern--3fc01293-ef5e-41c6-86ce-61f10706b64a",
+  "attack_version": "1.7",
+  "created": "2020-02-11T19:12:46.830Z",
+  "modified": "2025-10-24T17:48:41.885Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Active Directory Configuration",
+    "Audit",
+    "Credential Access Protection",
+    "Encrypt Sensitive Information",
+    "Password Policies",
+    "Privileged Account Management"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "Akira (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to subvert Kerberos authentication by stealing or forging Kerberos tickets to enable [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003). Kerberos is an authentication protocol widely used in modern Windows domain environments. In Kerberos environments, referred to as \u201crealms\u201d, there are three basic participants: client, service, and Key Distribution Center (KDC).(Citation: ADSecurity Kerberos Ring Decoder) Clients request access to a service and through the exchange of Kerberos tickets, originating from KDC, they are granted access after having successfully authenticated. The KDC is responsible for both authentication and ticket granting.  Adversaries may attempt to abuse Kerberos by stealing tickets or forging tickets to enable unauthorized access.\n\nOn Windows, the built-in <code>klist</code> utility can be used to list and analyze cached Kerberos tickets.(Citation: Microsoft Klist)"
+}

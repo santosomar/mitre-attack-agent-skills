@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1037.001",
+  "name": "Logon Script (Windows)",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1037/001",
+  "stix_id": "attack-pattern--eb125d40-0b2d-41ac-a71a-3229241c2cd3",
+  "attack_version": "1.0",
+  "created": "2020-01-10T03:43:37.211Z",
+  "modified": "2025-10-24T17:49:33.610Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Restrict Registry Permissions"
+  ],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "Attor (malware)",
+    "Cobalt Group (intrusion-set)",
+    "JHUHUGIT (malware)",
+    "KGH_SPY (malware)",
+    "Zebrocy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use Windows logon scripts automatically executed at logon initialization to establish persistence. Windows allows logon scripts to be run whenever a specific user or group of users log into a system.(Citation: TechNet Logon Scripts) This is done via adding a path to a script to the <code>HKCU\\Environment\\UserInitMprLogonScript</code> Registry key.(Citation: Hexacorn Logon Scripts)\n\nAdversaries may use these scripts to maintain persistence on a single system. Depending on the access configuration of the logon scripts, either local credentials or an administrator account may be necessary."
+}

@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1602",
+  "name": "Data from Configuration Repository",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1602",
+  "stix_id": "attack-pattern--0ad7bc5c-235a-4048-944b-3b286676cb74",
+  "attack_version": "1.1",
+  "created": "2020-10-19T23:46:13.931Z",
+  "modified": "2025-10-24T17:48:22.396Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Network Devices"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Encrypt Sensitive Information",
+    "Filter Network Traffic",
+    "Network Intrusion Prevention",
+    "Network Segmentation",
+    "Software Configuration",
+    "Update Software"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may collect data related to managed devices from configuration repositories. Configuration repositories are used by management systems in order to configure, manage, and control data on remote systems. Configuration repositories may also facilitate remote access and administration of devices.\n\nAdversaries may target these repositories in order to collect large quantities of sensitive system administration data. Data from configuration repositories may be exposed by various protocols and software and can store a wide variety of data, much of which may align with adversary Discovery objectives.(Citation: US-CERT-TA18-106A)(Citation: US-CERT TA17-156A SNMP Abuse 2017)"
+}

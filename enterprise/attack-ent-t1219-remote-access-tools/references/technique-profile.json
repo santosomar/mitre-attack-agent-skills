@@ -1,0 +1,54 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1219",
+  "name": "Remote Access Tools",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1219",
+  "stix_id": "attack-pattern--4061e78c-1284-44b4-9116-73e4ac3912f7",
+  "attack_version": "3.0",
+  "created": "2018-04-18T17:59:24.739Z",
+  "modified": "2025-10-24T17:48:42.154Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "Execution Prevention",
+    "Filter Network Traffic",
+    "Limit Hardware Installation",
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "Akira (intrusion-set)",
+    "BlackByte (intrusion-set)",
+    "Carbanak (intrusion-set)",
+    "Carbanak (malware)",
+    "Cobalt Group (intrusion-set)",
+    "DarkVishnya (intrusion-set)",
+    "Dridex (malware)",
+    "Egregor (malware)",
+    "FIN7 (intrusion-set)",
+    "GOLD SOUTHFIELD (intrusion-set)",
+    "Hildegard (malware)",
+    "INC Ransom (intrusion-set)",
+    "InvisibleFerret (malware)",
+    "Medusa Group (intrusion-set)",
+    "Night Dragon (campaign)",
+    "OilRig (intrusion-set)",
+    "Operation AkaiRy\u016b (campaign)",
+    "RTM (malware)",
+    "Sandworm Team (intrusion-set)",
+    "TeamTNT (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may use legitimate remote access tools to establish an interactive command and control channel within a network. Remote access tools create a session between two trusted hosts through a graphical interface, a command line interaction, a protocol tunnel via development or management software, or hardware-level access such as KVM (Keyboard, Video, Mouse) over IP solutions. Desktop support software (usually graphical interface) and remote management software (typically command line interface) allow a user to control a computer remotely as if they are a local user inheriting the user or software permissions. This software is commonly used for troubleshooting, software installation, and system management.(Citation: Symantec Living off the Land)(Citation: CrowdStrike 2015 Global Threat Report)(Citation: CrySyS Blog TeamSpy) Adversaries may similarly abuse response features included in EDR and other defensive tools that enable remote access.\n\nRemote access tools may be installed and used post-compromise as an alternate communications channel for redundant access or to establish an interactive remote desktop session with the target system. It may also be used as a malware component to establish a reverse connection or back-connect to a service or adversary-controlled system.\n\nInstallation of many remote access tools may also include persistence (e.g., the software's installation routine creates a [Windows Service](https://attack.mitre.org/techniques/T1543/003)). Remote access modules/features may also exist as part of otherwise existing software (e.g., Google Chrome\u2019s Remote Desktop).(Citation: Google Chrome Remote Desktop)(Citation: Chrome Remote Desktop)"
+}

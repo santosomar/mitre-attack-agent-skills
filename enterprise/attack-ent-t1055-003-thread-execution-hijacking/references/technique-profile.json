@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1055.003",
+  "name": "Thread Execution Hijacking",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1055/003",
+  "stix_id": "attack-pattern--41d9846c-f6af-4302-a654-24bba2729bc6",
+  "attack_version": "2.0",
+  "created": "2020-01-14T01:28:32.166Z",
+  "modified": "2026-04-15T22:30:40.463Z",
+  "tactics": [
+    "privilege-escalation",
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Behavior Prevention on Endpoint"
+  ],
+  "known_context": [
+    "Gazer (malware)",
+    "Pikabot (malware)",
+    "Trojan.Karagany (malware)",
+    "Waterbear (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may inject malicious code into hijacked processes in order to evade process-based defenses as well as possibly elevate privileges. Thread Execution Hijacking is a method of executing arbitrary code in the address space of a separate live process. \n\nThread Execution Hijacking is commonly performed by suspending an existing process then unmapping/hollowing its memory, which can then be replaced with malicious code or the path to a DLL. A handle to an existing victim process is first created with native Windows API calls such as <code>OpenThread</code>. At this point the process can be suspended then written to, realigned to the injected code, and resumed via <code>SuspendThread </code>, <code>VirtualAllocEx</code>, <code>WriteProcessMemory</code>, <code>SetThreadContext</code>, then <code>ResumeThread</code> respectively.(Citation: Elastic Process Injection July 2017)\n\nThis is very similar to [Process Hollowing](https://attack.mitre.org/techniques/T1055/012) but targets an existing process rather than creating a process in a suspended state.  \n\nRunning code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via Thread Execution Hijacking may also evade detection from security products since the execution is masked under a legitimate process."
+}

@@ -1,0 +1,41 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1053",
+  "name": "Scheduled Task/Job",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1053",
+  "stix_id": "attack-pattern--35dd844a-b219-4e2b-a6bb-efa9a75995a9",
+  "attack_version": "2.5",
+  "created": "2017-05-31T21:30:46.977Z",
+  "modified": "2026-04-06T13:58:22.807Z",
+  "tactics": [
+    "execution",
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Containers",
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Operating System Configuration",
+    "Privileged Account Management",
+    "Restrict File and Directory Permissions",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "Lokibot (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. Utilities exist within all major operating systems to schedule programs or scripts to be executed at a specified date and time. A task can also be scheduled on a remote system, provided the proper authentication is met (ex: RPC and file and printer sharing in Windows environments). Scheduling a task on a remote system typically may require being a member of an admin or otherwise privileged group on the remote system.(Citation: TechNet Task Scheduler Security)\n\nAdversaries may use task scheduling to execute programs at system startup or on a scheduled basis for persistence. These mechanisms can also be abused to run a process under the context of a specified account (such as one with elevated permissions/privileges). Similar to [System Binary Proxy Execution](https://attack.mitre.org/techniques/T1218), adversaries have also abused task scheduling to potentially mask one-time execution under a trusted system process.(Citation: ProofPoint Serpent)"
+}

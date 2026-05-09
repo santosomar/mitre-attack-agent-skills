@@ -1,0 +1,45 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1543.002",
+  "name": "Systemd Service",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1543/002",
+  "stix_id": "attack-pattern--dfefe2ed-4389-4318-8762-f0272b350a1b",
+  "attack_version": "1.6",
+  "created": "2020-01-17T16:15:19.870Z",
+  "modified": "2025-10-24T17:49:29.942Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Linux"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Limit Software Installation",
+    "Privileged Account Management",
+    "Restrict File and Directory Permissions",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2022 Ukraine Electric Power Attack (campaign)",
+    "Exaramel for Linux (malware)",
+    "Fysbis (malware)",
+    "Gomir (malware)",
+    "Hildegard (malware)",
+    "Pupy (tool)",
+    "RIFLESPINE (malware)",
+    "Rocke (intrusion-set)",
+    "RotaJakiro (malware)",
+    "Scattered Spider (intrusion-set)",
+    "Shai-Hulud (malware)",
+    "SysUpdate (malware)",
+    "TeamTNT (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may create or modify systemd services to repeatedly execute malicious payloads as part of persistence. Systemd is a system and service manager commonly used for managing background daemon processes (also known as services) and other system resources.(Citation: Linux man-pages: systemd January 2014) Systemd is the default initialization (init) system on many Linux distributions replacing legacy init systems, including SysVinit and Upstart, while remaining backwards compatible.  \n\nSystemd utilizes unit configuration files with the `.service` file extension to encode information about a service's process. By default, system level unit files are stored in the `/systemd/system` directory of the root owned directories (`/`). User level unit files are stored in the `/systemd/user` directories of the user owned directories (`$HOME`).(Citation: lambert systemd 2022) \n\nInside the `.service` unit files, the following directives are used to execute commands:(Citation: freedesktop systemd.service)  \n\n* `ExecStart`, `ExecStartPre`, and `ExecStartPost` directives execute when a service is started manually by `systemctl` or on system start if the service is set to automatically start.\n* `ExecReload` directive executes when a service restarts. \n* `ExecStop`, `ExecStopPre`, and `ExecStopPost` directives execute when a service is stopped.  \n\nAdversaries have created new service files, altered the commands a `.service` file\u2019s directive executes, and modified the user directive a `.service` file executes as, which could result in privilege escalation. Adversaries may also place symbolic links in these directories, enabling systemd to find these payloads regardless of where they reside on the filesystem.(Citation: Anomali Rocke March 2019)(Citation: airwalk backdoor unix systems)(Citation: Rapid7 Service Persistence 22JUNE2016) \n\nThe `.service` file\u2019s User directive can be used to run service as a specific user, which could result in privilege escalation based on specific user/group permissions. \n\nSystemd services can be created via systemd generators, which support the dynamic generation of unit files. Systemd generators are small executables that run during boot or configuration reloads to dynamically create or modify systemd unit files by converting non-native configurations into services, symlinks, or drop-ins (i.e., [Boot or Logon Initialization Scripts](https://attack.mitre.org/techniques/T1037)).(Citation: Elastic Security Labs Linux Persistence 2024)(Citation: Pepe Berba Systemd 2022)"
+}

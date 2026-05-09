@@ -1,0 +1,31 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1595.001",
+  "name": "Scanning IP Blocks",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1595/001",
+  "stix_id": "attack-pattern--db8f5003-3b20-48f0-9b76-123e44208120",
+  "attack_version": "1.1",
+  "created": "2020-10-02T16:54:23.193Z",
+  "modified": "2025-10-24T17:49:28.603Z",
+  "tactics": [
+    "reconnaissance"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "Anthropic AI-orchestrated Campaign (campaign)",
+    "Ember Bear (intrusion-set)",
+    "TeamTNT (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may scan victim IP blocks to gather information that can be used during targeting. Public IP addresses may be allocated to organizations by block, or a range of sequential addresses.\n\nAdversaries may scan IP blocks in order to [Gather Victim Network Information](https://attack.mitre.org/techniques/T1590), such as which IP addresses are actively in use as well as more detailed information about hosts assigned these addresses. Scans may range from simple pings (ICMP requests and responses) to more nuanced scans that may reveal host software/versions via server banners or other network artifacts.(Citation: Botnet Scan) Information from these scans may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)), establishing operational resources (ex: [Develop Capabilities](https://attack.mitre.org/techniques/T1587) or [Obtain Capabilities](https://attack.mitre.org/techniques/T1588)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133))."
+}

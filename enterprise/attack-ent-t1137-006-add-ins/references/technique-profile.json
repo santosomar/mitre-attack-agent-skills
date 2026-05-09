@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1137.006",
+  "name": "Add-ins",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1137/006",
+  "stix_id": "attack-pattern--34f1d81d-fe88-4f97-bd3b-a3164536255d",
+  "attack_version": "1.2",
+  "created": "2019-11-07T19:52:52.801Z",
+  "modified": "2025-10-24T17:48:37.911Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Windows",
+    "Office Suite"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Behavior Prevention on Endpoint"
+  ],
+  "known_context": [
+    "Bisonal (malware)",
+    "LunarLoader (malware)",
+    "LunarMail (malware)",
+    "Naikon (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Microsoft Office add-ins to obtain persistence on a compromised system. Office add-ins can be used to add functionality to Office programs. (Citation: Microsoft Office Add-ins) There are different types of add-ins that can be used by the various Office products; including Word/Excel add-in Libraries (WLL/XLL), VBA add-ins, Office Component Object Model (COM) add-ins, automation add-ins, VBA Editor (VBE), Visual Studio Tools for Office (VSTO) add-ins, and Outlook add-ins. (Citation: MRWLabs Office Persistence Add-ins)(Citation: FireEye Mail CDS 2018)\n\nAdd-ins can be used to obtain persistence because they can be set to execute code when an Office application starts."
+}

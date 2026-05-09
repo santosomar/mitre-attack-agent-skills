@@ -1,0 +1,34 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1526",
+  "name": "Cloud Service Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1526",
+  "stix_id": "attack-pattern--e24fcba8-2557-4442-a139-1ee2f2e784db",
+  "attack_version": "1.4",
+  "created": "2019-08-30T13:01:10.120Z",
+  "modified": "2026-04-17T14:17:35.798Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "IaaS",
+    "Identity Provider",
+    "Office Suite",
+    "SaaS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "AADInternals (tool)",
+    "Pacu (tool)",
+    "ROADTools (tool)",
+    "Storm-0501 (intrusion-set)",
+    "TruffleHog (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may attempt to enumerate the cloud services running on a system after gaining access. These methods can differ from platform-as-a-service (PaaS), to infrastructure-as-a-service (IaaS), or software-as-a-service (SaaS). Many services exist throughout the various cloud providers and can include Continuous Integration and Continuous Delivery (CI/CD), Lambda Functions, Entra ID, etc. They may also include security services, such as AWS GuardDuty and Microsoft Defender for Cloud, and logging services, such as AWS CloudTrail and Google Cloud Audit Logs.\n\nAdversaries may attempt to discover information about the services enabled throughout the environment. Azure tools and APIs, such as the Microsoft Graph API and Azure Resource Manager API, can enumerate resources and services, including applications, management groups, resources and policy definitions, and their relationships that are accessible by an identity.(Citation: Azure - Resource Manager API)(Citation: Azure AD Graph API)\n\nFor example, Stormspotter is an open source tool for enumerating and constructing a graph for Azure resources and services, and Pacu is an open source AWS exploitation framework that supports several methods for discovering cloud services.(Citation: Azure - Stormspotter)(Citation: GitHub Pacu)\n\nAdversaries may use the information gained to shape follow-on behaviors, such as targeting data or credentials from enumerated services or evading identified defenses through [Disable or Modify Tools](https://attack.mitre.org/techniques/T1685) or [Disable or Modify Cloud Log](https://attack.mitre.org/techniques/T1685/002)."
+}

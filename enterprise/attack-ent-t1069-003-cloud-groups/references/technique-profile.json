@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1069.003",
+  "name": "Cloud Groups",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1069/003",
+  "stix_id": "attack-pattern--16e94db9-b5b1-4cd0-b851-f38fbd0a70f2",
+  "attack_version": "1.5",
+  "created": "2020-02-21T21:15:33.222Z",
+  "modified": "2025-10-24T17:48:26.982Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "SaaS",
+    "IaaS",
+    "Office Suite",
+    "Identity Provider"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "AADInternals (tool)",
+    "C0027 (campaign)",
+    "Pacu (tool)",
+    "ROADTools (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to find cloud groups and permission settings. The knowledge of cloud permission groups can help adversaries determine the particular roles of users and groups within an environment, as well as which users are associated with a particular group.\n\nWith authenticated access there are several tools that can be used to find permissions groups. The <code>Get-MsolRole</code> PowerShell cmdlet can be used to obtain roles and permissions groups for Exchange and Office 365 accounts (Citation: Microsoft Msolrole)(Citation: GitHub Raindance).\n\nAzure CLI (AZ CLI) and the Google Cloud Identity Provider API also provide interfaces to obtain permissions groups. The command <code>az ad user get-member-groups</code> will list groups associated to a user account for Azure while the API endpoint <code>GET https://cloudidentity.googleapis.com/v1/groups</code> lists group resources available to a user for Google.(Citation: Microsoft AZ CLI)(Citation: Black Hills Red Teaming MS AD Azure, 2018)(Citation: Google Cloud Identity API Documentation) In AWS, the commands `ListRolePolicies` and `ListAttachedRolePolicies` allow users to enumerate the policies attached to a role.(Citation: Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022)\n\nAdversaries may attempt to list ACLs for objects to determine the owner and other accounts with access to the object, for example, via the AWS <code>GetBucketAcl</code> API (Citation: AWS Get Bucket ACL). Using this information an adversary can target accounts with permissions to a given object or leverage accounts they have already compromised to access the object."
+}

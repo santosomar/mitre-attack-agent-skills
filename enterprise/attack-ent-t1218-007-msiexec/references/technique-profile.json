@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1218.007",
+  "name": "Msiexec",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1218/007",
+  "stix_id": "attack-pattern--365be77f-fc0e-42ee-bac8-4faf806d9336",
+  "attack_version": "3.0",
+  "created": "2020-01-24T14:38:49.266Z",
+  "modified": "2026-04-15T22:40:01.230Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "Privileged Account Management"
+  ],
+  "known_context": [
+    "3CX Supply Chain Attack (campaign)",
+    "APT38 (intrusion-set)",
+    "AppleJeus (malware)",
+    "Chaes (malware)",
+    "Clop (malware)",
+    "DEADEYE (malware)",
+    "DOWNIISSA (malware)",
+    "Duqu (malware)",
+    "FlawedAmmyy (malware)",
+    "Grandoreiro (malware)",
+    "IcedID (malware)",
+    "Javali (malware)",
+    "Latrodectus (malware)",
+    "LoudMiner (malware)",
+    "Machete (intrusion-set)",
+    "Maze (malware)",
+    "Melcoz (malware)",
+    "Metamorfo (malware)",
+    "Mispadu (malware)",
+    "Molerats (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse msiexec.exe to proxy execution of malicious payloads. Msiexec.exe is the command-line utility for the Windows Installer and is thus commonly associated with executing installation packages (.msi).(Citation: Microsoft msiexec) The Msiexec.exe binary may also be digitally signed by Microsoft.\n\nAdversaries may abuse msiexec.exe to launch local or network accessible MSI files. Msiexec.exe can also execute DLLs.(Citation: LOLBAS Msiexec)(Citation: TrendMicro Msiexec Feb 2018) Since it may be signed and native on Windows systems, msiexec.exe can be used to bypass application control solutions that do not account for its potential abuse. Msiexec.exe execution may also be elevated to SYSTEM privileges if the <code>AlwaysInstallElevated</code> policy is enabled.(Citation: Microsoft AlwaysInstallElevated 2018)"
+}

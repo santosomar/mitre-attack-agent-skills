@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1547.002",
+  "name": "Authentication Package",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1547/002",
+  "stix_id": "attack-pattern--b8cfed42-6a8a-4989-ad72-541af74475ec",
+  "attack_version": "1.1",
+  "created": "2020-01-24T14:54:42.757Z",
+  "modified": "2025-10-24T17:49:17.208Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Privileged Process Integrity"
+  ],
+  "known_context": [
+    "Flame (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse authentication packages to execute DLLs when the system boots. Windows authentication package DLLs are loaded by the Local Security Authority (LSA) process at system start. They provide support for multiple logon processes and multiple security protocols to the operating system.(Citation: MSDN Authentication Packages)\n\nAdversaries can use the autostart mechanism provided by LSA authentication packages for persistence by placing a reference to a binary in the Windows Registry location <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\</code> with the key value of <code>\"Authentication Packages\"=&lt;target binary&gt;</code>. The binary will then be executed by the system when the authentication packages are loaded."
+}

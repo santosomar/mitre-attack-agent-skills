@@ -1,0 +1,43 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1134.002",
+  "name": "Create Process with Token",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1134/002",
+  "stix_id": "attack-pattern--677569f9-a8b0-459e-ab24-7f18091fa7bf",
+  "attack_version": "2.0",
+  "created": "2020-02-18T16:48:56.582Z",
+  "modified": "2026-04-15T19:55:37.484Z",
+  "tactics": [
+    "privilege-escalation",
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Privileged Account Management",
+    "User Account Management"
+  ],
+  "known_context": [
+    "Aria-body (malware)",
+    "Azorult (malware)",
+    "Bankshot (malware)",
+    "Empire (tool)",
+    "KONNI (malware)",
+    "Lazarus Group (intrusion-set)",
+    "PipeMon (malware)",
+    "PoshC2 (tool)",
+    "REvil (malware)",
+    "TONESHELL (malware)",
+    "Turla (intrusion-set)",
+    "WhisperGate (malware)",
+    "ZxShell (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may create a new process with an existing token to escalate privileges and bypass access controls. Processes can be created with the token and resulting security context of another user using features such as <code>CreateProcessWithTokenW</code> and <code>runas</code>.(Citation: Microsoft RunAs)\n\nCreating processes with a token not associated with the current user may require the credentials of the target user, specific privileges to impersonate that user, or access to the token to be used. For example, the token could be duplicated via [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001) or created via [Make and Impersonate Token](https://attack.mitre.org/techniques/T1134/003) before being used to create a process.\n\nWhile this technique is distinct from [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001), the techniques can be used in conjunction where a token is duplicated and then used to create a new process."
+}

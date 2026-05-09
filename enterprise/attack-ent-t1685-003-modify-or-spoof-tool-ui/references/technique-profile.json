@@ -1,0 +1,31 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1685.003",
+  "name": "Modify or Spoof Tool UI",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1685/003",
+  "stix_id": "attack-pattern--0ff4bd68-aebb-4039-9e00-9f92c705edf4",
+  "attack_version": "1.0",
+  "created": "2026-04-14T22:54:02.938Z",
+  "modified": "2026-04-22T15:44:20.156Z",
+  "tactics": [
+    "defense-impairment"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Execution Prevention"
+  ],
+  "known_context": [
+    "PHASEJAM (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may spoof or manipulate security tool user interfaces (UIs) to falsely indicate tools are functioning normally and delay detection and response. \n\nAdversaries may present misleading or falsified security tool interfaces (UIs) that display normal or healthy status indicators, even when underlying security tools have been disabled, degraded, or otherwise tampered with. Security tools typically provide visibility into system health, alerting, and operational status; by misrepresenting this information, adversaries can undermine defender trust in these signals and obscure the true security posture of the system. \n\nThis behavior is often used in conjunction with efforts to disable or modify tools, where adversaries first impair the functionality of defenses (e.g., EDR, logging agents) and then replace or mimic their interfaces to conceal the loss of visibility. By maintaining the appearance of normal operations, such as showing active protection, successful updates, or absence of threats, adversaries can delay investigation and response, enabling continued malicious activity. \n\nFor example, adversaries may display a fake Windows Security interface or system tray icon indicating a \u201cprotected\u201d or \u201chealthy\u201d state after disabling Windows Defender or related services.(Citation: BlackBasta)"
+}

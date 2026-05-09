@@ -1,0 +1,28 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1547.014",
+  "name": "Active Setup",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1547/014",
+  "stix_id": "attack-pattern--22522668-ddf6-470b-a027-9d6866679f67",
+  "attack_version": "1.1",
+  "created": "2020-12-18T16:33:13.098Z",
+  "modified": "2025-10-24T17:48:31.226Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "PoisonIvy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may achieve persistence by adding a Registry key to the Active Setup of the local machine. Active Setup is a Windows mechanism that is used to execute programs when a user logs in. The value stored in the Registry key will be executed after a user logs into the computer.(Citation: Klein Active Setup 2010) These programs will be executed under the context of the user and will have the account's associated permissions level.\n\nAdversaries may abuse Active Setup by creating a key under <code> HKLM\\SOFTWARE\\Microsoft\\Active Setup\\Installed Components\\</code> and setting a malicious value for <code>StubPath</code>. This value will serve as the program that will be executed when a user logs into the computer.(Citation: Mandiant Glyer APT 2010)(Citation: Citizenlab Packrat 2015)(Citation: FireEye CFR Watering Hole 2012)(Citation: SECURELIST Bright Star 2015)(Citation: paloalto Tropic Trooper 2016)\n\nAdversaries can abuse these components to execute malware, such as remote access tools, to maintain persistence through system reboots. Adversaries may also use [Masquerading](https://attack.mitre.org/techniques/T1036) to make the Registry entries look as if they are associated with legitimate programs."
+}

@@ -1,0 +1,48 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1069.001",
+  "name": "Local Groups",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1069/001",
+  "stix_id": "attack-pattern--a01bf75f-00b2-4568-a58f-565ff9bf202b",
+  "attack_version": "1.2",
+  "created": "2020-03-12T19:29:21.013Z",
+  "modified": "2025-10-24T17:49:10.014Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "BloodHound (tool)",
+    "C0015 (campaign)",
+    "Caterpillar WebShell (malware)",
+    "Chimera (intrusion-set)",
+    "Cobalt Strike (malware)",
+    "Emissary (malware)",
+    "Epic (malware)",
+    "Exbyte (malware)",
+    "Flagpro (malware)",
+    "FlawedAmmyy (malware)",
+    "Gomir (malware)",
+    "HEXANE (intrusion-set)",
+    "Helminth (malware)",
+    "JPIN (malware)",
+    "Kazuar (malware)",
+    "Kwampirs (malware)",
+    "LunarWeb (malware)",
+    "Net (tool)",
+    "OSInfo (malware)",
+    "OilRig (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to find local system groups and permission settings. The knowledge of local system permission groups can help adversaries determine which groups exist and which users belong to a particular group. Adversaries may use this information to determine which users have elevated permissions, such as the users found within the local administrators group.\n\nCommands such as <code>net localgroup</code> of the [Net](https://attack.mitre.org/software/S0039) utility, <code>dscl . -list /Groups</code> on macOS, and <code>groups</code> on Linux can list local groups."
+}

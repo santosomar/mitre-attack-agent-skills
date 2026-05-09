@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1006",
+  "name": "Direct Volume Access",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1006",
+  "stix_id": "attack-pattern--0c8ab3eb-df48-4b9c-ace7-beacaac81cc5",
+  "attack_version": "3.0",
+  "created": "2017-05-31T21:30:20.934Z",
+  "modified": "2026-04-15T19:59:05.018Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Behavior Prevention on Endpoint",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "APT28 Nearest Neighbor Campaign (campaign)",
+    "Scattered Spider (intrusion-set)",
+    "Volt Typhoon (intrusion-set)",
+    "esentutl (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may directly access a volume to bypass file access controls and file system monitoring. Windows allows programs to have direct access to logical volumes. Programs with direct access may read and write files directly from the drive by analyzing file system data structures. This technique may bypass Windows file access controls as well as file system monitoring tools. (Citation: Hakobyan 2009)\n\nUtilities, such as `NinjaCopy`, exist to perform these actions in PowerShell.(Citation: Github PowerSploit Ninjacopy) Adversaries may also use built-in or third-party utilities (such as `vssadmin`, `wbadmin`, and [esentutl](https://attack.mitre.org/software/S0404)) to create shadow copies or backups of data from system volumes.(Citation: LOLBAS Esentutl)"
+}

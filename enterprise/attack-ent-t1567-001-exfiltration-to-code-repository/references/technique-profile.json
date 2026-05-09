@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1567.001",
+  "name": "Exfiltration to Code Repository",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1567/001",
+  "stix_id": "attack-pattern--86a96bf6-cf8b-411c-aaeb-8959944d64f7",
+  "attack_version": "1.2",
+  "created": "2020-03-09T14:51:11.772Z",
+  "modified": "2025-10-24T17:49:04.207Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Restrict Web-Based Content"
+  ],
+  "known_context": [
+    "Empire (tool)",
+    "Shai-Hulud (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may exfiltrate data to a code repository rather than over their primary command and control channel. Code repositories are often accessible via an API (ex: https://api.github.com). Access to these APIs are often over HTTPS, which gives the adversary an additional level of protection.\n\nExfiltration to a code repository can also provide a significant amount of cover to the adversary if it is a popular service already used by hosts within the network."
+}

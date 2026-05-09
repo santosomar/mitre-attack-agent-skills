@@ -1,0 +1,37 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1594",
+  "name": "Search Victim-Owned Websites",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1594",
+  "stix_id": "attack-pattern--16cdd21f-da65-4e4f-bc04-dd7d198c7b26",
+  "attack_version": "1.1",
+  "created": "2020-10-02T16:51:50.306Z",
+  "modified": "2025-10-24T17:48:26.799Z",
+  "tactics": [
+    "reconnaissance"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "APT41 DUST (campaign)",
+    "Cutting Edge (campaign)",
+    "EXOTIC LILY (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "Leviathan Australian Intrusions (campaign)",
+    "Sandworm Team (intrusion-set)",
+    "Silent Librarian (intrusion-set)",
+    "TA578 (intrusion-set)",
+    "Volt Typhoon (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may search websites owned by the victim for information that can be used during targeting. Victim-owned websites may contain a variety of details, including names of departments/divisions, physical locations, and data about key employees such as names, roles, and contact info (ex: [Email Addresses](https://attack.mitre.org/techniques/T1589/002)). These sites may also have details highlighting business operations and relationships.(Citation: Comparitech Leak)\n\nAdversaries may search victim-owned websites to gather actionable information. Information from these sources may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Trusted Relationship](https://attack.mitre.org/techniques/T1199) or [Phishing](https://attack.mitre.org/techniques/T1566)).\n\nIn addition to manually browsing the website, adversaries may attempt to identify hidden directories or files that could contain additional sensitive information or vulnerable functionality. They may do this through automated activities such as [Wordlist Scanning](https://attack.mitre.org/techniques/T1595/003), as well as by leveraging files such as sitemap.xml and robots.txt.(Citation: Perez Sitemap XML 2023)(Citation: Register Robots TXT 2015)"
+}

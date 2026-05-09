@@ -1,0 +1,52 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1505.003",
+  "name": "Web Shell",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1505/003",
+  "stix_id": "attack-pattern--5d0d3609-d06d-49e1-b9c9-b544e0c618cb",
+  "attack_version": "1.5",
+  "created": "2019-12-13T16:46:18.927Z",
+  "modified": "2025-10-24T17:48:50.387Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2022 Ukraine Electric Power Attack (campaign)",
+    "APT28 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "APT41 DUST (campaign)",
+    "APT5 (intrusion-set)",
+    "ASPXSpy (malware)",
+    "Agrius (intrusion-set)",
+    "BUSHWALK (malware)",
+    "BackdoorDiplomacy (intrusion-set)",
+    "BlackByte (intrusion-set)",
+    "C0017 (campaign)",
+    "C0032 (campaign)",
+    "CURIUM (intrusion-set)",
+    "China Chopper (malware)",
+    "Cutting Edge (campaign)",
+    "Deep Panda (intrusion-set)",
+    "Dragonfly (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may backdoor web servers with web shells to establish persistent access to systems. A Web shell is a Web script that is placed on an openly accessible Web server to allow an adversary to access the Web server as a gateway into a network. A Web shell may provide a set of functions to execute or a command-line interface on the system that hosts the Web server.(Citation: volexity_0day_sophos_FW)\n\nIn addition to a server-side script, a Web shell may have a client interface program that is used to talk to the Web server (e.g. [China Chopper](https://attack.mitre.org/software/S0020) Web shell client).(Citation: Lee 2013)"
+}

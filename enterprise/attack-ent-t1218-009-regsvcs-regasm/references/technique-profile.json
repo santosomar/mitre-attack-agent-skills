@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1218.009",
+  "name": "Regsvcs/Regasm",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1218/009",
+  "stix_id": "attack-pattern--c48a67ee-b657-45c1-91bf-6cdbe27205f8",
+  "attack_version": "3.0",
+  "created": "2020-01-23T19:42:16.439Z",
+  "modified": "2026-04-15T22:41:42.115Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "Execution Prevention"
+  ],
+  "known_context": [
+    "Agent Tesla (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Regsvcs and Regasm to proxy execution of code through a trusted Windows utility. Regsvcs and Regasm are Windows command-line utilities that are used to register .NET [Component Object Model](https://attack.mitre.org/techniques/T1559/001) (COM) assemblies. Both are binaries that may be digitally signed by Microsoft. (Citation: MSDN Regsvcs) (Citation: MSDN Regasm)\n\nBoth utilities may be used to bypass application control through use of attributes within the binary to specify code that should be run before registration or unregistration: <code>[ComRegisterFunction]</code> or <code>[ComUnregisterFunction]</code> respectively. The code with the registration and unregistration attributes will be executed even if the process is run under insufficient privileges and fails to execute. (Citation: LOLBAS Regsvcs)(Citation: LOLBAS Regasm)"
+}

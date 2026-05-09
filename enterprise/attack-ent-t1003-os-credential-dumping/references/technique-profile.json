@@ -1,0 +1,58 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1003",
+  "name": "OS Credential Dumping",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1003",
+  "stix_id": "attack-pattern--0a3ead4e-6d47-4ccb-854c-a6a4f9d96b22",
+  "attack_version": "2.2",
+  "created": "2017-05-31T21:30:19.735Z",
+  "modified": "2025-10-24T17:48:22.201Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Active Directory Configuration",
+    "Behavior Prevention on Endpoint",
+    "Credential Access Protection",
+    "Encrypt Sensitive Information",
+    "Operating System Configuration",
+    "Password Policies",
+    "Privileged Account Management",
+    "Privileged Process Integrity",
+    "User Training"
+  ],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "Axiom (intrusion-set)",
+    "BlackByte (intrusion-set)",
+    "Carbanak (malware)",
+    "Ember Bear (intrusion-set)",
+    "HOMEFRY (malware)",
+    "Leviathan (intrusion-set)",
+    "MgBot (malware)",
+    "Mustang Panda (intrusion-set)",
+    "OnionDuke (malware)",
+    "PinchDuke (malware)",
+    "Poseidon Group (intrusion-set)",
+    "Revenge RAT (malware)",
+    "Sowbug (intrusion-set)",
+    "Storm-0501 (intrusion-set)",
+    "Suckfly (intrusion-set)",
+    "Tonto Team (intrusion-set)",
+    "Trojan.Karagany (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory, or structures.(Citation: Brining MimiKatz to Unix) Credentials can then be used to perform [Lateral Movement](https://attack.mitre.org/tactics/TA0008) and access restricted information.\n\nSeveral of the tools mentioned in associated sub-techniques may be used by both adversaries and professional security testers. Additional custom tools likely exist as well."
+}

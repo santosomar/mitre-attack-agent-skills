@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1213.005",
+  "name": "Messaging Applications",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1213/005",
+  "stix_id": "attack-pattern--fb75213f-cfb0-40bf-a02f-3bad93d6601e",
+  "attack_version": "1.0",
+  "created": "2024-08-30T13:50:42.023Z",
+  "modified": "2025-04-15T22:48:58.763Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Office Suite",
+    "SaaS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Out-of-Band Communications Channel",
+    "User Training"
+  ],
+  "known_context": [
+    "Fox Kitten (intrusion-set)",
+    "LAPSUS$ (intrusion-set)",
+    "Scattered Spider (intrusion-set)",
+    "TruffleHog (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage chat and messaging applications, such as Microsoft Teams, Google Chat, and Slack, to mine valuable information.  \n\nThe following is a brief list of example information that may hold potential value to an adversary and may also be found on messaging applications: \n\n* Testing / development credentials (i.e., [Chat Messages](https://attack.mitre.org/techniques/T1552/008)) \n* Source code snippets \n* Links to network shares and other internal resources \n* Proprietary data(Citation: Guardian Grand Theft Auto Leak 2022)\n* Discussions about ongoing incident response efforts(Citation: SC Magazine Ragnar Locker 2021)(Citation: Microsoft DEV-0537)\n\nIn addition to exfiltrating data from messaging applications, adversaries may leverage data from chat messages in order to improve their targeting - for example, by learning more about an environment or evading ongoing incident response efforts.(Citation: Sentinel Labs NullBulge 2024)(Citation: Permiso Scattered Spider 2023)"
+}

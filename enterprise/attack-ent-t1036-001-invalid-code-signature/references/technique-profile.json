@@ -1,0 +1,38 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1036.001",
+  "name": "Invalid Code Signature",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1036/001",
+  "stix_id": "attack-pattern--b4b7458f-81f2-4d38-84be-1c5ba0167a52",
+  "attack_version": "2.0",
+  "created": "2020-02-10T19:49:46.752Z",
+  "modified": "2026-04-15T20:38:13.564Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Code Signing"
+  ],
+  "known_context": [
+    "APT37 (intrusion-set)",
+    "BADNEWS (malware)",
+    "Gelsemium (malware)",
+    "NETWIRE (malware)",
+    "PcShare (tool)",
+    "Regin (malware)",
+    "SplatCloak (malware)",
+    "WindTail (malware)",
+    "Windshift (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to mimic features of valid code signatures to increase the chance of deceiving a user, analyst, or tool. Code signing provides a level of authenticity on a binary from the developer and a guarantee that the binary has not been tampered with. Adversaries can copy the metadata and signature information from a signed program, then use it as a template for an unsigned program. Files with invalid code signatures will fail digital signature validation checks, but they may appear more legitimate to users and security tools may improperly handle these files.(Citation: Threatexpress MetaTwin 2017)\n\nUnlike [Code Signing](https://attack.mitre.org/techniques/T1553/002), this activity will not result in a valid signature."
+}

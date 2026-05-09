@@ -1,0 +1,52 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1036.008",
+  "name": "Masquerade File Type",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1036/008",
+  "stix_id": "attack-pattern--208884f1-7b83-4473-ac22-4e1cf6c41471",
+  "attack_version": "2.0",
+  "created": "2023-03-08T22:40:06.918Z",
+  "modified": "2026-04-15T20:39:13.971Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Antivirus/Antimalware",
+    "Behavior Prevention on Endpoint",
+    "Execution Prevention"
+  ],
+  "known_context": [
+    "2016 Ukraine Electric Power Attack (campaign)",
+    "ANDROMEDA (malware)",
+    "AvosLocker (malware)",
+    "BlackByte (intrusion-set)",
+    "Brute Ratel C4 (tool)",
+    "HeartCrypt (malware)",
+    "Kapeka (malware)",
+    "Lumma Stealer (malware)",
+    "MagicRAT (malware)",
+    "MirrorFace (intrusion-set)",
+    "Mustang Panda (intrusion-set)",
+    "OSX_OCEANLOTUS.D (malware)",
+    "Operation AkaiRy\u016b (campaign)",
+    "Operation Dream Job (campaign)",
+    "PureCrypter (malware)",
+    "QakBot (malware)",
+    "Raspberry Robin (malware)",
+    "STATICPLUGIN (malware)",
+    "StrelaStealer (malware)",
+    "Volt Typhoon (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may masquerade malicious payloads as legitimate files through changes to the payload's formatting, including the file\u2019s signature, extension, icon, and contents. Various file types have a typical standard format, including how they are encoded and organized. For example, a file\u2019s signature (also known as header or magic bytes) is the beginning bytes of a file and is often used to identify the file\u2019s type. For example, the header of a JPEG file,  is <code> 0xFF 0xD8</code> and the file extension is either `.JPE`, `.JPEG` or `.JPG`. \n\nAdversaries may edit the header\u2019s hex code and/or the file extension of a malicious payload in order to bypass file validation checks and/or input sanitization. This behavior is commonly used when payload files are transferred (e.g., [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)) and stored (e.g., [Upload Malware](https://attack.mitre.org/techniques/T1608/001)) so that adversaries may move their malware without triggering detections. \n\nCommon non-executable file types and extensions, such as text files (`.txt`) and image files (`.jpg`, `.gif`, etc.) may be typically treated as benign.  Based on this, adversaries may use a file extension to disguise malware, such as naming a PHP backdoor code with a file name of <code>test.gif</code>. A user may not know that a file is malicious due to the benign appearance and file extension.\n\nPolyglot files, which are files that have multiple different file types and that function differently based on the application that will execute them, may also be used to disguise malicious malware and capabilities.(Citation: polygot_icedID)"
+}

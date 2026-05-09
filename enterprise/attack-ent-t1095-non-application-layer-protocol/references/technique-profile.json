@@ -1,0 +1,55 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1095",
+  "name": "Non-Application Layer Protocol",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1095",
+  "stix_id": "attack-pattern--c21d5a77-d422-4a69-acd7-2c53c1faa34b",
+  "attack_version": "2.4",
+  "created": "2017-05-31T21:31:10.728Z",
+  "modified": "2025-10-24T17:49:20.136Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Filter Network Traffic",
+    "Network Intrusion Prevention",
+    "Network Segmentation"
+  ],
+  "known_context": [
+    "2022 Ukraine Electric Power Attack (campaign)",
+    "APT3 (intrusion-set)",
+    "Anchor (malware)",
+    "Aria-body (malware)",
+    "AuTo Stealer (malware)",
+    "BITTER (intrusion-set)",
+    "BUBBLEWRAP (malware)",
+    "BackdoorDiplomacy (intrusion-set)",
+    "Bandook (malware)",
+    "Bisonal (malware)",
+    "Brute Ratel C4 (tool)",
+    "C0021 (campaign)",
+    "COATHANGER (malware)",
+    "Carbon (malware)",
+    "Clambling (malware)",
+    "Cobalt Strike (malware)",
+    "Crimson (malware)",
+    "Cryptoistic (malware)",
+    "Cuckoo Stealer (malware)",
+    "Cutting Edge (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use an OSI non-application layer protocol for communication between host and C2 server or among infected hosts within a network. The list of possible protocols is extensive.(Citation: Wikipedia OSI) Specific examples include use of network layer protocols, such as the Internet Control Message Protocol (ICMP), transport layer protocols, such as the User Datagram Protocol (UDP), session layer protocols, such as Socket Secure (SOCKS), as well as redirected/tunneled protocols, such as Serial over LAN (SOL).\n\nICMP communication between hosts is one example.(Citation: Cisco Synful Knock Evolution) Because ICMP is part of the Internet Protocol Suite, it is required to be implemented by all IP-compatible hosts.(Citation: Microsoft ICMP) However, it is not as commonly monitored as other Internet Protocols such as TCP or UDP and may be used by adversaries to hide communications.\n\nIn ESXi environments, adversaries may leverage the Virtual Machine Communication Interface (VMCI) for communication between guest virtual machines and the ESXi host. This traffic is similar to client-server communications on traditional network sockets but is localized to the physical machine running the ESXi host, meaning it does not traverse external networks (routers, switches). This results in communications that are invisible to external monitoring and standard networking tools like tcpdump, netstat, nmap, and Wireshark. By adding a VMCI backdoor to a compromised ESXi host, adversaries may persistently regain access from any guest VM to the compromised ESXi host\u2019s backdoor, regardless of network segmentation or firewall rules in place.(Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023)"
+}

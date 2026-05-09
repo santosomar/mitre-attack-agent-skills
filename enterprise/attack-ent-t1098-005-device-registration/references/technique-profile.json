@@ -1,0 +1,34 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1098.005",
+  "name": "Device Registration",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1098/005",
+  "stix_id": "attack-pattern--7decb26c-715c-40cf-b7e0-026f7d7cc215",
+  "attack_version": "1.4",
+  "created": "2022-03-04T18:30:38.989Z",
+  "modified": "2025-05-22T21:02:06.575Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows",
+    "Identity Provider"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Multi-factor Authentication"
+  ],
+  "known_context": [
+    "AADInternals (tool)",
+    "APT29 (intrusion-set)",
+    "C0027 (campaign)",
+    "SolarWinds Compromise (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may register a device to an adversary-controlled account. Devices may be registered in a multifactor authentication (MFA) system, which handles authentication to the network, or in a device management system, which handles device access and compliance.\n\nMFA systems, such as Duo or Okta, allow users to associate devices with their accounts in order to complete MFA requirements. An adversary that compromises a user\u2019s credentials may enroll a new device in order to bypass initial MFA requirements and gain persistent access to a network.(Citation: CISA MFA PrintNightmare)(Citation: DarkReading FireEye SolarWinds) In some cases, the MFA self-enrollment process may require only a username and password to enroll the account's first device or to enroll a device to an inactive account. (Citation: Mandiant APT29 Microsoft 365 2022)\n\nSimilarly, an adversary with existing access to a network may register a device or a virtual machine to Entra ID and/or its device management system, Microsoft Intune, in order to access sensitive data or resources while bypassing conditional access policies.(Citation: AADInternals - Device Registration)(Citation: AADInternals - Conditional Access Bypass)(Citation: Microsoft DEV-0537)(Citation: Expel Atlas Lion 2025)\n\nDevices registered in Entra ID may be able to conduct [Internal Spearphishing](https://attack.mitre.org/techniques/T1534) campaigns via intra-organizational emails, which are less likely to be treated as suspicious by the email client.(Citation: Microsoft - Device Registration) Additionally, an adversary may be able to perform a [Service Exhaustion Flood](https://attack.mitre.org/techniques/T1499/002) on an Entra ID tenant by registering a large number of devices.(Citation: AADInternals - BPRT)"
+}

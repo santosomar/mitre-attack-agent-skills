@@ -1,0 +1,42 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1556.006",
+  "name": "Multi-Factor Authentication",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1556/006",
+  "stix_id": "attack-pattern--b4409cd8-0da9-46e1-a401-a241afd4d1cc",
+  "attack_version": "2.0",
+  "created": "2022-05-31T19:31:38.431Z",
+  "modified": "2026-04-16T20:07:52.875Z",
+  "tactics": [
+    "credential-access",
+    "defense-impairment",
+    "persistence"
+  ],
+  "platforms": [
+    "IaaS",
+    "Identity Provider",
+    "Linux",
+    "macOS",
+    "Office Suite",
+    "SaaS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Multi-factor Authentication",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "AADInternals (tool)",
+    "SLOWPULSE (malware)",
+    "Scattered Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may disable or modify multi-factor authentication (MFA) mechanisms to enable persistent access to compromised accounts.\n\nOnce adversaries have gained access to a network by either compromising an account lacking MFA or by employing an MFA bypass method such as [Multi-Factor Authentication Request Generation](https://attack.mitre.org/techniques/T1621), adversaries may leverage their access to modify or completely disable MFA defenses. This can be accomplished by abusing legitimate features, such as excluding users from Azure AD Conditional Access Policies, registering a new yet vulnerable/adversary-controlled MFA method, or by manually patching MFA programs and configuration files to bypass expected functionality.(Citation: Mandiant APT42)(Citation: Azure AD Conditional Access Exclusions)\n\nFor example, modifying the Windows hosts file (`C:\\windows\\system32\\drivers\\etc\\hosts`) to redirect MFA calls to localhost instead of an MFA server may cause the MFA process to fail. If a \"fail open\" policy is in place, any otherwise successful authentication attempt may be granted access without enforcing MFA. (Citation: Russians Exploit Default MFA Protocol - CISA March 2022) \n\nDepending on the scope, goals, and privileges of the adversary, MFA defenses may be disabled for individual accounts or for all accounts tied to a larger group, such as all domain accounts in a victim's network environment.(Citation: Russians Exploit Default MFA Protocol - CISA March 2022)"
+}

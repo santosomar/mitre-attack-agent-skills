@@ -1,0 +1,45 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1197",
+  "name": "BITS Jobs",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1197",
+  "stix_id": "attack-pattern--c8e87b83-edbb-48d4-9295-4974897525b7",
+  "attack_version": "2.0",
+  "created": "2018-04-18T17:59:24.739Z",
+  "modified": "2026-04-15T19:57:02.003Z",
+  "tactics": [
+    "execution",
+    "persistence",
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Filter Network Traffic",
+    "Operating System Configuration",
+    "User Account Management"
+  ],
+  "known_context": [
+    "APT39 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "BITSAdmin (tool)",
+    "Bazar (malware)",
+    "Cobalt Strike (malware)",
+    "Egregor (malware)",
+    "JPIN (malware)",
+    "Leviathan (intrusion-set)",
+    "MarkiRAT (malware)",
+    "Patchwork (intrusion-set)",
+    "ProLock (malware)",
+    "UBoatRAT (malware)",
+    "Wizard Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse BITS jobs to persistently execute code and perform various background tasks. Windows Background Intelligent Transfer Service (BITS) is a low-bandwidth, asynchronous file transfer mechanism exposed through [Component Object Model](https://attack.mitre.org/techniques/T1559/001) (COM).(Citation: Microsoft COM)(Citation: Microsoft BITS) BITS is commonly used by updaters, messengers, and other applications preferred to operate in the background (using available idle bandwidth) without interrupting other networked applications. File transfer tasks are implemented as BITS jobs, which contain a queue of one or more file operations.\n\nThe interface to create and manage BITS jobs is accessible through [PowerShell](https://attack.mitre.org/techniques/T1059/001) and the [BITSAdmin](https://attack.mitre.org/software/S0190) tool.(Citation: Microsoft BITS)(Citation: Microsoft BITSAdmin)\n\nAdversaries may abuse BITS to download (e.g. [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)), execute, and even clean up after running malicious code (e.g. [Indicator Removal](https://attack.mitre.org/techniques/T1070)). BITS tasks are self-contained in the BITS job database, without new files or registry modifications, and often permitted by host firewalls.(Citation: CTU BITS Malware June 2016)(Citation: Mondok Windows PiggyBack BITS May 2007)(Citation: Symantec BITS May 2007) BITS enabled execution may also enable persistence by creating long-standing jobs (the default maximum lifetime is 90 days and extendable) or invoking an arbitrary program when a job completes or errors (including after system reboots).(Citation: PaloAlto UBoatRAT Nov 2017)(Citation: CTU BITS Malware June 2016)\n\nBITS upload functionalities can also be used to perform [Exfiltration Over Alternative Protocol](https://attack.mitre.org/techniques/T1048).(Citation: CTU BITS Malware June 2016)"
+}

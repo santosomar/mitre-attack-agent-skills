@@ -1,0 +1,47 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1543",
+  "name": "Create or Modify System Process",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1543",
+  "stix_id": "attack-pattern--106c0cf6-bf73-4601-9aa8-0945c2715ec5",
+  "attack_version": "1.2",
+  "created": "2020-01-10T16:03:18.865Z",
+  "modified": "2025-10-24T17:48:24.896Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Containers",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Behavior Prevention on Endpoint",
+    "Code Signing",
+    "Limit Software Installation",
+    "Operating System Configuration",
+    "Privileged Account Management",
+    "Restrict File and Directory Permissions",
+    "Software Configuration",
+    "User Account Management"
+  ],
+  "known_context": [
+    "Akira _v2 (malware)",
+    "BOLDMOVE (malware)",
+    "BRICKSTORM (malware)",
+    "Exaramel for Linux (malware)",
+    "IMAPLoader (malware)",
+    "LITTLELAMB.WOOLTEA (malware)",
+    "LunarMail (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence. When operating systems boot up, they can start processes that perform background system functions. On Windows and Linux, these system processes are referred to as services.(Citation: TechNet Services) On macOS, launchd processes known as [Launch Daemon](https://attack.mitre.org/techniques/T1543/004) and [Launch Agent](https://attack.mitre.org/techniques/T1543/001) are run to finish system initialization and load user specific parameters.(Citation: AppleDocs Launch Agent Daemons) \n\nAdversaries may install new services, daemons, or agents that can be configured to execute at startup or a repeatable interval in order to establish persistence. Similarly, adversaries may modify existing services, daemons, or agents to achieve the same effect.  \n\nServices, daemons, or agents may be created with administrator privileges but executed under root/SYSTEM privileges. Adversaries may leverage this functionality to create or modify system processes in order to escalate privileges.(Citation: OSX Malware Detection)"
+}

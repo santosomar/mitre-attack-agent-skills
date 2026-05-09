@@ -1,0 +1,34 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1553.001",
+  "name": "Gatekeeper Bypass",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1553/001",
+  "stix_id": "attack-pattern--31a0a2ac-c67c-4a7e-b9ed-6a96477d4e8e",
+  "attack_version": "2.0",
+  "created": "2020-02-05T16:16:08.471Z",
+  "modified": "2026-04-16T20:07:52.996Z",
+  "tactics": [
+    "defense-impairment"
+  ],
+  "platforms": [
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Execution Prevention"
+  ],
+  "known_context": [
+    "CoinTicker (malware)",
+    "Cuckoo Stealer (malware)",
+    "MacMa (malware)",
+    "OSX/Shlayer (malware)",
+    "OSX_OCEANLOTUS.D (malware)",
+    "XCSSET (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify file attributes and subvert Gatekeeper functionality to evade user prompts and execute untrusted programs. Gatekeeper is a set of technologies that act as layer of Apple\u2019s security model to ensure only trusted applications are executed on a host. Gatekeeper was built on top of File Quarantine in Snow Leopard (10.6, 2009) and has grown to include Code Signing, security policy compliance, Notarization, and more. Gatekeeper also treats applications running for the first time differently than reopened applications.(Citation: TheEclecticLightCompany Quarantine and the flag)(Citation: TheEclecticLightCompany apple notarization )\n\nBased on an opt-in system, when files are downloaded an extended attribute (xattr) called `com.apple.quarantine` (also known as a quarantine flag) can be set on the file by the application performing the download. Launch Services opens the application in a suspended state. For first run applications with the quarantine flag set, Gatekeeper executes the following functions:\n\n1. Checks extended attribute \u2013 Gatekeeper checks for the quarantine flag, then provides an alert prompt to the user to allow or deny execution.(Citation: OceanLotus for OS X)(Citation: 20 macOS Common Tools and Techniques)\n\n2. Checks System Policies - Gatekeeper checks the system security policy, allowing execution of apps downloaded from either just the App Store or the App Store and identified developers.\n\n3. Code Signing \u2013 Gatekeeper checks for a valid code signature from an Apple Developer ID.\n\n4. Notarization - Using the `api.apple-cloudkit.com` API, Gatekeeper reaches out to Apple servers to verify or pull down the notarization ticket and ensure the ticket is not revoked. Users can override notarization, which will result in a prompt of executing an \u201cunauthorized app\u201d and the security policy will be modified.\n\nAdversaries can subvert one or multiple security controls within Gatekeeper checks through logic errors (e.g. [Exploitation for Stealth](https://attack.mitre.org/techniques/T1211)), unchecked file types, and external libraries. For example, prior to macOS 13 Ventura, code signing and notarization checks were only conducted on first launch, allowing adversaries to write malicious executables to previously opened applications in order to bypass Gatekeeper security checks.(Citation: theevilbit gatekeeper bypass 2021)(Citation: Application Bundle Manipulation Brandon Dalton)\n\nApplications and files loaded onto the system from a USB flash drive, optical disk, external hard drive, from a drive shared over the local network, or using the curl command may not set the quarantine flag. Additionally, it is possible to avoid setting the quarantine flag using [Drive-by Compromise](https://attack.mitre.org/techniques/T1189)."
+}

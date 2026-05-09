@@ -1,0 +1,37 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1505",
+  "name": "Server Software Component",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1505",
+  "stix_id": "attack-pattern--d456de47-a16f-4e46-8980-e67478a12dcb",
+  "attack_version": "1.5",
+  "created": "2019-06-28T17:52:07.296Z",
+  "modified": "2025-10-24T17:49:27.065Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Windows",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "ESXi"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Boot Integrity",
+    "Code Signing",
+    "Disable or Remove Feature or Program",
+    "Privileged Account Management",
+    "Restrict Registry Permissions",
+    "User Account Management"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse legitimate extensible development features of servers to establish persistent access to systems. Enterprise server applications may include features that allow developers to write and install software or scripts to extend the functionality of the main application. Adversaries may install malicious components to extend and abuse server applications.(Citation: volexity_0day_sophos_FW)"
+}

@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1496",
+  "name": "Resource Hijacking",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1496",
+  "stix_id": "attack-pattern--cd25c1b4-935c-4f0e-ba8d-552f28bc4783",
+  "attack_version": "2.0",
+  "created": "2019-04-17T14:50:05.682Z",
+  "modified": "2025-10-24T17:49:24.276Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Windows",
+    "IaaS",
+    "Linux",
+    "macOS",
+    "Containers",
+    "SaaS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage the resources of co-opted systems to complete resource-intensive tasks, which may impact system and/or hosted service availability. \n\nResource hijacking may take a number of different forms. For example, adversaries may:\n\n* Leverage compute resources in order to mine cryptocurrency\n* Sell network bandwidth to proxy networks\n* Generate SMS traffic for profit\n* Abuse cloud-based messaging services to send large quantities of spam messages\n\nIn some cases, adversaries may leverage multiple types of Resource Hijacking at once.(Citation: Sysdig Cryptojacking Proxyjacking 2023)"
+}

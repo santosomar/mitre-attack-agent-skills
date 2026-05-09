@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1546.009",
+  "name": "AppCert DLLs",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1546/009",
+  "stix_id": "attack-pattern--7d57b371-10c2-45e5-b3cc-83a8fb380e4c",
+  "attack_version": "1.1",
+  "created": "2020-01-24T14:47:41.795Z",
+  "modified": "2025-10-24T17:49:00.663Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Execution Prevention"
+  ],
+  "known_context": [
+    "PUNCHBUGGY (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by AppCert DLLs loaded into processes. Dynamic-link libraries (DLLs) that are specified in the <code>AppCertDLLs</code> Registry key under <code>HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\</code> are loaded into every process that calls the ubiquitously used application programming interface (API) functions <code>CreateProcess</code>, <code>CreateProcessAsUser</code>, <code>CreateProcessWithLoginW</code>, <code>CreateProcessWithTokenW</code>, or <code>WinExec</code>. (Citation: Elastic Process Injection July 2017)\n\nSimilar to [Process Injection](https://attack.mitre.org/techniques/T1055), this value can be abused to obtain elevated privileges by causing a malicious DLL to be loaded and run in the context of separate processes on the computer. Malicious AppCert DLLs may also provide persistence by continuously being triggered by API activity."
+}

@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1497",
+  "name": "Virtualization/Sandbox Evasion",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1497",
+  "stix_id": "attack-pattern--82caa33e-d11a-433a-94ea-9b5a5fbef81d",
+  "attack_version": "2.0",
+  "created": "2019-04-17T22:22:24.505Z",
+  "modified": "2026-04-15T22:52:12.932Z",
+  "tactics": [
+    "discovery",
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Agent Tesla (malware)",
+    "Bazar (malware)",
+    "Bisonal (malware)",
+    "Black Basta (malware)",
+    "Bumblebee (malware)",
+    "CHOPSTICK (malware)",
+    "Carberp (malware)",
+    "Contagious Interview (intrusion-set)",
+    "CozyCar (malware)",
+    "Darkhotel (intrusion-set)",
+    "Egregor (malware)",
+    "Gelsemium (malware)",
+    "Hancitor (malware)",
+    "IcedID (malware)",
+    "Kevin (malware)",
+    "Metamorfo (malware)",
+    "Operation Spalax (campaign)",
+    "Pteranodon (malware)",
+    "RTM (malware)",
+    "Raspberry Robin (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may employ various means to detect and avoid virtualization and analysis environments. This may include changing behaviors based on the results of checks for the presence of artifacts indicative of a virtual machine environment (VME) or sandbox. If the adversary detects a VME, they may alter their malware to disengage from the victim or conceal the core functions of the implant. They may also search for VME artifacts before dropping secondary or additional payloads. Adversaries may use the information learned from [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497) during automated discovery to shape follow-on behaviors.(Citation: Deloitte Environment Awareness)\n\nAdversaries may use several methods to accomplish [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497) such as checking for security monitoring tools (e.g., Sysinternals, Wireshark, etc.) or other system artifacts associated with analysis or virtualization. Adversaries may also check for legitimate user activity to help determine if it is in an analysis environment. Additional methods include use of sleep timers or loops within malware code to avoid operating within a temporary sandbox.(Citation: Unit 42 Pirpi July 2015)"
+}

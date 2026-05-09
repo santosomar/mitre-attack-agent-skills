@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1567.003",
+  "name": "Exfiltration to Text Storage Sites",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1567/003",
+  "stix_id": "attack-pattern--ba04e672-da86-4e69-aa15-0eca5db25f43",
+  "attack_version": "1.1",
+  "created": "2023-02-27T22:51:27.101Z",
+  "modified": "2025-04-15T19:59:01.716Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows",
+    "ESXi"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Restrict Web-Based Content"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may exfiltrate data to text storage sites instead of their primary command and control channel. Text storage sites, such as <code>pastebin[.]com</code>, are commonly used by developers to share code and other information.  \n\nText storage sites are often used to host malicious code for C2 communication (e.g., [Stage Capabilities](https://attack.mitre.org/techniques/T1608)), but adversaries may also use these sites to exfiltrate collected data. Furthermore, paid features and encryption options may allow adversaries to conceal and store data more securely.(Citation: Pastebin EchoSec)\n\n**Note:** This is distinct from [Exfiltration to Code Repository](https://attack.mitre.org/techniques/T1567/001), which highlight access to code repositories via APIs."
+}

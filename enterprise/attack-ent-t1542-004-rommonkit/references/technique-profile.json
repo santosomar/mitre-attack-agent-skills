@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1542.004",
+  "name": "ROMMONkit",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1542/004",
+  "stix_id": "attack-pattern--a6557c75-798f-42e4-be70-ab4502e0a3bc",
+  "attack_version": "2.0",
+  "created": "2020-10-20T00:05:48.790Z",
+  "modified": "2026-04-17T18:38:49.551Z",
+  "tactics": [
+    "persistence",
+    "stealth"
+  ],
+  "platforms": [
+    "Network Devices"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Boot Integrity",
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse the ROM Monitor (ROMMON) by loading an unauthorized firmware with adversary code to provide persistent access and manipulate device behavior that is difficult to detect. (Citation: Cisco Synful Knock Evolution)(Citation: Cisco Blog Legacy Device Attacks)\n\n\nROMMON is a Cisco network device firmware that functions as a boot loader, boot image, or boot helper to initialize hardware and software when the platform is powered on or reset. Similar to [TFTP Boot](https://attack.mitre.org/techniques/T1542/005), an adversary may upgrade the ROMMON image locally or remotely (for example, through TFTP) with adversary code and restart the device in order to overwrite the existing ROMMON image. This provides adversaries with the means to update the ROMMON to gain persistence on a system in a way that may be difficult to detect."
+}

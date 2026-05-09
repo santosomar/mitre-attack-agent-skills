@@ -1,0 +1,34 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1673",
+  "name": "Virtual Machine Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1673",
+  "stix_id": "attack-pattern--6bc7f9aa-b91f-4b23-84b8-5e756eba68eb",
+  "attack_version": "1.0",
+  "created": "2025-03-27T15:32:17.400Z",
+  "modified": "2025-04-15T21:24:32.155Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Cheerscrypt (malware)",
+    "PureCrypter (malware)",
+    "Qilin (malware)",
+    "UNC3886 (intrusion-set)",
+    "VIRTUALPITA (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may attempt to enumerate running virtual machines (VMs) after gaining access to a host or hypervisor. For example, adversaries may enumerate a list of VMs on an ESXi hypervisor using a [Hypervisor CLI](https://attack.mitre.org/techniques/T1059/012) such as `esxcli` or `vim-cmd` (e.g. `esxcli vm process list or vim-cmd vmsvc/getallvms`).(Citation: Crowdstrike Hypervisor Jackpotting Pt 2 2021)(Citation: TrendMicro Play) Adversaries may also directly leverage a graphical user interface, such as VMware vCenter, in order to view virtual machines on a host. \n\nAdversaries may use the information from [Virtual Machine Discovery](https://attack.mitre.org/techniques/T1673) during discovery to shape follow-on behaviors. Subsequently discovered VMs may be leveraged for follow-on activities such as [Service Stop](https://attack.mitre.org/techniques/T1489) or [Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486).(Citation: Crowdstrike Hypervisor Jackpotting Pt 2 2021)"
+}

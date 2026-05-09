@@ -1,0 +1,40 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1021.006",
+  "name": "Windows Remote Management",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1021/006",
+  "stix_id": "attack-pattern--60d0c01d-e2bf-49dd-a453-f8a9c9fa6f65",
+  "attack_version": "1.2",
+  "created": "2020-02-11T18:29:47.757Z",
+  "modified": "2025-10-24T17:48:51.000Z",
+  "tactics": [
+    "lateral-movement"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "Network Segmentation",
+    "Privileged Account Management"
+  ],
+  "known_context": [
+    "Brute Ratel C4 (tool)",
+    "Chimera (intrusion-set)",
+    "Cobalt Strike (malware)",
+    "FIN13 (intrusion-set)",
+    "Operation MidnightEclipse (campaign)",
+    "SILENTTRINITY (tool)",
+    "SolarWinds Compromise (campaign)",
+    "Storm-0501 (intrusion-set)",
+    "Threat Group-3390 (intrusion-set)",
+    "Wizard Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with remote systems using Windows Remote Management (WinRM). The adversary may then perform actions as the logged-on user.\n\nWinRM is the name of both a Windows service and a protocol that allows a user to interact with a remote system (e.g., run an executable, modify the Registry, modify services).(Citation: Microsoft WinRM) It may be called with the `winrm` command or by any number of programs such as PowerShell.(Citation: Jacobsen 2014) WinRM  can be used as a method of remotely interacting with [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047).(Citation: MSDN WMI)"
+}

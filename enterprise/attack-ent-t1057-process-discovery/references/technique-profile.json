@@ -1,0 +1,50 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1057",
+  "name": "Process Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1057",
+  "stix_id": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+  "attack_version": "1.6",
+  "created": "2017-05-31T21:30:48.728Z",
+  "modified": "2025-10-24T17:49:05.839Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "4H RAT (malware)",
+    "ADVSTORESHELL (malware)",
+    "APT1 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT3 (intrusion-set)",
+    "APT37 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT5 (intrusion-set)",
+    "Agent Tesla (malware)",
+    "Akira (malware)",
+    "Andariel (intrusion-set)",
+    "Apostle (malware)",
+    "AppleSeed (malware)",
+    "Aria-body (malware)",
+    "AshTag (malware)",
+    "Astaroth (malware)",
+    "AsyncRAT (tool)",
+    "Avaddon (malware)",
+    "Avenger (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software/applications running on systems within the network. Administrator or otherwise elevated access may provide better process details. Adversaries may use the information from [Process Discovery](https://attack.mitre.org/techniques/T1057) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\n\nIn Windows environments, adversaries could obtain details on running processes using the [Tasklist](https://attack.mitre.org/software/S0057) utility via [cmd](https://attack.mitre.org/software/S0106) or <code>Get-Process</code> via [PowerShell](https://attack.mitre.org/techniques/T1059/001). Information about processes can also be extracted from the output of [Native API](https://attack.mitre.org/techniques/T1106) calls such as <code>CreateToolhelp32Snapshot</code>. In Mac and Linux, this is accomplished with the <code>ps</code> command. Adversaries may also opt to enumerate processes via `/proc`. ESXi also supports use of the `ps` command, as well as `esxcli system process list`.(Citation: Sygnia ESXi Ransomware 2025)(Citation: Crowdstrike Hypervisor Jackpotting Pt 2 2021)\n\nOn network devices, [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `show processes` can be used to display current running processes.(Citation: US-CERT-TA18-106A)(Citation: show_processes_cisco_cmd)"
+}

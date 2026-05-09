@@ -1,0 +1,38 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1547.013",
+  "name": "XDG Autostart Entries",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1547/013",
+  "stix_id": "attack-pattern--e0232cb0-ded5-4c2e-9dc7-2893142a5c11",
+  "attack_version": "1.2",
+  "created": "2019-09-10T18:13:12.195Z",
+  "modified": "2025-10-24T17:49:30.252Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Linux"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Limit Software Installation",
+    "Restrict File and Directory Permissions",
+    "User Account Management"
+  ],
+  "known_context": [
+    "Contagious Interview (intrusion-set)",
+    "CrossRAT (malware)",
+    "Fysbis (malware)",
+    "InvisibleFerret (malware)",
+    "NETWIRE (malware)",
+    "Pupy (tool)",
+    "RotaJakiro (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may add or modify XDG Autostart Entries to execute malicious programs or commands when a user\u2019s desktop environment is loaded at login. XDG Autostart entries are available for any XDG-compliant Linux system. XDG Autostart entries use Desktop Entry files (`.desktop`) to configure the user\u2019s desktop environment upon user login. These configuration files determine what applications launch upon user login, define associated applications to open specific file types, and define applications used to open removable media.(Citation: Free Desktop Application Autostart Feb 2006)(Citation: Free Desktop Entry Keys)\n\nAdversaries may abuse this feature to establish persistence by adding a path to a malicious binary or command to the `Exec` directive in the `.desktop` configuration file. When the user\u2019s desktop environment is loaded at user login, the `.desktop` files located in the XDG Autostart directories are automatically executed. System-wide Autostart entries are located in the `/etc/xdg/autostart` directory while the user entries are located in the `~/.config/autostart` directory.\n\nAdversaries may combine this technique with [Masquerading](https://attack.mitre.org/techniques/T1036) to blend malicious Autostart entries with legitimate programs.(Citation: Red Canary Netwire Linux 2022)"
+}

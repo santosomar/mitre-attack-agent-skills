@@ -1,0 +1,28 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1578",
+  "name": "Modify Cloud Compute Infrastructure",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1578",
+  "stix_id": "attack-pattern--144e007b-e638-431d-a894-45d90c54ab90",
+  "attack_version": "2.0",
+  "created": "2019-08-30T18:03:05.864Z",
+  "modified": "2026-04-16T20:07:52.919Z",
+  "tactics": [
+    "defense-impairment"
+  ],
+  "platforms": [
+    "IaaS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "User Account Management"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may attempt to modify a cloud account's compute service infrastructure to evade defenses. A modification to the compute service infrastructure can include the creation, deletion, or modification of one or more components such as compute instances, virtual machines, and snapshots.\n\nPermissions gained from the modification of infrastructure components may bypass restrictions that prevent access to existing infrastructure. Modifying infrastructure components may also allow an adversary to evade detection and remove evidence of their presence.(Citation: Mandiant M-Trends 2020)"
+}

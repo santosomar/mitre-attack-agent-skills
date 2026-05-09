@@ -1,0 +1,28 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1037.003",
+  "name": "Network Logon Script",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1037/003",
+  "stix_id": "attack-pattern--c63a348e-ffc2-486a-b9d9-d7f11ec54d99",
+  "attack_version": "1.0",
+  "created": "2020-01-10T18:01:03.666Z",
+  "modified": "2025-10-24T17:49:21.921Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use network logon scripts automatically executed at logon initialization to establish persistence. Network logon scripts can be assigned using Active Directory or Group Policy Objects.(Citation: Petri Logon Script AD) These logon scripts run with the privileges of the user they are assigned to. Depending on the systems within the network, initializing one of these scripts could apply to more than one or potentially all systems.  \n \nAdversaries may use these scripts to maintain persistence on a network. Depending on the access configuration of the logon scripts, either local credentials or an administrator account may be necessary."
+}

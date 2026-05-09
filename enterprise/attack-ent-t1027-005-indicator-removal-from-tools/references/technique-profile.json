@@ -1,0 +1,46 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1027.005",
+  "name": "Indicator Removal from Tools",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1027/005",
+  "stix_id": "attack-pattern--b0533c6e-8fea-4788-874f-b799cacc4b92",
+  "attack_version": "2.0",
+  "created": "2020-03-19T21:27:32.820Z",
+  "modified": "2026-04-15T22:19:28.558Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "APT3 (intrusion-set)",
+    "Cobalt Strike (malware)",
+    "Daserf (malware)",
+    "Deep Panda (intrusion-set)",
+    "GALLIUM (intrusion-set)",
+    "GravityRAT (malware)",
+    "InvisiMole (malware)",
+    "OilRig (intrusion-set)",
+    "Operation Wocao (campaign)",
+    "Patchwork (intrusion-set)",
+    "Penquin (malware)",
+    "PowerSploit (tool)",
+    "QakBot (malware)",
+    "SUNBURST (malware)",
+    "Triton Safety Instrumented System Attack (campaign)",
+    "Turla (intrusion-set)",
+    "UNC3886 (intrusion-set)",
+    "Waterbear (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may remove indicators from tools if they believe their malicious tool was detected, quarantined, or otherwise curtailed. They can modify the tool by removing the indicator and using the updated version that is no longer detected by the target's defensive systems or subsequent targets that may use similar systems.\n\nA good example of this is when malware is detected with a file signature and quarantined by anti-virus software. An adversary who can determine that the malware was quarantined because of its file signature may modify the file to explicitly avoid that signature, and then re-use the malware."
+}

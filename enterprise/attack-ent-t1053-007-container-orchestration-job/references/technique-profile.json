@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1053.007",
+  "name": "Container Orchestration Job",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1053/007",
+  "stix_id": "attack-pattern--1126cab1-c700-412f-a510-61f4937bb096",
+  "attack_version": "1.4",
+  "created": "2021-03-29T17:06:22.247Z",
+  "modified": "2025-10-24T17:48:25.363Z",
+  "tactics": [
+    "execution",
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Containers"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Privileged Account Management",
+    "User Account Management"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse task scheduling functionality provided by container orchestration tools such as Kubernetes to schedule deployment of containers configured to execute malicious code. Container orchestration jobs run these automated tasks at a specific date and time, similar to cron jobs on a Linux system. Deployments of this type can also be configured to maintain a quantity of containers over time, automating the process of maintaining persistence within a cluster.\n\nIn Kubernetes, a CronJob may be used to schedule a Job that runs one or more containers to perform specific tasks.(Citation: Kubernetes Jobs)(Citation: Kubernetes CronJob) An adversary therefore may utilize a CronJob to schedule deployment of a Job that executes malicious code in various nodes within a cluster.(Citation: Threat Matrix for Kubernetes)"
+}

@@ -1,0 +1,29 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1496.002",
+  "name": "Bandwidth Hijacking",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1496/002",
+  "stix_id": "attack-pattern--718cb208-6446-4572-a2f0-9c799c60091e",
+  "attack_version": "1.0",
+  "created": "2024-09-25T13:44:35.412Z",
+  "modified": "2025-04-15T21:52:31.979Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Linux",
+    "Windows",
+    "macOS",
+    "IaaS",
+    "Containers"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage the network bandwidth resources of co-opted systems to complete resource-intensive tasks, which may impact system and/or hosted service availability. \n\nAdversaries may also use malware that leverages a system's network bandwidth as part of a botnet in order to facilitate [Network Denial of Service](https://attack.mitre.org/techniques/T1498) campaigns and/or to seed malicious torrents.(Citation: GoBotKR) Alternatively, they may engage in proxyjacking by selling use of the victims' network bandwidth and IP address to proxyware services.(Citation: Sysdig Proxyjacking) Finally, they may engage in internet-wide scanning in order to identify additional targets for compromise.(Citation: Unit 42 Leaked Environment Variables 2024)\n\nIn addition to incurring potential financial costs or availability disruptions, this technique may cause reputational damage if a victim\u2019s bandwidth is used for illegal activities.(Citation: Sysdig Proxyjacking)"
+}

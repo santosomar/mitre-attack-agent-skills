@@ -1,0 +1,51 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1072",
+  "name": "Software Deployment Tools",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1072",
+  "stix_id": "attack-pattern--92a78814-b191-47ca-909c-1ccfe3777414",
+  "attack_version": "3.2",
+  "created": "2017-05-31T21:30:57.201Z",
+  "modified": "2025-10-24T17:49:06.595Z",
+  "tactics": [
+    "execution",
+    "lateral-movement"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "SaaS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Active Directory Configuration",
+    "Limit Software Installation",
+    "Multi-factor Authentication",
+    "Network Segmentation",
+    "Password Policies",
+    "Privileged Account Management",
+    "Remote Data Storage",
+    "Update Software",
+    "User Account Management",
+    "User Training"
+  ],
+  "known_context": [
+    "APT32 (intrusion-set)",
+    "C0018 (campaign)",
+    "Medusa Group (intrusion-set)",
+    "Mustang Panda (intrusion-set)",
+    "Sandworm Team (intrusion-set)",
+    "Silence (intrusion-set)",
+    "Threat Group-1314 (intrusion-set)",
+    "VOID MANTICORE (intrusion-set)",
+    "Wiper (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may gain access to and use centralized software suites installed within an enterprise to execute commands and move laterally through the network. Configuration management and software deployment applications may be used in an enterprise network or cloud environment for routine administration purposes. These systems may also be integrated into CI/CD pipelines. Examples of such solutions include: SCCM, HBSS, Altiris, AWS Systems Manager, Microsoft Intune, Azure Arc, and GCP Deployment Manager.  \n\nAccess to network-wide or enterprise-wide endpoint management software may enable an adversary to achieve remote code execution on all connected systems. The access may be used to laterally move to other systems, gather information, or cause a specific effect, such as wiping the hard drives on all endpoints.\n\nSaaS-based configuration management services may allow for broad [Cloud Administration Command](https://attack.mitre.org/techniques/T1651) on cloud-hosted instances, as well as the execution of arbitrary commands on on-premises endpoints. For example, Microsoft Configuration Manager allows Global or Intune Administrators to run scripts as SYSTEM on on-premises devices joined to Entra ID.(Citation: SpecterOps Lateral Movement from Azure to On-Prem AD 2020) Such services may also utilize [Web Protocols](https://attack.mitre.org/techniques/T1071/001) to communicate back to adversary owned infrastructure.(Citation: Mitiga Security Advisory: SSM Agent as Remote Access Trojan)\n\nNetwork infrastructure devices may also have configuration management tools that can be similarly abused by adversaries.(Citation: Fortinet Zero-Day and Custom Malware Used by Suspected Chinese Actor in Espionage Operation)\n\nThe permissions required for this action vary by system configuration; local credentials may be sufficient with direct access to the third-party system, or specific domain credentials may be required. However, the system may require an administrative account to log in or to access specific functionality."
+}

@@ -1,0 +1,39 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1111",
+  "name": "Multi-Factor Authentication Interception",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1111",
+  "stix_id": "attack-pattern--dd43c543-bb85-4a6f-aa6e-160d90d06a49",
+  "attack_version": "2.1",
+  "created": "2017-05-31T21:31:23.195Z",
+  "modified": "2025-10-24T17:49:29.231Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Training"
+  ],
+  "known_context": [
+    "APT42 (intrusion-set)",
+    "Chimera (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "LAPSUS$ (intrusion-set)",
+    "Leviathan Australian Intrusions (campaign)",
+    "Operation Wocao (campaign)",
+    "SLOWPULSE (malware)",
+    "Sykipot (malware)",
+    "evilginx2 (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may target multi-factor authentication (MFA) mechanisms, (i.e., smart cards, token generators, etc.) to gain access to credentials that can be used to access systems, services, and network resources. Use of MFA is recommended and provides a higher level of security than usernames and passwords alone, but organizations should be aware of techniques that could be used to intercept and bypass these security mechanisms. \n\nIf a smart card is used for multi-factor authentication, then a keylogger will need to be used to obtain the password associated with a smart card during normal use. With both an inserted card and access to the smart card password, an adversary can connect to a network resource using the infected system to proxy the authentication with the inserted hardware token. (Citation: Mandiant M Trends 2011)\n\nAdversaries may also employ a keylogger to similarly target other hardware tokens, such as RSA SecurID. Capturing token input (including a user's personal identification code) may provide temporary access (i.e. replay the one-time passcode until the next value rollover) as well as possibly enabling adversaries to reliably predict future authentication values (given access to both the algorithm and any seed values used to generate appended temporary codes). (Citation: GCN RSA June 2011)\n\nOther methods of MFA may be intercepted and used by an adversary to authenticate. It is common for one-time codes to be sent via out-of-band communications (email, SMS). If the device and/or service is not secured, then it may be vulnerable to interception. Service providers can also be targeted: for example, an adversary may compromise an SMS messaging service in order to steal MFA codes sent to users\u2019 phones.(Citation: Okta Scatter Swine 2022)"
+}

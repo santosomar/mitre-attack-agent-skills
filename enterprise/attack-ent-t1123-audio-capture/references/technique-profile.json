@@ -1,0 +1,48 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1123",
+  "name": "Audio Capture",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1123",
+  "stix_id": "attack-pattern--1035cdf2-3e5f-446f-a7a7-e8f6d7925967",
+  "attack_version": "1.0",
+  "created": "2017-05-31T21:31:34.528Z",
+  "modified": "2025-10-24T17:48:24.702Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "APT37 (intrusion-set)",
+    "Attor (malware)",
+    "Bandook (malware)",
+    "Cadelspy (malware)",
+    "Cobian RAT (malware)",
+    "Crimson (malware)",
+    "DOGCALL (malware)",
+    "DarkComet (malware)",
+    "Derusbi (malware)",
+    "EvilGrab (malware)",
+    "Flame (malware)",
+    "Imminent Monitor (tool)",
+    "InvisiMole (malware)",
+    "Janicab (malware)",
+    "LightSpy (malware)",
+    "MacMa (malware)",
+    "MacSpy (malware)",
+    "Machete (malware)",
+    "MgBot (malware)",
+    "Micropsia (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary can leverage a computer's peripheral devices (e.g., microphones and webcams) or applications (e.g., voice and video call services) to capture audio recordings for the purpose of listening into sensitive conversations to gather information.(Citation: ESET Attor Oct 2019)\n\nMalware or scripts may be used to interact with the devices through an available API provided by the operating system or an application to capture audio. Audio files may be written to disk and exfiltrated later."
+}

@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1137.004",
+  "name": "Outlook Home Page",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1137/004",
+  "stix_id": "attack-pattern--bf147104-abf9-4221-95d1-e81585859441",
+  "attack_version": "1.2",
+  "created": "2019-11-07T20:09:56.536Z",
+  "modified": "2025-10-24T17:49:18.872Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Windows",
+    "Office Suite"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Behavior Prevention on Endpoint",
+    "Update Software"
+  ],
+  "known_context": [
+    "OilRig (intrusion-set)",
+    "Ruler (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Microsoft Outlook's Home Page feature to obtain persistence on a compromised system. Outlook Home Page is a legacy feature used to customize the presentation of Outlook folders. This feature allows for an internal or external URL to be loaded and presented whenever a folder is opened. A malicious HTML page can be crafted that will execute code when loaded by Outlook Home Page.(Citation: SensePost Outlook Home Page)\n\nOnce malicious home pages have been added to the user\u2019s mailbox, they will be loaded when Outlook is started. Malicious Home Pages will execute when the right Outlook folder is loaded/reloaded.(Citation: SensePost Outlook Home Page)"
+}

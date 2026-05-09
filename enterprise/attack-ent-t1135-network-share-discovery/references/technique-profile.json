@@ -1,0 +1,50 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1135",
+  "name": "Network Share Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1135",
+  "stix_id": "attack-pattern--3489cfc5-640f-4bb3-a103-9137b97de79f",
+  "attack_version": "3.2",
+  "created": "2017-12-14T16:46:06.044Z",
+  "modified": "2025-10-24T17:48:37.475Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Operating System Configuration"
+  ],
+  "known_context": [
+    "APT1 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "Akira (malware)",
+    "Avaddon (malware)",
+    "AvosLocker (malware)",
+    "BADHATCH (malware)",
+    "Babuk (malware)",
+    "Bad Rabbit (malware)",
+    "Bazar (malware)",
+    "BitPaymer (malware)",
+    "BlackByte (intrusion-set)",
+    "BlackByte 2.0 Ransomware (malware)",
+    "BlackByte Ransomware (malware)",
+    "BlackCat (malware)",
+    "C0015 (campaign)",
+    "Chimera (intrusion-set)",
+    "Clambling (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may look for folders and drives shared on remote systems as a means of identifying sources of information to gather as a precursor for Collection and to identify potential systems of interest for Lateral Movement. Networks often contain shared network drives and folders that enable users to access file directories on various systems across a network. \n\nFile sharing over a Windows network occurs over the SMB protocol. (Citation: Wikipedia Shared Resource) (Citation: TechNet Shared Folder) [Net](https://attack.mitre.org/software/S0039) can be used to query a remote system for available shared drives using the <code>net view \\\\\\\\remotesystem</code> command. It can also be used to query shared drives on the local system using <code>net share</code>. For macOS, the <code>sharing -l</code> command lists all shared points used for smb services."
+}

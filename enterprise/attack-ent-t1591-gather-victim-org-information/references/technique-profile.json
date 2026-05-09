@@ -1,0 +1,37 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1591",
+  "name": "Gather Victim Org Information",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1591",
+  "stix_id": "attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23",
+  "attack_version": "1.1",
+  "created": "2020-10-02T16:27:02.339Z",
+  "modified": "2025-10-24T17:49:06.846Z",
+  "tactics": [
+    "reconnaissance"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "FIN7 (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "Lazarus Group (intrusion-set)",
+    "MirrorFace (intrusion-set)",
+    "Moonstone Sleet (intrusion-set)",
+    "Operation Digital Eye (campaign)",
+    "Operation Dream Job (campaign)",
+    "Volt Typhoon (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may gather information about the victim's organization that can be used during targeting. Information about an organization may include a variety of details, including the names of divisions/departments, specifics of business operations, as well as the roles and responsibilities of key employees.\n\nAdversaries may gather this information in various ways, such as direct elicitation via [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about an organization may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: ThreatPost Broadvoice Leak)(Citation: SEC EDGAR Search) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566) or [Trusted Relationship](https://attack.mitre.org/techniques/T1199))."
+}

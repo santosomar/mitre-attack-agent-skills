@@ -1,0 +1,27 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1668",
+  "name": "Exclusive Control",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1668",
+  "stix_id": "attack-pattern--dff263cc-328e-42b4-afbc-1fee8b6a8913",
+  "attack_version": "1.0",
+  "created": "2025-01-31T15:22:39.317Z",
+  "modified": "2025-04-15T19:59:14.622Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries who successfully compromise a system may attempt to maintain persistence by \u201cclosing the door\u201d behind them  \u2013 in other words, by preventing other threat actors from initially accessing or maintaining a foothold on the same system. \n\nFor example, adversaries may patch a vulnerable, compromised system(Citation: Mandiant-iab-control)(Citation: CERT AT Fortinent Ransomware 2025) to prevent other threat actors from leveraging that vulnerability in the future. They may \u201cclose the door\u201d in other ways, such as disabling vulnerable services(Citation: sophos-multiple-attackers), stripping privileges from accounts(Citation: aquasec-postgres-processes), or removing other malware already on the compromised device.(Citation: fsecure-netsky)\n\nHindering other threat actors may allow an adversary to maintain sole access to a compromised system or network. This prevents the threat actor from needing to compete with or even being removed themselves by other threat actors. It also reduces the \u201cnoise\u201d in the environment, lowering the possibility of being caught and evicted by defenders. Finally, in the case of [Resource Hijacking](https://attack.mitre.org/techniques/T1496), leveraging a compromised device\u2019s full power allows the threat actor to maximize profit.(Citation: sophos-multiple-attackers)"
+}

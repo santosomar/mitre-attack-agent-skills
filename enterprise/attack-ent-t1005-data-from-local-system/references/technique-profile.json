@@ -1,0 +1,52 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1005",
+  "name": "Data from Local System",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1005",
+  "stix_id": "attack-pattern--3c4a2599-71ee-4405-ba1e-0e28414b4bc5",
+  "attack_version": "1.8",
+  "created": "2017-05-31T21:30:20.537Z",
+  "modified": "2025-10-24T17:48:40.839Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Data Loss Prevention"
+  ],
+  "known_context": [
+    "APT1 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "APT3 (intrusion-set)",
+    "APT37 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "Action RAT (malware)",
+    "Agrius (intrusion-set)",
+    "Amadey (malware)",
+    "Andariel (intrusion-set)",
+    "Anthropic AI-orchestrated Campaign (campaign)",
+    "AppleSeed (malware)",
+    "Aquatic Panda (intrusion-set)",
+    "AuTo Stealer (malware)",
+    "Axiom (intrusion-set)",
+    "BADFLICK (malware)",
+    "BADNEWS (malware)",
+    "BLINDINGCAN (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.\n\nAdversaries may do this using a [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059), such as [cmd](https://attack.mitre.org/software/S0106) as well as a [Network Device CLI](https://attack.mitre.org/techniques/T1059/008), which have functionality to interact with the file system to gather information.(Citation: show_run_config_cmd_cisco) Adversaries may also use [Automated Collection](https://attack.mitre.org/techniques/T1119) on the local system."
+}

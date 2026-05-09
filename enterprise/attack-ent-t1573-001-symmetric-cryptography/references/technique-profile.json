@@ -1,0 +1,52 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1573.001",
+  "name": "Symmetric Cryptography",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1573/001",
+  "stix_id": "attack-pattern--24bfaeba-cb0d-4525-b3dc-507c77ecec41",
+  "attack_version": "1.2",
+  "created": "2020-03-16T15:45:17.032Z",
+  "modified": "2025-10-24T17:48:32.429Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "3CX Supply Chain Attack (campaign)",
+    "3PARA RAT (malware)",
+    "4H RAT (malware)",
+    "ADVSTORESHELL (malware)",
+    "APT28 (intrusion-set)",
+    "APT33 (intrusion-set)",
+    "Attor (malware)",
+    "Azorult (malware)",
+    "BADCALL (malware)",
+    "BADNEWS (malware)",
+    "BBSRAT (malware)",
+    "BLINDINGCAN (malware)",
+    "BOOKWORM (malware)",
+    "BRONZE BUTLER (intrusion-set)",
+    "Bandook (malware)",
+    "Bazar (malware)",
+    "BendyBear (malware)",
+    "Bisonal (malware)",
+    "Bonadan (malware)",
+    "Bumblebee (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may employ a known symmetric encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol. Symmetric encryption algorithms use the same key for plaintext encryption and ciphertext decryption. Common symmetric encryption algorithms include AES, DES, 3DES, Blowfish, and RC4."
+}

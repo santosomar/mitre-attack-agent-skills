@@ -1,0 +1,48 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1120",
+  "name": "Peripheral Device Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1120",
+  "stix_id": "attack-pattern--348f1eef-964b-4eb6-bb53-69b3dcb0c643",
+  "attack_version": "1.4",
+  "created": "2017-05-31T21:31:28.471Z",
+  "modified": "2025-10-24T17:48:37.563Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "ADVSTORESHELL (malware)",
+    "APT28 (intrusion-set)",
+    "APT37 (intrusion-set)",
+    "AcidPour (malware)",
+    "Attor (malware)",
+    "BADNEWS (malware)",
+    "BackdoorDiplomacy (intrusion-set)",
+    "Bandook (malware)",
+    "BlackEnergy (malware)",
+    "CHIMNEYSWEEP (malware)",
+    "Cadelspy (malware)",
+    "Crimson (malware)",
+    "Crutch (malware)",
+    "DarkWatchman (malware)",
+    "DustySky (malware)",
+    "DynoWiper (malware)",
+    "Equation (intrusion-set)",
+    "Ferocious (malware)",
+    "FlawedAmmyy (malware)",
+    "FunnyDream (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to gather information about attached peripheral devices and components connected to a computer system.(Citation: Peripheral Discovery Linux)(Citation: Peripheral Discovery macOS) Peripheral devices could include auxiliary resources that support a variety of functionalities such as keyboards, printers, cameras, smart card readers, or removable storage. The information may be used to enhance their awareness of the system and network environment or may be used for further actions."
+}

@@ -1,0 +1,50 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1685.005",
+  "name": "Clear Windows Event Logs",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1685/005",
+  "stix_id": "attack-pattern--75b9a4d2-d4e2-4ca1-9aab-1badd9e05fd0",
+  "attack_version": "1.0",
+  "created": "2026-04-14T22:54:03.796Z",
+  "modified": "2026-04-22T15:41:59.512Z",
+  "tactics": [
+    "defense-impairment"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Encrypt Sensitive Information",
+    "Remote Data Storage",
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "Apostle (malware)",
+    "Aquatic Panda (intrusion-set)",
+    "BlackCat (malware)",
+    "BlackEnergy (malware)",
+    "Chimera (intrusion-set)",
+    "DUSTTRAP (malware)",
+    "Dragonfly (intrusion-set)",
+    "FIN5 (intrusion-set)",
+    "FIN8 (intrusion-set)",
+    "FinFisher (malware)",
+    "HAFNIUM (intrusion-set)",
+    "HermeticWiper (malware)",
+    "HermeticWizard (malware)",
+    "Hydraq (malware)",
+    "Indrik Spider (intrusion-set)",
+    "KillDisk (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may clear Windows Event Logs to hide the activity of an intrusion. Windows Event Logs are a record of a computer's alerts and notifications. There are three system-defined sources of events: System, Application, and Security, with five event types: Error, Warning, Information, Success Audit, and Failure Audit.\n\nWith administrator privileges, the event logs can be cleared with the following utility commands:\n\n* `wevtutil cl system`\n* `wevtutil cl application`\n* `wevtutil cl security`\n\nThese logs may also be cleared through other mechanisms, such as the event viewer GUI or [PowerShell](https://attack.mitre.org/techniques/T1059/001). For example, adversaries may use the PowerShell command `Remove-EventLog -LogName Security` to delete the Security EventLog and after reboot, disable future logging. Note: events may still be generated and logged in the .evtx file between the time the command is run and the reboot.(Citation: disable_win_evt_logging)\n\nAdversaries may also attempt to clear logs by directly deleting the stored log files within `C:\\Windows\\System32\\winevt\\logs\\`."
+}

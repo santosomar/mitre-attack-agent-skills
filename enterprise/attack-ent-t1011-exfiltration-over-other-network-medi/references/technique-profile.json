@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1011",
+  "name": "Exfiltration Over Other Network Medium",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1011",
+  "stix_id": "attack-pattern--51ea26b1-ff1e-4faa-b1a0-1114cd298c87",
+  "attack_version": "1.2",
+  "created": "2017-05-31T21:30:25.159Z",
+  "modified": "2025-10-24T17:48:47.042Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "Operating System Configuration"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to exfiltrate data over a different network medium than the command and control channel. If the command and control network is a wired Internet connection, the exfiltration may occur, for example, over a WiFi connection, modem, cellular data connection, Bluetooth, or another radio frequency (RF) channel.\n\nAdversaries may choose to do this if they have sufficient access or proximity, and the connection might not be secured or defended as well as the primary Internet-connected channel because it is not routed through the same enterprise network."
+}

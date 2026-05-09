@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1134.003",
+  "name": "Make and Impersonate Token",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1134/003",
+  "stix_id": "attack-pattern--8cdeb020-e31e-4f88-a582-f53dcfbda819",
+  "attack_version": "2.0",
+  "created": "2020-02-18T18:03:37.481Z",
+  "modified": "2026-04-15T19:56:16.233Z",
+  "tactics": [
+    "privilege-escalation",
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Privileged Account Management",
+    "User Account Management"
+  ],
+  "known_context": [
+    "BlackByte (intrusion-set)",
+    "Cobalt Strike (malware)",
+    "FIN13 (intrusion-set)",
+    "Mafalda (malware)",
+    "SILENTTRINITY (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may make new tokens and impersonate users to escalate privileges and bypass access controls. For example, if an adversary has a username and password but the user is not logged onto the system the adversary can then create a logon session for the user using the `LogonUser` function.(Citation: LogonUserW function) The function will return a copy of the new session's access token and the adversary can use `SetThreadToken` to assign the token to a thread.\n\nThis behavior is distinct from [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001) in that this refers to creating a new user token instead of stealing or duplicating an existing one."
+}

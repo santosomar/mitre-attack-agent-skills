@@ -1,0 +1,42 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1056",
+  "name": "Input Capture",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1056",
+  "stix_id": "attack-pattern--bb5a00de-e086-4859-a231-fa793f6797e2",
+  "attack_version": "1.4",
+  "created": "2017-05-31T21:30:48.323Z",
+  "modified": "2025-10-24T17:49:17.884Z",
+  "tactics": [
+    "collection",
+    "credential-access"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "APT39 (intrusion-set)",
+    "APT42 (intrusion-set)",
+    "Chaes (malware)",
+    "FlawedAmmyy (malware)",
+    "InvisibleFerret (malware)",
+    "Kobalos (malware)",
+    "Leviathan Australian Intrusions (campaign)",
+    "Mafalda (malware)",
+    "NPPSPY (tool)",
+    "Storm-1811 (intrusion-set)",
+    "Versa Director Zero Day Exploitation (campaign)",
+    "metaMain (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use methods of capturing user input to obtain credentials or collect information. During normal system usage, users often provide credentials to various different locations, such as login pages/portals or system dialog boxes. Input capture mechanisms may be transparent to the user (e.g. [Credential API Hooking](https://attack.mitre.org/techniques/T1056/004)) or rely on deceiving the user into providing input into what they believe to be a genuine service (e.g. [Web Portal Capture](https://attack.mitre.org/techniques/T1056/003))."
+}

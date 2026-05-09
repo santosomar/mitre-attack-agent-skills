@@ -1,0 +1,34 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1137",
+  "name": "Office Application Startup",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1137",
+  "stix_id": "attack-pattern--2c4d4e92-0ccf-4a97-b54c-86d662988a53",
+  "attack_version": "1.4",
+  "created": "2017-12-14T16:46:06.044Z",
+  "modified": "2025-10-24T17:48:34.614Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Windows",
+    "Office Suite"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Behavior Prevention on Endpoint",
+    "Disable or Remove Feature or Program",
+    "Software Configuration",
+    "Update Software"
+  ],
+  "known_context": [
+    "APT32 (intrusion-set)",
+    "Gamaredon Group (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage Microsoft Office-based applications for persistence between startups. Microsoft Office is a fairly common application suite on Windows-based operating systems within an enterprise network. There are multiple mechanisms that can be used with Office for persistence when an Office-based application is started; this can include the use of Office Template Macros and add-ins.\n\nA variety of features have been discovered in Outlook that can be abused to obtain persistence, such as Outlook rules, forms, and Home Page.(Citation: SensePost Ruler GitHub) These persistence mechanisms can work within Outlook or be used through Office 365.(Citation: TechNet O365 Outlook Rules)"
+}

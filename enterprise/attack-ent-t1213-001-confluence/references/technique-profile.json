@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1213.001",
+  "name": "Confluence",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1213/001",
+  "stix_id": "attack-pattern--7ad38ef1-381a-406d-872a-38b136eb5ecc",
+  "attack_version": "1.1",
+  "created": "2020-02-14T13:09:51.004Z",
+  "modified": "2025-10-24T17:48:59.776Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "SaaS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "User Account Management",
+    "User Training"
+  ],
+  "known_context": [
+    "LAPSUS$ (intrusion-set)",
+    "TruffleHog (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage Confluence repositories to mine valuable information. Often found in development environments alongside Atlassian JIRA, Confluence is generally used to store development-related documentation, however, in general may contain more diverse categories of useful information, such as:\n\n* Policies, procedures, and standards\n* Physical / logical network diagrams\n* System architecture diagrams\n* Technical system documentation\n* Testing / development credentials (i.e., [Unsecured Credentials](https://attack.mitre.org/techniques/T1552))\n* Work / project schedules\n* Source code snippets\n* Links to network shares and other internal resources"
+}

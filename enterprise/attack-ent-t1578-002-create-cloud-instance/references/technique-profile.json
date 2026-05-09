@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1578.002",
+  "name": "Create Cloud Instance",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1578/002",
+  "stix_id": "attack-pattern--cf1c2504-433f-4c4e-a1f8-91de45a0318c",
+  "attack_version": "2.0",
+  "created": "2020-05-14T14:45:15.978Z",
+  "modified": "2026-04-16T20:07:52.862Z",
+  "tactics": [
+    "defense-impairment"
+  ],
+  "platforms": [
+    "IaaS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "User Account Management"
+  ],
+  "known_context": [
+    "C0027 (campaign)",
+    "LAPSUS$ (intrusion-set)",
+    "Scattered Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may create a new instance or virtual machine (VM) within the compute service of a cloud account to evade defenses. Creating a new instance may allow an adversary to bypass firewall rules and permissions that exist on instances currently residing within an account. An adversary may [Create Snapshot](https://attack.mitre.org/techniques/T1578/001) of one or more volumes in an account, create a new instance, mount the snapshots, and then apply a less restrictive security policy to collect [Data from Local System](https://attack.mitre.org/techniques/T1005) or for [Remote Data Staging](https://attack.mitre.org/techniques/T1074/002).(Citation: Mandiant M-Trends 2020)\n\nCreating a new instance may also allow an adversary to carry out malicious activity within an environment without affecting the execution of current running instances."
+}

@@ -1,0 +1,45 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1491.001",
+  "name": "Internal Defacement",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1491/001",
+  "stix_id": "attack-pattern--8c41090b-aa47-4331-986b-8c9a51a91103",
+  "attack_version": "1.2",
+  "created": "2020-02-20T14:31:34.778Z",
+  "modified": "2025-10-24T17:49:05.030Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Data Backup"
+  ],
+  "known_context": [
+    "Black Basta (malware)",
+    "BlackByte (intrusion-set)",
+    "BlackCat (malware)",
+    "Diavol (malware)",
+    "Gamaredon Group (intrusion-set)",
+    "INC Ransomware (malware)",
+    "Lazarus Group (intrusion-set)",
+    "Meteor (malware)",
+    "Qilin (malware)",
+    "ROADSWEEP (malware)",
+    "RansomHub (malware)",
+    "Remcos (tool)",
+    "SameCoin (malware)",
+    "ShrinkLocker (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may deface systems internal to an organization in an attempt to intimidate or mislead users, thus discrediting the integrity of the systems. This may take the form of modifications to internal websites or server login messages, or directly to user systems with the replacement of the desktop wallpaper.(Citation: Novetta Blockbuster)(Citation: Varonis) Disturbing or offensive images may be used as a part of [Internal Defacement](https://attack.mitre.org/techniques/T1491/001) in order to cause user discomfort, or to pressure compliance with accompanying messages. Since internally defacing systems exposes an adversary's presence, it often takes place after other intrusion goals have been accomplished.(Citation: Novetta Blockbuster Destructive Malware)"
+}

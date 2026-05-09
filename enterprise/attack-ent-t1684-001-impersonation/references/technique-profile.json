@@ -1,0 +1,53 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1684.001",
+  "name": "Impersonation",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1684/001",
+  "stix_id": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+  "attack_version": "1.0",
+  "created": "2026-04-14T22:54:01.082Z",
+  "modified": "2026-04-22T15:50:04.400Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Office Suite",
+    "SaaS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Threat Intelligence Program",
+    "User Training"
+  ],
+  "known_context": [
+    "APT-C-36 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "APT42 (intrusion-set)",
+    "C0027 (campaign)",
+    "Contagious Interview (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "LAPSUS$ (intrusion-set)",
+    "MirrorFace (intrusion-set)",
+    "MuddyWater (intrusion-set)",
+    "NPPSPY (tool)",
+    "Operation Dream Job (campaign)",
+    "RustyWater (malware)",
+    "Saint Bear (intrusion-set)",
+    "Salesforce Data Exfiltration (campaign)",
+    "Scattered Spider (intrusion-set)",
+    "Star Blizzard (intrusion-set)",
+    "Storm-1811 (intrusion-set)",
+    "VOID MANTICORE (intrusion-set)",
+    "WIRTE (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. For example, adversaries may communicate with victims (via [Phishing for Information](https://attack.mitre.org/techniques/T1598), [Phishing](https://attack.mitre.org/techniques/T1566), or [Internal Spearphishing](https://attack.mitre.org/techniques/T1534)) while impersonating a known sender such as an executive, colleague, or third-party vendor. Established trust can then be leveraged to accomplish an adversary\u2019s ultimate goals, possibly against multiple victims.\n\nIn many cases of business email compromise or email fraud campaigns, adversaries use impersonation to defraud victims -- deceiving them into sending money or divulging information that ultimately enables [Financial Theft](https://attack.mitre.org/techniques/T1657).\n\nAdversaries will often also use social engineering techniques such as manipulative and persuasive language in email subject lines and body text such as `payment`, `request`, or `urgent` to push the victim to act quickly before malicious activity is detected. These campaigns are often specifically targeted against people who, due to job roles and/or accesses, can carry out the adversary\u2019s goal.\u202f\u202f\n\nImpersonation is typically preceded by reconnaissance techniques such as [Gather Victim Identity Information](https://attack.mitre.org/techniques/T1589) and [Gather Victim Org Information](https://attack.mitre.org/techniques/T1591) as well as acquiring infrastructure such as email domains (i.e. [Domains](https://attack.mitre.org/techniques/T1583/001)) to substantiate their false identity.(Citation: Crowdstrike BEC)\n\nThere is the potential for multiple victims in campaigns involving impersonation. For example, an adversary may Compromise Accounts targeting one organization which can then be used to support impersonation against other entities.(Citation: VEC)"
+}

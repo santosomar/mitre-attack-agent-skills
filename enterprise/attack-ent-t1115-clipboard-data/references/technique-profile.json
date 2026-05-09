@@ -1,0 +1,48 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1115",
+  "name": "Clipboard Data",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1115",
+  "stix_id": "attack-pattern--30973a08-aed9-4edf-8604-9084ce1b5c4f",
+  "attack_version": "1.2",
+  "created": "2017-05-31T21:31:25.967Z",
+  "modified": "2025-10-24T17:48:36.079Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "Agent Tesla (malware)",
+    "Astaroth (malware)",
+    "Attor (malware)",
+    "BOOKWORM (malware)",
+    "CHIMNEYSWEEP (malware)",
+    "Cadelspy (malware)",
+    "Catchamas (malware)",
+    "Clambling (malware)",
+    "CosmicDuke (malware)",
+    "DarkComet (malware)",
+    "DarkGate (malware)",
+    "DarkTortilla (malware)",
+    "Empire (tool)",
+    "Explosive (malware)",
+    "FlawedAmmyy (malware)",
+    "Grandoreiro (malware)",
+    "Helminth (malware)",
+    "InvisibleFerret (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may collect data stored in the clipboard from users copying information within or between applications. \n\nFor example, on Windows adversaries can access clipboard data by using <code>clip.exe</code> or <code>Get-Clipboard</code>.(Citation: MSDN Clipboard)(Citation: clip_win_server)(Citation: CISA_AA21_200B) Additionally, adversaries may monitor then replace users\u2019 clipboard with their data (e.g., [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002)).(Citation: mining_ruby_reversinglabs)\n\nmacOS and Linux also have commands, such as <code>pbpaste</code>, to grab clipboard contents.(Citation: Operating with EmPyre)"
+}

@@ -1,0 +1,51 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1556",
+  "name": "Modify Authentication Process",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1556",
+  "stix_id": "attack-pattern--f4c1826f-a322-41cd-9557-562100848c84",
+  "attack_version": "3.0",
+  "created": "2020-02-11T19:01:56.887Z",
+  "modified": "2026-04-16T20:07:52.977Z",
+  "tactics": [
+    "credential-access",
+    "defense-impairment",
+    "persistence"
+  ],
+  "platforms": [
+    "IaaS",
+    "Identity Provider",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Office Suite",
+    "SaaS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Multi-factor Authentication",
+    "Operating System Configuration",
+    "Password Policies",
+    "Privileged Account Management",
+    "Privileged Process Integrity",
+    "Restrict File and Directory Permissions",
+    "Restrict Registry Permissions",
+    "User Account Management"
+  ],
+  "known_context": [
+    "ArcaneDoor (campaign)",
+    "DRYHOOK (malware)",
+    "Ebury (malware)",
+    "FIN13 (intrusion-set)",
+    "Kessel (malware)",
+    "SILENTTRINITY (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify authentication mechanisms and processes to access user credentials or enable otherwise unwarranted access to accounts. The authentication process is handled by mechanisms, such as the Local Security Authentication Server (LSASS) process and the Security Accounts Manager (SAM) on Windows, pluggable authentication modules (PAM) on Unix-based systems, and authorization plugins on MacOS systems, responsible for gathering, storing, and validating credentials. By modifying an authentication process, an adversary may be able to authenticate to a service or system without using [Valid Accounts](https://attack.mitre.org/techniques/T1078).\n\nAdversaries may maliciously modify a part of this process to either reveal credentials or bypass authentication mechanisms. Compromised credentials or access may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access and remote desktop."
+}

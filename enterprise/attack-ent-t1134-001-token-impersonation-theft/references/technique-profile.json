@@ -1,0 +1,50 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1134.001",
+  "name": "Token Impersonation/Theft",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1134/001",
+  "stix_id": "attack-pattern--86850eff-2729-40c3-b85e-c4af26da4a2d",
+  "attack_version": "2.0",
+  "created": "2020-02-18T16:39:06.289Z",
+  "modified": "2026-04-15T19:54:20.663Z",
+  "tactics": [
+    "privilege-escalation",
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Privileged Account Management",
+    "User Account Management"
+  ],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "Aria-body (malware)",
+    "BADHATCH (malware)",
+    "BitPaymer (malware)",
+    "Cobalt Strike (malware)",
+    "Emotet (malware)",
+    "FIN8 (intrusion-set)",
+    "FinFisher (malware)",
+    "Fooder (malware)",
+    "Havoc (malware)",
+    "HomeLand Justice (campaign)",
+    "LP-Notes (malware)",
+    "Okrum (malware)",
+    "Pupy (tool)",
+    "REvil (malware)",
+    "SILENTTRINITY (tool)",
+    "Shamoon (malware)",
+    "Siloscape (malware)",
+    "Stuxnet (malware)",
+    "Tarrask (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may duplicate then impersonate another user's existing token to escalate privileges and bypass access controls. For example, an adversary can duplicate an existing token using `DuplicateToken` or `DuplicateTokenEx`.(Citation: DuplicateToken function) The token can then be used with `ImpersonateLoggedOnUser` to allow the calling thread to impersonate a logged on user's security context, or with `SetThreadToken` to assign the impersonated token to a thread.\n\nAn adversary may perform [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001) when they have a specific, existing process they want to assign the duplicated token to. For example, this may be useful for when the target user has a non-network logon session on the system.\n\nWhen an adversary would instead use a duplicated token to create a new process rather than attaching to an existing process, they can additionally [Create Process with Token](https://attack.mitre.org/techniques/T1134/002) using `CreateProcessWithTokenW` or `CreateProcessAsUserW`. [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001) is also distinct from [Make and Impersonate Token](https://attack.mitre.org/techniques/T1134/003) in that it refers to duplicating an existing token, rather than creating a new one."
+}

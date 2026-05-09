@@ -1,0 +1,34 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1546.010",
+  "name": "AppInit DLLs",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1546/010",
+  "stix_id": "attack-pattern--cc89ecbd-3d33-4a41-bcca-001e702d18fd",
+  "attack_version": "1.2",
+  "created": "2020-01-24T14:52:25.589Z",
+  "modified": "2025-10-24T17:49:24.008Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Execution Prevention",
+    "Update Software"
+  ],
+  "known_context": [
+    "APT39 (intrusion-set)",
+    "Cherry Picker (malware)",
+    "Ramsay (malware)",
+    "T9000 (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by AppInit DLLs loaded into processes. Dynamic-link libraries (DLLs) that are specified in the <code>AppInit_DLLs</code> value in the Registry keys <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows</code> or <code>HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows</code> are loaded by user32.dll into every process that loads user32.dll. In practice this is nearly every program, since user32.dll is a very common library. (Citation: Elastic Process Injection July 2017)\n\nSimilar to Process Injection, these values can be abused to obtain elevated privileges by causing a malicious DLL to be loaded and run in the context of separate processes on the computer. (Citation: AppInit Registry) Malicious AppInit DLLs may also provide persistence by continuously being triggered by API activity. \n\nThe AppInit DLL functionality is disabled in Windows 8 and later versions when secure boot is enabled. (Citation: AppInit Secure Boot)"
+}

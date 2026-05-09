@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1127",
+  "name": "Trusted Developer Utilities Proxy Execution",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1127",
+  "stix_id": "attack-pattern--ff25900d-76d5-449b-a351-8824e62fc81b",
+  "attack_version": "2.0",
+  "created": "2017-05-31T21:31:39.262Z",
+  "modified": "2026-04-15T22:45:17.637Z",
+  "tactics": [
+    "execution",
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "Execution Prevention",
+    "Restrict Web-Based Content"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may take advantage of trusted developer utilities to proxy execution of malicious payloads. There are many utilities used for software development related tasks that can be used to execute code in various forms to assist in development, debugging, and reverse engineering.(Citation: engima0x3 DNX Bypass)(Citation: engima0x3 RCSI Bypass)(Citation: Exploit Monday WinDbg)(Citation: LOLBAS Tracker) These utilities may often be signed with legitimate certificates that allow them to execute on a system and proxy execution of malicious code through a trusted process that effectively bypasses application control solutions.\n\nSmart App Control is a feature of Windows that blocks applications it considers potentially malicious from running by verifying unsigned applications against a known safe list from a Microsoft cloud service before executing them.(Citation: Microsoft Smart App Control) However, adversaries may leverage \"reputation hijacking\" to abuse an operating system\u2019s trust of safe, signed applications that support the execution of arbitrary code. By leveraging [Trusted Developer Utilities Proxy Execution](https://attack.mitre.org/techniques/T1127) to run their malicious code, adversaries may bypass Smart App Control protections.(Citation: Elastic Security Labs)"
+}

@@ -1,0 +1,55 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1048.003",
+  "name": "Exfiltration Over Unencrypted Non-C2 Protocol",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1048/003",
+  "stix_id": "attack-pattern--fb8d023d-45be-47e9-bc51-f56bcae6435b",
+  "attack_version": "2.2",
+  "created": "2020-03-15T15:37:47.583Z",
+  "modified": "2025-10-24T17:49:39.079Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Data Loss Prevention",
+    "Filter Network Traffic",
+    "Network Intrusion Prevention",
+    "Network Segmentation"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "APT32 (intrusion-set)",
+    "APT33 (intrusion-set)",
+    "Agent Tesla (malware)",
+    "BITSAdmin (tool)",
+    "Brave Prince (malware)",
+    "C0017 (campaign)",
+    "CORALDECK (malware)",
+    "Carbon (malware)",
+    "CharmPower (malware)",
+    "Cherry Picker (malware)",
+    "Contagious Interview (intrusion-set)",
+    "CookieMiner (malware)",
+    "CosmicDuke (malware)",
+    "Dok (malware)",
+    "FIN6 (intrusion-set)",
+    "FIN8 (intrusion-set)",
+    "InvisibleFerret (malware)",
+    "KONNI (malware)",
+    "Kessel (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server.(Citation: copy_cmd_cisco)\n\nAdversaries may opt to obfuscate this data, without the use of encryption, within network protocols that are natively unencrypted (such as HTTP, FTP, or DNS). This may include custom or publicly available encoding/compression algorithms (such as base64) as well as embedding data within protocol headers and fields."
+}

@@ -1,0 +1,36 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1205.002",
+  "name": "Socket Filters",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1205/002",
+  "stix_id": "attack-pattern--005cc321-08ce-4d17-b1ea-cb5275926520",
+  "attack_version": "2.0",
+  "created": "2022-09-30T21:18:41.930Z",
+  "modified": "2026-04-15T22:45:22.463Z",
+  "tactics": [
+    "command-and-control",
+    "persistence",
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Filter Network Traffic"
+  ],
+  "known_context": [
+    "BPFDoor (malware)",
+    "CASTLETAP (malware)",
+    "PITSTOP (malware)",
+    "Penquin (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attach filters to a network socket to monitor then activate backdoors used for persistence or command and control. With elevated permissions, adversaries can use features such as the `libpcap` library to open sockets and install filters to allow or disallow certain types of data to come through the socket. The filter may apply to all traffic passing through the specified network interface (or every interface if not specified). When the network interface receives a packet matching the filter criteria, additional actions can be triggered on the host, such as activation of a reverse shell.\n\nTo establish a connection, an adversary sends a crafted packet to the targeted host that matches the installed filter criteria.(Citation: haking9 libpcap network sniffing) Adversaries have used these socket filters to trigger the installation of implants, conduct ping backs, and to invoke command shells. Communication with these socket filters may also be used in conjunction with [Protocol Tunneling](https://attack.mitre.org/techniques/T1572).(Citation: exatrack bpf filters passive backdoors)(Citation: Leonardo Turla Penquin May 2020)\n\nFilters can be installed on any Unix-like platform with `libpcap` installed or on Windows hosts using `Winpcap`.  Adversaries may use either `libpcap` with `pcap_setfilter` or the standard library function `setsockopt` with `SO_ATTACH_FILTER` options. Since the socket connection is not active until the packet is received, this behavior may be difficult to detect due to the lack of activity on a host, low CPU overhead, and limited visibility into raw socket usage."
+}

@@ -1,0 +1,45 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1136",
+  "name": "Create Account",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1136",
+  "stix_id": "attack-pattern--e01be9c5-e763-4caf-aeb7-000b416aef67",
+  "attack_version": "2.6",
+  "created": "2017-12-14T16:46:06.044Z",
+  "modified": "2025-10-24T17:49:30.136Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Windows",
+    "IaaS",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Containers",
+    "SaaS",
+    "Office Suite",
+    "Identity Provider",
+    "ESXi"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Multi-factor Authentication",
+    "Network Segmentation",
+    "Operating System Configuration",
+    "Privileged Account Management"
+  ],
+  "known_context": [
+    "2016 Ukraine Electric Power Attack (campaign)",
+    "Indrik Spider (intrusion-set)",
+    "LockBit 2.0 (malware)",
+    "Salt Typhoon (intrusion-set)",
+    "Scattered Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may create an account to maintain access to victim systems.(Citation: Symantec WastedLocker June 2020) With a sufficient level of access, creating such accounts may be used to establish secondary credentialed access that do not require persistent remote access tools to be deployed on the system.\n\nAccounts may be created on the local system or within a domain or cloud tenant. In cloud environments, adversaries may create accounts that only have access to specific services, which can reduce the chance of detection."
+}

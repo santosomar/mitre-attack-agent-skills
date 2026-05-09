@@ -1,0 +1,31 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1036.012",
+  "name": "Browser Fingerprint",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1036/012",
+  "stix_id": "attack-pattern--afac5dbc-4383-4fb6-9ba6-45b25d49e530",
+  "attack_version": "2.0",
+  "created": "2025-09-22T20:13:45.616Z",
+  "modified": "2026-04-15T20:37:12.322Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit"
+  ],
+  "known_context": [
+    "FatDuke (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to blend in with legitimate traffic by spoofing browser and system attributes like operating system, system language, platform, user-agent string, resolution, time zone, etc.  The HTTP\u00a0User-Agent\u00a0request header\u00a0is a string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting\u00a0user agent.(Citation: Mozilla User Agent)\n\nAdversaries may gather this information through [System Information Discovery](https://attack.mitre.org/techniques/T1082) or by users navigating to adversary-controlled websites, and then use that information to craft their web traffic to evade defenses.(Citation: Gummy Browsers Targeted Browser Spoofing against State-of-the-Art Fingerprinting Techniques)"
+}

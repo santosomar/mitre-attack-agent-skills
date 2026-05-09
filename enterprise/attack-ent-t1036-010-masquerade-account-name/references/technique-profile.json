@@ -1,0 +1,43 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1036.010",
+  "name": "Masquerade Account Name",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1036/010",
+  "stix_id": "attack-pattern--d349c66e-18e1-4d8b-a2d7-65af7cbd2ba0",
+  "attack_version": "2.0",
+  "created": "2024-08-05T21:39:16.274Z",
+  "modified": "2026-04-17T14:21:43.719Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Containers",
+    "IaaS",
+    "Identity Provider",
+    "Linux",
+    "macOS",
+    "Office Suite",
+    "SaaS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2016 Ukraine Electric Power Attack (campaign)",
+    "APT3 (intrusion-set)",
+    "Dragonfly (intrusion-set)",
+    "Flame (malware)",
+    "Magic Hound (intrusion-set)",
+    "ServHelper (malware)",
+    "Storm-1811 (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may match or approximate the names of legitimate accounts to make newly created ones appear benign. This will typically occur during [Create Account](https://attack.mitre.org/techniques/T1136), although accounts may also be renamed at a later date. This may also coincide with [Account Access Removal](https://attack.mitre.org/techniques/T1531) if the actor first deletes an account before re-creating one with the same name.(Citation: Huntress MOVEit 2023)\n\nOften, adversaries will attempt to masquerade as service accounts, such as those associated with legitimate software, data backups, or container cluster management.(Citation: Elastic CUBA Ransomware 2022)(Citation: Aquasec Kubernetes Attack 2023) They may also give accounts generic, trustworthy names, such as \u201cadmin\u201d, \u201chelp\u201d, or \u201croot.\u201d(Citation: Invictus IR Cloud Ransomware 2024) Sometimes adversaries may model account names off of those already existing in the system, as a follow-on behavior to [Account Discovery](https://attack.mitre.org/techniques/T1087).  \n\nNote that this is distinct from [Impersonation](https://attack.mitre.org/techniques/T1684/001), which describes impersonating specific trusted individuals or organizations, rather than user or service account names."
+}

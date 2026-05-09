@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1204.003",
+  "name": "Malicious Image",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1204/003",
+  "stix_id": "attack-pattern--b0c74ef9-c61e-4986-88cb-78da98a355ec",
+  "attack_version": "1.2",
+  "created": "2021-03-30T17:20:05.789Z",
+  "modified": "2025-10-24T17:49:13.999Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "IaaS",
+    "Containers"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Code Signing",
+    "Network Intrusion Prevention",
+    "User Training"
+  ],
+  "known_context": [
+    "TeamTNT (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may rely on a user running a malicious image to facilitate execution. Amazon Web Services (AWS) Amazon Machine Images (AMIs), Google Cloud Platform (GCP) Images, and Azure Images as well as popular container runtimes such as Docker can be backdoored. Backdoored images may be uploaded to a public repository via [Upload Malware](https://attack.mitre.org/techniques/T1608/001), and users may then download and deploy an instance or container from the image without realizing the image is malicious, thus bypassing techniques that specifically achieve Initial Access. This can lead to the execution of malicious code, such as code that executes cryptocurrency mining, in the instance or container.(Citation: Summit Route Malicious AMIs)\n\nAdversaries may also name images a certain way to increase the chance of users mistakenly deploying an instance or container from the image (ex: [Match Legitimate Resource Name or Location](https://attack.mitre.org/techniques/T1036/005)).(Citation: Aqua Security Cloud Native Threat Report June 2021)"
+}

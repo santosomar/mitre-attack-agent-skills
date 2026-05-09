@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1048.001",
+  "name": "Exfiltration Over Symmetric Encrypted Non-C2 Protocol",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1048/001",
+  "stix_id": "attack-pattern--79a4052e-1a89-4b09-aea6-51f1d11fe19c",
+  "attack_version": "1.1",
+  "created": "2020-03-15T15:30:42.378Z",
+  "modified": "2025-10-24T17:48:59.332Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows",
+    "ESXi"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Filter Network Traffic",
+    "Network Intrusion Prevention",
+    "Network Segmentation"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may steal data by exfiltrating it over a symmetrically encrypted network protocol other than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server. \n\nSymmetric encryption algorithms are those that use shared or the same keys/secrets on each end of the channel. This requires an exchange or pre-arranged agreement/possession of the value used to encrypt and decrypt data. \n\nNetwork protocols that use asymmetric encryption often utilize symmetric encryption once keys are exchanged, but adversaries may opt to manually share keys and implement symmetric cryptographic algorithms (ex: RC4, AES) vice using mechanisms that are baked into a protocol. This may result in multiple layers of encryption (in protocols that are natively encrypted such as HTTPS) or encryption in protocols that not typically encrypted (such as HTTP or FTP)."
+}

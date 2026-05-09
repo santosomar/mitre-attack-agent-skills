@@ -1,0 +1,40 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1552.002",
+  "name": "Credentials in Registry",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1552/002",
+  "stix_id": "attack-pattern--341e222a-a6e3-4f6f-b69c-831d792b1580",
+  "attack_version": "1.2",
+  "created": "2020-02-04T12:58:40.678Z",
+  "modified": "2025-10-24T17:48:37.378Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Password Policies",
+    "Privileged Account Management"
+  ],
+  "known_context": [
+    "APT32 (intrusion-set)",
+    "Agent Tesla (malware)",
+    "IceApple (malware)",
+    "PowerSploit (tool)",
+    "RedCurl (intrusion-set)",
+    "Reg (tool)",
+    "StrelaStealer (malware)",
+    "TrickBot (malware)",
+    "VOID MANTICORE (intrusion-set)",
+    "Valak (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may search the Registry on compromised systems for insecurely stored credentials. The Windows Registry stores configuration information that can be used by the system or other programs. Adversaries may query the Registry looking for credentials and passwords that have been stored for use by other programs or services. Sometimes these credentials are used for automatic logons.\n\nExample commands to find Registry keys related to password information: (Citation: Pentestlab Stored Credentials)\n\n* Local Machine Hive: <code>reg query HKLM /f password /t REG_SZ /s</code>\n* Current User Hive: <code>reg query HKCU /f password /t REG_SZ /s</code>"
+}

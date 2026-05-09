@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1505.006",
+  "name": "vSphere Installation Bundles",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1505/006",
+  "stix_id": "attack-pattern--f8ba7d61-11c5-4130-bafd-7c3ff5fbf4b5",
+  "attack_version": "1.0",
+  "created": "2025-03-27T18:41:08.494Z",
+  "modified": "2025-04-15T21:24:04.676Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "ESXi"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Boot Integrity",
+    "Code Signing"
+  ],
+  "known_context": [
+    "UNC3886 (intrusion-set)",
+    "VIRTUALPIE (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse vSphere Installation Bundles (VIBs) to establish persistent access to ESXi hypervisors. VIBs are collections of files used for software distribution and virtual system management in VMware environments. Since ESXi uses an in-memory filesystem where changes made to most files are stored in RAM rather than in persistent storage, these modifications are lost after a reboot. However, VIBs can be used to create startup tasks, apply custom firewall rules, or deploy binaries that persist across reboots. Typically, administrators use VIBs for updates and system maintenance.\n\nVIBs can be broken down into three components:(Citation: VMware VIBs)\n\n* VIB payload: a `.vgz` archive containing the directories and files to be created and executed on boot when the VIBs are loaded.  \n* Signature file: verifies the host acceptance level of a VIB, indicating what testing and validation has been done by VMware or its partners before publication of a VIB. By default, ESXi hosts require a minimum acceptance level of PartnerSupported for VIB installation, meaning the VIB is published by a trusted VMware partner. However, privileged users can change the default acceptance level using the `esxcli` command line interface. Additionally, VIBs are able to be installed regardless of acceptance level by using the <code> esxcli software vib install --force</code> command. \n* XML descriptor file: a configuration file containing associated VIB metadata, such as the name of the VIB and its dependencies.  \n\nAdversaries may leverage malicious VIB packages to maintain persistent access to ESXi hypervisors, allowing system changes to be executed upon each bootup of ESXi \u2013 such as using  `esxcli` to enable firewall rules for backdoor traffic, creating listeners on hard coded ports, and executing backdoors.(Citation: Google Cloud Threat Intelligence ESXi VIBs 2022) Adversaries may also masquerade their malicious VIB files as PartnerSupported by modifying the XML descriptor file.(Citation: Google Cloud Threat Intelligence ESXi VIBs 2022)"
+}

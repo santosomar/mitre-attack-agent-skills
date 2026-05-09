@@ -1,0 +1,53 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1053.005",
+  "name": "Scheduled Task",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1053/005",
+  "stix_id": "attack-pattern--005a06c6-14bf-4118-afa0-ebcd8aebb0c9",
+  "attack_version": "1.8",
+  "created": "2019-11-27T14:58:00.429Z",
+  "modified": "2025-10-24T17:48:19.176Z",
+  "tactics": [
+    "execution",
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Operating System Configuration",
+    "Privileged Account Management",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2022 Ukraine Electric Power Attack (campaign)",
+    "APT-C-36 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "APT3 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT33 (intrusion-set)",
+    "APT37 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "APT42 (intrusion-set)",
+    "Agent Tesla (malware)",
+    "Anchor (malware)",
+    "Apostle (malware)",
+    "AppleJeus (malware)",
+    "AshTag (malware)",
+    "AsyncRAT (tool)",
+    "Attor (malware)",
+    "BADHATCH (malware)",
+    "BADNEWS (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse the Windows Task Scheduler to perform task scheduling for initial or recurring execution of malicious code. There are multiple ways to access the Task Scheduler in Windows. The [schtasks](https://attack.mitre.org/software/S0111) utility can be run directly on the command line, or the Task Scheduler can be opened through the GUI within the Administrator Tools section of the Control Panel.(Citation: Stack Overflow) In some cases, adversaries have used a .NET wrapper for the Windows Task Scheduler, and alternatively, adversaries have used the Windows netapi32 library and [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047) (WMI) to create a scheduled task. Adversaries may also utilize the Powershell Cmdlet `Invoke-CimMethod`, which leverages WMI class `PS_ScheduledTask` to create a scheduled task via an XML path.(Citation: Red Canary - Atomic Red Team)\n\nAn adversary may use Windows Task Scheduler to execute programs at system startup or on a scheduled basis for persistence. The Windows Task Scheduler can also be abused to conduct remote Execution as part of Lateral Movement and/or to run a process under the context of a specified account (such as SYSTEM). Similar to [System Binary Proxy Execution](https://attack.mitre.org/techniques/T1218), adversaries have also abused the Windows Task Scheduler to potentially mask one-time execution under signed/trusted system processes.(Citation: ProofPoint Serpent)\n\nAdversaries may also create \"hidden\" scheduled tasks (i.e. [Hide Artifacts](https://attack.mitre.org/techniques/T1564)) that may not be visible to defender tools and manual queries used to enumerate tasks. Specifically, an adversary may hide a task from `schtasks /query` and the Task Scheduler by deleting the associated Security Descriptor (SD) registry value (where deletion of this value must be completed using SYSTEM permissions).(Citation: SigmaHQ)(Citation: Tarrask scheduled task) Adversaries may also employ alternate methods to hide tasks, such as altering the metadata (e.g., `Index` value) within associated registry keys.(Citation: Defending Against Scheduled Task Attacks in Windows Environments)"
+}

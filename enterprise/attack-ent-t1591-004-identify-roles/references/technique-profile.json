@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1591.004",
+  "name": "Identify Roles",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1591/004",
+  "stix_id": "attack-pattern--cc723aff-ec88-40e3-a224-5af9fd983cc4",
+  "attack_version": "1.0",
+  "created": "2020-10-02T16:37:30.015Z",
+  "modified": "2025-10-24T17:49:23.837Z",
+  "tactics": [
+    "reconnaissance"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "FIN7 (intrusion-set)",
+    "HEXANE (intrusion-set)",
+    "LAPSUS$ (intrusion-set)",
+    "Operation Dream Job (campaign)",
+    "Volt Typhoon (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may gather information about identities and roles within the victim organization that can be used during targeting. Information about business roles may reveal a variety of targetable details, including identifiable information for key personnel as well as what data/resources they have access to.\n\nAdversaries may gather this information in various ways, such as direct elicitation via [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about business roles may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: ThreatPost Broadvoice Leak) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566))."
+}

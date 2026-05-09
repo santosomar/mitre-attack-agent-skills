@@ -1,0 +1,41 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1102.003",
+  "name": "One-Way Communication",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1102/003",
+  "stix_id": "attack-pattern--9c99724c-a483-4d60-ad9d-7f004e42e8e8",
+  "attack_version": "1.1",
+  "created": "2020-03-14T22:45:52.963Z",
+  "modified": "2025-10-24T17:49:08.849Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows",
+    "ESXi"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention",
+    "Restrict Web-Based Content"
+  ],
+  "known_context": [
+    "ArcaneDoor (campaign)",
+    "EVILNUM (malware)",
+    "Gamaredon Group (intrusion-set)",
+    "HAMMERTOSS (malware)",
+    "Leviathan (intrusion-set)",
+    "Metamorfo (malware)",
+    "OnionDuke (malware)",
+    "Sagerunex (malware)",
+    "UPSTYLE (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use an existing, legitimate external Web service as a means for sending commands to a compromised system without receiving return output over the Web service channel. Compromised systems may leverage popular websites and social media to host command and control (C2) instructions. Those infected systems may opt to send the output from those commands back over a different C2 channel, including to another distinct Web service. Alternatively, compromised systems may return no output at all in cases where adversaries want to send instructions to systems and do not want a response.\n\nPopular websites and social media acting as a mechanism for C2 may give a significant amount of cover due to the likelihood that hosts within a network are already communicating with them prior to a compromise. Using common services, such as those offered by Google or Twitter, makes it easier for adversaries to hide in expected noise. Web service providers commonly use SSL/TLS encryption, giving adversaries an added level of protection."
+}

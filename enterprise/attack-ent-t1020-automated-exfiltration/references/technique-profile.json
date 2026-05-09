@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1020",
+  "name": "Automated Exfiltration",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1020",
+  "stix_id": "attack-pattern--774a3188-6ba9-4dc4-879d-d54ee48a5ce9",
+  "attack_version": "1.3",
+  "created": "2017-05-31T21:30:29.458Z",
+  "modified": "2025-10-24T17:48:58.340Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "ArcaneDoor (campaign)",
+    "Attor (malware)",
+    "CosmicDuke (malware)",
+    "Crutch (malware)",
+    "Doki (malware)",
+    "Ebury (malware)",
+    "Empire (tool)",
+    "Frankenstein (campaign)",
+    "Gamaredon Group (intrusion-set)",
+    "Hannotog (malware)",
+    "Ke3chang (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "LightNeuron (malware)",
+    "Machete (malware)",
+    "OutSteel (malware)",
+    "Peppy (malware)",
+    "Raccoon Stealer (malware)",
+    "RedCurl (intrusion-set)",
+    "Rover (malware)",
+    "Salesforce Data Exfiltration (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may exfiltrate data, such as sensitive documents, through the use of automated processing after being gathered during Collection.(Citation: ESET Gamaredon June 2020) \n\nWhen automated exfiltration is used, other exfiltration techniques likely apply as well to transfer the information out of the network, such as [Exfiltration Over C2 Channel](https://attack.mitre.org/techniques/T1041) and [Exfiltration Over Alternative Protocol](https://attack.mitre.org/techniques/T1048)."
+}

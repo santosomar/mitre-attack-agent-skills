@@ -1,0 +1,45 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1195.002",
+  "name": "Compromise Software Supply Chain",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1195/002",
+  "stix_id": "attack-pattern--bd369cd9-abb8-41ce-b5bb-fff23ee86c00",
+  "attack_version": "1.1",
+  "created": "2020-03-11T14:17:21.153Z",
+  "modified": "2025-10-24T17:49:18.341Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "Linux",
+    "Windows",
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Update Software",
+    "Vulnerability Scanning"
+  ],
+  "known_context": [
+    "3CX Supply Chain Attack (campaign)",
+    "APT41 (intrusion-set)",
+    "CCBkdr (malware)",
+    "Cobalt Group (intrusion-set)",
+    "Daggerfly (intrusion-set)",
+    "Dragonfly (intrusion-set)",
+    "FIN7 (intrusion-set)",
+    "GOLD SOUTHFIELD (intrusion-set)",
+    "GoldenSpy (malware)",
+    "Moonstone Sleet (intrusion-set)",
+    "SUNSPOT (malware)",
+    "Sandworm Team (intrusion-set)",
+    "SolarWinds Compromise (campaign)",
+    "Threat Group-3390 (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may manipulate application software prior to receipt by a final consumer for the purpose of data or system compromise. Supply chain compromise of software can take place in a number of ways, including manipulation of the application source code, manipulation of the update/distribution mechanism for that software, or replacing compiled releases with a modified version.\n\nTargeting may be specific to a desired victim set or may be distributed to a broad set of consumers but only move on to additional tactics on specific victims.(Citation: Avast CCleaner3 2018)(Citation: Command Five SK 2011)"
+}

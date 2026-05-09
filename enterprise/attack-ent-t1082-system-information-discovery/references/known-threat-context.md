@@ -1,0 +1,32 @@
+# Known Threat Context
+
+Use this file as a contextual lead list, not attribution evidence. ATT&CK relationships indicate that groups, campaigns, or software have been associated with this technique in ATT&CK data, but an observed event still requires independent evidence.
+
+## Associated context from STIX relationships
+
+- 4H RAT (malware)
+- ADVSTORESHELL (malware)
+- APT18 (intrusion-set)
+- APT19 (intrusion-set)
+- APT3 (intrusion-set)
+- APT32 (intrusion-set)
+- APT37 (intrusion-set)
+- APT38 (intrusion-set)
+- APT41 (intrusion-set)
+- APT42 (intrusion-set)
+- AcidPour (malware)
+- Action RAT (malware)
+- Agent Tesla (malware)
+- Akira (malware)
+- Amadey (malware)
+- Anchor (malware)
+- Anthropic AI-orchestrated Campaign (campaign)
+- AppleJeus (malware)
+- AppleSeed (malware)
+- Aquatic Panda (intrusion-set)
+
+## Attribution caution
+
+- Do not infer a threat actor from a technique match alone.
+- Combine multiple independent signals, such as infrastructure, tooling, targeting, language artifacts, timing, malware families, and victimology.
+- Prefer phrasing such as "consistent with" or "overlaps with" unless attribution is independently confirmed.

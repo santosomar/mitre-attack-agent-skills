@@ -1,0 +1,51 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1574",
+  "name": "Hijack Execution Flow",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1574",
+  "stix_id": "attack-pattern--aedfca76-3b30-4866-b2aa-0f1d7fd1e4b6",
+  "attack_version": "2.0",
+  "created": "2020-03-12T20:38:12.465Z",
+  "modified": "2026-04-20T21:18:17.156Z",
+  "tactics": [
+    "execution",
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Application Developer Guidance",
+    "Audit",
+    "Behavior Prevention on Endpoint",
+    "Execution Prevention",
+    "Restrict File and Directory Permissions",
+    "Restrict Library Loading",
+    "Restrict Registry Permissions",
+    "Update Software",
+    "User Account Control",
+    "User Account Management"
+  ],
+  "known_context": [
+    "C0017 (campaign)",
+    "COATHANGER (malware)",
+    "DarkGate (malware)",
+    "Denis (malware)",
+    "Dtrack (malware)",
+    "Nightdoor (malware)",
+    "Pikabot Distribution February 2024 (campaign)",
+    "Raspberry Robin (malware)",
+    "SPAWNCHIMERA (malware)",
+    "Saint Bot (malware)",
+    "ShimRat (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may execute their own malicious payloads by hijacking the way operating systems run programs. Hijacking execution flow can be for the purposes of persistence, since this hijacked execution may reoccur over time. Adversaries may also use these mechanisms to elevate privileges or evade defenses, such as application control or other restrictions on execution.\n\nThere are many ways an adversary may hijack the flow of execution, including by manipulating how the operating system locates programs to be executed. How the operating system locates libraries to be used by a program can also be intercepted. Locations where the operating system looks for programs/resources, such as file directories and in the case of Windows the Registry, could also be poisoned to include malicious payloads."
+}

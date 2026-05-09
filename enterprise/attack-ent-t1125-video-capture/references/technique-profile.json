@@ -1,0 +1,48 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1125",
+  "name": "Video Capture",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1125",
+  "stix_id": "attack-pattern--6faf650d-bf31-4eb4-802d-1000cf38efaf",
+  "attack_version": "1.2",
+  "created": "2017-05-31T21:31:37.917Z",
+  "modified": "2025-10-24T17:48:56.077Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Agent Tesla (malware)",
+    "AsyncRAT (tool)",
+    "Bandook (malware)",
+    "Clambling (malware)",
+    "Cobian RAT (malware)",
+    "ConnectWise (tool)",
+    "Crimson (malware)",
+    "DarkComet (malware)",
+    "Derusbi (malware)",
+    "Ember Bear (intrusion-set)",
+    "Empire (tool)",
+    "EvilGrab (malware)",
+    "FIN7 (intrusion-set)",
+    "Imminent Monitor (tool)",
+    "InvisiMole (malware)",
+    "Kazuar (malware)",
+    "Machete (malware)",
+    "NanoCore (malware)",
+    "ObliqueRAT (malware)",
+    "PcShare (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary can leverage a computer's peripheral devices (e.g., integrated cameras or webcams) or applications (e.g., video call services) to capture video recordings for the purpose of gathering information. Images may also be captured from devices or applications, potentially in specified intervals, in lieu of video files.\n\nMalware or scripts may be used to interact with the devices through an available API provided by the operating system or an application to capture video or images. Video or image files may be written to disk and exfiltrated later. This technique differs from [Screen Capture](https://attack.mitre.org/techniques/T1113) due to use of specific devices or applications for video recording rather than capturing the victim's screen.\n\nIn macOS, there are a few different malware samples that record the user's webcam such as FruitFly and Proton. (Citation: objective-see 2017 review)"
+}

@@ -1,0 +1,44 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1185",
+  "name": "Browser Session Hijacking",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1185",
+  "stix_id": "attack-pattern--544b0346-29ad-41e1-a808-501bb4193f47",
+  "attack_version": "2.1",
+  "created": "2018-01-16T16:13:52.465Z",
+  "modified": "2025-10-24T17:48:48.383Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Account Management",
+    "User Training"
+  ],
+  "known_context": [
+    "Agent Tesla (malware)",
+    "Carberp (malware)",
+    "Chaes (malware)",
+    "Cobalt Strike (malware)",
+    "Dridex (malware)",
+    "Grandoreiro (malware)",
+    "IcedID (malware)",
+    "Kimsuky (intrusion-set)",
+    "Melcoz (malware)",
+    "QakBot (malware)",
+    "TRANSLATEXT (malware)",
+    "TrickBot (malware)",
+    "Ursnif (malware)",
+    "XLoader (malware)",
+    "evilginx2 (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may take advantage of security vulnerabilities and inherent functionality in browser software to change content, modify user-behaviors, and intercept information as part of various browser session hijacking techniques.(Citation: Wikipedia Man in the Browser)\n\nA specific example is when an adversary injects software into a browser that allows them to inherit cookies, HTTP sessions, and SSL client certificates of a user then use the browser as a way to pivot into an authenticated intranet.(Citation: Cobalt Strike Browser Pivot)(Citation: ICEBRG Chrome Extensions) Executing browser-based behaviors such as pivoting may require specific process permissions, such as <code>SeDebugPrivilege</code> and/or high-integrity/administrator rights.\n\nAnother example involves pivoting browser traffic from the adversary's browser through the user's browser by setting up a proxy which will redirect web traffic. This does not alter the user's traffic in any way, and the proxy connection can be severed as soon as the browser is closed. The adversary assumes the security context of whichever browser process the proxy is injected into. Browsers typically create a new process for each tab that is opened and permissions and certificates are separated accordingly. With these permissions, an adversary could potentially browse to any resource on an intranet, such as [Sharepoint](https://attack.mitre.org/techniques/T1213/002) or webmail, that is accessible through the browser and which the browser has sufficient permissions. Browser pivoting may also bypass security provided by 2-factor authentication.(Citation: cobaltstrike manual)"
+}

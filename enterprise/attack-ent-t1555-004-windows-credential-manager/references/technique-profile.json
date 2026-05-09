@@ -1,0 +1,42 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1555.004",
+  "name": "Windows Credential Manager",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1555/004",
+  "stix_id": "attack-pattern--d336b553-5da9-46ca-98a8-0b23f49fb447",
+  "attack_version": "1.1",
+  "created": "2020-11-23T15:35:53.793Z",
+  "modified": "2025-10-24T17:49:26.444Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program"
+  ],
+  "known_context": [
+    "Juicy Mix (campaign)",
+    "KGH_SPY (malware)",
+    "LaZagne (tool)",
+    "Lizar (malware)",
+    "Mimikatz (tool)",
+    "OilRig (intrusion-set)",
+    "PowerSploit (tool)",
+    "ROKRAT (malware)",
+    "RainyDay (malware)",
+    "SILENTTRINITY (tool)",
+    "Stealth Falcon (intrusion-set)",
+    "Turla (intrusion-set)",
+    "Valak (malware)",
+    "Wizard Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may acquire credentials from the Windows Credential Manager. The Credential Manager stores credentials for signing into websites, applications, and/or devices that request authentication through NTLM or Kerberos in Credential Lockers (previously known as Windows Vaults).(Citation: Microsoft Credential Manager store)(Citation: Microsoft Credential Locker)\n\nThe Windows Credential Manager separates website credentials from application or network credentials in two lockers. As part of [Credentials from Web Browsers](https://attack.mitre.org/techniques/T1555/003), Internet Explorer and Microsoft Edge website credentials are managed by the Credential Manager and are stored in the Web Credentials locker. Application and network credentials are stored in the Windows Credentials locker.\n\nCredential Lockers store credentials in encrypted `.vcrd` files, located under `%Systemdrive%\\Users\\\\[Username]\\AppData\\Local\\Microsoft\\\\[Vault/Credentials]\\`. The encryption key can be found in a file named <code>Policy.vpol</code>, typically located in the same folder as the credentials.(Citation: passcape Windows Vault)(Citation: Malwarebytes The Windows Vault)\n\nAdversaries may list credentials managed by the Windows Credential Manager through several mechanisms. <code>vaultcmd.exe</code> is a native Windows executable that can be used to enumerate credentials stored in the Credential Locker through a command-line interface. Adversaries may also gather credentials by directly reading files located inside of the Credential Lockers. Windows APIs, such as <code>CredEnumerateA</code>, may also be absued to list credentials managed by the Credential Manager.(Citation: Microsoft CredEnumerate)(Citation: Delpy Mimikatz Crendential Manager)\n\nAdversaries may also obtain credentials from credential backups. Credential backups and restorations may be performed by running <code>rundll32.exe keymgr.dll KRShowKeyMgr</code> then selecting the \u201cBack up...\u201d button on the \u201cStored User Names and Passwords\u201d GUI.\n\nPassword recovery tools may also obtain plain text passwords from the Credential Manager.(Citation: Malwarebytes The Windows Vault)"
+}

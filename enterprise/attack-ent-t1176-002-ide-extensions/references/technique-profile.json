@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1176.002",
+  "name": "IDE Extensions",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1176/002",
+  "stix_id": "attack-pattern--66b34be7-6915-4b83-8d5a-b0f0592b5e41",
+  "attack_version": "1.0",
+  "created": "2025-03-30T22:16:24.078Z",
+  "modified": "2025-04-23T12:40:46.664Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Execution Prevention",
+    "Limit Software Installation",
+    "Update Software",
+    "User Training"
+  ],
+  "known_context": [
+    "Mustang Panda (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse an integrated development environment (IDE) extension to establish persistent access to victim systems.(Citation: Mnemonic misuse visual studio) IDEs such as Visual Studio Code, IntelliJ IDEA, and Eclipse support extensions - software components that add features like code linting, auto-completion, task automation, or integration with tools like Git and Docker. A malicious extension can be installed through an extension marketplace (i.e., [Compromise Software Dependencies and Development Tools](https://attack.mitre.org/techniques/T1195/001)) or side-loaded directly into the IDE.(Citation: Abramovsky VSCode Security)(Citation: Lakshmanan Visual Studio Marketplace)   \n\nIn addition to installing malicious extensions, adversaries may also leverage benign ones. For example, adversaries may establish persistent SSH tunnels via the use of the VSCode Remote SSH extension (i.e., [IDE Tunneling](https://attack.mitre.org/techniques/T1219/001)).  \n\nTrust is typically established through the installation process; once installed, the malicious extension is run every time that the IDE is launched. The extension can then be used to execute arbitrary code, establish a backdoor, mine cryptocurrency, or exfiltrate data.(Citation: ExtensionTotal VSCode Extensions  2025)"
+}

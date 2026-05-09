@@ -1,0 +1,51 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1027.013",
+  "name": "Encrypted/Encoded File",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1027/013",
+  "stix_id": "attack-pattern--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+  "attack_version": "2.0",
+  "created": "2024-03-29T12:38:17.135Z",
+  "modified": "2026-04-15T22:18:22.179Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Antivirus/Antimalware",
+    "Behavior Prevention on Endpoint"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "3CX Supply Chain Attack (campaign)",
+    "ANELLDR (malware)",
+    "APT-C-36 (intrusion-set)",
+    "APT18 (intrusion-set)",
+    "APT19 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT33 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "APT41 DUST (campaign)",
+    "Aria-body (malware)",
+    "AshTag (malware)",
+    "Astaroth (malware)",
+    "Attor (malware)",
+    "AuditCred (malware)",
+    "Avenger (malware)",
+    "BITTER (intrusion-set)",
+    "BLINDINGCAN (malware)",
+    "BLUELIGHT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may encrypt or encode files to obfuscate strings, bytes, and other specific patterns to impede detection. Encrypting and/or encoding file content aims to conceal malicious artifacts within a file used in an intrusion. Many other techniques, such as [Software Packing](https://attack.mitre.org/techniques/T1027/002), [Steganography](https://attack.mitre.org/techniques/T1027/003), and [Embedded Payloads](https://attack.mitre.org/techniques/T1027/009), share this same broad objective. Encrypting and/or encoding files could lead to a lapse in detection of static signatures, only for this malicious content to be revealed (i.e., [Deobfuscate/Decode Files or Information](https://attack.mitre.org/techniques/T1140)) at the time of execution/use.\n\nThis type of file obfuscation can be applied to many file artifacts present on victim hosts, such as malware log/configuration and payload files.(Citation: File obfuscation) Files can be encrypted with a hardcoded or user-supplied key, as well as otherwise obfuscated using standard encoding schemes such as Base64.\n\nThe entire content of a file may be obfuscated, or just specific functions or values (such as C2 addresses). Encryption and encoding may also be applied in redundant layers for additional protection.\n\nFor example, adversaries may abuse password-protected Word documents or self-extracting (SFX) archives as a method of encrypting/encoding a file such as a [Phishing](https://attack.mitre.org/techniques/T1566) payload. These files typically function by attaching the intended archived content to a decompressor stub that is executed when the file is invoked (e.g., [User Execution](https://attack.mitre.org/techniques/T1204)).(Citation: SFX - Encrypted/Encoded File) \n\nAdversaries may also abuse file-specific as well as custom encoding schemes. For example, Byte Order Mark (BOM) headers in text files may be abused to manipulate and obfuscate file content until [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059) execution."
+}

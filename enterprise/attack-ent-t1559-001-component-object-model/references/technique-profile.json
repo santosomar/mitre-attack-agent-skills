@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1559.001",
+  "name": "Component Object Model",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1559/001",
+  "stix_id": "attack-pattern--2f6b4ed7-fef1-44ba-bcb8-1b4beb610b64",
+  "attack_version": "1.2",
+  "created": "2020-02-12T14:09:53.107Z",
+  "modified": "2025-10-24T17:48:35.814Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Application Isolation and Sandboxing",
+    "Privileged Account Management"
+  ],
+  "known_context": [
+    "Bumblebee (malware)",
+    "CLAIMLOADER (malware)",
+    "DarkTortilla (malware)",
+    "FunnyDream (malware)",
+    "Gamaredon Group (intrusion-set)",
+    "Gelsemium (malware)",
+    "HermeticWizard (malware)",
+    "InvisiMole (malware)",
+    "Kimsuky (intrusion-set)",
+    "Latrodectus (malware)",
+    "Medusa Group (intrusion-set)",
+    "Milan (malware)",
+    "MuddyWater (intrusion-set)",
+    "Neoichor (malware)",
+    "POWERSTATS (malware)",
+    "Ramsay (malware)",
+    "Raspberry Robin (malware)",
+    "RustyWater (malware)",
+    "SILENTTRINITY (tool)",
+    "STATICPLUGIN (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use the Windows Component Object Model (COM) for local code execution. COM is an inter-process communication (IPC) component of the native Windows application programming interface (API) that enables interaction between software objects, or executable code that implements one or more interfaces.(Citation: Fireeye Hunting COM June 2019) Through COM, a client object can call methods of server objects, which are typically binary Dynamic Link Libraries (DLL) or executables (EXE).(Citation: Microsoft COM) Remote COM execution is facilitated by [Remote Services](https://attack.mitre.org/techniques/T1021) such as  [Distributed Component Object Model](https://attack.mitre.org/techniques/T1021/003) (DCOM).(Citation: Fireeye Hunting COM June 2019)\n\nVarious COM interfaces are exposed that can be abused to invoke arbitrary execution via a variety of programming languages such as C, C++, Java, and [Visual Basic](https://attack.mitre.org/techniques/T1059/005).(Citation: Microsoft COM) Specific COM objects also exist to directly perform functions beyond code execution, such as creating a [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053), fileless download/execution, and other adversary behaviors related to privilege escalation and persistence.(Citation: Fireeye Hunting COM June 2019)(Citation: ProjectZero File Write EoP Apr 2018)"
+}

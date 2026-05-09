@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1669",
+  "name": "Wi-Fi Networks",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1669",
+  "stix_id": "attack-pattern--fde016f6-211a-41c8-a4ab-301f1e419c62",
+  "attack_version": "1.0",
+  "created": "2025-02-25T15:49:33.963Z",
+  "modified": "2025-04-15T19:59:24.690Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "Linux",
+    "Network Devices",
+    "Windows",
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Encrypt Sensitive Information",
+    "Multi-factor Authentication",
+    "Network Segmentation"
+  ],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "APT28 Nearest Neighbor Campaign (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may gain initial access to target systems by connecting to wireless networks. They may accomplish this by exploiting open Wi-Fi networks used by target devices or by accessing secured Wi-Fi networks \u2014 requiring [Valid Accounts](https://attack.mitre.org/techniques/T1078) \u2014 belonging to a target organization.(Citation: DOJ GRU Charges 2018)(Citation: Nearest Neighbor Volexity) Establishing a connection to a Wi-Fi access point requires a certain level of proximity to both discover and maintain a stable network connection. \n\nAdversaries may establish a wireless connection through various methods, such as by physically positioning themselves near a Wi-Fi network to conduct close access operations. To bypass the need for physical proximity, adversaries may attempt to remotely compromise nearby third-party systems that have both wired and wireless network connections available (i.e., dual-homed systems). These third-party compromised devices can then serve as a bridge to connect to a target\u2019s Wi-Fi network.(Citation: Nearest Neighbor Volexity)\n\nOnce an initial wireless connection is achieved, adversaries may leverage this access for follow-on activities in the victim network or further targeting of specific devices on the network. Adversaries may perform [Network Sniffing](https://attack.mitre.org/techniques/T1040) or [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557) activities for [Credential Access](https://attack.mitre.org/tactics/TA0006) or [Discovery](https://attack.mitre.org/tactics/TA0007)."
+}

@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1070.006",
+  "name": "Timestomp",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1070/006",
+  "stix_id": "attack-pattern--47f2d673-ca62-47e9-929b-1b0be9657611",
+  "attack_version": "2.0",
+  "created": "2020-01-31T12:42:44.103Z",
+  "modified": "2026-04-15T20:30:57.770Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "3PARA RAT (malware)",
+    "APT28 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT5 (intrusion-set)",
+    "Attor (malware)",
+    "BLINDINGCAN (malware)",
+    "BOOKWORM (malware)",
+    "BPFDoor (malware)",
+    "Bankshot (malware)",
+    "BitPaymer (malware)",
+    "BlackByte 2.0 Ransomware (malware)",
+    "C0032 (campaign)",
+    "CHIMNEYSWEEP (malware)",
+    "Chimera (intrusion-set)",
+    "China Chopper (malware)",
+    "Cobalt Strike (malware)",
+    "Cutting Edge (campaign)",
+    "Cyclops Blink (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify file time attributes to hide new files or changes to existing files. Timestomping is a technique that modifies the timestamps of a file (the modify, access, create, and change times), often to mimic files that are in the same folder and blend malicious files with legitimate files.\n\nIn Windows systems, both the `$STANDARD_INFORMATION` (`$SI`) and `$FILE_NAME` (`$FN`) attributes record times in a Master File Table (MFT) file.(Citation: Inversecos Timestomping 2022) `$SI` (dates/time stamps) is displayed to the end user, including in the File System view, while `$FN` is dealt with by the kernel.(Citation: Magnet Forensics)\n\nModifying the `$SI` attribute is the most common method of timestomping because it can be modified at the user level using API calls. `$FN` timestomping, however, typically requires interacting with the system kernel or moving or renaming a file.(Citation: Inversecos Timestomping 2022)\n\nAdversaries modify timestamps on files so that they do not appear conspicuous to forensic investigators or file analysis tools. In order to evade detections that rely on identifying discrepancies between the `$SI` and `$FN` attributes, adversaries may also engage in \u201cdouble timestomping\u201d by modifying times on both attributes simultaneously.(Citation: Double Timestomping)\n\nIn Linux systems and on ESXi servers, threat actors may attempt to perform timestomping using commands such as `touch -a -m -t <timestamp> <filename>` (which sets access and modification times to a specific value) or `touch -r <filename> <filename>` (which sets access and modification times to match those of another file).(Citation: Inversecos Linux Timestomping)(Citation: Juniper Networks ESXi Backdoor 2022)\n\nTimestomping may be used along with file name [Masquerading](https://attack.mitre.org/techniques/T1036) to hide malware and tools.(Citation: WindowsIR Anti-Forensic Techniques)"
+}

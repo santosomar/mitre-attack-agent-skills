@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Structured output for T1078 Valid Accounts",
+  "type": "object",
+  "properties": {
+    "attack_id": {
+      "type": "string",
+      "const": "T1078"
+    },
+    "technique_name": {
+      "type": "string",
+      "const": "Valid Accounts"
+    },
+    "domain": {
+      "type": "string",
+      "const": "enterprise"
+    },
+    "assessment": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "data_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "detections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mitigations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "response_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "coverage_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    }
+  },
+  "required": [
+    "attack_id",
+    "technique_name",
+    "domain",
+    "assessment",
+    "confidence"
+  ],
+  "additionalProperties": false
+}

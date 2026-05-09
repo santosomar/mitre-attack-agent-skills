@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1647",
+  "name": "Plist File Modification",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1647",
+  "stix_id": "attack-pattern--7d20fff9-8751-404e-badd-ccd71bda0236",
+  "attack_version": "2.0",
+  "created": "2022-04-09T15:06:32.458Z",
+  "modified": "2026-04-16T20:07:52.947Z",
+  "tactics": [
+    "defense-impairment"
+  ],
+  "platforms": [
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Application Developer Guidance"
+  ],
+  "known_context": [
+    "Cuckoo Stealer (malware)",
+    "XCSSET (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify property list files (plist files) to enable other malicious activity, while also potentially evading and bypassing system defenses. macOS applications use plist files, such as the <code>info.plist</code> file, to store properties and configuration settings that inform the operating system how to handle the application at runtime. Plist files are structured metadata in key-value pairs formatted in XML based on Apple's Core Foundation DTD. Plist files can be saved in text or binary format.(Citation: fileinfo plist file description) \n\nAdversaries can modify key-value pairs in plist files to influence system behaviors, such as hiding the execution of an application (i.e. [Hidden Window](https://attack.mitre.org/techniques/T1564/003)) or running additional commands for persistence (ex: [Launch Agent](https://attack.mitre.org/techniques/T1543/001)/[Launch Daemon](https://attack.mitre.org/techniques/T1543/004) or [Re-opened Applications](https://attack.mitre.org/techniques/T1547/007)).\n\nFor example, adversaries can add a malicious application path to the `~/Library/Preferences/com.apple.dock.plist` file, which controls apps that appear in the Dock. Adversaries can also modify the <code>LSUIElement</code> key in an application\u2019s <code>info.plist</code> file  to run the app in the background. Adversaries can also insert key-value pairs to insert environment variables, such as <code>LSEnvironment</code>, to enable persistence via [Dynamic Linker Hijacking](https://attack.mitre.org/techniques/T1574/006).(Citation: wardle chp2 persistence)(Citation: eset_osx_flashback)"
+}

@@ -1,0 +1,57 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1539",
+  "name": "Steal Web Session Cookie",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1539",
+  "stix_id": "attack-pattern--10ffac09-e42d-4f56-ab20-db94c67d76ff",
+  "attack_version": "1.5",
+  "created": "2019-10-08T20:04:35.508Z",
+  "modified": "2025-10-24T17:48:25.272Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Office Suite",
+    "SaaS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Multi-factor Authentication",
+    "Restrict Web-Based Content",
+    "Software Configuration",
+    "Update Software",
+    "User Training"
+  ],
+  "known_context": [
+    "APT42 (intrusion-set)",
+    "BLUELIGHT (malware)",
+    "Chaes (malware)",
+    "CookieMiner (malware)",
+    "DarkGate (malware)",
+    "EVILNUM (malware)",
+    "Evilnum (intrusion-set)",
+    "GlassWorm (malware)",
+    "Grandoreiro (malware)",
+    "Kimsuky (intrusion-set)",
+    "LODEINFO (malware)",
+    "Lotus Blossom (intrusion-set)",
+    "LuminousMoth (intrusion-set)",
+    "Lumma Stealer (malware)",
+    "MgBot (malware)",
+    "QakBot (malware)",
+    "Raccoon Stealer (malware)",
+    "RedLine Stealer (malware)",
+    "Sandworm Team (intrusion-set)",
+    "Scattered Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may steal web application or service session cookies and use them to gain access to web applications or Internet services as an authenticated user without needing credentials. Web applications and services often use session cookies as an authentication token after a user has authenticated to a website.\n\nCookies are often valid for an extended period of time, even if the web application is not actively used. Cookies can be found on disk, in the process memory of the browser, and in network traffic to remote systems. Additionally, other applications on the targets machine might store sensitive authentication cookies in memory (e.g. apps which authenticate to cloud services). Session cookies can be used to bypasses some multi-factor authentication protocols.(Citation: Pass The Cookie)\n\nThere are several examples of malware targeting cookies from web browsers on the local system.(Citation: Kaspersky TajMahal April 2019)(Citation: Unit 42 Mac Crypto Cookies January 2019) Adversaries may also steal cookies by injecting malicious JavaScript content into websites or relying on [User Execution](https://attack.mitre.org/techniques/T1204) by tricking victims into running malicious JavaScript in their browser.(Citation: Talos Roblox Scam 2023)(Citation: Krebs Discord Bookmarks 2023)\n\nThere are also open source frameworks such as `Evilginx2` and `Muraena` that can gather session cookies through a malicious proxy (e.g., [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557)) that can be set up by an adversary and used in phishing campaigns.(Citation: Github evilginx2)(Citation: GitHub Mauraena)\n\nAfter an adversary acquires a valid cookie, they can then perform a [Web Session Cookie](https://attack.mitre.org/techniques/T1550/004) technique to login to the corresponding web application."
+}
