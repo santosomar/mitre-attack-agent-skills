@@ -1,0 +1,11 @@
+Validation summary
+
+- Validator: agentskills validate
+- Skill directories validated: 918
+- Valid skills: 918
+- Failed skills: 0
+- Resource coverage check: 918 of 918 skills include the expected bundled references, templates, script, and JSON schema
+- Expected files per skill: 11
+- Total files in package: 10,102 before adding the top-level generator script
+- Scope: latest enterprise-attack.json, mobile-attack.json, and ics-attack.json bundles from mitre-attack/attack-stix-data
+- Generated package root: mitre-attack-agent-skills
