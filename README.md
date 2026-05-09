@@ -1,8 +1,7 @@
 # MITRE ATT&CK Agent Skills
 
-Generated at: 2026-05-08T12:23:43.843616+00:00
 
-This package contains one Agent Skill per non-revoked, non-deprecated ATT&CK `attack-pattern` object from the latest MITRE ATT&CK STIX bundles in `mitre-attack/attack-stix-data`.
+This package contains one Agent Skill per non-revoked, non-deprecated [MITRE ATT&CK](https://attack.mitre.org/) `attack-pattern` object from the latest [MITRE ATT&CK STIX bundles](https://attack.mitre.org/resources/attack-data-and-tools/#access-attack) in `mitre-attack/attack-stix-data`.
 
 ## Counts
 
