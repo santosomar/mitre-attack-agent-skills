@@ -1,0 +1,32 @@
+{
+  "domain": "ics",
+  "attack_id": "T1692.002",
+  "name": "Reporting Message",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1692/002",
+  "stix_id": "attack-pattern--527106b3-95a2-4ed2-bf89-db7f0e4d0da0",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:54:17.539Z",
+  "modified": "2026-04-23T19:01:42.644Z",
+  "tactics": [
+    "evasion",
+    "impair-process-control"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Communication Authenticity",
+    "Filter Network Traffic",
+    "Network Allowlists",
+    "Network Segmentation",
+    "Software Process and Device Authentication"
+  ],
+  "known_context": [
+    "Maroochy Water Breach (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may spoof reporting messages in control system environments for evasion and to impair process control. In control systems, reporting messages contain telemetry data (e.g., I/O values) pertaining to the current state of equipment and the industrial process. Reporting messages are important for monitoring the normal operation of a system or identifying important events such as deviations from expected values.\n\nIf an adversary has the ability to Spoof Reporting Messages, they can impact the control system in many ways. The adversary can Spoof Reporting Messages that state that the process is operating normally, as a form of evasion. The adversary could also Spoof Reporting Messages to make the defenders and operators think that other errors are occurring in order to distract them from the actual source of a problem.(Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011)"
+}

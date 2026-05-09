@@ -1,0 +1,31 @@
+{
+  "domain": "ics",
+  "attack_id": "T0892",
+  "name": "Change Credential",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0892",
+  "stix_id": "attack-pattern--fab8fc7d-f27f-4fbb-9de6-44740aade05f",
+  "attack_version": "1.0",
+  "created": "2023-03-30T14:04:17.023Z",
+  "modified": "2025-04-16T21:26:20.690Z",
+  "tactics": [
+    "inhibit-response-function"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Data Backup",
+    "Password Policies",
+    "Redundancy of Service"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify software and device credentials to prevent operator and responder access. Depending on the device, the modification or addition of this password could prevent any device configuration actions from being accomplished and may require a factory reset or replacement of hardware. These credentials are often built-in features provided by the device vendors as a means to restrict access to management interfaces.\n\nAn adversary with access to valid or hardcoded credentials could change the credential to prevent future authorized device access. Change Credential may be especially damaging when paired with other techniques such as Modify Program, Data Destruction, or Modify Controller Tasking. In these cases, a device\u2019s configuration may be destroyed or include malicious actions for the process environment, which cannot not be removed through normal device configuration actions. \n\nAdditionally, recovery of the device and original configuration may be difficult depending on the features provided by the device. In some cases, these passwords cannot be removed onsite and may require that the device be sent back to the vendor for additional recovery steps.\n\n\nA chain of incidents occurred in Germany, where adversaries locked operators out of their building automation system (BAS) controllers by enabling a previously unset BCU key. (Citation: German BAS Lockout Dec 2021)"
+}

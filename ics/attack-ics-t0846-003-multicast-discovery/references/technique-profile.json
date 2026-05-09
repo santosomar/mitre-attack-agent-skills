@@ -1,0 +1,28 @@
+{
+  "domain": "ics",
+  "attack_id": "T0846.003",
+  "name": "Multicast Discovery",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0846/003",
+  "stix_id": "attack-pattern--64bbc1b2-101f-4322-af1d-0c9cc25cef91",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:54:21.726Z",
+  "modified": "2026-04-23T19:45:38.166Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Segmentation",
+    "Static Network Configuration"
+  ],
+  "known_context": [
+    "INCONTROLLER (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may perform multicast discovery requests which is when one system or device sends messages to all systems and devices in a pre-defined group on a network (or subnet) and then waits for a response. If a response is received that means the system or device that responded is live and can communicate over that protocol.  Multicast discovery tends to be stealthier than broadcast discovery because every system or device on the network (or subnet) is not being messaged. \n\nOne common OT protocol that has a multicast discovery mechanism is the Process Field Network (PROFINET) Discovery and Configuration Protocol (DCP) with its Identify All requests.(Citation: Cisco Active Discovery)"
+}

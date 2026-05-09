@@ -1,0 +1,32 @@
+{
+  "domain": "ics",
+  "attack_id": "T0832",
+  "name": "Manipulation of View",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0832",
+  "stix_id": "attack-pattern--4c2e1408-9d68-4187-8e6b-a77bc52700ec",
+  "attack_version": "1.0",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-15T19:58:29.210Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Communication Authenticity",
+    "Data Backup",
+    "Out-of-Band Communications Channel"
+  ],
+  "known_context": [
+    "Industroyer (malware)",
+    "Stuxnet (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to manipulate the information reported back to operators or controllers. This manipulation may be short term or sustained. During this time the process itself could be in a much different state than what is reported. (Citation: Corero) (Citation: Michael J. Assante and Robert M. Lee) (Citation: Tyson Macaulay) \n\nOperators may be fooled into doing something that is harmful to the system in a loss of view situation. With a manipulated view into the systems, operators may issue inappropriate control sequences that introduce faults or catastrophic failures into the system. Business analysis systems can also be provided with inaccurate data leading to bad management decisions."
+}

@@ -1,0 +1,46 @@
+{
+  "domain": "ics",
+  "attack_id": "T0859",
+  "name": "Valid Accounts",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0859",
+  "stix_id": "attack-pattern--cd2c76a4-5e23-4ca5-9c40-d5e0604f7101",
+  "attack_version": "1.1",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-15T19:59:08.866Z",
+  "tactics": [
+    "lateral-movement",
+    "persistence"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Access Management",
+    "Account Use Policies",
+    "Active Directory Configuration",
+    "Application Developer Guidance",
+    "Audit",
+    "Filter Network Traffic",
+    "Multi-factor Authentication",
+    "Password Policies",
+    "Privileged Account Management",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "2016 Ukraine Electric Power Attack (campaign)",
+    "2025 Poland Wiper Attacks (campaign)",
+    "ALLANITE (intrusion-set)",
+    "BlackEnergy (malware)",
+    "INCONTROLLER (malware)",
+    "OilRig (intrusion-set)",
+    "Triton Safety Instrumented System Attack (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may steal the credentials of a specific user or service account using credential access techniques. In some cases, default credentials for control system devices may be publicly available. Compromised credentials may be used to bypass access controls placed on various resources on hosts and within the network, and may even be used for persistent access to remote systems. Compromised and default credentials may also grant an adversary increased privilege to specific systems and devices or access to restricted areas of the network. Adversaries may choose not to use malware or tools, in conjunction with the legitimate access those credentials provide, to make it harder to detect their presence or to control devices and send legitimate commands in an unintended way. \n\nAdversaries may also create accounts, sometimes using predefined account names and passwords, to provide a means of backup access for persistence. (Citation: Booz Allen Hamilton) \n\nThe overlap of credentials and permissions across a network of systems is of concern because the adversary may be able to pivot across accounts and systems to reach a high level of access (i.e., domain or enterprise administrator)  and possibly between the enterprise and operational technology environments. Adversaries may be able to leverage valid credentials from one system to gain access to another system."
+}

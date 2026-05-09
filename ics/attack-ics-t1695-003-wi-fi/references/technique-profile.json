@@ -1,0 +1,29 @@
+{
+  "domain": "ics",
+  "attack_id": "T1695.003",
+  "name": "Wi-Fi",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1695/003",
+  "stix_id": "attack-pattern--71f2d49e-65dd-4fb6-a4cc-0d2b19d427fa",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:54:23.383Z",
+  "modified": "2026-04-23T19:59:42.404Z",
+  "tactics": [
+    "inhibit-response-function"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Allowlists",
+    "Network Segmentation",
+    "Out-of-Band Communications Channel"
+  ],
+  "known_context": [
+    "LockerGoga (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may block access to Wi-Fi communications to prevent messages from reaching target systems and devices. Wi-Fi connections allow for communications between IT and OT systems and devices. Blocking Wi-Fi communications may also block command and reporting messages.(Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011)\n\nAn adversary may block Wi-Fi communications by disabling network interfaces, [Service Stop](https://attack.mitre.org/techniques/T0881), conducting an [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T0830) attack and dropping the network traffic, or by jamming the Wi-Fi signal."
+}

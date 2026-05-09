@@ -1,0 +1,30 @@
+{
+  "domain": "ics",
+  "attack_id": "T1694.001",
+  "name": "Default Credentials",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1694/001",
+  "stix_id": "attack-pattern--5658ad88-7510-490e-a351-95d50b1bcd91",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:54:19.020Z",
+  "modified": "2026-04-23T19:30:36.158Z",
+  "tactics": [
+    "lateral-movement",
+    "persistence"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Access Management",
+    "Password Policies"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "Unitronics Defacement Campaign (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage manufacturer or supplier set default credentials on control system devices. These default credentials may have administrative permissions and may be necessary for initial configuration of the device. It is general best practice to change the passwords for these accounts as soon as possible, but some manufacturers may have devices that have passwords or usernames that cannot be changed.(Citation: Keith Stouffer May 2015)\n\nDefault credentials are normally documented in an instruction manual that is either packaged with the device, published online through official means, or published online through unofficial means. Adversaries may leverage default credentials that have not been properly modified or disabled."
+}

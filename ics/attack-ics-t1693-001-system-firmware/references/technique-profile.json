@@ -1,0 +1,44 @@
+{
+  "domain": "ics",
+  "attack_id": "T1693.001",
+  "name": "System Firmware",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1693/001",
+  "stix_id": "attack-pattern--68a9324d-a524-4766-a899-a026f68a33df",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:54:18.031Z",
+  "modified": "2026-04-23T19:10:31.871Z",
+  "tactics": [
+    "impair-process-control",
+    "inhibit-response-function",
+    "persistence"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Access Management",
+    "Audit",
+    "Boot Integrity",
+    "Code Signing",
+    "Communication Authenticity",
+    "Encrypt Network Traffic",
+    "Encrypt Sensitive Information",
+    "Filter Network Traffic",
+    "Human User Authentication",
+    "Network Allowlists",
+    "Network Segmentation",
+    "Software Process and Device Authentication",
+    "Update Software"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "2025 Poland Wiper Attacks (campaign)",
+    "FrostyGoop Incident (campaign)",
+    "Triton (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "System firmware on modern assets is often designed with an update feature. Older device firmware may be factory installed and require special reprograming equipment. When available, the firmware update feature enables vendors to remotely patch bugs and perform upgrades. Device firmware updates are often delegated to the user and may be done using a software update package. It may also be possible to perform this task over the network.\n\nAn adversary may exploit the firmware update feature on accessible devices to upload malicious or out-of-date firmware. Malicious modification of device firmware may provide an adversary with root access to a device, given firmware is one of the lowest programming abstraction layers.(Citation: Basnight, Zachry, et al.)"
+}

@@ -1,0 +1,37 @@
+{
+  "domain": "ics",
+  "attack_id": "T0830",
+  "name": "Adversary-in-the-Middle",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0830",
+  "stix_id": "attack-pattern--9a505987-ab05-4f46-a9a6-6441442eec3b",
+  "attack_version": "2.0",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:16.777Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Communication Authenticity",
+    "Disable or Remove Feature or Program",
+    "Network Intrusion Prevention",
+    "Network Segmentation",
+    "Out-of-Band Communications Channel",
+    "Software Process and Device Authentication",
+    "Static Network Configuration"
+  ],
+  "known_context": [
+    "Triton Safety Instrumented System Attack (campaign)",
+    "VPNFilter (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries with privileged network access may seek to modify network traffic in real time using adversary-in-the-middle (AiTM) attacks. (Citation: Gabriel Sanchez October 2017) This type of attack allows the adversary to intercept traffic to and/or from a particular device on the network. If a AiTM attack is established, then the adversary has the ability to block, log, modify, or inject traffic into the communication stream. There are several ways to accomplish this attack, but some of the most-common are Address Resolution Protocol (ARP) poisoning and the use of a proxy. (Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011)  \n\nAn AiTM attack may allow an adversary to perform the following attacks:  \n[Block Reporting Message](https://attack.mitre.org/techniques/T0804), [Spoof Reporting Message](https://attack.mitre.org/techniques/T0856), [Modify Parameter](https://attack.mitre.org/techniques/T0836), [Unauthorized Command Message](https://attack.mitre.org/techniques/T0855)"
+}

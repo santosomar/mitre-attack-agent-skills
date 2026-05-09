@@ -1,0 +1,37 @@
+{
+  "domain": "ics",
+  "attack_id": "T0869",
+  "name": "Standard Application Layer Protocol",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0869",
+  "stix_id": "attack-pattern--e076cca8-2f08-45c9-aff7-ea5ac798b387",
+  "attack_version": "1.0",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-25T15:16:52.173Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Allowlists",
+    "Network Intrusion Prevention",
+    "Network Segmentation"
+  ],
+  "known_context": [
+    "BlackEnergy (malware)",
+    "FrostyGoop (malware)",
+    "INCONTROLLER (malware)",
+    "OilRig (intrusion-set)",
+    "REvil (malware)",
+    "Stuxnet (malware)",
+    "Triton (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may establish command and control capabilities over commonly used application layer protocols such as HTTP(S), OPC, RDP, telnet, DNP3, and modbus. These protocols may be used to disguise adversary actions as benign network traffic. Standard protocols may be seen on their associated port or in some cases over a non-standard port.  Adversaries may use these protocols to reach out of the network for command and control, or in some cases to other infected devices within the network."
+}

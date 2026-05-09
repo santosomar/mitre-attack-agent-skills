@@ -1,0 +1,31 @@
+{
+  "domain": "ics",
+  "attack_id": "T0834",
+  "name": "Native API",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0834",
+  "stix_id": "attack-pattern--b52870cc-83f3-473c-b895-72d91751030b",
+  "attack_version": "1.0",
+  "created": "2021-04-13T12:36:26.506Z",
+  "modified": "2025-04-16T21:26:17.499Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Execution Prevention"
+  ],
+  "known_context": [
+    "PLC-Blaster (malware)",
+    "Stuxnet (malware)",
+    "Triton (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may directly interact with the native OS application programming interface (API) to access system functions. Native APIs provide a controlled means of calling low-level OS services within the kernel, such as those involving hardware/devices, memory, and processes. (Citation: The MITRE Corporation May 2017) These native APIs are leveraged by the OS during system boot (when other system components are not yet initialized) as well as carrying out tasks and requests during routine operations. \n\nFunctionality provided by native APIs are often also exposed to user-mode applications via interfaces and libraries. For example, functions such as memcpy and direct operations on memory registers can be used to modify user and system memory space."
+}

@@ -1,0 +1,38 @@
+{
+  "domain": "ics",
+  "attack_id": "T0822",
+  "name": "External Remote Services",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0822",
+  "stix_id": "attack-pattern--8d2f3bab-507c-4424-b58b-edc977bd215c",
+  "attack_version": "1.1",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:16.385Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Account Use Policies",
+    "Disable or Remove Feature or Program",
+    "Limit Access to Resource Over Network",
+    "Multi-factor Authentication",
+    "Network Segmentation",
+    "Password Policies",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "2025 Poland Wiper Attacks (campaign)",
+    "Fuxnet (malware)",
+    "Maroochy Water Breach (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage external remote services as a point of initial access into your network. These services allow users to connect to internal network resources from external locations. Examples are VPNs, Citrix, and other access mechanisms. Remote service gateways often manage connections and credential authentication for these services. (Citation: Daniel Oakley, Travis Smith, Tripwire)\n\nExternal remote services allow administration of a control system from outside the system. Often, vendors and internal engineering groups have access to external remote services to control system networks via the corporate network. In some cases, this access is enabled directly from the internet. While remote access enables ease of maintenance when a control system is in a remote area, compromise of remote access solutions is a liability. The adversary may use these services to gain access to and execute attacks against a control system network. Access to valid accounts is often a requirement. \n\nAs they look for an entry point into the control system network, adversaries may begin searching for existing point-to-point VPN implementations at trusted third party networks or through remote support employee connections where split tunneling is enabled. (Citation: Electricity Information Sharing and Analysis Center; SANS Industrial Control Systems March 2016)"
+}

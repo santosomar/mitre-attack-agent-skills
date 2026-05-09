@@ -1,0 +1,32 @@
+{
+  "domain": "ics",
+  "attack_id": "T0878",
+  "name": "Alarm Suppression",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0878",
+  "stix_id": "attack-pattern--2900bbd8-308a-4274-b074-5b8bde8347bc",
+  "attack_version": "1.2",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:11.789Z",
+  "tactics": [
+    "inhibit-response-function"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Allowlists",
+    "Network Segmentation",
+    "Out-of-Band Communications Channel",
+    "Static Network Configuration"
+  ],
+  "known_context": [
+    "Maroochy Water Breach (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may target protection function alarms to prevent them from notifying operators of critical conditions. Alarm messages may be a part of an overall reporting system and of particular interest for adversaries. Disruption of the alarm system does not imply the disruption of the reporting system as a whole.\n\nA Secura presentation on targeting OT notes a dual fold goal for adversaries attempting alarm suppression: prevent outgoing alarms from being raised and prevent incoming alarms from being responded to. (Citation: Jos Wetzels, Marina Krotofil 2019) The method of suppression may greatly depend on the type of alarm in question:  \n\n* An alarm raised by a protocol message \n* An alarm signaled with I/O \n* An alarm bit set in a flag (and read) \n\nIn ICS environments, the adversary may have to suppress or contend with multiple alarms and/or alarm propagation to achieve a specific goal to evade detection or prevent intended responses from occurring. (Citation: Jos Wetzels, Marina Krotofil 2019)  Methods of suppression may involve tampering or altering device displays and logs, modifying in memory code to fixed values, or even tampering with assembly level instruction code."
+}
