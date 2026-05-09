@@ -1,0 +1,28 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1546.007",
+  "name": "Netsh Helper DLL",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1546/007",
+  "stix_id": "attack-pattern--f63fe421-b1d1-45c0-b8a7-02cd16ff2bed",
+  "attack_version": "1.1",
+  "created": "2020-01-24T14:26:51.207Z",
+  "modified": "2025-10-24T17:49:37.405Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "netsh (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may establish persistence by executing malicious content triggered by Netsh Helper DLLs. Netsh.exe (also referred to as Netshell) is a command-line scripting utility used to interact with the network configuration of a system. It contains functionality to add helper DLLs for extending functionality of the utility.(Citation: TechNet Netsh) The paths to registered netsh.exe helper DLLs are entered into the Windows Registry at <code>HKLM\\SOFTWARE\\Microsoft\\Netsh</code>.\n\nAdversaries can use netsh.exe helper DLLs to trigger execution of arbitrary code in a persistent manner. This execution would take place anytime netsh.exe is executed, which could happen automatically, with another persistence technique, or if other software (ex: VPN) is present on the system that executes netsh.exe as part of its normal functionality.(Citation: Github Netsh Helper CS Beacon)(Citation: Demaske Netsh Persistence)"
+}

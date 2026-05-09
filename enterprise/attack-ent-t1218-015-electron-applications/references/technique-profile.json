@@ -1,0 +1,34 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1218.015",
+  "name": "Electron Applications",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1218/015",
+  "stix_id": "attack-pattern--561ae9aa-c28a-4144-9eec-e7027a14c8c3",
+  "attack_version": "2.0",
+  "created": "2024-03-07T19:32:35.383Z",
+  "modified": "2026-04-20T18:01:23.195Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "Execution Prevention",
+    "Exploit Protection"
+  ],
+  "known_context": [
+    "3CX Supply Chain Attack (campaign)",
+    "Lumma Stealer (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse components of the Electron framework to execute malicious code. The Electron framework hosts many common applications such as Signal, Slack, and Microsoft Teams.(Citation: Electron 2) Originally developed by GitHub, Electron is a cross-platform desktop application development framework that employs web technologies like JavaScript, HTML, and CSS.(Citation: Electron 3) The Chromium engine is used to display web content and Node.js runs the backend code.(Citation: Electron 1)\n\nDue to the functional mechanics of Electron (such as allowing apps to run arbitrary commands), adversaries may also be able to perform malicious functions in the background potentially disguised as legitimate tools within the framework.(Citation: Electron 1) For example, the abuse of `teams.exe` and `chrome.exe` may allow adversaries to execute malicious commands as child processes of the legitimate application (e.g., `chrome.exe --disable-gpu-sandbox --gpu-launcher=\"C:\\Windows\\system32\\cmd.exe /c calc.exe`).(Citation: Electron 6-8)\n\nAdversaries may also execute malicious content by planting malicious [JavaScript](https://attack.mitre.org/techniques/T1059/007) within Electron applications.(Citation: Electron Security)"
+}

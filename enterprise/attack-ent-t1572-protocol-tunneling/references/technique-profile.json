@@ -1,0 +1,52 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1572",
+  "name": "Protocol Tunneling",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1572",
+  "stix_id": "attack-pattern--4fe28b27-b13c-453e-a386-c2ef362a573b",
+  "attack_version": "1.1",
+  "created": "2020-03-15T16:03:39.082Z",
+  "modified": "2025-10-24T17:48:45.888Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Filter Network Traffic",
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "2022 Ukraine Electric Power Attack (campaign)",
+    "BRICKSTORM (malware)",
+    "Brute Ratel C4 (tool)",
+    "C0027 (campaign)",
+    "C0032 (campaign)",
+    "Chimera (intrusion-set)",
+    "Cinnamon Tempest (intrusion-set)",
+    "Cobalt Group (intrusion-set)",
+    "Cobalt Strike (malware)",
+    "CostaRicto (campaign)",
+    "Cutting Edge (campaign)",
+    "Cyclops Blink (malware)",
+    "Duqu (malware)",
+    "Ember Bear (intrusion-set)",
+    "FIN13 (intrusion-set)",
+    "FIN6 (intrusion-set)",
+    "FIN7 (intrusion-set)",
+    "FLIPSIDE (malware)",
+    "FRP (tool)",
+    "Fox Kitten (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may tunnel network communications to and from a victim system within a separate protocol to avoid detection/network filtering and/or enable access to otherwise unreachable systems. Tunneling involves explicitly encapsulating a protocol within another. This behavior may conceal malicious traffic by blending in with existing traffic and/or provide an outer layer of encryption (similar to a VPN). Tunneling could also enable routing of network packets that would otherwise not reach their intended destination, such as SMB, RDP, or other traffic that would be filtered by network appliances or not routed over the Internet. \n\nThere are various means to encapsulate a protocol within another protocol. For example, adversaries may perform SSH tunneling (also known as SSH port forwarding), which involves forwarding arbitrary data over an encrypted SSH tunnel.(Citation: SSH Tunneling)(Citation: Sygnia Abyss Locker 2025) \n\n[Protocol Tunneling](https://attack.mitre.org/techniques/T1572) may also be abused by adversaries during [Dynamic Resolution](https://attack.mitre.org/techniques/T1568). Known as DNS over HTTPS (DoH), queries to resolve C2 infrastructure may be encapsulated within encrypted HTTPS packets.(Citation: BleepingComp Godlua JUL19) \n\nAdversaries may also leverage [Protocol Tunneling](https://attack.mitre.org/techniques/T1572) in conjunction with [Proxy](https://attack.mitre.org/techniques/T1090) and/or [Protocol or Service Impersonation](https://attack.mitre.org/techniques/T1001/003) to further conceal C2 communications and infrastructure."
+}

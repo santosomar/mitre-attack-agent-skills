@@ -1,0 +1,34 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1686.002",
+  "name": "Network Device Firewall",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1686/002",
+  "stix_id": "attack-pattern--a29aa77c-a88d-4f19-bab9-7751941b2e2d",
+  "attack_version": "1.0",
+  "created": "2026-04-14T22:54:05.016Z",
+  "modified": "2026-04-22T15:38:51.612Z",
+  "tactics": [
+    "defense-impairment"
+  ],
+  "platforms": [
+    "Network Devices"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Update Software",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "APT38 (intrusion-set)",
+    "Cyclops Blink (malware)",
+    "Grandoreiro (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may disable network device-based firewall mechanisms entirely or add, delete, or modify particular rules in order to bypass controls limiting network usage.  \n\nAdversaries may obtain access to devices such as routers, switches, or other perimeter/network devices and change access control lists (ACLs), security zones, or policy rules to permit otherwise blocked traffic. For example, adversaries may add new network firewall rules to allow access to all internal network subnets without restrictions. Allowing access to internal network subsets may enable unrestricted inbound/outbound connectivity or open paths for command and control and lateral movement.\n\nAdversaries may obtain access to network device management interfaces via [Valid Accounts](https://attack.mitre.org/techniques/T1078) or by exploiting vulnerabilities. In some cases, threat actors may target firewalls and other network infrastructure that are exposed to the internet by leveraging weaknesses in public-facing applications ([Exploit Public-Facing Application](https://attack.mitre.org/techniques/T1190)).(Citation: CVE-2024-55591 Detail)\n\nAdversaries may also modify host networking configurations that indirectly manipulate system firewalls, such as adjusting interface bandwidth or network connection request thresholds."
+}

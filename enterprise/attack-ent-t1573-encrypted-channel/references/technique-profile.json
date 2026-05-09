@@ -1,0 +1,50 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1573",
+  "name": "Encrypted Channel",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1573",
+  "stix_id": "attack-pattern--b8902400-e6c5-4ba2-95aa-2d35b442b118",
+  "attack_version": "1.2",
+  "created": "2020-03-16T15:33:01.739Z",
+  "modified": "2025-10-24T17:49:17.042Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention",
+    "SSL/TLS Inspection"
+  ],
+  "known_context": [
+    "APT29 (intrusion-set)",
+    "BITTER (intrusion-set)",
+    "Chaes (malware)",
+    "Cryptoistic (malware)",
+    "Emotet (malware)",
+    "Gomir (malware)",
+    "KV Botnet Activity (campaign)",
+    "Lizar (malware)",
+    "MacMa (malware)",
+    "Magic Hound (intrusion-set)",
+    "NETWIRE (malware)",
+    "PowGoop (malware)",
+    "PowerLess (malware)",
+    "RCSession (malware)",
+    "Triton Safety Instrumented System Attack (campaign)",
+    "Tropic Trooper (intrusion-set)",
+    "gh0st RAT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may employ an encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol. Despite the use of a secure algorithm, these implementations may be vulnerable to reverse engineering if secret keys are encoded and/or generated within malware samples/configuration files."
+}

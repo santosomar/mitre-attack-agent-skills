@@ -1,0 +1,39 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1685.006",
+  "name": "Clear Linux or Mac System Logs",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1685/006",
+  "stix_id": "attack-pattern--5e29d64d-2b14-4f92-875e-4c9c498e213c",
+  "attack_version": "1.0",
+  "created": "2026-04-14T22:54:04.240Z",
+  "modified": "2026-04-22T15:41:39.190Z",
+  "tactics": [
+    "defense-impairment"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Encrypt Sensitive Information",
+    "Remote Data Storage",
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [
+    "JumbledPath (malware)",
+    "MacMa (malware)",
+    "Proton (malware)",
+    "Rocke (intrusion-set)",
+    "Salt Typhoon (intrusion-set)",
+    "Sea Turtle (intrusion-set)",
+    "TeamTNT (intrusion-set)",
+    "UPSTYLE (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may clear system logs to hide evidence of an intrusion. macOS and Linux both keep track of system or user-initiated actions via system logs. The majority of native system logging is stored under the `/var/log/` directory. Subfolders in this directory categorize logs by their related functions, such as:(Citation: Linux Logs)\n\n* `/var/log/messages:`: General and system-related messages\n* `/var/log/secure or /var/log/auth.log`: Authentication logs\n* `/var/log/utmp or /var/log/wtmp`: Login records\n* `/var/log/kern.log`: Kernel logs\n* `/var/log/cron.log`: Crond logs\n* `/var/log/maillog`: Mail server logs\n* `/var/log/httpd/`: Web server access and error logs"
+}

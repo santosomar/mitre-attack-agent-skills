@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1199",
+  "name": "Trusted Relationship",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1199",
+  "stix_id": "attack-pattern--9fa07bef-9c81-421e-a8e5-ad4366c5a925",
+  "attack_version": "2.4",
+  "created": "2018-04-18T17:59:24.739Z",
+  "modified": "2025-11-12T15:42:52.705Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "IaaS",
+    "Identity Provider",
+    "Linux",
+    "macOS",
+    "Office Suite",
+    "SaaS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Multi-factor Authentication",
+    "Network Segmentation",
+    "User Account Management"
+  ],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "GOLD SOUTHFIELD (intrusion-set)",
+    "HAFNIUM (intrusion-set)",
+    "LAPSUS$ (intrusion-set)",
+    "POLONIUM (intrusion-set)",
+    "RedCurl (intrusion-set)",
+    "Sandworm Team (intrusion-set)",
+    "Sea Turtle (intrusion-set)",
+    "SolarWinds Compromise (campaign)",
+    "Threat Group-3390 (intrusion-set)",
+    "VOID MANTICORE (intrusion-set)",
+    "menuPass (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may breach or otherwise leverage organizations who have access to intended victims. Access through trusted third party relationship abuses an existing connection that may not be protected or receives less scrutiny than standard mechanisms of gaining access to a network.\n\nOrganizations often grant elevated access to second or third-party external providers in order to allow them to manage internal systems as well as cloud-based environments. Some examples of these relationships include IT services contractors, managed security providers, infrastructure contractors (e.g. HVAC, elevators, physical security). The third-party provider's access may be intended to be limited to the infrastructure being maintained, but may exist on the same network as the rest of the enterprise. As such, [Valid Accounts](https://attack.mitre.org/techniques/T1078) used by the other party for access to internal network systems may be compromised and used.(Citation: CISA IT Service Providers)\n\nIn Office 365 environments, organizations may grant Microsoft partners or resellers delegated administrator permissions. By compromising a partner or reseller account, an adversary may be able to leverage existing delegated administrator relationships or send new delegated administrator offers to clients in order to gain administrative control over the victim tenant.(Citation: Office 365 Delegated Administration)"
+}

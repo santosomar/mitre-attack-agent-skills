@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1590.004",
+  "name": "Network Topology",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1590/004",
+  "stix_id": "attack-pattern--34ab90a3-05f6-4259-8f21-621081fdaba5",
+  "attack_version": "1.0",
+  "created": "2020-10-02T15:49:03.815Z",
+  "modified": "2025-10-24T17:48:37.652Z",
+  "tactics": [
+    "reconnaissance"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "Anthropic AI-orchestrated Campaign (campaign)",
+    "FIN13 (intrusion-set)",
+    "MuddyWater (intrusion-set)",
+    "Salt Typhoon (intrusion-set)",
+    "Volt Typhoon (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may gather information about the victim's network topology that can be used during targeting. Information about network topologies may include a variety of details, including the physical and/or logical arrangement of both external-facing and internal network environments. This information may also include specifics regarding network devices (gateways, routers, etc.) and other infrastructure.\n\nAdversaries may gather this information in various ways, such as direct collection actions via [Active Scanning](https://attack.mitre.org/techniques/T1595) or [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about network topologies may also be exposed to adversaries via online or other accessible data sets (ex: [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: DNS Dumpster) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) or [Compromise Infrastructure](https://attack.mitre.org/techniques/T1584)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133))."
+}

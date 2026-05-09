@@ -1,0 +1,31 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1585.003",
+  "name": "Cloud Accounts",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1585/003",
+  "stix_id": "attack-pattern--926d8cfd-1d0d-4da2-ab49-3ca10ec3f3b5",
+  "attack_version": "1.1",
+  "created": "2022-05-27T14:06:05.130Z",
+  "modified": "2025-10-24T17:49:06.502Z",
+  "tactics": [
+    "resource-development"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "Operation AkaiRy\u016b (campaign)",
+    "Outer Space (campaign)",
+    "Storm-1811 (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may create accounts with cloud providers that can be used during targeting. Adversaries can use cloud accounts to further their operations, including leveraging cloud storage services such as Dropbox, MEGA, Microsoft OneDrive, or AWS S3 buckets for [Exfiltration to Cloud Storage](https://attack.mitre.org/techniques/T1567/002) or to [Upload Tool](https://attack.mitre.org/techniques/T1608/002)s. Cloud accounts can also be used in the acquisition of infrastructure, such as [Virtual Private Server](https://attack.mitre.org/techniques/T1583/003)s or [Serverless](https://attack.mitre.org/techniques/T1583/007) infrastructure. Establishing cloud accounts may allow adversaries to develop sophisticated capabilities without managing their own servers.(Citation: Awake Security C2 Cloud)\n\nCreating [Cloud Accounts](https://attack.mitre.org/techniques/T1585/003) may also require adversaries to establish [Email Accounts](https://attack.mitre.org/techniques/T1585/002) to register with the cloud provider."
+}

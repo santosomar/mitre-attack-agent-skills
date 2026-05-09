@@ -1,0 +1,27 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1216",
+  "name": "System Script Proxy Execution",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1216",
+  "stix_id": "attack-pattern--f6fe9070-7a65-49ea-ae72-76292f42cebe",
+  "attack_version": "3.0",
+  "created": "2018-04-18T17:59:24.739Z",
+  "modified": "2026-04-15T22:42:22.297Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Execution Prevention"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use trusted scripts, often signed with certificates, to proxy the execution of malicious files. Several Microsoft signed scripts that have been downloaded from Microsoft or are default on Windows installations can be used to proxy execution of other files.(Citation: LOLBAS Project) This behavior may be abused by adversaries to execute malicious files that could bypass application control and signature validation on systems.(Citation: GitHub Ultimate AppLocker Bypass List)"
+}

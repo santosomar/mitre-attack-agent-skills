@@ -1,0 +1,46 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1001",
+  "name": "Data Obfuscation",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1001",
+  "stix_id": "attack-pattern--ad255bfe-a9e6-4b52-a258-8d3462abe842",
+  "attack_version": "1.2",
+  "created": "2017-05-31T21:30:18.931Z",
+  "modified": "2025-10-24T17:49:13.380Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "DarkGate (malware)",
+    "FRAMESTING (malware)",
+    "FlawedAmmyy (malware)",
+    "FunnyDream (malware)",
+    "Gamaredon Group (intrusion-set)",
+    "Ninja (malware)",
+    "Okrum (malware)",
+    "Operation Wocao (campaign)",
+    "RDAT (malware)",
+    "SLOTHFULMEDIA (malware)",
+    "SideTwist (malware)",
+    "StrelaStealer (malware)",
+    "SystemBC (malware)",
+    "TrailBlazer (malware)",
+    "evilginx2 (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may obfuscate command and control traffic to make it more difficult to detect.(Citation: Bitdefender FunnyDream Campaign November 2020) Command and control (C2) communications are hidden (but not necessarily encrypted) in an attempt to make the content more difficult to discover or decipher and to make the communication less conspicuous and hide commands from being seen. This encompasses many methods, such as adding junk data to protocol traffic, using steganography, or impersonating legitimate protocols."
+}

@@ -1,0 +1,58 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1078.002",
+  "name": "Domain Accounts",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1078/002",
+  "stix_id": "attack-pattern--c3d4bdd9-2cfe-4a80-9d0c-07a29ecdce8f",
+  "attack_version": "2.0",
+  "created": "2020-03-13T20:21:54.758Z",
+  "modified": "2026-04-15T22:50:57.880Z",
+  "tactics": [
+    "initial-access",
+    "persistence",
+    "privilege-escalation",
+    "stealth"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Multi-factor Authentication",
+    "Password Policies",
+    "Privileged Account Management",
+    "User Account Management",
+    "User Training"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "APT3 (intrusion-set)",
+    "APT5 (intrusion-set)",
+    "Agrius (intrusion-set)",
+    "Aquatic Panda (intrusion-set)",
+    "BlackByte (intrusion-set)",
+    "Chimera (intrusion-set)",
+    "Cinnamon Tempest (intrusion-set)",
+    "Cobalt Strike (malware)",
+    "CreepySnail (malware)",
+    "Cutting Edge (campaign)",
+    "Indrik Spider (intrusion-set)",
+    "Leviathan Australian Intrusions (campaign)",
+    "Magic Hound (intrusion-set)",
+    "Naikon (intrusion-set)",
+    "Night Dragon (campaign)",
+    "OilRig (intrusion-set)",
+    "Operation CuckooBees (campaign)",
+    "Operation Ghost (campaign)",
+    "Operation MidnightEclipse (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may obtain and abuse credentials of a domain account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.(Citation: TechNet Credential Theft) Domain accounts are those managed by Active Directory Domain Services where access and permissions are configured across systems and services that are part of that domain. Domain accounts can cover users, administrators, and services.(Citation: Microsoft AD Accounts)\n\nAdversaries may compromise domain accounts, some with a high level of privileges, through various means such as [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) or password reuse, allowing access to privileged resources of the domain."
+}

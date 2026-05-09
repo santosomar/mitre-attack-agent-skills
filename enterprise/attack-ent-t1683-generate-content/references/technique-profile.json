@@ -1,0 +1,29 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1683",
+  "name": "Generate Content",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1683",
+  "stix_id": "attack-pattern--b512fb8a-18dd-4bfc-bbad-acbaaeb7dde3",
+  "attack_version": "1.0",
+  "created": "2026-03-25T14:24:06.194Z",
+  "modified": "2026-04-23T23:36:34.476Z",
+  "tactics": [
+    "resource-development"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "Anthropic AI-orchestrated Campaign (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may create or generate content to support targeting and operations. This content may be used to establish personas, impersonate known individuals or organizations, and support [Social Engineering](https://attack.mitre.org/techniques/T1684), fraud, or influence activities. Written materials, audio, images, video, or other media may be developed and tailored to the target and objective.(Citation: IBM AI-Generated Content)\n\nContent development may occur prior to or during an operation. Adversaries may develop or generate content in-house, source it through third parties, or produce it using AI-assisted tools. Adversaries may use AI to research targets, develop pretexts, and better understand the organizations and individuals they intend to target or deceive prior to generating content (i.e., [Query Public AI Services](https://attack.mitre.org/techniques/T1682)); for obtaining access to AI tools used in content generation, see [Artificial Intelligence](https://attack.mitre.org/techniques/T1588/007). \n\nContent may be leveraged in support of techniques such as [Phishing](https://attack.mitre.org/techniques/T1566), [Phishing for Information](https://attack.mitre.org/techniques/T1598), [Social Engineering](https://attack.mitre.org/techniques/T1684), [Financial Theft](https://attack.mitre.org/techniques/T1657), or [Establish Accounts](https://attack.mitre.org/techniques/T1585). Generated or developed content does not include malicious code or scripts (i.e., [Develop Capabilities](https://attack.mitre.org/techniques/T1587) and [Artificial Intelligence](https://attack.mitre.org/techniques/T1588/007))."
+}

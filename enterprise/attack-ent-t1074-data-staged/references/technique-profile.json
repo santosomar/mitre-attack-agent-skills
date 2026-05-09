@@ -1,0 +1,39 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1074",
+  "name": "Data Staged",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1074",
+  "stix_id": "attack-pattern--7dd95ff6-712e-4056-9626-312ea4ab4c5e",
+  "attack_version": "1.5",
+  "created": "2017-05-31T21:30:58.938Z",
+  "modified": "2025-10-24T17:49:01.010Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "ESXi",
+    "IaaS",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "INC Ransom (intrusion-set)",
+    "Kevin (malware)",
+    "Kobalos (malware)",
+    "QUIETCANARY (malware)",
+    "Scattered Spider (intrusion-set)",
+    "Shark (malware)",
+    "VOID MANTICORE (intrusion-set)",
+    "Volt Typhoon (intrusion-set)",
+    "Wizard Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may stage collected data in a central location or directory prior to Exfiltration. Data may be kept in separate files or combined into one file through techniques such as [Archive Collected Data](https://attack.mitre.org/techniques/T1560). Interactive command shells may be used, and common functionality within [cmd](https://attack.mitre.org/software/S0106) and bash may be used to copy data into a staging location.(Citation: PWC Cloud Hopper April 2017)\n\nIn cloud environments, adversaries may stage data within a particular instance or virtual machine before exfiltration. An adversary may [Create Cloud Instance](https://attack.mitre.org/techniques/T1578/002) and stage data in that instance.(Citation: Mandiant M-Trends 2020)\n\nAdversaries may choose to stage data from a victim network in a centralized location prior to Exfiltration to minimize the number of connections made to their C2 server and better evade detection."
+}

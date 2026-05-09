@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1176",
+  "name": "Software Extensions",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1176",
+  "stix_id": "attack-pattern--389735f1-f21c-4208-b8f0-f8031e7169b8",
+  "attack_version": "2.0",
+  "created": "2018-01-16T16:13:52.465Z",
+  "modified": "2025-10-24T17:48:39.525Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Execution Prevention",
+    "Limit Software Installation",
+    "Update Software",
+    "User Training"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse software extensions to establish persistent access to victim systems. Software extensions are modular components that enhance or customize the functionality of software applications, including web browsers, Integrated Development Environments (IDEs), and other platforms.(Citation: Chrome Extension C2 Malware)(Citation: Abramovsky VSCode Security) Extensions are typically installed via official marketplaces, app stores, or manually loaded by users, and they often inherit the permissions and access levels of the host application. \n\n  \nMalicious extensions can be introduced through various methods, including social engineering, compromised marketplaces, or direct installation by users or by adversaries who have already gained access to a system. Malicious extensions can be named similarly or identically to benign extensions in marketplaces. Security mechanisms in extension marketplaces may be insufficient to detect malicious components, allowing adversaries to bypass automated scanners or exploit trust established during the installation process. Adversaries may also abuse benign extensions to achieve their objectives, such as using legitimate functionality to tunnel data or bypass security controls. \n\nThe modular nature of extensions and their integration with host applications make them an attractive target for adversaries seeking to exploit trusted software ecosystems. Detection can be challenging due to the inherent trust placed in extensions during installation and their ability to blend into normal application workflows."
+}

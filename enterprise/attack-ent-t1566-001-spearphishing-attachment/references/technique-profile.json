@@ -1,0 +1,56 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1566.001",
+  "name": "Spearphishing Attachment",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1566/001",
+  "stix_id": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597",
+  "attack_version": "2.2",
+  "created": "2020-03-02T19:05:18.137Z",
+  "modified": "2025-10-24T17:48:35.522Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Antivirus/Antimalware",
+    "Audit",
+    "Network Intrusion Prevention",
+    "Restrict Web-Based Content",
+    "Software Configuration",
+    "User Account Management",
+    "User Training"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "APT-C-36 (intrusion-set)",
+    "APT1 (intrusion-set)",
+    "APT12 (intrusion-set)",
+    "APT19 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "APT30 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT33 (intrusion-set)",
+    "APT37 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "Agent Tesla (malware)",
+    "Ajax Security Team (intrusion-set)",
+    "Andariel (intrusion-set)",
+    "AppleSeed (malware)",
+    "Astaroth (malware)",
+    "AsyncRAT (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems. Spearphishing attachment is a specific variant of spearphishing. Spearphishing attachment is different from other forms of spearphishing in that it employs the use of malware attached to an email. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries attach a file to the spearphishing email and usually rely upon [User Execution](https://attack.mitre.org/techniques/T1204) to gain execution.(Citation: Unit 42 DarkHydrus July 2018) Spearphishing may also involve social engineering techniques, such as posing as a trusted source.\n\nThere are many options for the attachment such as Microsoft Office documents, executables, PDFs, or archived files. Upon opening the attachment (and potentially clicking past protections), the adversary's payload exploits a vulnerability or directly executes on the user's system. The text of the spearphishing email usually tries to give a plausible reason why the file should be opened, and may explain how to bypass system protections in order to do so. The email may also contain instructions on how to decrypt an attachment, such as a zip file password, in order to evade email boundary defenses. Adversaries frequently manipulate file extensions and icons in order to make attached executables appear to be document files, or files exploiting one application appear to be a file for a different one."
+}

@@ -1,0 +1,52 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1204.001",
+  "name": "Malicious Link",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1204/001",
+  "stix_id": "attack-pattern--ef67e13e-5598-4adc-bdb2-998225874fa9",
+  "attack_version": "1.2",
+  "created": "2020-03-11T14:43:31.706Z",
+  "modified": "2025-10-24T17:49:35.144Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention",
+    "Restrict Web-Based Content",
+    "User Training"
+  ],
+  "known_context": [
+    "APT-C-36 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "APT3 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT33 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "AppleJeus (malware)",
+    "BackConfig (malware)",
+    "Bazar (malware)",
+    "BlackTech (intrusion-set)",
+    "Bumblebee (malware)",
+    "C0011 (campaign)",
+    "C0021 (campaign)",
+    "Cobalt Group (intrusion-set)",
+    "Confucius (intrusion-set)",
+    "Contagious Interview (intrusion-set)",
+    "Daggerfly (intrusion-set)",
+    "EXOTIC LILY (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may rely upon a user clicking a malicious link in order to gain execution. Users may be subjected to social engineering to get them to click on a link that will lead to code execution. This user action will typically be observed as follow-on behavior from [Spearphishing Link](https://attack.mitre.org/techniques/T1566/002). Clicking on a link may also lead to other execution techniques such as exploitation of a browser or application vulnerability via [Exploitation for Client Execution](https://attack.mitre.org/techniques/T1203). Links may also lead users to download files that require execution via [Malicious File](https://attack.mitre.org/techniques/T1204/002)."
+}

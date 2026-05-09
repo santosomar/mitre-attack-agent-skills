@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1027.012",
+  "name": "LNK Icon Smuggling",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1027/012",
+  "stix_id": "attack-pattern--887274fc-2d63-4bdc-82f3-fae56d1d5fdc",
+  "attack_version": "2.0",
+  "created": "2023-09-29T15:28:42.409Z",
+  "modified": "2026-04-15T22:20:54.005Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Antivirus/Antimalware",
+    "Behavior Prevention on Endpoint"
+  ],
+  "known_context": [
+    "Gamaredon Group (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "Mustang Panda (intrusion-set)",
+    "TONESHELL (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may smuggle commands to download malicious payloads past content filters by hiding them within otherwise seemingly benign windows shortcut files. Windows shortcut files (.LNK) include many metadata fields, including an icon location field (also known as the `IconEnvironmentDataBlock`) designed to specify the path to an icon file that is to be displayed for the LNK file within a host directory. \n\nAdversaries may abuse this LNK metadata to download malicious payloads. For example, adversaries have been observed using LNK files as phishing payloads to deliver malware. Once invoked (e.g., [Malicious File](https://attack.mitre.org/techniques/T1204/002)), payloads referenced via external URLs within the LNK icon location field may be downloaded. These files may also then be invoked by [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059)/[System Binary Proxy Execution](https://attack.mitre.org/techniques/T1218) arguments within the target path field of the LNK.(Citation: Unprotect Shortcut)(Citation: Booby Trap Shortcut 2017)\n\nLNK Icon Smuggling may also be utilized post compromise, such as malicious scripts executing an LNK on an infected host to download additional malicious payloads."
+}

@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1027.011",
+  "name": "Fileless Storage",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1027/011",
+  "stix_id": "attack-pattern--02c5abff-30bf-4703-ab92-1f6072fae939",
+  "attack_version": "3.0",
+  "created": "2023-03-23T19:55:25.546Z",
+  "modified": "2026-04-15T22:18:39.119Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit"
+  ],
+  "known_context": [
+    "APT32 (intrusion-set)",
+    "CHOPSTICK (malware)",
+    "Chaes (malware)",
+    "ComRAT (malware)",
+    "DarkWatchman (malware)",
+    "Exaramel for Windows (malware)",
+    "Gelsemium (malware)",
+    "Grandoreiro (malware)",
+    "Mosquito (malware)",
+    "NETWIRE (malware)",
+    "Operation CuckooBees (campaign)",
+    "Pikabot (malware)",
+    "Pillowmint (malware)",
+    "PipeMon (malware)",
+    "PolyglotDuke (malware)",
+    "QUADAGENT (malware)",
+    "QakBot (malware)",
+    "Quad7 Activity (campaign)",
+    "RCSession (malware)",
+    "REvil (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may store data in \"fileless\" formats to conceal malicious activity from defenses. Fileless storage can be broadly defined as any format other than a file. Common examples of non-volatile fileless storage in Windows systems include the Windows Registry, event logs, or WMI repository.(Citation: Microsoft Fileless)(Citation: SecureList Fileless) Shared memory directories on Linux systems (`/dev/shm`, `/run/shm`, `/var/run`, and `/var/lock`) and volatile directories on Network Devices (`/tmp` and `/volatile`) may also be considered fileless storage, as files written to these directories are mapped directly to RAM and not stored on the disk.(Citation: Elastic Binary Executed from Shared Memory Directory)(Citation: Akami Frog4Shell 2024)(Citation: Aquasec Muhstik Malware 2024)(Citation: Bitsight 7777 Botnet)(Citation: CISCO Nexus 900 Config).\n\nSimilar to fileless in-memory behaviors such as [Reflective Code Loading](https://attack.mitre.org/techniques/T1620) and [Process Injection](https://attack.mitre.org/techniques/T1055), fileless data storage may remain undetected by antivirus and other endpoint security tools that can only access specific file formats from disk storage. Leveraging fileless storage may also allow adversaries to bypass the protections offered by read-only file systems in Linux.(Citation: Sysdig Fileless Malware 23022)\n\nAdversaries may use fileless storage to conceal various types of stored data, including payloads/shellcode (potentially being used as part of [Persistence](https://attack.mitre.org/tactics/TA0003)) and collected data not yet exfiltrated from the victim (e.g., [Local Data Staging](https://attack.mitre.org/techniques/T1074/001)). Adversaries also often encrypt, encode, splice, or otherwise obfuscate this fileless data when stored. \n\nSome forms of fileless storage activity may indirectly create artifacts in the file system, but in central and otherwise difficult to inspect formats such as the WMI (e.g., `%SystemRoot%\\System32\\Wbem\\Repository`) or Registry (e.g., `%SystemRoot%\\System32\\Config`) physical files.(Citation: Microsoft Fileless)"
+}

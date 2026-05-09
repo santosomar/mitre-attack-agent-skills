@@ -1,0 +1,46 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1213.006",
+  "name": "Databases",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1213/006",
+  "stix_id": "attack-pattern--248d3fe1-7fe1-4d71-91c7-8bb7ef35cad3",
+  "attack_version": "1.0",
+  "created": "2025-05-22T19:02:46.718Z",
+  "modified": "2025-10-21T23:54:04.429Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "IaaS",
+    "Linux",
+    "macOS",
+    "SaaS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Encrypt Sensitive Information",
+    "Software Configuration",
+    "User Account Management",
+    "User Training"
+  ],
+  "known_context": [
+    "APT41 DUST (campaign)",
+    "Anthropic AI-orchestrated Campaign (campaign)",
+    "FIN6 (intrusion-set)",
+    "GlassWorm (malware)",
+    "Leviathan Australian Intrusions (campaign)",
+    "MgBot (malware)",
+    "P.A.S. Webshell (malware)",
+    "Sandworm Team (intrusion-set)",
+    "Sea Turtle (intrusion-set)",
+    "Turla (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage databases to mine valuable information. These databases may be hosted on-premises or in the cloud (both in platform-as-a-service and software-as-a-service environments). \n\nExamples of databases from which information may be collected include MySQL, PostgreSQL, MongoDB, Amazon Relational Database Service, Azure SQL Database, Google Firebase, and Snowflake. Databases may include a variety of information of interest to adversaries, such as usernames, hashed passwords, personally identifiable information, and financial data. Data collected from databases may be used for [Lateral Movement](https://attack.mitre.org/tactics/TA0008), [Command and Control](https://attack.mitre.org/tactics/TA0011), or [Exfiltration](https://attack.mitre.org/tactics/TA0010). Data exfiltrated from databases may also be used to extort victims or may be sold for profit.(Citation: Google Cloud Threat Intelligence UNC5537 Snowflake 2024)"
+}

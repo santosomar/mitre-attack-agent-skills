@@ -1,0 +1,44 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1074.002",
+  "name": "Remote Data Staging",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1074/002",
+  "stix_id": "attack-pattern--359b00ad-9425-420b-bba5-6de8d600cbc0",
+  "attack_version": "1.2",
+  "created": "2020-03-13T21:14:58.206Z",
+  "modified": "2025-10-24T17:48:38.453Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "ESXi",
+    "IaaS",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "Chimera (intrusion-set)",
+    "FIN6 (intrusion-set)",
+    "FIN8 (intrusion-set)",
+    "Leviathan (intrusion-set)",
+    "MirrorFace (intrusion-set)",
+    "MoustachedBouncer (intrusion-set)",
+    "Night Dragon (campaign)",
+    "Sea Turtle (intrusion-set)",
+    "SolarWinds Compromise (campaign)",
+    "Threat Group-3390 (intrusion-set)",
+    "ToddyCat (intrusion-set)",
+    "ccf32 (malware)",
+    "menuPass (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may stage data collected from multiple systems in a central location or directory on one system prior to Exfiltration. Data may be kept in separate files or combined into one file through techniques such as [Archive Collected Data](https://attack.mitre.org/techniques/T1560). Interactive command shells may be used, and common functionality within [cmd](https://attack.mitre.org/software/S0106) and bash may be used to copy data into a staging location.\n\nIn cloud environments, adversaries may stage data within a particular instance or virtual machine before exfiltration. An adversary may [Create Cloud Instance](https://attack.mitre.org/techniques/T1578/002) and stage data in that instance.(Citation: Mandiant M-Trends 2020)\n\nBy staging data on one system prior to Exfiltration, adversaries can minimize the number of connections made to their C2 server and better evade detection."
+}

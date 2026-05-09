@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1555.006",
+  "name": "Cloud Secrets Management Stores",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1555/006",
+  "stix_id": "attack-pattern--cfb525cc-5494-401d-a82b-2539ca46a561",
+  "attack_version": "1.0",
+  "created": "2023-09-25T12:41:26.501Z",
+  "modified": "2025-04-15T22:03:00.834Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "IaaS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Privileged Account Management"
+  ],
+  "known_context": [
+    "HAFNIUM (intrusion-set)",
+    "Pacu (tool)",
+    "Shai-Hulud (malware)",
+    "Storm-0501 (intrusion-set)",
+    "TruffleHog (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may acquire credentials from cloud-native secret management solutions such as AWS Secrets Manager, GCP Secret Manager, Azure Key Vault, and Terraform Vault.  \n\nSecrets managers support the secure centralized management of passwords, API keys, and other credential material. Where secrets managers are in use, cloud services can dynamically acquire credentials via API requests rather than accessing secrets insecurely stored in plain text files or environment variables.  \n\nIf an adversary is able to gain sufficient privileges in a cloud environment \u2013 for example, by obtaining the credentials of high-privileged [Cloud Accounts](https://attack.mitre.org/techniques/T1078/004) or compromising a service that has permission to retrieve secrets \u2013 they may be able to request secrets from the secrets manager. This can be accomplished via commands such as `get-secret-value` in AWS, `gcloud secrets describe` in GCP, and `az key vault secret show` in Azure.(Citation: Permiso Scattered Spider 2023)(Citation: Sysdig ScarletEel 2.0 2023)(Citation: AWS Secrets Manager)(Citation: Google Cloud Secrets)(Citation: Microsoft Azure Key Vault)\n\n**Note:** this technique is distinct from [Cloud Instance Metadata API](https://attack.mitre.org/techniques/T1552/005) in that the credentials are being directly requested from the cloud secrets manager, rather than through the medium of the instance metadata API."
+}

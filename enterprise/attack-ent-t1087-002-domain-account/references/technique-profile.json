@@ -1,0 +1,50 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1087.002",
+  "name": "Domain Account",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1087/002",
+  "stix_id": "attack-pattern--21875073-b0ee-49e3-9077-1e2a885359af",
+  "attack_version": "1.2",
+  "created": "2020-02-21T21:08:26.480Z",
+  "modified": "2025-10-24T17:48:31.050Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Operating System Configuration"
+  ],
+  "known_context": [
+    "APT41 (intrusion-set)",
+    "AdFind (tool)",
+    "BRONZE BUTLER (intrusion-set)",
+    "Bankshot (malware)",
+    "Bazar (malware)",
+    "BlackByte (intrusion-set)",
+    "BlackCat (malware)",
+    "BloodHound (tool)",
+    "BoomBox (malware)",
+    "Brute Ratel C4 (tool)",
+    "Chimera (intrusion-set)",
+    "Cobalt Strike (malware)",
+    "CrackMapExec (tool)",
+    "DUSTTRAP (malware)",
+    "Dragonfly (intrusion-set)",
+    "Empire (tool)",
+    "FIN13 (intrusion-set)",
+    "FIN6 (intrusion-set)",
+    "FIN7 (intrusion-set)",
+    "Fox Kitten (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to get a listing of domain accounts. This information can help adversaries determine which domain accounts exist to aid in follow-on behavior such as targeting specific accounts which possess particular privileges.\n\nCommands such as <code>net user /domain</code> and <code>net group /domain</code> of the [Net](https://attack.mitre.org/software/S0039) utility, <code>dscacheutil -q group</code> on macOS, and <code>ldapsearch</code> on Linux can list domain users and groups. [PowerShell](https://attack.mitre.org/techniques/T1059/001) cmdlets including <code>Get-ADUser</code> and <code>Get-ADGroupMember</code> may enumerate members of Active Directory groups.(Citation: CrowdStrike StellarParticle January 2022)"
+}

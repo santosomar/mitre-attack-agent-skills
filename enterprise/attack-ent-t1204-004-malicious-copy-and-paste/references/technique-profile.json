@@ -1,0 +1,36 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1204.004",
+  "name": "Malicious Copy and Paste",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1204/004",
+  "stix_id": "attack-pattern--e261a979-f354-41a8-963e-6cadac27c4bf",
+  "attack_version": "1.1",
+  "created": "2025-03-18T12:57:50.188Z",
+  "modified": "2026-03-27T20:05:57.921Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Execution Prevention",
+    "Network Intrusion Prevention",
+    "Restrict Web-Based Content"
+  ],
+  "known_context": [
+    "Contagious Interview (intrusion-set)",
+    "Havoc (malware)",
+    "Kimsuky (intrusion-set)",
+    "MuddyWater (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may rely upon a user copying and pasting code in order to gain execution. Users may be subjected to social engineering to get them to copy and paste code directly into a [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059). One such strategy is \"ClickFix,\" in which adversaries present users with seemingly helpful solutions\u2014such as prompts to fix errors or complete CAPTCHAs\u2014that instead instruct the user to copy and paste malicious code.\n\nMalicious websites, such as those used in [Drive-by Compromise](https://attack.mitre.org/techniques/T1189), may present fake error messages or CAPTCHA prompts that instruct users to open a terminal or the Windows Run Dialog box and execute an arbitrary command. These commands may be obfuscated using encoding or other techniques to conceal malicious intent. Once executed, the adversary will typically be able to establish a foothold on the victim's machine.(Citation: CloudSEK Lumma Stealer 2024)(Citation: Sekoia ClickFake 2025)(Citation: Reliaquest CAPTCHA 2024)(Citation: AhnLab LummaC2 2025)\n\nAdversaries may also leverage phishing emails for this purpose. When a user attempts to open an attachment, they may be presented with a fake error and offered a malicious command to paste as a solution, consistent with the \"ClickFix\" strategy.(Citation: Proofpoint ClickFix 2024)(Citation: AhnLab Malicioys Copy Paste 2024)\n\nTricking a user into executing a command themselves may help to bypass email filtering, browser sandboxing, or other mitigations designed to protect users against malicious downloaded files."
+}

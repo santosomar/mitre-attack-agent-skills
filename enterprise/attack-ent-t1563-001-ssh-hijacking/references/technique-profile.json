@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1563.001",
+  "name": "SSH Hijacking",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1563/001",
+  "stix_id": "attack-pattern--4d2a5b3e-340d-4600-9123-309dd63c9bf8",
+  "attack_version": "1.1",
+  "created": "2020-02-25T18:34:38.290Z",
+  "modified": "2025-10-24T17:48:45.240Z",
+  "tactics": [
+    "lateral-movement"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "Password Policies",
+    "Privileged Account Management",
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [
+    "MEDUSA (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may hijack a legitimate user's SSH session to move laterally within an environment. Secure Shell (SSH) is a standard means of remote access on Linux and macOS systems. It allows a user to connect to another system via an encrypted tunnel, commonly authenticating through a password, certificate or the use of an asymmetric encryption key pair.\n\nIn order to move laterally from a compromised host, adversaries may take advantage of trust relationships established with other systems via public key authentication in active SSH sessions by hijacking an existing connection to another system. This may occur through compromising the SSH agent itself or by having access to the agent's socket. If an adversary is able to obtain root access, then hijacking SSH sessions is likely trivial.(Citation: Slideshare Abusing SSH)(Citation: SSHjack Blackhat)(Citation: Clockwork SSH Agent Hijacking)(Citation: Breach Post-mortem SSH Hijack)\n\n[SSH Hijacking](https://attack.mitre.org/techniques/T1563/001) differs from use of [SSH](https://attack.mitre.org/techniques/T1021/004) because it hijacks an existing SSH session rather than creating a new session using [Valid Accounts](https://attack.mitre.org/techniques/T1078)."
+}

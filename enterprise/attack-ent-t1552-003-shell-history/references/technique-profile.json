@@ -1,0 +1,31 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1552.003",
+  "name": "Shell History",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1552/003",
+  "stix_id": "attack-pattern--8187bd2a-866f-4457-9009-86b0ddedffa3",
+  "attack_version": "2.0",
+  "created": "2020-02-04T13:02:11.685Z",
+  "modified": "2025-10-24T17:49:02.375Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Operating System Configuration"
+  ],
+  "known_context": [
+    "Kinsing (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may search the command history on compromised systems for insecurely stored credentials.\n\nOn Linux and macOS systems, shells such as Bash and Zsh keep track of the commands users type on the command-line with the \"history\" utility. Once a user logs out, the history is flushed to the user's history file. For each user, this file resides at the same location: for example, `~/.bash_history` or `~/.zsh_history`. Typically, these files keeps track of the user's last 1000 commands.\n\nOn Windows, PowerShell has both a command history that is wiped after the session ends, and one that contains commands used in all sessions and is persistent. The default location for persistent history can be found in `%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadline\\ConsoleHost_history.txt`, but command history can also be accessed with `Get-History`. Command Prompt (CMD) on Windows does not have persistent history.(Citation: Microsoft about_History)(Citation: Medium)\n\nUsers often type usernames and passwords on the command-line as parameters to programs, which then get saved to this file when they log out. Adversaries can abuse this by looking through the file for potential credentials.(Citation: External to DA, the OS X Way)"
+}

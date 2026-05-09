@@ -1,0 +1,31 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1619",
+  "name": "Cloud Storage Object Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1619",
+  "stix_id": "attack-pattern--8565825b-21c8-4518-b75e-cbc4c717a156",
+  "attack_version": "1.0",
+  "created": "2021-10-01T17:58:26.445Z",
+  "modified": "2025-10-24T17:49:03.853Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "IaaS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Account Management"
+  ],
+  "known_context": [
+    "Pacu (tool)",
+    "Peirates (tool)",
+    "TruffleHog (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may enumerate objects in cloud storage infrastructure. Adversaries may use this information during automated discovery to shape follow-on behaviors, including requesting all or specific objects from cloud storage.  Similar to [File and Directory Discovery](https://attack.mitre.org/techniques/T1083) on a local host, after identifying available storage services (i.e. [Cloud Infrastructure Discovery](https://attack.mitre.org/techniques/T1580)) adversaries may access the contents/objects stored in cloud infrastructure.\n\nCloud service providers offer APIs allowing users to enumerate objects stored within cloud storage. Examples include ListObjectsV2 in AWS (Citation: ListObjectsV2) and List Blobs in Azure(Citation: List Blobs) ."
+}

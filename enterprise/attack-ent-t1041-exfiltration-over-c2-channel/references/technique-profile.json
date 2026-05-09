@@ -1,0 +1,52 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1041",
+  "name": "Exfiltration Over C2 Channel",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1041",
+  "stix_id": "attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d",
+  "attack_version": "2.3",
+  "created": "2017-05-31T21:30:41.804Z",
+  "modified": "2025-10-24T17:49:06.675Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Data Loss Prevention",
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "ADVSTORESHELL (malware)",
+    "APT3 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "Agrius (intrusion-set)",
+    "Amadey (malware)",
+    "AppleJeus (malware)",
+    "AppleSeed (malware)",
+    "ArcaneDoor (campaign)",
+    "AshTag (malware)",
+    "Astaroth (malware)",
+    "Attor (malware)",
+    "AuTo Stealer (malware)",
+    "BACKSPACE (malware)",
+    "BADHATCH (malware)",
+    "BLINDINGCAN (malware)",
+    "BLUELIGHT (malware)",
+    "BRICKSTORM (malware)",
+    "Bandook (malware)",
+    "Bankshot (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may steal data by exfiltrating it over an existing command and control channel. Stolen data is encoded into the normal communications channel using the same protocol as command and control communications."
+}

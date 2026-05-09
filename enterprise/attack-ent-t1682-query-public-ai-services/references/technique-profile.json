@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1682",
+  "name": "Query Public AI Services",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1682",
+  "stix_id": "attack-pattern--143122a8-fcda-4dd7-aded-5b9387d9c2d6",
+  "attack_version": "1.0",
+  "created": "2026-03-25T14:21:30.680Z",
+  "modified": "2026-04-20T20:59:00.096Z",
+  "tactics": [
+    "reconnaissance"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "APT42 (intrusion-set)",
+    "Kimsuky (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may query publicly accessible artificial intelligence (AI) services, such as large language models (LLMs), to support targeting and operations. In addition to searching websites or databases directly (i.e., [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), adversaries may use AI services to synthesize, aggregate, and analyze publicly available information at scale. This may include identifying individuals or organizations to target, researching organizational structures and personnel, identifying technologies used by target organizations, researching business relationships to develop plausible pretexts for [Social Engineering](https://attack.mitre.org/techniques/T1684) approaches, identifying contact information for use in [Phishing](https://attack.mitre.org/techniques/T1566) or [Phishing for Information](https://attack.mitre.org/techniques/T1598), or gathering derogatory or sensitive information about individuals that may be used for extortion or coercion.(Citation: MSFT-AI)(Citation: GTIG AI Threat Tracker)\n\nInformation gathered through AI services may be leveraged for other behaviors, such as establishing operational resources (i.e., [Generate Content](https://attack.mitre.org/techniques/T1683) or [Establish Accounts](https://attack.mitre.org/techniques/T1585). For obtaining access to AI tools and services, see [Artificial Intelligence](https://attack.mitre.org/techniques/T1588/007)."
+}

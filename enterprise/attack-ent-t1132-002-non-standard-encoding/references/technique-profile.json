@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1132.002",
+  "name": "Non-Standard Encoding",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1132/002",
+  "stix_id": "attack-pattern--d467bc38-284b-4a00-96ac-125f447799fc",
+  "attack_version": "1.1",
+  "created": "2020-03-14T23:39:50.117Z",
+  "modified": "2026-04-21T18:10:25.277Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "BACKSPACE (malware)",
+    "Bankshot (malware)",
+    "CHIMNEYSWEEP (malware)",
+    "Cyclops Blink (malware)",
+    "HTTPTroy (malware)",
+    "InvisiMole (malware)",
+    "Kimsuky (intrusion-set)",
+    "Lizar (malware)",
+    "Neo-reGeorg (malware)",
+    "NightClub (malware)",
+    "Ninja (malware)",
+    "OceanSalt (malware)",
+    "PowGoop (malware)",
+    "RDAT (malware)",
+    "ShadowPad (malware)",
+    "Small Sieve (malware)",
+    "TONESHELL (malware)",
+    "Uroburos (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may encode data with a non-standard data encoding system to make the content of command and control traffic more difficult to detect. Command and control (C2) information can be encoded using a non-standard data encoding system that diverges from existing protocol specifications. Non-standard data encoding schemes may be based on or related to standard data encoding schemes, such as a modified Base64 encoding for the message body of an HTTP request.(Citation: Wikipedia Binary-to-text Encoding)(Citation: Wikipedia Character Encoding)"
+}

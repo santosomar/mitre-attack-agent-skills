@@ -1,0 +1,42 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1204",
+  "name": "User Execution",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1204",
+  "stix_id": "attack-pattern--8c32eb4d-805f-4fc5-bf60-c4d476c131b5",
+  "attack_version": "1.8",
+  "created": "2018-04-18T17:59:24.739Z",
+  "modified": "2025-10-24T17:49:04.940Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Linux",
+    "Windows",
+    "macOS",
+    "IaaS",
+    "Containers"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Behavior Prevention on Endpoint",
+    "Execution Prevention",
+    "Limit Software Installation",
+    "Network Intrusion Prevention",
+    "Restrict Web-Based Content",
+    "User Training"
+  ],
+  "known_context": [
+    "LAPSUS$ (intrusion-set)",
+    "Lumma Stealer (malware)",
+    "Raspberry Robin (malware)",
+    "Scattered Spider (intrusion-set)",
+    "Water Curupira Pikabot Distribution (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may rely upon specific actions by a user in order to gain execution. Users may be subjected to social engineering to get them to execute malicious code by, for example, opening a malicious document file or link. These user actions will typically be observed as follow-on behavior from forms of [Phishing](https://attack.mitre.org/techniques/T1566).\n\nWhile [User Execution](https://attack.mitre.org/techniques/T1204) frequently occurs shortly after Initial Access it may occur at other phases of an intrusion, such as when an adversary places a file in a shared directory or on a user's desktop hoping that a user will click on it. This activity may also be seen shortly after [Internal Spearphishing](https://attack.mitre.org/techniques/T1534).\n\nAdversaries may also deceive users into performing actions such as:\n\n* Enabling [Remote Access Tools](https://attack.mitre.org/techniques/T1219), allowing direct control of the system to the adversary\n* Running malicious JavaScript in their browser, allowing adversaries to [Steal Web Session Cookie](https://attack.mitre.org/techniques/T1539)s(Citation: Talos Roblox Scam 2023)(Citation: Krebs Discord Bookmarks 2023)\n* Downloading and executing malware for [User Execution](https://attack.mitre.org/techniques/T1204)\n* Coerceing users to copy, paste, and execute malicious code manually(Citation: Reliaquest-execution)(Citation: proofpoint-selfpwn)\n\nFor example, tech support scams can be facilitated through [Phishing](https://attack.mitre.org/techniques/T1566), vishing, or various forms of user interaction. Adversaries can use a combination of these methods, such as spoofing and promoting toll-free numbers or call centers that are used to direct victims to malicious websites, to deliver and execute payloads containing malware or [Remote Access Tools](https://attack.mitre.org/techniques/T1219).(Citation: Telephone Attack Delivery)"
+}

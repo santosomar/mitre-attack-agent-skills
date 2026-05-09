@@ -1,0 +1,39 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1132",
+  "name": "Data Encoding",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1132",
+  "stix_id": "attack-pattern--cc7b8c4e-9be0-47ca-b0bb-83915ec3ee2f",
+  "attack_version": "1.3",
+  "created": "2017-05-31T21:31:43.540Z",
+  "modified": "2025-10-24T17:49:23.915Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "BADNEWS (malware)",
+    "H1N1 (malware)",
+    "LAMEHUG (malware)",
+    "Linux Rabbit (malware)",
+    "Mythic (tool)",
+    "Ursnif (malware)",
+    "Velvet Ant (intrusion-set)",
+    "evilginx2 (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may encode data to make the content of command and control traffic more difficult to detect. Command and control (C2) information can be encoded using a standard data encoding system. Use of data encoding may adhere to existing protocol specifications and includes use of ASCII, Unicode, Base64, MIME, or other binary-to-text and character encoding systems.(Citation: Wikipedia Binary-to-text Encoding) (Citation: Wikipedia Character Encoding) Some data encoding systems may also result in data compression, such as gzip."
+}

@@ -1,0 +1,29 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1597.002",
+  "name": "Purchase Technical Data",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1597/002",
+  "stix_id": "attack-pattern--0a241b6c-7bb2-48f9-98f7-128145b4d27f",
+  "attack_version": "1.0",
+  "created": "2020-10-02T17:05:43.562Z",
+  "modified": "2025-10-24T17:48:22.109Z",
+  "tactics": [
+    "reconnaissance"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "LAPSUS$ (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may purchase technical information about victims that can be used during targeting. Information about victims may be available for purchase within reputable private sources and databases, such as paid subscriptions to feeds of scan databases or other data aggregation services. Adversaries may also purchase information from less-reputable sources such as dark web or cybercrime blackmarkets.\n\nAdversaries may purchase information about their already identified targets, or use purchased data to discover opportunities for successful breaches. Threat actors may gather various technical details from purchased data, including but not limited to employee contact information, credentials, or specifics regarding a victim\u2019s infrastructure.(Citation: ZDNET Selling Data) Information from these sources may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Develop Capabilities](https://attack.mitre.org/techniques/T1587) or [Obtain Capabilities](https://attack.mitre.org/techniques/T1588)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133) or [Valid Accounts](https://attack.mitre.org/techniques/T1078))."
+}

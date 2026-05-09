@@ -1,0 +1,38 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1059.011",
+  "name": "Lua",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1059/011",
+  "stix_id": "attack-pattern--afddee82-3385-4682-ad90-eeced33f2d07",
+  "attack_version": "1.1",
+  "created": "2024-08-05T18:19:42.201Z",
+  "modified": "2025-04-15T19:58:57.854Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Linux",
+    "Network Devices",
+    "Windows",
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Execution Prevention",
+    "Limit Software Installation"
+  ],
+  "known_context": [
+    "EvilBunny (malware)",
+    "Line Runner (malware)",
+    "PoetRAT (malware)",
+    "RedLine Stealer (malware)",
+    "Remsec (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Lua commands and scripts for execution. Lua is a cross-platform scripting and programming language primarily designed for embedded use in applications. Lua can be executed on the command-line (through the stand-alone lua interpreter), via scripts (<code>.lua</code>), or from Lua-embedded programs (through the <code>struct lua_State</code>).(Citation: Lua main page)(Citation: Lua state)\n\nLua scripts may be executed by adversaries for malicious purposes. Adversaries may incorporate, abuse, or replace existing Lua interpreters to allow for malicious Lua command execution at runtime.(Citation: PoetRat Lua)(Citation: Lua Proofpoint Sunseed)(Citation: Cyphort EvilBunny)(Citation: Kaspersky Lua)"
+}

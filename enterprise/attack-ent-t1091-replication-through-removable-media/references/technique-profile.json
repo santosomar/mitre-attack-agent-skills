@@ -1,0 +1,51 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1091",
+  "name": "Replication Through Removable Media",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1091",
+  "stix_id": "attack-pattern--3b744087-9945-4a6f-91e8-9dbceda417a4",
+  "attack_version": "1.3",
+  "created": "2017-05-31T21:31:08.977Z",
+  "modified": "2025-10-24T17:48:40.752Z",
+  "tactics": [
+    "initial-access",
+    "lateral-movement"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Behavior Prevention on Endpoint",
+    "Disable or Remove Feature or Program",
+    "Limit Hardware Installation"
+  ],
+  "known_context": [
+    "ANDROMEDA (malware)",
+    "APT28 (intrusion-set)",
+    "Agent.btz (malware)",
+    "Aoqin Dragon (intrusion-set)",
+    "CHOPSTICK (malware)",
+    "Conficker (malware)",
+    "Crimson (malware)",
+    "Darkhotel (intrusion-set)",
+    "DustySky (malware)",
+    "FIN7 (intrusion-set)",
+    "Flame (malware)",
+    "Gamaredon Group (intrusion-set)",
+    "H1N1 (malware)",
+    "HIUPAN (malware)",
+    "LuminousMoth (intrusion-set)",
+    "Mustang Panda (intrusion-set)",
+    "PlugX (malware)",
+    "QakBot (malware)",
+    "Ramsay (malware)",
+    "Raspberry Robin (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may move onto systems, possibly those on disconnected or air-gapped networks, by copying malware to removable media and taking advantage of Autorun features when the media is inserted into a system and executes. In the case of Lateral Movement, this may occur through modification of executable files stored on removable media or by copying malware and renaming it to look like a legitimate file to trick users into executing it on a separate system. In the case of Initial Access, this may occur through manual manipulation of the media, modification of systems used to initially format the media, or modification to the media's firmware itself.\n\nMobile devices may also be used to infect PCs with malware if connected via USB.(Citation: Exploiting Smartphone USB ) This infection may be achieved using devices (Android, iOS, etc.) and, in some instances, USB charging cables.(Citation: Windows Malware Infecting Android)(Citation: iPhone Charging Cable Hack) For example, when a smartphone is connected to a system, it may appear to be mounted similar to a USB-connected disk drive. If malware that is compatible with the connected system is on the mobile device, the malware could infect the machine (especially if Autorun features are enabled)."
+}

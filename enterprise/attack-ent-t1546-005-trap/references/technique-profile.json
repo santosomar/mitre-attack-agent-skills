@@ -1,0 +1,27 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1546.005",
+  "name": "Trap",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1546/005",
+  "stix_id": "attack-pattern--63220765-d418-44de-8fae-694b3912317d",
+  "attack_version": "1.1",
+  "created": "2020-01-24T14:17:43.906Z",
+  "modified": "2025-10-24T17:48:51.725Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "macOS",
+    "Linux"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may establish persistence by executing malicious content triggered by an interrupt signal. The <code>trap</code> command allows programs and shells to specify commands that will be executed upon receiving interrupt signals. A common situation is a script allowing for graceful termination and handling of common keyboard interrupts like <code>ctrl+c</code> and <code>ctrl+d</code>.\n\nAdversaries can use this to register code to be executed when the shell encounters specific interrupts as a persistence mechanism. Trap commands are of the following format <code>trap 'command list' signals</code> where \"command list\" will be executed when \"signals\" are received.(Citation: Trap Manual)(Citation: Cyberciti Trap Statements)"
+}

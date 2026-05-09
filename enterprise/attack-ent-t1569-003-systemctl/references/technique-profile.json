@@ -1,0 +1,29 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1569.003",
+  "name": "Systemctl",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1569/003",
+  "stix_id": "attack-pattern--4b46767d-4a61-4f30-995e-c19a75c2e536",
+  "attack_version": "1.0",
+  "created": "2025-03-18T13:44:12.618Z",
+  "modified": "2025-04-15T19:58:28.694Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Linux"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Account Management"
+  ],
+  "known_context": [
+    "TeamTNT (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse systemctl to execute commands or programs. Systemctl is the primary interface for systemd, the Linux init system and service manager. Typically invoked from a shell, Systemctl can also be integrated into scripts or applications.   \n\nAdversaries may use systemctl to execute commands or programs as [Systemd Service](https://attack.mitre.org/techniques/T1543/002)s. Common subcommands include: `systemctl start`, `systemctl stop`, `systemctl enable`, `systemctl disable`, and `systemctl status`.(Citation: Red Hat Systemctl 2022)"
+}

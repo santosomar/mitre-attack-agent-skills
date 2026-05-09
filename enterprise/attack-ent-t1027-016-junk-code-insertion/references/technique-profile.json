@@ -1,0 +1,50 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1027.016",
+  "name": "Junk Code Insertion",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1027/016",
+  "stix_id": "attack-pattern--671cd17f-a765-48fd-adc4-dad1941b1ae3",
+  "attack_version": "2.0",
+  "created": "2025-03-04T21:38:49.913Z",
+  "modified": "2026-04-15T22:19:48.489Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Antivirus/Antimalware"
+  ],
+  "known_context": [
+    "ANELLDR (malware)",
+    "APT-C-36 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "CORESHELL (malware)",
+    "FIN7 (intrusion-set)",
+    "FatDuke (malware)",
+    "FinFisher (malware)",
+    "Gamaredon Group (intrusion-set)",
+    "Gelsemium (malware)",
+    "Goopy (malware)",
+    "Kimsuky (intrusion-set)",
+    "LODEINFO (malware)",
+    "Maze (malware)",
+    "Mustang Panda (intrusion-set)",
+    "NOOPLDR (malware)",
+    "POWERSTATS (malware)",
+    "Pony (malware)",
+    "PureCrypter (malware)",
+    "SamSam (malware)",
+    "StrelaStealer (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use junk code / dead code to obfuscate a malware\u2019s functionality. Junk code is code that either does not execute, or if it does execute, does not change the functionality of the code. Junk code makes analysis more difficult and time-consuming, as the analyst steps through non-functional code instead of analyzing the main code. It also may hinder detections that rely on static code analysis due to the use of benign functionality, especially when combined with [Compression](https://attack.mitre.org/techniques/T1027/015) or [Software Packing](https://attack.mitre.org/techniques/T1027/002).(Citation: ReasonLabs)(Citation: ReasonLabs Cyberpedia Junk Code)\n\nNo-Operation (NOP) instructions are an example of dead code commonly used in x86 assembly language. They are commonly used as the 0x90 opcode. When NOPs are added to malware, the disassembler may show the NOP instructions, leading to the analyst needing to step through them.(Citation: ReasonLabs)\n\nThe use of junk / dead code insertion is distinct from [Binary Padding](https://attack.mitre.org/techniques/T1027/001) because the purpose is to obfuscate the functionality of the code, rather than simply to change the malware\u2019s signature."
+}

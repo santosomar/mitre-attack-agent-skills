@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1685.002",
+  "name": "Disable or Modify Cloud Log",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1685/002",
+  "stix_id": "attack-pattern--34ff60a3-a3f8-42e4-bed0-af9a2cb563d7",
+  "attack_version": "1.0",
+  "created": "2026-04-14T22:54:02.368Z",
+  "modified": "2026-04-22T15:42:27.748Z",
+  "tactics": [
+    "defense-impairment"
+  ],
+  "platforms": [
+    "IaaS",
+    "SaaS",
+    "Identity Provider",
+    "Office Suite"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Account Management"
+  ],
+  "known_context": [
+    "APT29 (intrusion-set)",
+    "Pacu (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may disable or modify cloud logging capabilities and integrations to limit what data is collected on their activities and avoid detection. Cloud environments allow for collection and analysis of audit and application logs that provide insight into what activities a user does within the environment. If an adversary has sufficient permissions, they can disable or modify logging to avoid detection of their activities. \n\nFor example, in AWS an adversary may disable CloudWatch/CloudTrail integrations prior to conducting further malicious activity. They may alternatively tamper with logging functionality, for example, by removing any associated SNS topics, disabling multi-region logging, or disabling settings that validate and/or encrypt log files.(Citation: AWS Cloud Trail)(Citation: Pacu Detection Disruption Module) In Office 365, an adversary may disable logging on mail collection activities for specific users by using the Set-MailboxAuditBypassAssociation cmdlet, by disabling M365 Advanced Auditing for the user, or by downgrading the user\u2019s license from an Enterprise E5 to an Enterprise E3 license.(Citation: Dark Reading)"
+}

@@ -1,0 +1,41 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1056.004",
+  "name": "Credential API Hooking",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1056/004",
+  "stix_id": "attack-pattern--f5946b5e-9408-485f-a7f7-b5efc88909b6",
+  "attack_version": "1.2",
+  "created": "2020-02-11T19:01:15.930Z",
+  "modified": "2025-10-24T17:49:37.119Z",
+  "tactics": [
+    "collection",
+    "credential-access"
+  ],
+  "platforms": [
+    "Windows",
+    "Linux",
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Carberp (malware)",
+    "Empire (tool)",
+    "FinFisher (malware)",
+    "NOKKI (malware)",
+    "PLATINUM (intrusion-set)",
+    "RDFSNIFFER (malware)",
+    "TrickBot (malware)",
+    "Ursnif (malware)",
+    "VersaMem (malware)",
+    "Zebrocy (malware)",
+    "Zeus Panda (malware)",
+    "ZxShell (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may hook into Windows application programming interface (API) functions and Linux system functions to collect user credentials. Malicious hooking mechanisms may capture API or function calls that include parameters that reveal user authentication credentials.(Citation: Microsoft TrojanSpy:Win32/Ursnif.gen!I Sept 2017) Unlike [Keylogging](https://attack.mitre.org/techniques/T1056/001), this technique focuses specifically on API functions that include parameters that reveal user credentials. \n\nIn Windows, hooking involves redirecting calls to these functions and can be implemented via:\n\n* **Hooks procedures**, which intercept and execute designated code in response to events such as messages, keystrokes, and mouse inputs.(Citation: Microsoft Hook Overview)(Citation: Elastic Process Injection July 2017)\n* **Import address table (IAT) hooking**, which use modifications to a process\u2019s IAT, where pointers to imported API functions are stored.(Citation: Elastic Process Injection July 2017)(Citation: Adlice Software IAT Hooks Oct 2014)(Citation: MWRInfoSecurity Dynamic Hooking 2015)\n* **Inline hooking**, which overwrites the first bytes in an API function to redirect code flow.(Citation: Elastic Process Injection July 2017)(Citation: HighTech Bridge Inline Hooking Sept 2011)(Citation: MWRInfoSecurity Dynamic Hooking 2015)\n\nIn Linux and macOS, adversaries may hook into system functions via the `LD_PRELOAD` (Linux) or `DYLD_INSERT_LIBRARIES` (macOS) environment variables, which enables loading shared libraries into a program\u2019s address space. For example, an adversary may capture credentials by hooking into the `libc read` function leveraged by SSH or SCP.(Citation: Intezer Symbiote 2022)"
+}

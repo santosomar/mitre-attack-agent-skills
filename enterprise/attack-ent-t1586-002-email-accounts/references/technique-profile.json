@@ -1,0 +1,44 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1586.002",
+  "name": "Email Accounts",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1586/002",
+  "stix_id": "attack-pattern--3dc8c101-d4db-4f4d-8150-1b5a76ca5f1b",
+  "attack_version": "1.1",
+  "created": "2020-10-01T01:20:53.104Z",
+  "modified": "2025-10-24T17:48:41.309Z",
+  "tactics": [
+    "resource-development"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "APT-C-36 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "HEXANE (intrusion-set)",
+    "IndigoZebra (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "LAPSUS$ (intrusion-set)",
+    "Leviathan (intrusion-set)",
+    "Magic Hound (intrusion-set)",
+    "Mustang Panda (intrusion-set)",
+    "OilRig (intrusion-set)",
+    "Operation AkaiRy\u016b (campaign)",
+    "Salesforce Data Exfiltration (campaign)",
+    "Star Blizzard (intrusion-set)",
+    "TA577 (intrusion-set)",
+    "WIRTE (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may compromise email accounts that can be used during targeting. Adversaries can use compromised email accounts to further their operations, such as leveraging them to conduct [Phishing for Information](https://attack.mitre.org/techniques/T1598), [Phishing](https://attack.mitre.org/techniques/T1566), or large-scale spam email campaigns. Utilizing an existing persona with a compromised email account may engender a level of trust in a potential victim if they have a relationship with, or knowledge of, the compromised persona. Compromised email accounts can also be used in the acquisition of infrastructure (ex: [Domains](https://attack.mitre.org/techniques/T1583/001)).\n\nA variety of methods exist for compromising email accounts, such as gathering credentials via [Phishing for Information](https://attack.mitre.org/techniques/T1598), purchasing credentials from third-party sites, brute forcing credentials (ex: password reuse from breach credential dumps), or paying employees, suppliers or business partners for access to credentials.(Citation: AnonHBGary)(Citation: Microsoft DEV-0537) Prior to compromising email accounts, adversaries may conduct Reconnaissance to inform decisions about which accounts to compromise to further their operation. Adversaries may target compromising well-known email accounts or domains from which malicious spam or [Phishing](https://attack.mitre.org/techniques/T1566) emails may evade reputation-based email filtering rules.\n\nAdversaries can use a compromised email account to hijack existing email threads with targets of interest."
+}

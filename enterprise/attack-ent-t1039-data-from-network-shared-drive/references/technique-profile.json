@@ -1,0 +1,41 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1039",
+  "name": "Data from Network Shared Drive",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1039",
+  "stix_id": "attack-pattern--ae676644-d2d2-41b7-af7e-9bed1b55898c",
+  "attack_version": "1.5",
+  "created": "2017-05-31T21:30:41.022Z",
+  "modified": "2025-10-24T17:49:13.555Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "BADNEWS (malware)",
+    "BRONZE BUTLER (intrusion-set)",
+    "C0015 (campaign)",
+    "Chimera (intrusion-set)",
+    "CosmicDuke (malware)",
+    "Egregor (malware)",
+    "Fox Kitten (intrusion-set)",
+    "Gamaredon Group (intrusion-set)",
+    "Ramsay (malware)",
+    "RedCurl (intrusion-set)",
+    "Sowbug (intrusion-set)",
+    "menuPass (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may search network shares on computers they have compromised to find files of interest. Sensitive data can be collected from remote systems via shared network drives (host shared directory, network file server, etc.) that are accessible from the current system prior to Exfiltration. Interactive command shells may be in use, and common functionality within [cmd](https://attack.mitre.org/software/S0106) may be used to gather information."
+}

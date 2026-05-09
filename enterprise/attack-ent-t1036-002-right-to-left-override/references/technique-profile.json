@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1036.002",
+  "name": "Right-to-Left Override",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1036/002",
+  "stix_id": "attack-pattern--77eae145-55db-4519-8ae5-77b0c7215d69",
+  "attack_version": "2.0",
+  "created": "2020-02-10T19:55:29.385Z",
+  "modified": "2026-04-15T20:41:03.753Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "BRONZE BUTLER (intrusion-set)",
+    "BlackTech (intrusion-set)",
+    "Ferocious Kitten (intrusion-set)",
+    "Ke3chang (intrusion-set)",
+    "Scarlet Mimic (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse the right-to-left override (RTLO or RLO) character (U+202E) to disguise a string and/or file name to make it appear benign. RTLO is a non-printing Unicode character that causes the text that follows it to be displayed in reverse. For example, a Windows screensaver executable named <code>March 25 \\u202Excod.scr</code> will display as <code>March 25 rcs.docx</code>. A JavaScript file named <code>photo_high_re\\u202Egnp.js</code> will be displayed as <code>photo_high_resj.png</code>.(Citation: Infosecinstitute RTLO Technique)\n\nAdversaries may abuse the RTLO character as a means of tricking a user into executing what they think is a benign file type. A common use of this technique is with [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001)/[Malicious File](https://attack.mitre.org/techniques/T1204/002) since it can trick both end users and defenders if they are not aware of how their tools display and render the RTLO character. Use of the RTLO character has been seen in many targeted intrusion attempts and criminal activity.(Citation: Trend Micro PLEAD RTLO)(Citation: Kaspersky RTLO Cyber Crime) RTLO can be used in the Windows Registry as well, where regedit.exe displays the reversed characters but the command line tool reg.exe does not by default."
+}

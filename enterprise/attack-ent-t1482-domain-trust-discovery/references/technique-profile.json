@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1482",
+  "name": "Domain Trust Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1482",
+  "stix_id": "attack-pattern--767dbf9e-df3f-45cb-8998-4903ab5f80c0",
+  "attack_version": "1.2",
+  "created": "2019-02-14T16:15:05.974Z",
+  "modified": "2025-10-24T17:48:58.061Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Network Segmentation"
+  ],
+  "known_context": [
+    "AdFind (tool)",
+    "Akira (intrusion-set)",
+    "BADHATCH (malware)",
+    "Bazar (malware)",
+    "BlackByte (intrusion-set)",
+    "BloodHound (tool)",
+    "Brute Ratel C4 (tool)",
+    "C0015 (campaign)",
+    "Chimera (intrusion-set)",
+    "DUSTTRAP (malware)",
+    "Earth Lusca (intrusion-set)",
+    "Empire (tool)",
+    "FIN8 (intrusion-set)",
+    "IcedID (malware)",
+    "LAMEHUG (malware)",
+    "Latrodectus (malware)",
+    "Leviathan Australian Intrusions (campaign)",
+    "Lotus Blossom (intrusion-set)",
+    "Magic Hound (intrusion-set)",
+    "MgBot (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to gather information on domain trust relationships that may be used to identify lateral movement opportunities in Windows multi-domain/forest environments. Domain trusts provide a mechanism for a domain to allow access to resources based on the authentication procedures of another domain.(Citation: Microsoft Trusts) Domain trusts allow the users of the trusted domain to access resources in the trusting domain. The information discovered may help the adversary conduct [SID-History Injection](https://attack.mitre.org/techniques/T1134/005), [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003), and [Kerberoasting](https://attack.mitre.org/techniques/T1558/003).(Citation: AdSecurity Forging Trust Tickets)(Citation: Harmj0y Domain Trusts) Domain trusts can be enumerated using the `DSEnumerateDomainTrusts()` Win32 API call, .NET methods, and LDAP.(Citation: Harmj0y Domain Trusts) The Windows utility [Nltest](https://attack.mitre.org/software/S0359) is known to be used by adversaries to enumerate domain trusts.(Citation: Microsoft Operation Wilysupply)"
+}

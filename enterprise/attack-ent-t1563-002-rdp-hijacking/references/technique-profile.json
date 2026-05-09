@@ -1,0 +1,36 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1563.002",
+  "name": "RDP Hijacking",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1563/002",
+  "stix_id": "attack-pattern--e0033c16-a07e-48aa-8204-7c3ca669998c",
+  "attack_version": "1.1",
+  "created": "2020-02-25T18:35:42.765Z",
+  "modified": "2025-10-24T17:49:30.049Z",
+  "tactics": [
+    "lateral-movement"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Disable or Remove Feature or Program",
+    "Limit Access to Resource Over Network",
+    "Network Segmentation",
+    "Operating System Configuration",
+    "Privileged Account Management",
+    "User Account Management"
+  ],
+  "known_context": [
+    "Axiom (intrusion-set)",
+    "WannaCry (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may hijack a legitimate user\u2019s remote desktop session to move laterally within an environment. Remote desktop is a common feature in operating systems. It allows a user to log into an interactive session with a system desktop graphical user interface on a remote system. Microsoft refers to its implementation of the Remote Desktop Protocol (RDP) as Remote Desktop Services (RDS).(Citation: TechNet Remote Desktop Services)\n\nAdversaries may perform RDP session hijacking which involves stealing a legitimate user's remote session. Typically, a user is notified when someone else is trying to steal their session. With System permissions and using Terminal Services Console, `c:\\windows\\system32\\tscon.exe [session number to be stolen]`, an adversary can hijack a session without the need for credentials or prompts to the user.(Citation: RDP Hijacking Korznikov) This can be done remotely or locally and with active or disconnected sessions.(Citation: RDP Hijacking Medium) It can also lead to [Remote System Discovery](https://attack.mitre.org/techniques/T1018) and Privilege Escalation by stealing a Domain Admin or higher privileged account session. All of this can be done by using native Windows commands, but it has also been added as a feature in red teaming tools.(Citation: Kali Redsnarf)"
+}

@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1071.005",
+  "name": "Publish/Subscribe Protocols",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1071/005",
+  "stix_id": "attack-pattern--241f9ea8-f6ae-4f38-92f5-cef5b7e539dd",
+  "attack_version": "1.1",
+  "created": "2024-08-28T14:14:18.512Z",
+  "modified": "2025-04-15T19:58:14.152Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "macOS",
+    "Linux",
+    "Windows",
+    "Network Devices"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Filter Network Traffic",
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "GLOOXMAIL (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may communicate using publish/subscribe (pub/sub) application layer protocols to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. \n\nProtocols such as <code>MQTT</code>, <code>XMPP</code>, <code>AMQP</code>, and <code>STOMP</code> use a publish/subscribe design, with message distribution managed by a centralized broker.(Citation: wailing crab sub/pub)(Citation: Mandiant APT1 Appendix) Publishers categorize their messages by topics, while subscribers receive messages according to their subscribed topics.(Citation: wailing crab sub/pub) An adversary may abuse publish/subscribe protocols to communicate with systems under their control from behind a message broker while also mimicking normal, expected traffic."
+}

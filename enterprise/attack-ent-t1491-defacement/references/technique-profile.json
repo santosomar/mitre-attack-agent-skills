@@ -1,0 +1,31 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1491",
+  "name": "Defacement",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1491",
+  "stix_id": "attack-pattern--5909f20f-3c39-4795-be06-ef1ea40d350b",
+  "attack_version": "1.4",
+  "created": "2019-04-08T17:51:41.390Z",
+  "modified": "2025-10-24T17:48:49.761Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Windows",
+    "IaaS",
+    "Linux",
+    "macOS",
+    "ESXi"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Data Backup"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify visual content available internally or externally to an enterprise network, thus affecting the integrity of the original content. Reasons for [Defacement](https://attack.mitre.org/techniques/T1491) include delivering messaging, intimidation, or claiming (possibly false) credit for an intrusion. Disturbing or offensive images may be used as a part of [Defacement](https://attack.mitre.org/techniques/T1491) in order to cause user discomfort, or to pressure compliance with accompanying messages."
+}

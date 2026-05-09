@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1016.001",
+  "name": "Internet Connection Discovery",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1016/001",
+  "stix_id": "attack-pattern--132d5b37-aac5-4378-a8dc-3127b18a73dc",
+  "attack_version": "1.2",
+  "created": "2021-03-17T15:28:10.689Z",
+  "modified": "2025-10-24T17:48:26.017Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Windows",
+    "Linux",
+    "macOS",
+    "ESXi"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "APT29 (intrusion-set)",
+    "DarkTortilla (malware)",
+    "FIN13 (intrusion-set)",
+    "FIN8 (intrusion-set)",
+    "Gamaredon Group (intrusion-set)",
+    "GoldFinder (malware)",
+    "HAFNIUM (intrusion-set)",
+    "HEXANE (intrusion-set)",
+    "Havoc (malware)",
+    "Lotus Blossom (intrusion-set)",
+    "Magic Hound (intrusion-set)",
+    "More_eggs (malware)",
+    "NKAbuse (malware)",
+    "Neoichor (malware)",
+    "Operation Wocao (campaign)",
+    "PUBLOAD (malware)",
+    "QakBot (malware)",
+    "QuietSieve (malware)",
+    "Rising Sun (malware)",
+    "SUGARUSH (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may check for Internet connectivity on compromised systems. This may be performed during automated discovery and can be accomplished in numerous ways such as using [Ping](https://attack.mitre.org/software/S0097), <code>tracert</code>, and GET requests to websites, or performing initial speed testing to confirm bandwidth.\n\nAdversaries may use the results and responses from these requests to determine if the system is capable of communicating with their C2 servers before attempting to connect to them. The results may also be used to identify routes, redirectors, and proxy servers."
+}

@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1552.006",
+  "name": "Group Policy Preferences",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1552/006",
+  "stix_id": "attack-pattern--8d7bd4f5-3a89-4453-9c82-2c8894d5655e",
+  "attack_version": "1.1",
+  "created": "2020-02-11T18:43:06.253Z",
+  "modified": "2025-10-24T17:49:05.282Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Active Directory Configuration",
+    "Audit",
+    "Update Software"
+  ],
+  "known_context": [
+    "APT33 (intrusion-set)",
+    "MirrorStealer (malware)",
+    "PowerSploit (tool)",
+    "SILENTTRINITY (tool)",
+    "Wizard Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to find unsecured credentials in Group Policy Preferences (GPP). GPP are tools that allow administrators to create domain policies with embedded credentials. These policies allow administrators to set local accounts.(Citation: Microsoft GPP 2016)\n\nThese group policies are stored in SYSVOL on a domain controller. This means that any domain user can view the SYSVOL share and decrypt the password (using the AES key that has been made public).(Citation: Microsoft GPP Key)\n\nThe following tools and scripts can be used to gather and decrypt the password file from Group Policy Preference XML files:\n\n* Metasploit\u2019s post exploitation module: <code>post/windows/gather/credentials/gpp</code>\n* Get-GPPPassword(Citation: Obscuresecurity Get-GPPPassword)\n* gpprefdecrypt.py\n\nOn the SYSVOL share, adversaries may use the following command to enumerate potential GPP XML files: <code>dir /s * .xml</code>"
+}

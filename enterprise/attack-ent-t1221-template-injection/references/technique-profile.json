@@ -1,0 +1,43 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1221",
+  "name": "Template Injection",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1221",
+  "stix_id": "attack-pattern--dc31fe1e-d722-49da-8f5f-92c7b5aff534",
+  "attack_version": "2.0",
+  "created": "2018-10-17T00:14:20.652Z",
+  "modified": "2026-04-15T22:44:24.229Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Antivirus/Antimalware",
+    "Disable or Remove Feature or Program",
+    "Network Intrusion Prevention",
+    "User Training"
+  ],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "Chaes (malware)",
+    "Confucius (intrusion-set)",
+    "DarkHydrus (intrusion-set)",
+    "Dragonfly (intrusion-set)",
+    "Frankenstein (campaign)",
+    "Gamaredon Group (intrusion-set)",
+    "Inception (intrusion-set)",
+    "MirrorFace (intrusion-set)",
+    "Operation Dream Job (campaign)",
+    "Tropic Trooper (intrusion-set)",
+    "WarzoneRAT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may create or modify references in user document templates to conceal malicious code or force authentication attempts. For example, Microsoft\u2019s Office Open XML (OOXML) specification defines an XML-based format for Office documents (.docx, xlsx, .pptx) to replace older binary formats (.doc, .xls, .ppt). OOXML files are packed together ZIP archives compromised of various XML files, referred to as parts, containing properties that collectively define how a document is rendered.(Citation: Microsoft Open XML July 2017)\n\nProperties within parts may reference shared public resources accessed via online URLs. For example, template properties may reference a file, serving as a pre-formatted document blueprint, that is fetched when the document is loaded.\n\nAdversaries may abuse these templates to initially conceal malicious code to be executed via user documents. Template references injected into a document may enable malicious payloads to be fetched and executed when the document is loaded.(Citation: SANS Brian Wiltse Template Injection) These documents can be delivered via other techniques such as [Phishing](https://attack.mitre.org/techniques/T1566) and/or [Taint Shared Content](https://attack.mitre.org/techniques/T1080) and may evade static detections since no typical indicators (VBA macro, script, etc.) are present until after the malicious payload is fetched.(Citation: Redxorblue Remote Template Injection) Examples have been seen in the wild where template injection was used to load malicious code containing an exploit.(Citation: MalwareBytes Template Injection OCT 2017)\n\nAdversaries may also modify the <code>*\\template</code> control word within an .rtf file to similarly conceal then download malicious code. This legitimate control word value is intended to be a file destination of a template file resource that is retrieved and loaded when an .rtf file is opened. However, adversaries may alter the bytes of an existing .rtf file to insert a template control word field to include a URL resource of a malicious payload.(Citation: Proofpoint RTF Injection)(Citation: Ciberseguridad Decoding malicious RTF files)\n\nThis technique may also enable [Forced Authentication](https://attack.mitre.org/techniques/T1187) by injecting a SMB/HTTPS (or other credential prompting) URL and triggering an authentication attempt.(Citation: Anomali Template Injection MAR 2018)(Citation: Talos Template Injection July 2017)(Citation: ryhanson phishery SEPT 2016)"
+}

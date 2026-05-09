@@ -1,0 +1,55 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1046",
+  "name": "Network Service Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1046",
+  "stix_id": "attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88",
+  "attack_version": "3.2",
+  "created": "2017-05-31T21:30:43.915Z",
+  "modified": "2025-10-24T17:49:31.494Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Containers",
+    "IaaS",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Disable or Remove Feature or Program",
+    "Network Intrusion Prevention",
+    "Network Segmentation"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "APT32 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "Agrius (intrusion-set)",
+    "Anthropic AI-orchestrated Campaign (campaign)",
+    "BADHATCH (malware)",
+    "Backdoor.Oldrea (malware)",
+    "BackdoorDiplomacy (intrusion-set)",
+    "BlackByte (intrusion-set)",
+    "BlackByte Ransomware (malware)",
+    "BlackEnergy (malware)",
+    "BlackTech (intrusion-set)",
+    "Brute Ratel C4 (tool)",
+    "C0018 (campaign)",
+    "C0027 (campaign)",
+    "Caterpillar WebShell (malware)",
+    "Chimera (intrusion-set)",
+    "China Chopper (malware)",
+    "Cobalt Group (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to get a listing of services running on remote hosts and local network infrastructure devices, including those that may be vulnerable to remote software exploitation. Common methods to acquire this information include port, vulnerability, and/or wordlist scans using tools that are brought onto a system.(Citation: CISA AR21-126A FIVEHANDS May 2021)   \n\nWithin cloud environments, adversaries may attempt to discover services running on other cloud hosts. Additionally, if the cloud environment is connected to a on-premises environment, adversaries may be able to identify services running on non-cloud systems as well.\n\nWithin macOS environments, adversaries may use the native Bonjour application to discover services running on other macOS hosts within a network. The Bonjour mDNSResponder daemon automatically registers and advertises a host\u2019s registered services on the network. For example, adversaries can use a mDNS query (such as <code>dns-sd -B _ssh._tcp .</code>) to find other systems broadcasting the ssh service.(Citation: apple doco bonjour description)(Citation: macOS APT Activity Bradley)"
+}

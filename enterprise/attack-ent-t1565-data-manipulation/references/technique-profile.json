@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1565",
+  "name": "Data Manipulation",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1565",
+  "stix_id": "attack-pattern--ac9e6b22-11bf-45d7-9181-c1cb08360931",
+  "attack_version": "1.1",
+  "created": "2020-03-02T14:19:22.609Z",
+  "modified": "2026-01-20T15:10:23.526Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Encrypt Sensitive Information",
+    "Network Segmentation",
+    "Remote Data Storage",
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [
+    "FIN13 (intrusion-set)",
+    "PHASEJAM (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may insert, delete, or manipulate data in order to influence external outcomes or hide activity, thus threatening the integrity of the data.(Citation: Sygnia Elephant Beetle Jan 2022) By manipulating data, adversaries may attempt to affect a business process, organizational understanding, or decision making.\n\nThe type of modification and the impact it will have depends on the target application and process as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that would typically be gained through a prolonged information gathering campaign in order to have the desired impact."
+}

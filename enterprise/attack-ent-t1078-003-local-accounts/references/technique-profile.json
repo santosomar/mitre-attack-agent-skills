@@ -1,0 +1,59 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1078.003",
+  "name": "Local Accounts",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1078/003",
+  "stix_id": "attack-pattern--fdc47f44-dd32-4b99-af5f-209f556f63c2",
+  "attack_version": "2.0",
+  "created": "2020-03-13T20:26:46.695Z",
+  "modified": "2026-04-15T22:51:08.702Z",
+  "tactics": [
+    "initial-access",
+    "persistence",
+    "privilege-escalation",
+    "stealth"
+  ],
+  "platforms": [
+    "Containers",
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Multi-factor Authentication",
+    "Password Policies",
+    "Privileged Account Management",
+    "User Account Management"
+  ],
+  "known_context": [
+    "APT29 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "Anthropic AI-orchestrated Campaign (campaign)",
+    "Cobalt Strike (malware)",
+    "Emotet (malware)",
+    "FIN10 (intrusion-set)",
+    "FIN7 (intrusion-set)",
+    "HAFNIUM (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "Leviathan Australian Intrusions (campaign)",
+    "LockBit 3.0 (malware)",
+    "NotPetya (malware)",
+    "Operation Wocao (campaign)",
+    "PROMETHIUM (intrusion-set)",
+    "Play (intrusion-set)",
+    "Sea Turtle (intrusion-set)",
+    "SolarWinds Compromise (campaign)",
+    "Tropic Trooper (intrusion-set)",
+    "Turla (intrusion-set)",
+    "Umbreon (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may obtain and abuse credentials of a local account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Local accounts are those configured by an organization for use by users, remote support, services, or for administration on a single system or service.\n\nLocal Accounts may also be abused to elevate privileges and harvest credentials through [OS Credential Dumping](https://attack.mitre.org/techniques/T1003). Password reuse may allow the abuse of local accounts across a set of machines on a network for the purposes of Privilege Escalation and Lateral Movement."
+}

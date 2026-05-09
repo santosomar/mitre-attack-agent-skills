@@ -1,0 +1,27 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1564.013",
+  "name": "Bind Mounts",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1564/013",
+  "stix_id": "attack-pattern--5bd41255-a224-4425-a2e2-e9d293eafe1c",
+  "attack_version": "2.0",
+  "created": "2025-01-30T21:01:16.340Z",
+  "modified": "2026-04-15T20:17:48.263Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "KV Botnet Activity (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse bind mounts on file structures to hide their activity and artifacts from native utilities. A bind mount maps a directory or file from one location on the filesystem to another, similar to a shortcut on Windows. It\u2019s commonly used to provide access to specific files or directories across different environments, such as inside containers or chroot environments, and requires sudo access. \n\nAdversaries may use bind mounts to map either an empty directory or a benign `/proc` directory to a malicious process\u2019s `/proc` directory. Using the commands `mount \u2013o bind /proc/benign-process /proc/malicious-process` (or `mount \u2013B`), the malicious process's `/proc` directory is overlayed with the contents of a benign process's `/proc` directory. When system utilities query process activity, such as `ps` and `top`, the kernel follows the bind mount and presents the benign directory\u2019s contents instead of the malicious process's actual `/proc` directory. As a result, these utilities display information that appears to come from the benign process, effectively hiding the malicious process's metadata, executable, or other artifacts from detection.(Citation: Cado Security Commando Cat 2024)(Citation: Ahn Lab CoinMiner 2023)"
+}

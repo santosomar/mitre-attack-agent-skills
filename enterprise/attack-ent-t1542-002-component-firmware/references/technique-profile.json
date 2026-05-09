@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1542.002",
+  "name": "Component Firmware",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1542/002",
+  "stix_id": "attack-pattern--791481f8-e96a-41be-b089-a088763083d4",
+  "attack_version": "2.0",
+  "created": "2019-12-19T20:21:21.669Z",
+  "modified": "2026-04-17T18:38:49.538Z",
+  "tactics": [
+    "persistence",
+    "stealth"
+  ],
+  "platforms": [
+    "Windows",
+    "Linux",
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Update Software"
+  ],
+  "known_context": [
+    "Cyclops Blink (malware)",
+    "Equation (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify component firmware to persist on systems. Some adversaries may employ sophisticated means to compromise computer components and install malicious firmware that will execute adversary code outside of the operating system and main system firmware or BIOS. This technique may be similar to [System Firmware](https://attack.mitre.org/techniques/T1542/001) but conducted upon other system components/devices that may not have the same capability or level of integrity checking.\n\nMalicious component firmware could provide both a persistent level of access to systems despite potential typical failures to maintain access and hard disk re-images, as well as a way to evade host software-based defenses and integrity checks."
+}

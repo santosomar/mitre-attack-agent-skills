@@ -1,0 +1,39 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1546",
+  "name": "Event Triggered Execution",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1546",
+  "stix_id": "attack-pattern--b6301b64-ef57-4cce-bb0b-77026f14a8db",
+  "attack_version": "1.4",
+  "created": "2020-01-22T21:04:23.285Z",
+  "modified": "2025-10-24T17:49:15.866Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows",
+    "SaaS",
+    "IaaS",
+    "Office Suite"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Privileged Account Management",
+    "Update Software"
+  ],
+  "known_context": [
+    "KV Botnet Activity (campaign)",
+    "Pacu (tool)",
+    "UPSTYLE (malware)",
+    "XCSSET (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may establish persistence and/or elevate privileges using system mechanisms that trigger execution based on specific events. Various operating systems have means to monitor and subscribe to events such as logons or other user activity such as running specific applications/binaries. Cloud environments may also support various functions and services that monitor and can be invoked in response to specific cloud events.(Citation: Backdooring an AWS account)(Citation: Varonis Power Automate Data Exfiltration)(Citation: Microsoft DART Case Report 001)\n\nAdversaries may abuse these mechanisms as a means of maintaining persistent access to a victim via repeatedly executing malicious code. After gaining access to a victim system, adversaries may create/modify event triggers to point to malicious content that will be executed whenever the event trigger is invoked.(Citation: FireEye WMI 2015)(Citation: Malware Persistence on OS X)(Citation: amnesia malware)\n\nSince the execution can be proxied by an account with higher permissions, such as SYSTEM or service accounts, an adversary may be able to abuse these triggered execution mechanisms to escalate their privileges."
+}

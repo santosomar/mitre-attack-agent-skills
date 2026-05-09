@@ -1,0 +1,40 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1621",
+  "name": "Multi-Factor Authentication Request Generation",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1621",
+  "stix_id": "attack-pattern--954a1639-f2d6-407d-aef3-4917622ca493",
+  "attack_version": "1.2",
+  "created": "2022-04-01T02:15:49.754Z",
+  "modified": "2025-10-24T17:49:07.399Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Windows",
+    "Linux",
+    "macOS",
+    "IaaS",
+    "SaaS",
+    "Office Suite",
+    "Identity Provider"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Account Use Policies",
+    "Multi-factor Authentication",
+    "User Training"
+  ],
+  "known_context": [
+    "APT29 (intrusion-set)",
+    "C0027 (campaign)",
+    "LAPSUS$ (intrusion-set)",
+    "Scattered Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to bypass multi-factor authentication (MFA) mechanisms and gain access to accounts by generating MFA requests sent to users.\n\nAdversaries in possession of credentials to [Valid Accounts](https://attack.mitre.org/techniques/T1078) may be unable to complete the login process if they lack access to the 2FA or MFA mechanisms required as an additional credential and security control. To circumvent this, adversaries may abuse the automatic generation of push notifications to MFA services such as Duo Push, Microsoft Authenticator, Okta, or similar services to have the user grant access to their account. If adversaries lack credentials to victim accounts, they may also abuse automatic push notification generation when this option is configured for self-service password reset (SSPR).(Citation: Obsidian SSPR Abuse 2023)\n\nIn some cases, adversaries may continuously repeat login attempts in order to bombard users with MFA push notifications, SMS messages, and phone calls, potentially resulting in the user finally accepting the authentication request in response to \u201cMFA fatigue.\u201d(Citation: Russian 2FA Push Annoyance - Cimpanu)(Citation: MFA Fatigue Attacks - PortSwigger)(Citation: Suspected Russian Activity Targeting Government and Business Entities Around the Globe)"
+}

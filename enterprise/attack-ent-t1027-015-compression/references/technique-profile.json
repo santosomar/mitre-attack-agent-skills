@@ -1,0 +1,50 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1027.015",
+  "name": "Compression",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1027/015",
+  "stix_id": "attack-pattern--fbd91bfc-75c2-4f0c-8116-3b4e722906b3",
+  "attack_version": "2.0",
+  "created": "2025-03-04T18:29:33.850Z",
+  "modified": "2026-04-15T22:16:53.338Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Antivirus/Antimalware"
+  ],
+  "known_context": [
+    "BADHATCH (malware)",
+    "DarkWatchman (malware)",
+    "Donut (tool)",
+    "Gamaredon Group (intrusion-set)",
+    "Gelsemium (malware)",
+    "Hancitor (malware)",
+    "HermeticWiper (malware)",
+    "Higaisa (intrusion-set)",
+    "Kerrdown (malware)",
+    "Kimsuky (intrusion-set)",
+    "LODEINFO (malware)",
+    "Leviathan (intrusion-set)",
+    "Line Runner (malware)",
+    "Mofang (intrusion-set)",
+    "Molerats (intrusion-set)",
+    "Ninja (malware)",
+    "PUBLOAD (malware)",
+    "Pandora (malware)",
+    "PcShare (tool)",
+    "Pillowmint (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use compression to obfuscate their payloads or files. Compressed file formats such as ZIP, gzip, 7z, and RAR can compress and archive multiple files together to make it easier and faster to transfer files. In addition to compressing files, adversaries may also compress shellcode directly - for example, in order to store it in a Windows Registry key (i.e., [Fileless Storage](https://attack.mitre.org/techniques/T1027/011)).(Citation: Trustwave Pillowmint June 2020)\n\nIn order to further evade detection, adversaries may combine multiple ZIP files into one archive. This process of concatenation creates an archive that appears to be a single archive but in fact contains the central directories of the embedded archives. Some ZIP readers, such as 7zip, may not be able to identify concatenated ZIP files and miss the presence of the malicious payload.(Citation: Perception Point)\n\nFile archives may be sent as one [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001) through email. Adversaries have sent malicious payloads as archived files to encourage the user to interact with and extract the malicious payload onto their system (i.e., [Malicious File](https://attack.mitre.org/techniques/T1204/002)).(Citation: NTT Security Flagpro new December 2021) However, some file compression tools, such as 7zip, can be used to produce self-extracting archives. Adversaries may send self-extracting archives to hide the functionality of their payload and launch it without requiring multiple actions from the user.(Citation: The Hacker News)\n\n[Compression](https://attack.mitre.org/techniques/T1027/015) may be used in combination with [Encrypted/Encoded File](https://attack.mitre.org/techniques/T1027/013) where compressed files are encrypted and password-protected."
+}

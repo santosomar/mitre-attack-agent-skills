@@ -1,0 +1,51 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1550.002",
+  "name": "Pass the Hash",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1550/002",
+  "stix_id": "attack-pattern--e624264c-033a-424d-9fd7-fc9c3bbdb03e",
+  "attack_version": "2.0",
+  "created": "2020-01-30T16:36:51.184Z",
+  "modified": "2026-04-15T22:48:07.235Z",
+  "tactics": [
+    "lateral-movement"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Privileged Account Management",
+    "Update Software",
+    "User Account Control",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "APT1 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "Aquatic Panda (intrusion-set)",
+    "BADHATCH (malware)",
+    "Chimera (intrusion-set)",
+    "Cobalt Strike (malware)",
+    "CrackMapExec (tool)",
+    "Ember Bear (intrusion-set)",
+    "Empire (tool)",
+    "FIN13 (intrusion-set)",
+    "GALLIUM (intrusion-set)",
+    "HOPLIGHT (malware)",
+    "Kimsuky (intrusion-set)",
+    "Mimikatz (tool)",
+    "Night Dragon (campaign)",
+    "Operation Digital Eye (campaign)",
+    "Pass-The-Hash Toolkit (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may \u201cpass the hash\u201d using stolen password hashes to move laterally within an environment, bypassing normal system access controls. Pass the hash (PtH) is a method of authenticating as a user without having access to the user's cleartext password. This method bypasses standard authentication steps that require a cleartext password, moving directly into the portion of the authentication that uses the password hash.\n\nWhen performing PtH, valid password hashes for the account being used are captured using a [Credential Access](https://attack.mitre.org/tactics/TA0006) technique. Captured hashes are used with PtH to authenticate as that user. Once authenticated, PtH may be used to perform actions on local or remote systems.\n\nAdversaries may also use stolen password hashes to \"overpass the hash.\" Similar to PtH, this involves using a password hash to authenticate as a user but also uses the password hash to create a valid Kerberos ticket. This ticket can then be used to perform [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003) attacks.(Citation: Stealthbits Overpass-the-Hash)"
+}

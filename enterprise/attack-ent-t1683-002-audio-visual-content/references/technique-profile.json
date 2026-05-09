@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1683.002",
+  "name": "Audio-Visual Content",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1683/002",
+  "stix_id": "attack-pattern--8f452cb4-cbf4-4522-8b11-448787be95c4",
+  "attack_version": "1.0",
+  "created": "2026-03-25T14:28:15.331Z",
+  "modified": "2026-04-20T15:34:51.855Z",
+  "tactics": [
+    "resource-development"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "APT-C-36 (intrusion-set)",
+    "Contagious Interview (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may create or manipulate audio, image, and video content to support targeting and malicious operations. Adversaries may also use synthetic voice recordings, real-time altered audio or video during live interactions, fabricated profile photos and identity documents, or video content depicting fabricated or impersonated individuals.(Citation: Nov AI Threat Tracker)\n\nContent may be produced manually through editing tools, generated using AI-assisted tools, or produced using third-party synthetic services.(Citation: FBI 2025 AI Generate Content)(Citation: Europol Deepfakes) AI-assisted tools have enabled adversaries to produce synthetic media at scale and generate content that is more difficult to identify as inauthentic. \n\nAudio-visual content produced through these methods may be used in support of other techniques, such as [Phishing](https://attack.mitre.org/techniques/T1660), [Spearphishing via Service](https://attack.mitre.org/techniques/T1566/003), [Phishing for Information](https://attack.mitre.org/techniques/T1598), [Internal Spearphishing](https://attack.mitre.org/techniques/T1534), [Social Engineering](https://attack.mitre.org/techniques/T1684), [Financial Theft](https://attack.mitre.org/techniques/T1657), or [Establish Accounts](https://attack.mitre.org/techniques/T1585)."
+}

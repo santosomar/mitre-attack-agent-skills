@@ -1,0 +1,53 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1071.002",
+  "name": "File Transfer Protocols",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1071/002",
+  "stix_id": "attack-pattern--9a60a291-8960-4387-8a4a-2ab5c18bb50b",
+  "attack_version": "1.4",
+  "created": "2020-03-15T16:16:25.763Z",
+  "modified": "2025-10-24T17:49:08.302Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Filter Network Traffic",
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "APT41 (intrusion-set)",
+    "Attor (malware)",
+    "BADHATCH (malware)",
+    "CARROTBALL (tool)",
+    "Cobalt Strike (malware)",
+    "Disco (malware)",
+    "Dragonfly (intrusion-set)",
+    "Havoc (malware)",
+    "JPIN (malware)",
+    "Kazuar (malware)",
+    "Kimsuky (intrusion-set)",
+    "Machete (malware)",
+    "MirrorFace (intrusion-set)",
+    "Mythic (tool)",
+    "NOKKI (malware)",
+    "Operation Honeybee (campaign)",
+    "PUBLOAD (malware)",
+    "PoetRAT (malware)",
+    "Qilin (malware)",
+    "Quad7 Activity (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may communicate using application layer protocols associated with transferring files to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. \n\nProtocols such as SMB(Citation: US-CERT TA18-074A), FTP(Citation: ESET Machete July 2019), FTPS, and TFTP that transfer files may be very common in environments.  Packets produced from these protocols may have many fields and headers in which data can be concealed. Data could also be concealed within the transferred files. An adversary may abuse these protocols to communicate with systems under their control within a victim network while also mimicking normal, expected traffic."
+}

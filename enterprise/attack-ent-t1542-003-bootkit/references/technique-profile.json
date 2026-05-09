@@ -1,0 +1,40 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1542.003",
+  "name": "Bootkit",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1542/003",
+  "stix_id": "attack-pattern--1b7b1806-7746-41a1-a35d-e48dae25ddba",
+  "attack_version": "2.0",
+  "created": "2019-12-19T21:05:38.123Z",
+  "modified": "2026-04-17T18:38:49.558Z",
+  "tactics": [
+    "persistence",
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Boot Integrity",
+    "Privileged Account Management"
+  ],
+  "known_context": [
+    "APT28 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "BOOTRASH (malware)",
+    "Carberp (malware)",
+    "FinFisher (malware)",
+    "Lazarus Group (intrusion-set)",
+    "ROCKBOOT (malware)",
+    "TrickBot (malware)",
+    "WhisperGate (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use bootkits to persist on systems. A bootkit is a malware variant that modifies the boot sectors of a hard drive, allowing malicious code to execute before a computer's operating system has loaded. Bootkits reside at a layer below the operating system and may make it difficult to perform full remediation unless an organization suspects one was used and can act accordingly.\n\nIn BIOS systems, a bootkit may modify the Master Boot Record (MBR) and/or Volume Boot Record (VBR).(Citation: Mandiant M Trends 2016) The MBR is the section of disk that is first loaded after completing hardware initialization by the BIOS. It is the location of the boot loader. An adversary who has raw access to the boot drive may overwrite this area, diverting execution during startup from the normal boot loader to adversary code.(Citation: Lau 2011)\n\nThe MBR passes control of the boot process to the VBR. Similar to the case of MBR, an adversary who has raw access to the boot drive may overwrite the VBR to divert execution during startup to adversary code.\n\nIn UEFI (Unified Extensible Firmware Interface) systems, a bootkit may instead create or modify files in the EFI system partition (ESP). The ESP is a partition on data storage used by devices containing UEFI that allows the system to boot the OS and other utilities used by the system. An adversary can use the newly created or patched files in the ESP to run malicious kernel code.(Citation: Microsoft Security)(Citation: welivesecurity)"
+}

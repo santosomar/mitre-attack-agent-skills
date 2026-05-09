@@ -1,0 +1,36 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1583",
+  "name": "Acquire Infrastructure",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1583",
+  "stix_id": "attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2",
+  "attack_version": "1.5",
+  "created": "2020-09-30T16:37:40.271Z",
+  "modified": "2025-10-24T17:48:20.468Z",
+  "tactics": [
+    "resource-development"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "Agrius (intrusion-set)",
+    "Contagious Interview (intrusion-set)",
+    "Ember Bear (intrusion-set)",
+    "Indrik Spider (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "Sandworm Team (intrusion-set)",
+    "Sea Turtle (intrusion-set)",
+    "Star Blizzard (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may buy, lease, rent, or obtain infrastructure that can be used during targeting. A wide variety of infrastructure exists for hosting and orchestrating adversary operations. Infrastructure solutions include physical or cloud servers, domains, and third-party web services.(Citation: TrendmicroHideoutsLease) Some infrastructure providers offer free trial periods, enabling infrastructure acquisition at limited to no cost.(Citation: Free Trial PurpleUrchin) Additionally, botnets are available for rent or purchase.\n\nUse of these infrastructure solutions allows adversaries to stage, launch, and execute operations. Solutions may help adversary operations blend in with traffic that is seen as normal, such as contacting third-party web services or acquiring infrastructure to support [Proxy](https://attack.mitre.org/techniques/T1090), including from residential proxy services.(Citation: amnesty_nso_pegasus)(Citation: FBI Proxies Credential Stuffing)(Citation: Mandiant APT29 Microsoft 365 2022) Depending on the implementation, adversaries may use infrastructure that makes it difficult to physically tie back to them as well as utilize infrastructure that can be rapidly provisioned, modified, and shut down."
+}

@@ -1,0 +1,41 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1110.002",
+  "name": "Password Cracking",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1110/002",
+  "stix_id": "attack-pattern--1d24cdee-9ea2-4189-b08e-af110bf2435d",
+  "attack_version": "1.4",
+  "created": "2020-02-11T18:38:56.197Z",
+  "modified": "2025-10-24T17:48:29.397Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Identity Provider",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Office Suite",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Multi-factor Authentication",
+    "Password Policies"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "APT3 (intrusion-set)",
+    "Dragonfly (intrusion-set)",
+    "FIN6 (intrusion-set)",
+    "Net Crawler (malware)",
+    "Night Dragon (campaign)",
+    "Salt Typhoon (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use password cracking to attempt to recover usable credentials, such as plaintext passwords, when credential material such as password hashes are obtained. [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) can be used to obtain password hashes, this may only get an adversary so far when [Pass the Hash](https://attack.mitre.org/techniques/T1550/002) is not an option. Further,  adversaries may leverage [Data from Configuration Repository](https://attack.mitre.org/techniques/T1602) in order to obtain hashed credentials for network devices.(Citation: US-CERT-TA18-106A) \n\nTechniques to systematically guess the passwords used to compute hashes are available, or the adversary may use a pre-computed rainbow table to crack hashes. Cracking hashes is usually done on adversary-controlled systems outside of the target network.(Citation: Wikipedia Password cracking) The resulting plaintext password resulting from a successfully cracked hash may be used to log into systems, resources, and services in which the account has access."
+}

@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1593",
+  "name": "Search Open Websites/Domains",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1593",
+  "stix_id": "attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365",
+  "attack_version": "1.1",
+  "created": "2020-10-02T16:48:04.509Z",
+  "modified": "2025-10-24T17:49:10.188Z",
+  "tactics": [
+    "reconnaissance"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Application Developer Guidance",
+    "Audit"
+  ],
+  "known_context": [
+    "APT-C-36 (intrusion-set)",
+    "Contagious Interview (intrusion-set)",
+    "Mustang Panda (intrusion-set)",
+    "Sandworm Team (intrusion-set)",
+    "Star Blizzard (intrusion-set)",
+    "Volt Typhoon (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may search freely available websites and/or domains for information about victims that can be used during targeting. Information about victims may be available in various online sites, such as social media, new sites, or those hosting information about business operations such as hiring or requested/rewarded contracts.(Citation: Cyware Social Media)(Citation: SecurityTrails Google Hacking)(Citation: ExploitDB GoogleHacking)\n\nAdversaries may search in different online sites depending on what information they seek to gather. Information from these sources may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133) or [Phishing](https://attack.mitre.org/techniques/T1566))."
+}

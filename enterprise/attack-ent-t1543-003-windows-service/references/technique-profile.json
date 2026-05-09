@@ -1,0 +1,53 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1543.003",
+  "name": "Windows Service",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1543/003",
+  "stix_id": "attack-pattern--2959d63f-73fd-46a1-abd2-109d7dcede32",
+  "attack_version": "1.6",
+  "created": "2020-01-17T19:13:50.402Z",
+  "modified": "2026-04-23T18:48:07.774Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Behavior Prevention on Endpoint",
+    "Code Signing",
+    "Operating System Configuration",
+    "User Account Management"
+  ],
+  "known_context": [
+    "2016 Ukraine Electric Power Attack (campaign)",
+    "APT19 (intrusion-set)",
+    "APT3 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "APT41 DUST (campaign)",
+    "Agrius (intrusion-set)",
+    "Anchor (malware)",
+    "AppleJeus (malware)",
+    "Aquatic Panda (intrusion-set)",
+    "Attor (malware)",
+    "AuditCred (malware)",
+    "BBSRAT (malware)",
+    "BOOKWORM (malware)",
+    "Bankshot (malware)",
+    "Bisonal (malware)",
+    "BitPaymer (malware)",
+    "Black Basta (malware)",
+    "BlackByte (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may create or modify Windows services to repeatedly execute malicious payloads as part of persistence. When Windows boots up, it starts programs or applications called services that perform background system functions.(Citation: TechNet Services) Windows service configuration information, including the file path to the service's executable or recovery programs/commands, is stored in the Windows Registry.\n\nAdversaries may install a new service or modify an existing service to execute at startup in order to persist on a system. Service configurations can be set or modified using system utilities (such as sc.exe), by directly modifying the Registry, or by interacting directly with the Windows API. \n\nAdversaries may also use services to install and execute malicious drivers. For example, after dropping a driver file (ex: `.sys`) to disk, the payload can be loaded and registered via [Native API](https://attack.mitre.org/techniques/T1106) functions such as `CreateServiceW()` (or manually via functions such as `ZwLoadDriver()` and `ZwSetValueKey()`), by creating the required service Registry values (i.e. [Modify Registry](https://attack.mitre.org/techniques/T1112)), or by using command-line utilities such as `PnPUtil.exe`.(Citation: Symantec W.32 Stuxnet Dossier)(Citation: Crowdstrike DriveSlayer February 2022)(Citation: Unit42 AcidBox June 2020) Adversaries may leverage these drivers as [Rootkit](https://attack.mitre.org/techniques/T1014)s to hide the presence of malicious activity on a system. Adversaries may also load a signed yet vulnerable driver onto a compromised machine (known as \"Bring Your Own Vulnerable Driver\" (BYOVD)) as part of [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068).(Citation: ESET InvisiMole June 2020)(Citation: Unit42 AcidBox June 2020)\n\nServices may be created with administrator privileges but are executed under SYSTEM privileges, so an adversary may also use a service to escalate privileges. Adversaries may also directly start services through [Service Execution](https://attack.mitre.org/techniques/T1569/002).\n\nTo make detection analysis more challenging, malicious services may also incorporate [Masquerade Task or Service](https://attack.mitre.org/techniques/T1036/004) (ex: using a service and/or payload name related to a legitimate OS or benign software component). Adversaries may also create \u2018hidden\u2019 services (i.e., [Hide Artifacts](https://attack.mitre.org/techniques/T1564)), for example by using the `sc sdset` command to set service permissions via the Service Descriptor Definition Language (SDDL). This may hide a Windows service from the view of standard service enumeration methods such as `Get-Service`, `sc query`, and `services.exe`.(Citation: SANS 1)(Citation: SANS 2)"
+}

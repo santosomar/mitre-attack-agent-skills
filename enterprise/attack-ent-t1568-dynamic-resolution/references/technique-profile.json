@@ -1,0 +1,52 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1568",
+  "name": "Dynamic Resolution",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1568",
+  "stix_id": "attack-pattern--7bd9c723-2f78-4309-82c5-47cad406572b",
+  "attack_version": "1.1",
+  "created": "2020-03-10T17:28:11.747Z",
+  "modified": "2025-10-24T17:49:00.128Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention",
+    "Restrict Web-Based Content"
+  ],
+  "known_context": [
+    "APT-C-36 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "AsyncRAT (tool)",
+    "BITTER (intrusion-set)",
+    "BRICKSTORM (malware)",
+    "Bisonal (malware)",
+    "C0026 (campaign)",
+    "Gamaredon Group (intrusion-set)",
+    "Gelsemium (malware)",
+    "Indian Critical Infrastructure Intrusions (campaign)",
+    "Kimsuky (intrusion-set)",
+    "Maze (malware)",
+    "NETEAGLE (malware)",
+    "Night Dragon (campaign)",
+    "Operation Dust Storm (campaign)",
+    "Operation Spalax (campaign)",
+    "RTM (malware)",
+    "RedEcho (intrusion-set)",
+    "Remcos (tool)",
+    "SUNBURST (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may dynamically establish connections to command and control infrastructure to evade common detections and remediations. This may be achieved by using malware that shares a common algorithm with the infrastructure the adversary uses to receive the malware's communications. These calculations can be used to dynamically adjust parameters such as the domain name, IP address, or port number the malware uses for command and control.\n\nAdversaries may use dynamic resolution for the purpose of [Fallback Channels](https://attack.mitre.org/techniques/T1008). When contact is lost with the primary command and control server malware may employ dynamic resolution as a means to reestablishing command and control.(Citation: Talos CCleanup 2017)(Citation: FireEye POSHSPY April 2017)(Citation: ESET Sednit 2017 Activity)"
+}

@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1542",
+  "name": "Pre-OS Boot",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1542",
+  "stix_id": "attack-pattern--7f0ca133-88c4-40c6-a62f-b3083a7fbc2e",
+  "attack_version": "2.0",
+  "created": "2019-11-13T14:44:49.439Z",
+  "modified": "2026-04-17T18:38:50.048Z",
+  "tactics": [
+    "persistence",
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Boot Integrity",
+    "Limit Access to Resource Over Network",
+    "Privileged Account Management",
+    "Update Software"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Pre-OS Boot mechanisms as a way to establish persistence on a system. During the booting process of a computer, firmware and various startup services are loaded before the operating system. These programs control flow of execution before the operating system takes control.(Citation: Wikipedia Booting)\n\nAdversaries may overwrite data in boot drivers or firmware such as BIOS (Basic Input/Output System) and The Unified Extensible Firmware Interface (UEFI) to persist on systems at a layer below the operating system. This can be particularly difficult to detect as malware at this level will not be detected by host software-based defenses."
+}

@@ -1,0 +1,53 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1573.002",
+  "name": "Asymmetric Cryptography",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1573/002",
+  "stix_id": "attack-pattern--bf176076-b789-408e-8cba-7275e81c0ada",
+  "attack_version": "1.2",
+  "created": "2020-03-16T15:48:33.882Z",
+  "modified": "2025-10-24T17:49:18.961Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention",
+    "SSL/TLS Inspection"
+  ],
+  "known_context": [
+    "ADVSTORESHELL (malware)",
+    "APT41 DUST (campaign)",
+    "APT42 (intrusion-set)",
+    "Attor (malware)",
+    "BADHATCH (malware)",
+    "BISCUIT (malware)",
+    "BOLDMOVE (malware)",
+    "BRICKSTORM (malware)",
+    "Bazar (malware)",
+    "C0021 (campaign)",
+    "CASTLETAP (malware)",
+    "CHOPSTICK (malware)",
+    "COATHANGER (malware)",
+    "Carbon (malware)",
+    "Cobalt Group (intrusion-set)",
+    "Cobalt Strike (malware)",
+    "ComRAT (malware)",
+    "Covenant (tool)",
+    "Cyclops Blink (malware)",
+    "DCRAT (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may employ a known asymmetric encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol. Asymmetric cryptography, also known as public key cryptography, uses a keypair per party: one public that can be freely distributed, and one private. Due to how the keys are generated, the sender encrypts data with the receiver\u2019s public key and the receiver decrypts the data with their private key. This ensures that only the intended recipient can read the encrypted data. Common public key encryption algorithms include RSA and ElGamal.\n\nFor efficiency, many protocols (including SSL/TLS) use symmetric cryptography once a connection is established, but use asymmetric cryptography to establish or transmit a key. As such, these protocols are classified as [Asymmetric Cryptography](https://attack.mitre.org/techniques/T1573/002)."
+}

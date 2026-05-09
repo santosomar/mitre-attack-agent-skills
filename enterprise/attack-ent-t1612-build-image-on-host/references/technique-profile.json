@@ -1,0 +1,30 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1612",
+  "name": "Build Image on Host",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1612",
+  "stix_id": "attack-pattern--800f9819-7007-4540-a520-40e655876800",
+  "attack_version": "2.0",
+  "created": "2021-03-30T17:54:03.944Z",
+  "modified": "2026-04-15T19:56:51.027Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Containers"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Limit Access to Resource Over Network",
+    "Network Segmentation",
+    "Privileged Account Management"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may build a container image directly on a host to bypass defenses that monitor for the retrieval of malicious images from a public registry. A remote <code>build</code> request may be sent to the Docker API that includes a Dockerfile that pulls a vanilla base image, such as alpine, from a public or local registry and then builds a custom image upon it.(Citation: Docker Build Image)\n\nAn adversary may take advantage of that <code>build</code> API to build a custom image on the host that includes malware downloaded from their C2 server, and then they may utilize [Deploy Container](https://attack.mitre.org/techniques/T1610) using that custom image.(Citation: Aqua Build Images on Hosts)(Citation: Aqua Security Cloud Native Threat Report June 2021) If the base image is pulled from a public registry, defenses will likely not detect the image as malicious since it\u2019s a vanilla image. If the base image already resides in a local registry, the pull may be considered even less suspicious since the image is already in the environment."
+}

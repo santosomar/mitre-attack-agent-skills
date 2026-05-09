@@ -1,0 +1,40 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1114",
+  "name": "Email Collection",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1114",
+  "stix_id": "attack-pattern--1608f3e1-598a-42f4-a01a-2e252e81728f",
+  "attack_version": "2.6",
+  "created": "2017-05-31T21:31:25.454Z",
+  "modified": "2025-10-24T17:48:26.463Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Linux",
+    "Office Suite"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Encrypt Sensitive Information",
+    "Multi-factor Authentication",
+    "Out-of-Band Communications Channel"
+  ],
+  "known_context": [
+    "Ember Bear (intrusion-set)",
+    "Emotet (malware)",
+    "Magic Hound (intrusion-set)",
+    "Scattered Spider (intrusion-set)",
+    "Silent Librarian (intrusion-set)",
+    "TRANSLATEXT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may target user email to collect sensitive information. Emails may contain sensitive data, including trade secrets or personal information, that can prove valuable to adversaries. Emails may also contain details of ongoing incident response operations, which may allow adversaries to adjust their techniques in order to maintain persistence or evade defenses.(Citation: TrustedSec OOB Communications)(Citation: CISA AA20-352A 2021) Adversaries can collect or forward email from mail servers or clients."
+}

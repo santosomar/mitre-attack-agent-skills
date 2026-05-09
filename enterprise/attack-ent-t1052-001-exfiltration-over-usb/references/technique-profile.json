@@ -1,0 +1,39 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1052.001",
+  "name": "Exfiltration over USB",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1052/001",
+  "stix_id": "attack-pattern--a3e1e6c5-9c74-4fc0-a16c-a9d228c17829",
+  "attack_version": "1.2",
+  "created": "2020-03-11T13:50:11.467Z",
+  "modified": "2025-10-24T17:49:10.994Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "Linux",
+    "Windows",
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Data Loss Prevention",
+    "Disable or Remove Feature or Program",
+    "Limit Hardware Installation"
+  ],
+  "known_context": [
+    "Agent.btz (malware)",
+    "Machete (malware)",
+    "Mustang Panda (intrusion-set)",
+    "Remsec (malware)",
+    "SPACESHIP (malware)",
+    "Tropic Trooper (intrusion-set)",
+    "USBStealer (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to exfiltrate data over a USB connected physical device. In certain circumstances, such as an air-gapped network compromise, exfiltration could occur via a USB device introduced by a user. The USB device could be used as the final exfiltration point or to hop between otherwise disconnected systems."
+}

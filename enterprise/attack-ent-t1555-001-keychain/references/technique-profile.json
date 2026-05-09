@@ -1,0 +1,40 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1555.001",
+  "name": "Keychain",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1555/001",
+  "stix_id": "attack-pattern--1eaebf46-e361-4437-bc23-d5d65a3b92e3",
+  "attack_version": "1.1",
+  "created": "2020-02-12T18:55:24.728Z",
+  "modified": "2025-10-24T17:48:29.756Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "macOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Password Policies"
+  ],
+  "known_context": [
+    "BeaverTail (malware)",
+    "Calisto (malware)",
+    "Contagious Interview (intrusion-set)",
+    "Cuckoo Stealer (malware)",
+    "Empire (tool)",
+    "GlassWorm (malware)",
+    "Green Lambert (malware)",
+    "LaZagne (tool)",
+    "LightSpy (malware)",
+    "MacMa (malware)",
+    "Proton (malware)",
+    "iKitten (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may acquire credentials from Keychain. Keychain (or Keychain Services) is the macOS credential management system that stores account names, passwords, private keys, certificates, sensitive application data, payment data, and secure notes. There are three types of Keychains: Login Keychain, System Keychain, and Local Items (iCloud) Keychain. The default Keychain is the Login Keychain, which stores user passwords and information. The System Keychain stores items accessed by the operating system, such as items shared among users on a host. The Local Items (iCloud) Keychain is used for items synced with Apple\u2019s iCloud service. \n\nKeychains can be viewed and edited through the Keychain Access application or using the command-line utility <code>security</code>. Keychain files are located in <code>~/Library/Keychains/</code>, <code>/Library/Keychains/</code>, and <code>/Network/Library/Keychains/</code>.(Citation: Keychain Services Apple)(Citation: Keychain Decryption Passware)(Citation: OSX Keychain Schaumann)\n\nAdversaries may gather user credentials from Keychain storage/memory. For example, the command <code>security dump-keychain \u2013d</code> will dump all Login Keychain credentials from <code>~/Library/Keychains/login.keychain-db</code>. Adversaries may also directly read Login Keychain credentials from the <code>~/Library/Keychains/login.keychain</code> file. Both methods require a password, where the default password for the Login Keychain is the current user\u2019s password to login to the macOS host.(Citation: External to DA, the OS X Way)(Citation: Empire Keychain Decrypt)"
+}

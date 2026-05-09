@@ -1,0 +1,51 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1132.001",
+  "name": "Standard Encoding",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1132/001",
+  "stix_id": "attack-pattern--04fd5427-79c7-44ea-ae13-11b24778ff1c",
+  "attack_version": "1.1",
+  "created": "2020-03-14T23:36:52.095Z",
+  "modified": "2025-10-24T17:48:20.938Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "ADVSTORESHELL (malware)",
+    "APT19 (intrusion-set)",
+    "APT33 (intrusion-set)",
+    "APT42 (intrusion-set)",
+    "Astaroth (malware)",
+    "AutoIt backdoor (malware)",
+    "BADNEWS (malware)",
+    "BLINDINGCAN (malware)",
+    "BRICKSTORM (malware)",
+    "BRONZE BUTLER (intrusion-set)",
+    "BS2005 (malware)",
+    "BabyShark (malware)",
+    "Backdoor.Oldrea (malware)",
+    "Bisonal (malware)",
+    "Bumblebee (malware)",
+    "CORESHELL (malware)",
+    "Carbanak (malware)",
+    "ChChes (malware)",
+    "Chaes (malware)",
+    "CharmPower (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may encode data with a standard data encoding system to make the content of command and control traffic more difficult to detect. Command and control (C2) information can be encoded using a standard data encoding system that adheres to existing protocol specifications. Common data encoding schemes include ASCII, Unicode, hexadecimal, Base64, and MIME.(Citation: Wikipedia Binary-to-text Encoding)(Citation: Wikipedia Character Encoding) Some data encoding systems may also result in data compression, such as gzip."
+}

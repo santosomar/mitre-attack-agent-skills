@@ -1,0 +1,30 @@
+# Known Threat Context
+
+Use this file as a contextual lead list, not attribution evidence. ATT&CK relationships indicate that groups, campaigns, or software have been associated with this technique in ATT&CK data, but an observed event still requires independent evidence.
+
+## Associated context from STIX relationships
+
+- 2025 Poland Wiper Attacks (campaign)
+- APT28 (intrusion-set)
+- APT29 (intrusion-set)
+- APT33 (intrusion-set)
+- APT5 (intrusion-set)
+- C0027 (campaign)
+- HAFNIUM (intrusion-set)
+- Ke3chang (intrusion-set)
+- LAPSUS$ (intrusion-set)
+- Pacu (tool)
+- Peirates (tool)
+- ROADTools (tool)
+- Scattered Spider (intrusion-set)
+- Shai-Hulud (malware)
+- SolarWinds Compromise (campaign)
+- Storm-0501 (intrusion-set)
+- TruffleHog (tool)
+- VOID MANTICORE (intrusion-set)
+
+## Attribution caution
+
+- Do not infer a threat actor from a technique match alone.
+- Combine multiple independent signals, such as infrastructure, tooling, targeting, language artifacts, timing, malware families, and victimology.
+- Prefer phrasing such as "consistent with" or "overlaps with" unless attribution is independently confirmed.

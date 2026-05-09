@@ -1,0 +1,35 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1218.001",
+  "name": "Compiled HTML File",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1218/001",
+  "stix_id": "attack-pattern--a6937325-9321-4e2e-bb2b-3ed2d40b2a9d",
+  "attack_version": "3.0",
+  "created": "2020-01-23T18:53:54.377Z",
+  "modified": "2026-04-15T22:37:42.151Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Execution Prevention",
+    "Restrict Web-Based Content"
+  ],
+  "known_context": [
+    "APT38 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "Astaroth (malware)",
+    "Dark Caracal (intrusion-set)",
+    "OilRig (intrusion-set)",
+    "Silence (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Compiled HTML files (.chm) to conceal malicious code. CHM files are commonly distributed as part of the Microsoft HTML Help system. CHM files are compressed compilations of various content such as HTML documents, images, and scripting/web related programming languages such VBA, JScript, Java, and ActiveX. (Citation: Microsoft HTML Help May 2018) CHM content is displayed using underlying components of the Internet Explorer browser (Citation: Microsoft HTML Help ActiveX) loaded by the HTML Help executable program (hh.exe). (Citation: Microsoft HTML Help Executable Program)\n\nA custom CHM file containing embedded payloads could be delivered to a victim then triggered by [User Execution](https://attack.mitre.org/techniques/T1204). CHM execution may also bypass application application control on older and/or unpatched systems that do not account for execution of binaries through hh.exe. (Citation: MsitPros CHM Aug 2017) (Citation: Microsoft CVE-2017-8625 Aug 2017)"
+}

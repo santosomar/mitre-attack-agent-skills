@@ -1,0 +1,29 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1518.002",
+  "name": "Backup Software Discovery",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1518/002",
+  "stix_id": "attack-pattern--4a6cfdae-1417-40c7-a84e-f59d21c58266",
+  "attack_version": "1.0",
+  "created": "2025-05-22T18:57:47.616Z",
+  "modified": "2025-10-22T03:53:48.786Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Wizard Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to get a listing of backup software or configurations that are installed on a system. Adversaries may use this information to shape follow-on behaviors, such as [Data Destruction](https://attack.mitre.org/techniques/T1485), [Inhibit System Recovery](https://attack.mitre.org/techniques/T1490), or [Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486).  \n\nCommands that can be used to obtain security software information are [netsh](https://attack.mitre.org/software/S0108), `reg query` with [Reg](https://attack.mitre.org/software/S0075), `dir` with [cmd](https://attack.mitre.org/software/S0106), and [Tasklist](https://attack.mitre.org/software/S0057), but other indicators of discovery behavior may be more specific to the type of software or security system the adversary is looking for, such as Veeam, Acronis, Dropbox, or Paragon.(Citation: Symantec Play Ransomware 2023)"
+}

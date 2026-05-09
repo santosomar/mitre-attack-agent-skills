@@ -1,0 +1,28 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1485.001",
+  "name": "Lifecycle-Triggered Deletion",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1485/001",
+  "stix_id": "attack-pattern--1001e0d6-ee09-4dfc-aa90-e9320ffc8fe4",
+  "attack_version": "1.1",
+  "created": "2024-09-25T13:16:14.166Z",
+  "modified": "2025-04-15T19:58:06.787Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "IaaS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Data Backup",
+    "User Account Management"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify the lifecycle policies of a cloud storage bucket to destroy all objects stored within.  \n\nCloud storage buckets often allow users to set lifecycle policies to automate the migration, archival, or deletion of objects after a set period of time.(Citation: AWS Storage Lifecycles)(Citation: GCP Storage Lifecycles)(Citation: Azure Storage Lifecycles) If a threat actor has sufficient permissions to modify these policies, they may be able to delete all objects at once. \n\nFor example, in AWS environments, an adversary with the `PutLifecycleConfiguration` permission may use the `PutBucketLifecycle` API call to apply a lifecycle policy to an S3 bucket that deletes all objects in the bucket after one day.(Citation: Palo Alto Cloud Ransomware)(Citation: Halcyon AWS Ransomware 2025) In addition to destroying data for purposes of extortion and [Financial Theft](https://attack.mitre.org/techniques/T1657), adversaries may also perform this action on buckets storing cloud logs for [Indicator Removal](https://attack.mitre.org/techniques/T1070).(Citation: Datadog S3 Lifecycle CloudTrail Logs)"
+}

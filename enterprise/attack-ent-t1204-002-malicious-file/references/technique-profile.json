@@ -1,0 +1,52 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1204.002",
+  "name": "Malicious File",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1204/002",
+  "stix_id": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+  "attack_version": "1.6",
+  "created": "2020-03-11T14:49:36.954Z",
+  "modified": "2025-10-24T17:48:31.674Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Behavior Prevention on Endpoint",
+    "Execution Prevention",
+    "User Training"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "APT-C-36 (intrusion-set)",
+    "APT12 (intrusion-set)",
+    "APT19 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT29 (intrusion-set)",
+    "APT30 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT33 (intrusion-set)",
+    "APT37 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "Agent Tesla (malware)",
+    "Ajax Security Team (intrusion-set)",
+    "Andariel (intrusion-set)",
+    "Aoqin Dragon (intrusion-set)",
+    "AppleJeus (malware)",
+    "AppleSeed (malware)",
+    "AshTag (malware)",
+    "Astaroth (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may rely upon a user opening a malicious file in order to gain execution. Users may be subjected to social engineering to get them to open a file that will lead to code execution. This user action will typically be observed as follow-on behavior from [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001). Adversaries may use several types of files that require a user to execute them, including .doc, .pdf, .xls, .rtf, .scr, .exe, .lnk, .pif, .cpl, .reg, and .iso.(Citation: Mandiant Trojanized Windows 10)\n\nAdversaries may employ various forms of [Masquerading](https://attack.mitre.org/techniques/T1036) and [Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027) to increase the likelihood that a user will open and successfully execute a malicious file. These methods may include using a familiar naming convention and/or password protecting the file and supplying instructions to a user on how to open it.(Citation: Password Protected Word Docs) \n\nWhile [Malicious File](https://attack.mitre.org/techniques/T1204/002) frequently occurs shortly after Initial Access it may occur at other phases of an intrusion, such as when an adversary places a file in a shared directory or on a user's desktop hoping that a user will click on it. This activity may also be seen shortly after [Internal Spearphishing](https://attack.mitre.org/techniques/T1534)."
+}

@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1547.005",
+  "name": "Security Support Provider",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1547/005",
+  "stix_id": "attack-pattern--5095a853-299c-4876-abd7-ac0050fb5462",
+  "attack_version": "1.1",
+  "created": "2020-01-24T17:16:11.806Z",
+  "modified": "2025-10-24T17:48:46.245Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Privileged Process Integrity"
+  ],
+  "known_context": [
+    "Empire (tool)",
+    "Mimikatz (tool)",
+    "PowerSploit (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse security support providers (SSPs) to execute DLLs when the system boots. Windows SSP DLLs are loaded into the Local Security Authority (LSA) process at system start. Once loaded into the LSA, SSP DLLs have access to encrypted and plaintext passwords that are stored in Windows, such as any logged-on user's Domain password or smart card PINs.\n\nThe SSP configuration is stored in two Registry keys: <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Security Packages</code> and <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\OSConfig\\Security Packages</code>. An adversary may modify these Registry keys to add new SSPs, which will be loaded the next time the system boots, or when the AddSecurityPackage Windows API function is called.(Citation: Graeber 2014)"
+}

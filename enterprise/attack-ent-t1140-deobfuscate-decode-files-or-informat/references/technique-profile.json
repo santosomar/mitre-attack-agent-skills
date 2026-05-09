@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1140",
+  "name": "Deobfuscate/Decode Files or Information",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1140",
+  "stix_id": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+  "attack_version": "2.0",
+  "created": "2017-12-14T16:46:06.044Z",
+  "modified": "2026-04-15T19:58:25.069Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "ABK (malware)",
+    "ANELLDR (malware)",
+    "APT19 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT28 Nearest Neighbor Campaign (campaign)",
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "Action RAT (malware)",
+    "Agent Tesla (malware)",
+    "Agrius (intrusion-set)",
+    "Amadey (malware)",
+    "Apostle (malware)",
+    "AppleJeus (malware)",
+    "AppleSeed (malware)",
+    "ArcaneDoor (campaign)",
+    "Aria-body (malware)",
+    "AshTag (malware)",
+    "Astaroth (malware)",
+    "AuditCred (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use [Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027) to hide artifacts of an intrusion from analysis. They may require separate mechanisms to decode or deobfuscate that information depending on how they intend to use it. Methods for doing that include built-in functionality of malware or by using utilities present on the system.\n\nOne such example is the use of [certutil](https://attack.mitre.org/software/S0160) to decode a remote access tool portable executable file that has been hidden inside a certificate file.(Citation: Malwarebytes Targeted Attack against Saudi Arabia) Another example is using the Windows <code>copy /b</code> or <code>type</code> command to reassemble binary fragments into a malicious payload.(Citation: Carbon Black Obfuscation Sept 2016)(Citation: Sentinel One Tainted Love 2023)\n\nSometimes a user's action may be required to open it for deobfuscation or decryption as part of [User Execution](https://attack.mitre.org/techniques/T1204). The user may also be required to input a password to open a password protected compressed/encrypted file that was provided by the adversary.(Citation: Volexity PowerDuke November 2016)"
+}

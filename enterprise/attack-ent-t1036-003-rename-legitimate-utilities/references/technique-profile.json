@@ -1,0 +1,41 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1036.003",
+  "name": "Rename Legitimate Utilities",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1036/003",
+  "stix_id": "attack-pattern--bd5b58a4-a52d-4a29-bc0d-3f1d3968eb6b",
+  "attack_version": "3.0",
+  "created": "2020-02-10T20:03:11.691Z",
+  "modified": "2026-04-15T20:40:54.471Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [
+    "APT32 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "CozyCar (malware)",
+    "Daggerfly (intrusion-set)",
+    "DarkGate (malware)",
+    "GALLIUM (intrusion-set)",
+    "Kevin (malware)",
+    "Lazarus Group (intrusion-set)",
+    "PHASEJAM (malware)",
+    "StrelaStealer (malware)",
+    "menuPass (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may rename legitimate / system utilities to try to evade security mechanisms concerning the usage of those utilities. Security monitoring and control mechanisms may be in place for legitimate utilities adversaries are capable of abusing, including both built-in binaries and tools such as PSExec, AutoHotKey, and IronPython.(Citation: LOLBAS Main Site)(Citation: Huntress Python Malware 2025)(Citation: The DFIR Report AutoHotKey 2023)(Citation: Splunk Detect Renamed PSExec) It may be possible to bypass those security mechanisms by renaming the utility prior to utilization (ex: rename <code>rundll32.exe</code>).(Citation: Elastic Masquerade Ball) An alternative case occurs when a legitimate utility is copied or moved to a different directory and renamed to avoid detections based on these utilities executing from non-standard paths.(Citation: F-Secure CozyDuke)"
+}

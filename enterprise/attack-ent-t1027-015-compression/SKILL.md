@@ -1,0 +1,116 @@
+---
+name: attack-ent-t1027-015-compression
+description: "Analyze MITRE ATT&CK T1027.015 Compression in the enterprise matrix. Use for TTP triage, detection engineering, hunting, defensive emulation planning, mitigations, incident response mapping, ATT&CK coverage, or questions mentioning T1027.015, Compression, or enterprise ATT&CK. Adversaries may use compression to obfuscate their payloads or files."
+license: MITRE ATT&CK Terms of Use apply to ATT&CK-derived content. See https://attack.mitre.org/resources/terms-of-use/
+metadata:
+  source: mitre-attack/attack-stix-data
+  domain: enterprise
+  attack_id: T1027.015
+  attack_stix_id: attack-pattern--fbd91bfc-75c2-4f0c-8116-3b4e722906b3
+  attack_version: "2.0"
+  attack_modified: "2026-04-15T22:16:53.338Z"
+---
+
+# MITRE ATT&CK T1027.015: Compression
+
+## When to use this skill
+
+Use this skill when the task involves T1027.015, Compression, enterprise ATT&CK, TTP mapping, detection engineering, hunting, incident-response enrichment, control validation, or authorized adversary-emulation planning. Treat it as a defensive analysis aid: keep outputs focused on understanding, detecting, mitigating, and safely validating this ATT&CK sub-technique.
+
+## Technique context
+
+- ATT&CK domain: enterprise
+- ATT&CK ID: T1027.015
+- Technique name: Compression
+- Type: sub-technique
+- ATT&CK URL: https://attack.mitre.org/techniques/T1027/015
+- Tactics: stealth
+- Platforms: Linux, macOS, Windows
+- Required permissions: Not specified
+- Effective permissions: Not specified
+- Defenses bypassed: Not specified
+
+## ATT&CK description
+
+Adversaries may use compression to obfuscate their payloads or files. Compressed file formats such as ZIP, gzip, 7z, and RAR can compress and archive multiple files together to make it easier and faster to transfer files. In addition to compressing files, adversaries may also compress shellcode directly - for example, in order to store it in a Windows Registry key (i.e., [Fileless Storage](https://attack.mitre.org/techniques/T1027/011)).(Citation: Trustwave Pillowmint June 2020)
+
+In order to further evade detection, adversaries may combine multiple ZIP files into one archive. This process of concatenation creates an archive that appears to be a single archive but in fact contains the central directories of the embedded archives. Some ZIP readers, such as 7zip, may not be able to identify concatenated ZIP files and miss the presence of the malicious payload.(Citation: Perception Point)
+
+File archives may be sent as one [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001) through email. Adversaries have sent malicious payloads as archived files to encourage the user to interact with and extract the malicious payload onto their system (i.e., [Malicious File](https://attack.mitre.org/techniques/T1204/002)).(Citation: NTT Security Flagpro new December 2021) However, some file compression tools, such as 7zip, can be used to produce self-extracting archives. Adversaries may send self-extracting archives to hide the functionality of their payload and launch it without requiring multiple actions from the user.(Citation: The Hacker News)
+
+[Compression](https://attack.mitre.org/techniques/T1027/015) may be used in combination with [Encrypted/Encoded File](https://attack.mitre.org/techniques/T1027/013) where compressed files are encrypted and password-protected.
+
+## Agent workflow
+
+1. Clarify scope: identify the system, asset class, log sources, cloud or endpoint platform, and whether the user wants triage, detection, coverage assessment, or safe emulation planning.
+2. Load bundled resources as needed: use `references/technique-profile.json` for structured metadata, `references/detection-and-mitigation.md` for triage and telemetry guidance, `references/known-threat-context.md` for ATT&CK relationship context, and `templates/` for repeatable outputs.
+3. Map observations to ATT&CK: compare the user's evidence to the ATT&CK description, tactics, platforms, and known procedure patterns before asserting a match.
+4. Produce defensive outputs: prioritize hypotheses, telemetry requirements, detection logic ideas, validation steps, containment guidance, and mitigations.
+5. Preserve uncertainty: distinguish confirmed evidence, plausible indicators, assumptions, and gaps. Recommend what to collect next.
+6. Stay safe: do not provide malware, credential theft, persistence, evasion, destructive automation, or unauthorized exploitation instructions. For adversary emulation, keep steps bounded to approved lab or control-validation contexts and omit operational abuse details.
+
+## Bundled resources
+
+- `references/technique-profile.json`: machine-readable ATT&CK metadata for this technique.
+- `references/detection-and-mitigation.md`: detection notes, telemetry checklist, triage questions, mitigation candidates, and false-positive considerations.
+- `references/known-threat-context.md`: ATT&CK relationship context with attribution cautions.
+- `templates/detection-brief.md`: detection engineering brief template.
+- `templates/hunt-plan.md`: threat hunt plan template.
+- `templates/incident-response-note.md`: incident response note template.
+- `templates/coverage-assessment.md`: ATT&CK coverage assessment template.
+- `scripts/render_brief.py`: local helper that renders a Markdown defensive brief from `technique-profile.json`.
+- `assets/output-schema.json`: JSON schema for structured technique analysis outputs.
+
+To generate a quick brief, run `python scripts/render_brief.py --output brief.md` from inside this skill directory, or adapt the templates directly.
+
+## Detection guidance
+
+No ATT&CK detection guidance was present in the source STIX object.
+
+## Useful telemetry and data sources
+
+- Not specified in the STIX object.
+
+## Mitigations to consider
+
+- Antivirus/Antimalware
+
+## Known threat context
+
+Use these examples only as contextual leads, not as proof that an observed event is this technique:
+
+- BADHATCH (malware)
+- DarkWatchman (malware)
+- Donut (tool)
+- Gamaredon Group (intrusion-set)
+- Gelsemium (malware)
+- Hancitor (malware)
+- HermeticWiper (malware)
+- Higaisa (intrusion-set)
+- Kerrdown (malware)
+- Kimsuky (intrusion-set)
+- LODEINFO (malware)
+- Leviathan (intrusion-set)
+- Line Runner (malware)
+- Mofang (intrusion-set)
+- Molerats (intrusion-set)
+- Ninja (malware)
+- PUBLOAD (malware)
+- Pandora (malware)
+- PcShare (tool)
+- Pillowmint (malware)
+
+## Recommended output pattern
+
+When responding with this skill, structure the answer as:
+
+- Assessment: whether the evidence supports this ATT&CK mapping and why.
+- Evidence: specific indicators, logs, behaviors, and assumptions.
+- Detection: telemetry sources, analytic logic, and tuning considerations.
+- Response: containment, eradication, recovery, and validation actions.
+- Coverage gaps: missing logs, sensors, controls, or environmental details.
+- References: include the ATT&CK URL and any user-provided evidence references.
+
+## ATT&CK contributors
+
+- Fernando Bacchin

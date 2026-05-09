@@ -1,0 +1,50 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1016",
+  "name": "System Network Configuration Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1016",
+  "stix_id": "attack-pattern--707399d6-ab3e-4963-9315-d9d3818cd6a0",
+  "attack_version": "1.7",
+  "created": "2017-05-31T21:30:27.342Z",
+  "modified": "2025-10-24T17:48:56.618Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "APT1 (intrusion-set)",
+    "APT19 (intrusion-set)",
+    "APT3 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "APT42 (intrusion-set)",
+    "Action RAT (malware)",
+    "AdFind (tool)",
+    "Agent Tesla (malware)",
+    "Agent.btz (malware)",
+    "Amadey (malware)",
+    "Anchor (malware)",
+    "Anthropic AI-orchestrated Campaign (campaign)",
+    "AppleSeed (malware)",
+    "Aria-body (malware)",
+    "Arp (tool)",
+    "Astaroth (malware)",
+    "AsyncRAT (tool)",
+    "Avaddon (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may look for details about the network configuration and settings, such as IP and/or MAC addresses, of systems they access or through information discovery of remote systems. Several operating system administration utilities exist that can be used to gather this information. Examples include [Arp](https://attack.mitre.org/software/S0099), [ipconfig](https://attack.mitre.org/software/S0100)/[ifconfig](https://attack.mitre.org/software/S0101), [nbtstat](https://attack.mitre.org/software/S0102), and [route](https://attack.mitre.org/software/S0103).\n\nAdversaries may also leverage a [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) on network devices to gather information about configurations and settings, such as IP addresses of configured interfaces and static/dynamic routes (e.g. <code>show ip route</code>, <code>show ip interface</code>).(Citation: US-CERT-TA18-106A)(Citation: Mandiant APT41 Global Intrusion ) On ESXi, adversaries may leverage esxcli to gather network configuration information. For example, the command `esxcli network nic list` will retrieve the MAC address, while `esxcli network ip interface ipv4 get` will retrieve the local IPv4 address.(Citation: Trellix Rnasomhouse 2024)\n\nAdversaries may use the information from [System Network Configuration Discovery](https://attack.mitre.org/techniques/T1016) during automated discovery to shape follow-on behaviors, including determining certain access within the target network and what actions to do next."
+}

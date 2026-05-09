@@ -1,0 +1,51 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1008",
+  "name": "Fallback Channels",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1008",
+  "stix_id": "attack-pattern--f24faf46-3b26-4dbb-98f2-63460498e433",
+  "attack_version": "1.1",
+  "created": "2017-05-31T21:30:21.689Z",
+  "modified": "2025-10-24T17:49:35.854Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "APT41 (intrusion-set)",
+    "Anchor (malware)",
+    "AppleSeed (malware)",
+    "BISCUIT (malware)",
+    "Bazar (malware)",
+    "BlackEnergy (malware)",
+    "Bumblebee (malware)",
+    "CHOPSTICK (malware)",
+    "Cardinal RAT (malware)",
+    "CharmPower (malware)",
+    "Crutch (malware)",
+    "Derusbi (malware)",
+    "DustySky (malware)",
+    "Ebury (malware)",
+    "Exaramel for Linux (malware)",
+    "FIN7 (intrusion-set)",
+    "FatDuke (malware)",
+    "Gelsemium (malware)",
+    "GlassWorm (malware)",
+    "HOPLIGHT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use fallback or alternate communication channels if the primary channel is compromised or inaccessible in order to maintain reliable command and control and to avoid data transfer thresholds."
+}

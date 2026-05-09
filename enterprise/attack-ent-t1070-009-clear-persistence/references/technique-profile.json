@@ -1,0 +1,47 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1070.009",
+  "name": "Clear Persistence",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1070/009",
+  "stix_id": "attack-pattern--d2c4e5ea-dbdf-4113-805a-b1e2a337fb33",
+  "attack_version": "2.0",
+  "created": "2022-07-29T19:32:11.552Z",
+  "modified": "2026-04-15T20:28:24.292Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Remote Data Storage",
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [
+    "Bazar (malware)",
+    "GrimAgent (malware)",
+    "IPsec Helper (malware)",
+    "KOCTOPUS (malware)",
+    "Kapeka (malware)",
+    "MCMD (tool)",
+    "Misdat (malware)",
+    "Pillowmint (malware)",
+    "PlugX (malware)",
+    "RTM (malware)",
+    "Raspberry Robin (malware)",
+    "S-Type (malware)",
+    "SUNBURST (malware)",
+    "SplatDropper (malware)",
+    "njRAT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may clear artifacts associated with previously established persistence on a host system to remove evidence of their activity. This may involve various actions, such as removing services, deleting executables, [Modify Registry](https://attack.mitre.org/techniques/T1112), [Plist File Modification](https://attack.mitre.org/techniques/T1647), or other methods of cleanup to prevent defenders from collecting evidence of their persistent presence.(Citation: Cylance Dust Storm) Adversaries may also delete accounts previously created to maintain persistence (i.e. [Create Account](https://attack.mitre.org/techniques/T1136)).(Citation: Talos - Cisco Attack 2022)\n\nIn some instances, artifacts of persistence may also be removed once an adversary\u2019s persistence is executed in order to prevent errors with the new instance of the malware.(Citation: NCC Group Team9 June 2020)"
+}

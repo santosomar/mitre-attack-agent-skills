@@ -1,0 +1,49 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1074.001",
+  "name": "Local Data Staging",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1074/001",
+  "stix_id": "attack-pattern--1c34f7aa-9341-4a48-bfab-af22e51aca6c",
+  "attack_version": "1.2",
+  "created": "2020-03-13T21:13:10.467Z",
+  "modified": "2025-10-24T17:48:28.868Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "ADVSTORESHELL (malware)",
+    "APT28 (intrusion-set)",
+    "APT28 Nearest Neighbor Campaign (campaign)",
+    "APT3 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "APT41 DUST (campaign)",
+    "APT5 (intrusion-set)",
+    "Agrius (intrusion-set)",
+    "Anthropic AI-orchestrated Campaign (campaign)",
+    "AppleSeed (malware)",
+    "Astaroth (malware)",
+    "Attor (malware)",
+    "AuTo Stealer (malware)",
+    "BADNEWS (malware)",
+    "BackdoorDiplomacy (intrusion-set)",
+    "BadPatch (malware)",
+    "BeaverTail (malware)",
+    "BoxCaon (malware)",
+    "C0015 (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may stage collected data in a central location or directory on the local system prior to Exfiltration. Data may be kept in separate files or combined into one file through techniques such as [Archive Collected Data](https://attack.mitre.org/techniques/T1560). Interactive command shells may be used, and common functionality within [cmd](https://attack.mitre.org/software/S0106) and bash may be used to copy data into a staging location.\n\nAdversaries may also stage collected data in various available formats/locations of a system, including local storage databases/repositories or the Windows Registry.(Citation: Prevailion DarkWatchman 2021)"
+}

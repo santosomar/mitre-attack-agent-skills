@@ -1,0 +1,31 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1583.002",
+  "name": "DNS Server",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1583/002",
+  "stix_id": "attack-pattern--197ef1b9-e764-46c3-b96c-23f77985dc81",
+  "attack_version": "1.0",
+  "created": "2020-10-01T00:40:45.279Z",
+  "modified": "2025-10-24T17:48:27.611Z",
+  "tactics": [
+    "resource-development"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "Axiom (intrusion-set)",
+    "HEXANE (intrusion-set)",
+    "Sea Turtle (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may set up their own Domain Name System (DNS) servers that can be used during targeting. During post-compromise activity, adversaries may utilize DNS traffic for various tasks, including for Command and Control (ex: [Application Layer Protocol](https://attack.mitre.org/techniques/T1071)). Instead of hijacking existing DNS servers, adversaries may opt to configure and run their own DNS servers in support of operations.\n\nBy running their own DNS servers, adversaries can have more control over how they administer server-side DNS C2 traffic ([DNS](https://attack.mitre.org/techniques/T1071/004)). With control over a DNS server, adversaries can configure DNS applications to provide conditional responses to malware and, generally, have more flexibility in the structure of the DNS-based C2 channel.(Citation: Unit42 DNS Mar 2019)"
+}

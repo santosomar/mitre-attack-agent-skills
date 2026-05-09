@@ -1,0 +1,41 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1087.003",
+  "name": "Email Account",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1087/003",
+  "stix_id": "attack-pattern--4bc31b94-045b-4752-8920-aebaebdb6470",
+  "attack_version": "1.2",
+  "created": "2020-02-21T21:08:33.237Z",
+  "modified": "2025-10-24T17:48:44.685Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Windows",
+    "Office Suite"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Backdoor.Oldrea (malware)",
+    "BoomBox (malware)",
+    "C0027 (campaign)",
+    "Emotet (malware)",
+    "Grandoreiro (malware)",
+    "HomeLand Justice (campaign)",
+    "Lizar (malware)",
+    "Magic Hound (intrusion-set)",
+    "MailSniper (tool)",
+    "RedCurl (intrusion-set)",
+    "Ruler (tool)",
+    "Sandworm Team (intrusion-set)",
+    "TA505 (intrusion-set)",
+    "TrickBot (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to get a listing of email addresses and accounts. Adversaries may try to dump Exchange address lists such as global address lists (GALs).(Citation: Microsoft Exchange Address Lists)\n\nIn on-premises Exchange and Exchange Online, the <code>Get-GlobalAddressList</code> PowerShell cmdlet can be used to obtain email addresses and accounts from a domain using an authenticated session.(Citation: Microsoft getglobaladdresslist)(Citation: Black Hills Attacking Exchange MailSniper, 2016)\n\nIn Google Workspace, the GAL is shared with Microsoft Outlook users through the Google Workspace Sync for Microsoft Outlook (GWSMO) service. Additionally, the Google Workspace Directory allows for users to get a listing of other users within the organization.(Citation: Google Workspace Global Access List)"
+}

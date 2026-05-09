@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1505.002",
+  "name": "Transport Agent",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1505/002",
+  "stix_id": "attack-pattern--35187df2-31ed-43b6-a1f5-2f1d3d58d3f1",
+  "attack_version": "1.1",
+  "created": "2019-12-12T15:08:20.972Z",
+  "modified": "2025-10-24T17:48:38.001Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Linux",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Code Signing",
+    "Privileged Account Management"
+  ],
+  "known_context": [
+    "LightNeuron (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Microsoft transport agents to establish persistent access to systems. Microsoft Exchange transport agents can operate on email messages passing through the transport pipeline to perform various tasks such as filtering spam, filtering malicious attachments, journaling, or adding a corporate signature to the end of all outgoing emails.(Citation: Microsoft TransportAgent Jun 2016)(Citation: ESET LightNeuron May 2019) Transport agents can be written by application developers and then compiled to .NET assemblies that are subsequently registered with the Exchange server. Transport agents will be invoked during a specified stage of email processing and carry out developer defined tasks. \n\nAdversaries may register a malicious transport agent to provide a persistence mechanism in Exchange Server that can be triggered by adversary-specified email events.(Citation: ESET LightNeuron May 2019) Though a malicious transport agent may be invoked for all emails passing through the Exchange transport pipeline, the agent can be configured to only carry out specific tasks in response to adversary defined criteria. For example, the transport agent may only carry out an action like copying in-transit attachments and saving them for later exfiltration if the recipient email address matches an entry on a list provided by the adversary."
+}

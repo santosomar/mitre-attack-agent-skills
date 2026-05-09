@@ -1,0 +1,40 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1098.007",
+  "name": "Additional Local or Domain Groups",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1098/007",
+  "stix_id": "attack-pattern--3e6831b2-bf4c-4ae6-b328-2e7c6633b291",
+  "attack_version": "1.1",
+  "created": "2024-08-05T20:49:49.809Z",
+  "modified": "2025-09-26T18:25:02.290Z",
+  "tactics": [
+    "persistence",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "APT3 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "APT5 (intrusion-set)",
+    "DarkGate (malware)",
+    "Dragonfly (intrusion-set)",
+    "FIN13 (intrusion-set)",
+    "Kimsuky (intrusion-set)",
+    "Magic Hound (intrusion-set)",
+    "Net (tool)",
+    "SMOKEDHAM (malware)",
+    "ServHelper (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may add additional local or domain groups to an adversary-controlled account to maintain persistent access to a system or domain.\n\nOn Windows, accounts may use the `net localgroup` and `net group` commands to add existing users to local and domain groups.(Citation: Microsoft Net Localgroup)(Citation: Microsoft Net Group) On Linux, adversaries may use the `usermod` command for the same purpose.(Citation: Linux Usermod)\n\nFor example, accounts may be added to the local administrators group on Windows devices to maintain elevated privileges. They may also be added to the Remote Desktop Users group, which allows them to leverage [Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001) to log into the endpoints in the future.(Citation: Microsoft RDP Logons) Adversaries may also add accounts to VPN user groups to gain future persistence on the network.(Citation: Cyber Security News) On Linux, accounts may be added to the sudoers group, allowing them to persistently leverage [Sudo and Sudo Caching](https://attack.mitre.org/techniques/T1548/003) for elevated privileges. \n\nIn Windows environments, machine accounts may also be added to domain groups. This allows the local SYSTEM account to gain privileges on the domain.(Citation: RootDSE AD Detection 2022)"
+}

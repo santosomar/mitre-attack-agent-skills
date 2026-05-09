@@ -1,0 +1,53 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1071.001",
+  "name": "Web Protocols",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1071/001",
+  "stix_id": "attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161",
+  "attack_version": "1.5",
+  "created": "2020-03-15T16:13:46.151Z",
+  "modified": "2025-10-24T17:49:29.591Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "ESXi",
+    "Linux",
+    "macOS",
+    "Network Devices",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Filter Network Traffic",
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "3CX Supply Chain Attack (campaign)",
+    "3PARA RAT (malware)",
+    "4H RAT (malware)",
+    "ABK (malware)",
+    "ADVSTORESHELL (malware)",
+    "ANDROMEDA (malware)",
+    "APT18 (intrusion-set)",
+    "APT19 (intrusion-set)",
+    "APT28 (intrusion-set)",
+    "APT32 (intrusion-set)",
+    "APT33 (intrusion-set)",
+    "APT37 (intrusion-set)",
+    "APT38 (intrusion-set)",
+    "APT39 (intrusion-set)",
+    "APT41 (intrusion-set)",
+    "APT41 DUST (campaign)",
+    "APT42 (intrusion-set)",
+    "Action RAT (malware)",
+    "Agent Tesla (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. \n\nProtocols such as HTTP/S(Citation: CrowdStrike Putter Panda) and WebSocket(Citation: Brazking-Websockets) that carry web traffic may be very common in environments. HTTP/S packets have many fields and headers in which data can be concealed. An adversary may abuse these protocols to communicate with systems under their control within a victim network while also mimicking normal, expected traffic."
+}

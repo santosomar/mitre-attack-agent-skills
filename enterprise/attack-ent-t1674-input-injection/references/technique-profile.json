@@ -1,0 +1,32 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1674",
+  "name": "Input Injection",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1674",
+  "stix_id": "attack-pattern--63e3d25c-d57d-407d-8e6a-2cecd71f90be",
+  "attack_version": "1.0",
+  "created": "2025-03-27T18:14:06.330Z",
+  "modified": "2025-04-15T19:58:36.409Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Execution Prevention",
+    "Limit Hardware Installation"
+  ],
+  "known_context": [
+    "FIN7 (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may simulate keystrokes on a victim\u2019s computer by various means to perform any type of action on behalf of the user, such as launching the command interpreter using keyboard shortcuts,  typing an inline script to be executed, or interacting directly with a GUI-based application.  These actions can be preprogrammed into adversary tooling or executed through physical devices such as Human Interface Devices (HIDs).\n\nFor example, adversaries have used tooling that monitors the Windows message loop to detect when a user visits bank-specific URLs. If detected, the tool then simulates keystrokes to open the developer console or select the address bar, pastes malicious JavaScript from the clipboard, and executes it - enabling manipulation of content within the browser, such as replacing bank account numbers during transactions.(Citation: BleepingComputer BackSwap)(Citation: welivesecurity BackSwap)\n\nAdversaries have also used malicious USB devices to emulate keystrokes that launch PowerShell, leading to the download and execution of malware from adversary-controlled servers.(Citation: BleepingComputer USB)"
+}

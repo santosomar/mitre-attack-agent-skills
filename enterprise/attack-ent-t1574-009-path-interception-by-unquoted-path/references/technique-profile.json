@@ -1,0 +1,33 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1574.009",
+  "name": "Path Interception by Unquoted Path",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1574/009",
+  "stix_id": "attack-pattern--bf96a5a3-3bce-43b7-8597-88545984c07b",
+  "attack_version": "2.0",
+  "created": "2020-03-13T13:51:58.519Z",
+  "modified": "2026-04-15T23:01:45.477Z",
+  "tactics": [
+    "execution",
+    "stealth"
+  ],
+  "platforms": [
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Execution Prevention",
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [
+    "Empire (tool)",
+    "PowerSploit (tool)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may execute their own malicious payloads by hijacking vulnerable file path references. Adversaries can take advantage of paths that lack surrounding quotations by placing an executable in a higher level directory within the path, so that Windows will choose the adversary's executable to launch.\n\nService paths (Citation: Microsoft CurrentControlSet Services) and shortcut paths may also be vulnerable to path interception if the path has one or more spaces and is not surrounded by quotation marks (e.g., <code>C:\\unsafe path with space\\program.exe</code> vs. <code>\"C:\\safe path with space\\program.exe\"</code>). (Citation: Help eliminate unquoted path) (stored in Windows Registry keys) An adversary can place an executable in a higher level directory of the path, and Windows will resolve that executable instead of the intended executable. For example, if the path in a shortcut is <code>C:\\program files\\myapp.exe</code>, an adversary may create a program at <code>C:\\program.exe</code> that will be run instead of the intended program. (Citation: Windows Unquoted Services) (Citation: Windows Privilege Escalation Guide)\n\nThis technique can be used for persistence if executables are called on a regular basis, as well as privilege escalation if intercepted executables are started by a higher privileged process."
+}

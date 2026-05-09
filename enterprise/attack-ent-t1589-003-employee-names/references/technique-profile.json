@@ -1,0 +1,31 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1589.003",
+  "name": "Employee Names",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1589/003",
+  "stix_id": "attack-pattern--76551c52-b111-4884-bc47-ff3e728f0156",
+  "attack_version": "1.0",
+  "created": "2020-10-02T14:57:15.906Z",
+  "modified": "2025-10-24T17:48:57.975Z",
+  "tactics": [
+    "reconnaissance"
+  ],
+  "platforms": [
+    "PRE"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Pre-compromise"
+  ],
+  "known_context": [
+    "Kimsuky (intrusion-set)",
+    "Sandworm Team (intrusion-set)",
+    "Silent Librarian (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may gather employee names that can be used during targeting. Employee names be used to derive email addresses as well as to help guide other reconnaissance efforts and/or craft more-believable lures.\n\nAdversaries may easily gather employee names, since they may be readily available and exposed via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: OPM Leak) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Phishing for Information](https://attack.mitre.org/techniques/T1598)), establishing operational resources (ex: [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566) or [Valid Accounts](https://attack.mitre.org/techniques/T1078))."
+}

@@ -1,0 +1,48 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1027.003",
+  "name": "Steganography",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1027/003",
+  "stix_id": "attack-pattern--c2e147a9-d1a8-4074-811a-d8789202d916",
+  "attack_version": "2.0",
+  "created": "2020-02-05T14:28:16.719Z",
+  "modified": "2026-04-15T22:21:09.201Z",
+  "tactics": [
+    "stealth"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "ABK (malware)",
+    "APT-C-36 (intrusion-set)",
+    "APT37 (intrusion-set)",
+    "Andariel (intrusion-set)",
+    "Avenger (malware)",
+    "BBK (malware)",
+    "BRONZE BUTLER (intrusion-set)",
+    "Bandook (malware)",
+    "Diavol (malware)",
+    "Earth Lusca (intrusion-set)",
+    "IcedID (malware)",
+    "Invoke-PSImage (tool)",
+    "Leviathan (intrusion-set)",
+    "LiteDuke (malware)",
+    "MuddyWater (intrusion-set)",
+    "ObliqueRAT (malware)",
+    "Okrum (malware)",
+    "Operation Ghost (campaign)",
+    "Operation Spalax (campaign)",
+    "Pikabot (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use steganography techniques in order to prevent the detection of hidden information. Steganographic techniques can be used to hide data in digital media such as images, audio tracks, video clips, or text files.\n\n[Duqu](https://attack.mitre.org/software/S0038) was an early example of malware that used steganography. It encrypted the gathered information from a victim's system and hid it within an image before exfiltrating the image to a C2 server.(Citation: Wikipedia Duqu) \n\nBy the end of 2017, a threat group used\u202f<code>Invoke-PSImage</code>\u202fto hide [PowerShell](https://attack.mitre.org/techniques/T1059/001) commands in an image file (.png) and execute the code on a victim's system. In this particular case the [PowerShell](https://attack.mitre.org/techniques/T1059/001) code downloaded another obfuscated script to gather intelligence from the victim's machine and communicate it back to the adversary.(Citation: McAfee Malicious Doc Targets Pyeongchang Olympics)"
+}

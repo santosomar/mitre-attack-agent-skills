@@ -1,0 +1,44 @@
+{
+  "domain": "enterprise",
+  "attack_id": "T1001.002",
+  "name": "Steganography",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1001/002",
+  "stix_id": "attack-pattern--eec23884-3fa1-4d8a-ac50-6f104d51e235",
+  "attack_version": "1.1",
+  "created": "2020-03-15T00:37:58.963Z",
+  "modified": "2025-10-24T17:49:35.060Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows",
+    "ESXi"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Intrusion Prevention"
+  ],
+  "known_context": [
+    "Axiom (intrusion-set)",
+    "Daserf (malware)",
+    "Duqu (malware)",
+    "HAMMERTOSS (malware)",
+    "LightNeuron (malware)",
+    "LunarMail (malware)",
+    "LunarWeb (malware)",
+    "Operation Ghost (campaign)",
+    "RDAT (malware)",
+    "SUNBURST (malware)",
+    "Sliver (tool)",
+    "ZeroT (malware)",
+    "Zox (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use steganographic techniques to hide command and control traffic to make detection efforts more difficult. Steganographic techniques can be used to hide data in digital messages that are transferred between systems. This hidden information can be used for command and control of compromised systems. In some cases, the passing of files embedded using steganography, such as image or document files, can be used for command and control."
+}
