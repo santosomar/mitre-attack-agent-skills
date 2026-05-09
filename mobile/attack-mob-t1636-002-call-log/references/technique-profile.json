@@ -1,0 +1,49 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1636.002",
+  "name": "Call Log",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1636/002",
+  "stix_id": "attack-pattern--1d1b1558-c833-482e-aabb-d07ef6eae63d",
+  "attack_version": "1.1",
+  "created": "2022-04-01T13:12:23.522Z",
+  "modified": "2025-10-24T17:48:29.311Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "Adups (malware)",
+    "AhRat (malware)",
+    "AndroRAT (malware)",
+    "Android/Chuli.A (malware)",
+    "BOULDSPY (malware)",
+    "C0033 (campaign)",
+    "Corona Updates (malware)",
+    "DCHSpy (malware)",
+    "DocSwap (malware)",
+    "DoubleAgent (malware)",
+    "Drinik (malware)",
+    "DroidJack (malware)",
+    "Escobar (malware)",
+    "Exodus (malware)",
+    "Fakecalls (malware)",
+    "FinFisher (malware)",
+    "GoldenEagle (malware)",
+    "GolfSpy (malware)",
+    "HenBox (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may utilize standard operating system APIs to gather call log data. On Android, this can be accomplished using the Call Log Content Provider. iOS provides no standard API to access the call log. \n\n \n\nIf the device has been jailbroken or rooted, an adversary may be able to access the [Call Log](https://attack.mitre.org/techniques/T1636/002) without the user\u2019s knowledge or approval."
+}

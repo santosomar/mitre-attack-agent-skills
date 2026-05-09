@@ -1,0 +1,27 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1406.001",
+  "name": "Steganography",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1406/001",
+  "stix_id": "attack-pattern--fa801609-ca8e-415e-815e-65f3826ff4df",
+  "attack_version": "1.0",
+  "created": "2022-03-30T19:19:23.777Z",
+  "modified": "2025-10-24T17:49:38.813Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Agent Smith (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use steganography techniques in order to prevent the detection of hidden information. Steganographic techniques can be used to hide data in digital media such as images, audio tracks, video clips, or text files."
+}

@@ -1,0 +1,35 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1541",
+  "name": "Foreground Persistence",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1541",
+  "stix_id": "attack-pattern--648f8051-1a35-46d3-b1d8-3a3f5cf2cc8e",
+  "attack_version": "2.1",
+  "created": "2019-11-19T17:32:20.373Z",
+  "modified": "2025-10-24T17:48:52.197Z",
+  "tactics": [
+    "defense-evasion",
+    "persistence"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "CherryBlos (malware)",
+    "DocSwap (malware)",
+    "Drinik (malware)",
+    "Mandrake (malware)",
+    "TERRACOTTA (malware)",
+    "Tiktok Pro (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Android's `startForeground()` API method to maintain continuous sensor access. Beginning in Android 9, idle applications running in the background no longer have access to device sensors, such as the camera, microphone, and gyroscope.(Citation: Android-SensorsOverview) Applications can retain sensor access by running in the foreground, using Android\u2019s `startForeground()` API method. This informs the system that the user is actively interacting with the application, and it should not be killed. The only requirement to start a foreground service is showing a persistent notification to the user.(Citation: Android-ForegroundServices)\n\nMalicious applications may abuse the `startForeground()` API method to continue running in the foreground, while presenting a notification to the user pretending to be a genuine application. This would allow unhindered access to the device\u2019s sensors, assuming permission has been previously granted.(Citation: BlackHat Sutter Android Foreground 2019)\n\nMalicious applications may also abuse the `startForeground()` API to inform the Android system that the user is actively interacting with the application, thus preventing it from being killed by the low memory killer.(Citation: TrendMicro-Yellow Camera)"
+}

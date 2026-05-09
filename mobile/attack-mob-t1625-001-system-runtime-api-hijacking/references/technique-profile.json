@@ -1,0 +1,32 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1625.001",
+  "name": "System Runtime API Hijacking",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1625/001",
+  "stix_id": "attack-pattern--c6e17ca2-08b5-4379-9786-89bd05241831",
+  "attack_version": "1.1",
+  "created": "2022-03-30T15:07:51.646Z",
+  "modified": "2025-10-24T17:49:22.267Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "System Partition Integrity"
+  ],
+  "known_context": [
+    "Dvmap (malware)",
+    "FlexiSpy (tool)",
+    "Zen (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may execute their own malicious payloads by hijacking the way an operating system runs applications. Hijacking execution flow can be for the purposes of persistence since this hijacked execution may reoccur at later points in time. \n\n\nOn Android, adversaries may overwrite the standard OS API library with a malicious alternative to hook into core functions to achieve persistence. By doing this, the adversary\u2019s code will be executed every time the overwritten API function is called by an app on the infected device."
+}

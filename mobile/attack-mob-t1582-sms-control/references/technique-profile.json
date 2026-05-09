@@ -1,0 +1,48 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1582",
+  "name": "SMS Control",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1582",
+  "stix_id": "attack-pattern--b327a9c0-e709-495c-aa6e-00b042136e2b",
+  "attack_version": "1.1",
+  "created": "2020-09-11T15:14:33.730Z",
+  "modified": "2025-10-24T17:49:15.008Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "AhRat (malware)",
+    "AndroRAT (malware)",
+    "Anubis (malware)",
+    "Asacub (malware)",
+    "BusyGasper (malware)",
+    "Cerberus (malware)",
+    "Corona Updates (malware)",
+    "Crocodilus (malware)",
+    "Dendroid (malware)",
+    "Desert Scorpion (malware)",
+    "Drinik (malware)",
+    "Escobar (malware)",
+    "Exobot (malware)",
+    "FakeSpy (malware)",
+    "FluBot (malware)",
+    "GPlayed (malware)",
+    "Ginp (malware)",
+    "GodFather (malware)",
+    "GoldenEagle (malware)",
+    "LightSpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may delete, alter, or send SMS messages without user authorization. This could be used to hide C2 SMS messages, spread malware, or various external effects.\n\nThis can be accomplished by requesting the `RECEIVE_SMS` or `SEND_SMS` permissions depending on what the malware is attempting to do. If the app is set as the default SMS handler on the device, the `SMS_DELIVER` broadcast intent can be registered, which allows the app to write to the SMS content provider. The content provider directly modifies the messaging database on the device, which could allow malicious applications with this ability to insert, modify, or delete arbitrary messages on the device.(Citation: SMS KitKat)(Citation: Android SmsProvider)"
+}

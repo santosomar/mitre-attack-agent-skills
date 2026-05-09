@@ -1,0 +1,41 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1532",
+  "name": "Archive Collected Data",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1532",
+  "stix_id": "attack-pattern--e3b936a4-6321-4172-9114-038a866362ec",
+  "attack_version": "2.0",
+  "created": "2019-10-10T15:00:44.181Z",
+  "modified": "2025-10-24T17:49:31.761Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Anubis (malware)",
+    "Asacub (malware)",
+    "BOULDSPY (malware)",
+    "BRATA (malware)",
+    "C0033 (campaign)",
+    "DCHSpy (malware)",
+    "Desert Scorpion (malware)",
+    "Exodus (malware)",
+    "FrozenCell (malware)",
+    "Golden Cup (malware)",
+    "GolfSpy (malware)",
+    "LightSpy (malware)",
+    "Sunbird (malware)",
+    "Triada (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may compress and/or encrypt data that is collected prior to exfiltration. Compressing data can help to obfuscate its contents and minimize use of network resources. Encryption can be used to hide information that is being exfiltrated from detection or make exfiltration less conspicuous upon inspection by a defender. \n\n \n\nBoth compression and encryption are done prior to exfiltration, and can be performed using a utility, programming library, or custom algorithm."
+}

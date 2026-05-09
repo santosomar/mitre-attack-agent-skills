@@ -1,0 +1,25 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1628",
+  "name": "Hide Artifacts",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1628",
+  "stix_id": "attack-pattern--fc53309d-ebd5-4573-9242-57024ebdad4f",
+  "attack_version": "1.1",
+  "created": "2022-03-30T20:00:12.654Z",
+  "modified": "2025-10-24T17:49:39.161Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to hide artifacts associated with their behaviors to evade detection. Mobile operating systems have features and developer APIs to hide various artifacts, such as an application\u2019s launcher icon. These APIs have legitimate usages, such as hiding an icon to avoid application drawer clutter when an application does not have a usable interface. Adversaries may abuse these features and APIs to hide artifacts from the user to evade detection."
+}

@@ -1,0 +1,33 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1418.001",
+  "name": "Security Software Discovery",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1418/001",
+  "stix_id": "attack-pattern--1d44f529-6fe6-489f-8a01-6261ac43f05e",
+  "attack_version": "1.1",
+  "created": "2022-03-31T19:50:45.752Z",
+  "modified": "2025-10-24T17:48:29.485Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version",
+    "User Guidance"
+  ],
+  "known_context": [
+    "BRATA (malware)",
+    "Exobot (malware)",
+    "Gustuff (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to get a listing of security applications and configurations that are installed on a device. This may include things such as mobile security products. Adversaries may use the information from [Security Software Discovery](https://attack.mitre.org/techniques/T1418/001) during automated discovery to shape follow-on behaviors, including whether or not to fully infect the target and/or attempt specific actions."
+}

@@ -1,0 +1,45 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1643",
+  "name": "Generate Traffic from Victim",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1643",
+  "stix_id": "attack-pattern--a8e971b8-8dc7-4514-8249-ae95427ec467",
+  "attack_version": "1.1",
+  "created": "2022-04-06T13:55:14.390Z",
+  "modified": "2025-10-24T17:49:12.043Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "Agent Smith (malware)",
+    "Android/AdDisplay.Ashas (malware)",
+    "BrainTest (malware)",
+    "Bread (malware)",
+    "FlixOnline (malware)",
+    "Gooligan (malware)",
+    "HummingBad (malware)",
+    "HummingWhale (malware)",
+    "Judy (malware)",
+    "MazarBOT (malware)",
+    "PJApps (malware)",
+    "RedDrop (malware)",
+    "SimBad (malware)",
+    "TERRACOTTA (malware)",
+    "Triada (malware)",
+    "Zen (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may generate outbound traffic from devices. This is typically performed to manipulate external outcomes, such as to achieve carrier billing fraud or to manipulate app store rankings or ratings. Outbound traffic is typically generated as SMS messages or general web traffic, but may take other forms as well.\n\nIf done via SMS messages, Android apps must hold the `SEND_SMS` permission. Additionally, sending an SMS message requires user consent if the recipient is a premium number. Applications cannot send SMS messages on iOS"
+}

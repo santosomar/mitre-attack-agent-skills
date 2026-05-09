@@ -1,0 +1,40 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1645",
+  "name": "Compromise Client Software Binary",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1645",
+  "stix_id": "attack-pattern--4f14e30b-8b57-4a7b-9093-2c0778ea99cf",
+  "attack_version": "1.1",
+  "created": "2022-03-30T19:53:27.791Z",
+  "modified": "2025-10-24T17:48:45.611Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "Lock Bootloader",
+    "Security Updates",
+    "System Partition Integrity"
+  ],
+  "known_context": [
+    "BrainTest (malware)",
+    "BusyGasper (malware)",
+    "DoubleAgent (malware)",
+    "Monokle (malware)",
+    "Pegasus for Android (malware)",
+    "Pegasus for iOS (malware)",
+    "ShiftyBug (malware)",
+    "SpyDealer (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify system software binaries to establish persistent access to devices. System software binaries are used by the underlying operating system and users over adb or terminal emulators. \n\nAdversaries may make modifications to client software binaries to carry out malicious tasks when those binaries are executed. For example, malware may come with a pre-compiled malicious binary intended to overwrite the genuine one on the device. Since these binaries may be routinely executed by the system or user, the adversary can leverage this for persistent access to the device."
+}

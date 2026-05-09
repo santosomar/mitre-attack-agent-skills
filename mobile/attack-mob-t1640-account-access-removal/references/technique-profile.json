@@ -1,0 +1,29 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1640",
+  "name": "Account Access Removal",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1640",
+  "stix_id": "attack-pattern--e2c2249a-eb82-4614-8dd4-9c514dde65e2",
+  "attack_version": "1.1",
+  "created": "2022-04-06T13:29:47.590Z",
+  "modified": "2025-10-24T17:49:31.052Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "Monokle (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may interrupt availability of system and network resources by inhibiting access to accounts utilized by legitimate users. Accounts may be deleted, locked, or manipulated (ex: credentials changed) to remove access to accounts."
+}

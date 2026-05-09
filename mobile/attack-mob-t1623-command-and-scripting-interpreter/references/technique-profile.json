@@ -1,0 +1,32 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1623",
+  "name": "Command and Scripting Interpreter",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1623",
+  "stix_id": "attack-pattern--29f1f56c-7b7a-4c14-9e39-59577ea2743c",
+  "attack_version": "1.2",
+  "created": "2022-03-30T13:40:37.259Z",
+  "modified": "2025-10-24T17:48:33.677Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "Deploy Compromised Device Detection Method"
+  ],
+  "known_context": [
+    "LightSpy (malware)",
+    "TianySpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across many different platforms. Most systems come with some built-in command-line interface and scripting capabilities, for example, Android is a UNIX-like OS and includes a basic [Unix Shell](https://attack.mitre.org/techniques/T1623/001) that can be accessed via the Android Debug Bridge (ADB) or Java\u2019s `Runtime` package.\n\nAdversaries may abuse these technologies in various ways as a means of executing arbitrary commands. Commands and scripts can be embedded in [Initial Access](https://attack.mitre.org/tactics/TA0027) payloads delivered to victims as lure documents or as secondary payloads downloaded from an existing C2. Adversaries may also execute commands through interactive terminals/shells."
+}

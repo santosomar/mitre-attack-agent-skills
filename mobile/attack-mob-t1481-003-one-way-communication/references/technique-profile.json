@@ -1,0 +1,28 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1481.003",
+  "name": "One-Way Communication",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1481/003",
+  "stix_id": "attack-pattern--d916f176-a1ca-4a78-9fdd-4058bc28162e",
+  "attack_version": "1.2",
+  "created": "2022-04-06T15:52:07.711Z",
+  "modified": "2025-10-24T17:49:28.337Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Twitoor (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use an existing, legitimate external Web service channel as a means for sending commands to a compromised system without receiving return output. Compromised systems may leverage popular websites and social media to host command and control (C2) instructions. Those infected systems may opt to send the output from those commands back over a different C2 channel, including to another distinct Web service. Alternatively, compromised systems may return no output at all in cases where adversaries want to send instructions to systems and do not want a response. \n\n \n\nPopular websites and social media, acting as a mechanism for C2, may give a significant amount of cover. This is due to the likelihood that hosts within a network are already communicating with them prior to a compromise. Using common services, such as those offered by Google or Twitter, makes it easier for adversaries to hide in expected noise. Web service providers commonly use SSL/TLS encryption, giving adversaries an added level of protection."
+}

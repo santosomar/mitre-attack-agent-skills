@@ -1,0 +1,47 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1533",
+  "name": "Data from Local System",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1533",
+  "stix_id": "attack-pattern--e1c912a9-e305-434b-9172-8a6ce3ec9c4a",
+  "attack_version": "1.1",
+  "created": "2019-10-10T15:12:42.790Z",
+  "modified": "2025-10-24T17:49:30.706Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "AhRat (malware)",
+    "Anubis (malware)",
+    "BOULDSPY (malware)",
+    "BRATA (malware)",
+    "Binary Validator (malware)",
+    "BusyGasper (malware)",
+    "CHEMISTGAMES (malware)",
+    "Chameleon (malware)",
+    "Concipit1248 (malware)",
+    "Corona Updates (malware)",
+    "DCHSpy (malware)",
+    "Dendroid (malware)",
+    "Desert Scorpion (malware)",
+    "DocSwap (malware)",
+    "DoubleAgent (malware)",
+    "Drinik (malware)",
+    "Escobar (malware)",
+    "Exodus (malware)",
+    "Fakecalls (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may search local system sources, such as file systems or local databases, to find files of interest and sensitive data prior to exfiltration.  \n\n \n\nAccess to local system data, which includes information stored by the operating system, often requires escalated privileges. Examples of local system data include authentication tokens, the device keyboard cache, Wi-Fi passwords, and photos. On Android, adversaries may also attempt to access files from external storage which may require additional storage-related permissions."
+}

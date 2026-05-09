@@ -1,0 +1,26 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1630.003",
+  "name": "Disguise Root/Jailbreak Indicators",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1630/003",
+  "stix_id": "attack-pattern--a91262d5-b9ff-463f-b8d2-12e4ea1eb3c9",
+  "attack_version": "1.1",
+  "created": "2022-04-08T16:29:30.087Z",
+  "modified": "2025-10-24T17:49:12.130Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary could use knowledge of the techniques used by security software to evade detection.(Citation: Brodie)(Citation: Tan) For example, some mobile security products perform compromised device detection by searching for particular artifacts such as an installed \"su\" binary, but that check could be evaded by naming the binary something else. Similarly, polymorphic code techniques could be used to evade signature-based detection.(Citation: Rastogi)"
+}

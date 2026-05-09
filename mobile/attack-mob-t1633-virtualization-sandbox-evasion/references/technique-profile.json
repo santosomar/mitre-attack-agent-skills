@@ -1,0 +1,29 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1633",
+  "name": "Virtualization/Sandbox Evasion",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1633",
+  "stix_id": "attack-pattern--27d18e87-8f32-4be1-b456-39b90454360f",
+  "attack_version": "1.1",
+  "created": "2022-03-30T17:51:29.550Z",
+  "modified": "2025-10-24T17:48:32.877Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "SpyC23 (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may employ various means to detect and avoid virtualization and analysis environments. This may include changing behaviors after checking for the presence of artifacts indicative of a virtual machine environment (VME) or sandbox. If the adversary detects a VME, they may alter their malware\u2019s behavior to disengage from the victim or conceal the core functions of the payload. They may also search for VME artifacts before dropping further payloads. Adversaries may use the information learned from [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1633) during automated discovery to shape follow-on behaviors. \n\nAdversaries may use several methods to accomplish [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1633) such as checking for system artifacts associated with analysis or virtualization. Adversaries may also check for legitimate user activity to help determine if it is in an analysis environment."
+}

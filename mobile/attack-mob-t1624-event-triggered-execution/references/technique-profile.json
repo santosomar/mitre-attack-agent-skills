@@ -1,0 +1,30 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1624",
+  "name": "Event Triggered Execution",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1624",
+  "stix_id": "attack-pattern--d446b9f0-06a9-4a8d-97ee-298cfee84f14",
+  "attack_version": "1.1",
+  "created": "2022-03-30T14:25:41.721Z",
+  "modified": "2025-10-24T17:49:26.888Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version"
+  ],
+  "known_context": [
+    "BOULDSPY (malware)",
+    "GodFather (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may establish persistence using system mechanisms that trigger execution based on specific events. Mobile operating systems have means to subscribe to events such as receiving an SMS message, device boot completion, or other device activities. \n\nAdversaries may abuse these mechanisms as a means of maintaining persistent access to a victim via automatically and repeatedly executing malicious code. After gaining access to a victim\u2019s system, adversaries may create or modify event triggers to point to malicious content that will be executed whenever the event trigger is invoked."
+}

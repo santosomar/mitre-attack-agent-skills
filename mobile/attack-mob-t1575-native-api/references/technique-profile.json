@@ -1,0 +1,38 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1575",
+  "name": "Native API",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1575",
+  "stix_id": "attack-pattern--52eff1c7-dd30-4121-b762-24ae6fa61bbb",
+  "attack_version": "2.0",
+  "created": "2020-04-28T14:35:37.309Z",
+  "modified": "2025-10-24T17:48:47.482Z",
+  "tactics": [
+    "defense-evasion",
+    "execution"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Asacub (malware)",
+    "Bread (malware)",
+    "CHEMISTGAMES (malware)",
+    "CarbonSteal (malware)",
+    "Chameleon (malware)",
+    "DocSwap (malware)",
+    "GodFather (malware)",
+    "HenBox (malware)",
+    "LightSpy (malware)",
+    "Operation Triangulation (campaign)",
+    "TERRACOTTA (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use Android\u2019s Native Development Kit (NDK) to write native functions that can achieve execution of binaries or functions. Like system calls on a traditional desktop operating system, native code achieves execution on a lower level than normal Android SDK calls.\n\nThe NDK allows developers to write native code in C or C++ that is compiled directly to machine code, avoiding all intermediate languages and steps in compilation that higher level languages, like Java, typically have. The Java Native Interface (JNI) is the component that allows Java functions in the Android app to call functions in a native library.(Citation: Google NDK Getting Started)\n\nAdversaries may also choose to use native functions to execute malicious code since native actions are typically much more difficult to analyze than standard, non-native behaviors.(Citation: MITRE App Vetting Effectiveness)"
+}

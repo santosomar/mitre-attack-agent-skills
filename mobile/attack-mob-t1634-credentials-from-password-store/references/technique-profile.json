@@ -1,0 +1,29 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1634",
+  "name": "Credentials from Password Store",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1634",
+  "stix_id": "attack-pattern--cc6e0637-76d2-4af3-a604-9d8d3ff8a6b3",
+  "attack_version": "1.1",
+  "created": "2022-04-01T14:55:10.494Z",
+  "modified": "2025-10-24T17:49:23.749Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "Deploy Compromised Device Detection Method",
+    "Security Updates"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may search common password storage locations to obtain user credentials. Passwords can be stored in several places on a device, depending on the operating system or application holding the credentials. There are also specific applications that store passwords to make it easier for users to manage and maintain. Once credentials are obtained, they can be used to perform lateral movement and access restricted information."
+}

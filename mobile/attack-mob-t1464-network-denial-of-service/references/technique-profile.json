@@ -1,0 +1,28 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1464",
+  "name": "Network Denial of Service",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1464",
+  "stix_id": "attack-pattern--d2e112dc-f6d4-488d-b8df-ecbfb57a0a2d",
+  "attack_version": "1.4",
+  "created": "2017-10-25T14:48:25.740Z",
+  "modified": "2025-05-19T15:21:04.030Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "S.O.V.A. (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may perform Network Denial of Service (DoS) attacks to degrade or block the availability of targeted resources to users. Network DoS can be performed by exhausting the network bandwidth that services rely on, or by jamming the signal going to or coming from devices. \n\nA Network DoS will occur when an adversary is able to jam radio signals (e.g. Wi-Fi, cellular, GPS) around a device to prevent it from communicating. For example, to jam cellular signal, an adversary may use a handheld signal jammer, which jam devices within the jammer\u2019s operational range.(Citation: NIST-SP800187) \n\nUsage of cellular jamming has been documented in several arrests reported in the news.(Citation: CNET-Celljammer)(Citation: NYTimes-Celljam)(Citation: Digitaltrends-Celljam)(Citation: Arstechnica-Celljam)"
+}

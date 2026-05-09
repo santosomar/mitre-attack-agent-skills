@@ -1,0 +1,47 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1426",
+  "name": "System Information Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1426",
+  "stix_id": "attack-pattern--e2ea7f6b-8d4f-49c3-819d-660530d12b77",
+  "attack_version": "1.2",
+  "created": "2017-10-25T14:48:19.265Z",
+  "modified": "2025-10-24T17:49:31.141Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "ANDROIDOS_ANSERVER.A (malware)",
+    "AbstractEmu (malware)",
+    "AhRat (malware)",
+    "Android/AdDisplay.Ashas (malware)",
+    "Android/Chuli.A (malware)",
+    "Anubis (malware)",
+    "Asacub (malware)",
+    "BOULDSPY (malware)",
+    "BRATA (malware)",
+    "C0033 (campaign)",
+    "CHEMISTGAMES (malware)",
+    "CarbonSteal (malware)",
+    "Cerberus (malware)",
+    "Chameleon (malware)",
+    "Corona Updates (malware)",
+    "Desert Scorpion (malware)",
+    "DocSwap (malware)",
+    "DoubleAgent (malware)",
+    "Dvmap (malware)",
+    "EventBot (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to get detailed information about a device\u2019s operating system and hardware, including versions, patches, and architecture. Adversaries may use the information from [System Information Discovery](https://attack.mitre.org/techniques/T1426) during automated discovery to shape follow-on behaviors, including whether or not to fully infects the target and/or attempts specific actions. \n\n \n\nOn Android, much of this information is programmatically accessible to applications through the `android.os.Build` class. (Citation: Android-Build) iOS is much more restrictive with what information is visible to applications. Typically, applications will only be able to query the device model and which version of iOS it is running."
+}

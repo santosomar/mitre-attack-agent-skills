@@ -1,0 +1,33 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1627.001",
+  "name": "Geofencing",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1627/001",
+  "stix_id": "attack-pattern--e422b6fa-4739-46b9-992e-82f1b350c780",
+  "attack_version": "1.1",
+  "created": "2022-03-30T20:36:03.177Z",
+  "modified": "2025-10-24T17:49:31.935Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version",
+    "User Guidance"
+  ],
+  "known_context": [
+    "BRATA (malware)",
+    "Windshift (intrusion-set)",
+    "eSurv (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use a device\u2019s geographical location to limit certain malicious behaviors. For example, malware operators may limit the distribution of a second stage payload to certain geographic regions.(Citation: Lookout eSurv)\n\n[Geofencing](https://attack.mitre.org/techniques/T1627/001)\u202fis accomplished by persuading the user to grant the application permission to access location services. The application can then collect, process, and exfiltrate the device\u2019s location to perform location-based actions, such as ceasing malicious behavior or showing region-specific advertisements. \n\nOne method to accomplish\u202f[Geofencing](https://attack.mitre.org/techniques/T1627/001)\u202fon Android is to use the built-in Geofencing API to automatically trigger certain behaviors when the device enters or exits a specified radius around a geographical location. Similar to  other\u202f[Geofencing](https://attack.mitre.org/techniques/T1627/001) methods, this requires that the user has granted the `ACCESS_FINE_LOCATION` and `ACCESS_BACKGROUND_LOCATION` permissions. The latter is only required if the application targets Android 10 (API level 29) or higher. However, Android 11 introduced additional permission controls that may restrict background location collection based on user permission choices at runtime. These additional controls include \"Allow only while using the app\", which will effectively prohibit background location collection.  \n\nSimilarly, on iOS, developers can use built-in APIs to setup and execute geofencing. Depending on the use case, the app will either need to call\u202f`requestWhenInUseAuthorization()`\u202for\u202f`requestAlwaysAuthorization()`, depending on when access to the location services is required. Similar to Android, users also have the option to limit when the application can access the device\u2019s location, including one-time use and only when the application is running in the foreground.  \n\n[Geofencing](https://attack.mitre.org/techniques/T1627/001)\u202fcan be used to prevent exposure of capabilities in environments that are not intended to be compromised or operated within. For example, location data could be used to limit malware spread and/or capabilities, which could also potentially evade application analysis environments (ex: malware analysis outside of the target geographic area). Other malicious usages could include showing language-specific input prompts and/or advertisements."
+}

@@ -1,0 +1,36 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1458",
+  "name": "Replication Through Removable Media",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1458",
+  "stix_id": "attack-pattern--667e5707-3843-4da8-bd34-88b922526f0d",
+  "attack_version": "2.1",
+  "created": "2017-10-25T14:48:23.233Z",
+  "modified": "2024-11-17T13:26:29.167Z",
+  "tactics": [
+    "initial-access",
+    "lateral-movement"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Enterprise Policy",
+    "Lock Bootloader",
+    "Security Updates",
+    "Use Recent OS Version",
+    "User Guidance"
+  ],
+  "known_context": [
+    "DualToy (malware)",
+    "WireLurker (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may move onto devices by exploiting or copying malware to devices connected via USB. In the case of Lateral Movement, adversaries may utilize the physical connection of a device to a compromised or malicious charging station or PC to bypass application store requirements and install malicious applications directly.(Citation: Lau-Mactans) In the case of Initial Access, adversaries may attempt to exploit the device via the connection to gain access to data stored on the device.(Citation: Krebs-JuiceJacking) Examples of this include: \n \n* Exploiting insecure bootloaders in a Nexus 6 or 6P device over USB and gaining the ability to perform actions including intercepting phone calls, intercepting network traffic, and obtaining the device physical location.(Citation: IBM-NexusUSB) \n* Exploiting weakly-enforced security boundaries in Android devices such as the Google Pixel 2 over USB.(Citation: GoogleProjectZero-OATmeal) \n* Products from Cellebrite and Grayshift purportedly that can exploit some iOS devices using physical access to the data port to unlock the passcode.(Citation: Computerworld-iPhoneCracking)"
+}

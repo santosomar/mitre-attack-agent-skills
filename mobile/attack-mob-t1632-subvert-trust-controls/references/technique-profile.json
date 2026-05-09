@@ -1,0 +1,30 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1632",
+  "name": "Subvert Trust Controls",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1632",
+  "stix_id": "attack-pattern--79cb02f4-ac4e-4335-8b51-425c9573cce1",
+  "attack_version": "1.1",
+  "created": "2022-03-30T18:05:46.795Z",
+  "modified": "2025-10-24T17:48:59.522Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Enterprise Policy",
+    "Use Recent OS Version",
+    "User Guidance"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may undermine security controls that will either warn users of untrusted activity or prevent execution of untrusted applications. Operating systems and security products may contain mechanisms to identify programs or websites as possessing some level of trust. Examples of such features include: an app being allowed to run because it is signed by a valid code signing certificate; an OS prompt alerting the user that an app came from an untrusted source; or getting an indication that you are about to connect to an untrusted site. The method adversaries use will depend on the specific mechanism they seek to subvert."
+}

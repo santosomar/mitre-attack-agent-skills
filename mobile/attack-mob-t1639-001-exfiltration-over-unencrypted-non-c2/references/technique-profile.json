@@ -1,0 +1,30 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1639.001",
+  "name": "Exfiltration Over Unencrypted Non-C2 Protocol",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1639/001",
+  "stix_id": "attack-pattern--37047267-3e56-453c-833e-d92b68118120",
+  "attack_version": "1.1",
+  "created": "2022-04-06T13:22:57.683Z",
+  "modified": "2025-10-24T17:48:38.977Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "BusyGasper (malware)",
+    "Corona Updates (malware)",
+    "VajraSpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server.\n\nAdversaries may opt to obfuscate this data, without the use of encryption, within network protocols that are natively unencrypted (such as HTTP, FTP, or DNS). Adversaries may employ custom or publicly available encoding/compression algorithms (such as base64) or embed data within protocol headers and fields."
+}

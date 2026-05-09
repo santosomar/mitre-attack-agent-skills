@@ -1,0 +1,27 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1626",
+  "name": "Abuse Elevation Control Mechanism",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1626",
+  "stix_id": "attack-pattern--08ea902d-ecb5-47ed-a453-2798057bb2d3",
+  "attack_version": "1.1",
+  "created": "2022-04-01T15:54:05.633Z",
+  "modified": "2025-10-24T17:48:21.493Z",
+  "tactics": [
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Application Developer Guidance"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may circumvent mechanisms designed to control elevated privileges to gain higher-level permissions. Most modern systems contain native elevation control mechanisms that are intended to limit privileges that a user can gain on a machine. Authorization has to be granted to specific users in order to perform tasks that are designated as higher risk. An adversary can use several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system."
+}

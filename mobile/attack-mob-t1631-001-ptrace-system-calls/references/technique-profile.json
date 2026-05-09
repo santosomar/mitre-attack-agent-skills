@@ -1,0 +1,31 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1631.001",
+  "name": "Ptrace System Calls",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1631/001",
+  "stix_id": "attack-pattern--1ff89c1b-7615-4fe8-b9cb-63aaf52e6dee",
+  "attack_version": "1.1",
+  "created": "2022-03-30T19:05:17.048Z",
+  "modified": "2025-10-24T17:48:30.394Z",
+  "tactics": [
+    "defense-evasion",
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "INSOMNIA (malware)",
+    "Triada (malware)",
+    "Zen (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may inject malicious code into processes via ptrace (process trace) system calls in order to evade process-based defenses as well as possibly elevate privileges. Ptrace system call injection is a method of executing arbitrary code in the address space of a separate live process.  \n\nPtrace system call injection involves attaching to and modifying a running process. The ptrace system call enables a debugging process to observe and control another process (and each individual thread), including changing memory and register values.(Citation: PTRACE man) Ptrace system call injection is commonly performed by writing arbitrary code into a running process (e.g., by using `malloc`) then invoking that memory with `PTRACE_SETREGS` to set the register containing the next instruction to execute. Ptrace system call injection can also be done with `PTRACE_POKETEXT`/`PTRACE_POKEDATA`, which copy data to a specific address in the target process's memory (e.g., the current address of the next instruction).(Citation: PTRACE man)(Citation: Medium Ptrace JUL 2018)  \n\nPtrace system call injection may not be possible when targeting processes with high-privileges, and on some systems those that are non-child processes.(Citation: BH Linux Inject)  \n\nRunning code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via ptrace system call injection may also evade detection from security products since the execution is masked under a legitimate process."
+}

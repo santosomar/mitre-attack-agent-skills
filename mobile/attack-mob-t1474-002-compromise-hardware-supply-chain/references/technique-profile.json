@@ -1,0 +1,28 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1474.002",
+  "name": "Compromise Hardware Supply Chain",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1474/002",
+  "stix_id": "attack-pattern--c08366bb-8d11-4921-853f-f0a3b6a2a1da",
+  "attack_version": "1.1",
+  "created": "2022-03-28T19:30:15.556Z",
+  "modified": "2025-10-24T17:49:19.406Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Security Updates"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may manipulate hardware components in products prior to receipt by a final consumer for the purpose of data or system compromise. By modifying hardware or firmware in the supply chain, adversaries can insert a backdoor into consumer networks that may be difficult to detect and give the adversary a high degree of control over the system."
+}

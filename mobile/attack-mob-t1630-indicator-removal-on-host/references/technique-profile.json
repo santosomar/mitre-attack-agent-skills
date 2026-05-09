@@ -1,0 +1,34 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1630",
+  "name": "Indicator Removal on Host",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1630",
+  "stix_id": "attack-pattern--0d4e3bbb-7af5-4c88-a215-0c0906bc1e8d",
+  "attack_version": "1.1",
+  "created": "2022-03-30T19:28:25.541Z",
+  "modified": "2025-10-24T17:48:23.556Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "iOS",
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "Security Updates",
+    "User Guidance"
+  ],
+  "known_context": [
+    "Chameleon (malware)",
+    "GodFather (malware)",
+    "Operation Triangulation (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may delete, alter, or hide generated artifacts on a device, including files, jailbreak status, or the malicious application itself. These actions may interfere with event collection, reporting, or other notifications used to detect intrusion activity. This may compromise the integrity of mobile security solutions by causing notable events or information to go unreported."
+}

@@ -1,0 +1,30 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1670",
+  "name": "Virtualization Solution",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1670",
+  "stix_id": "attack-pattern--8e097ec5-1755-41d6-807c-3882442b818a",
+  "attack_version": "1.0",
+  "created": "2025-03-14T17:56:26.095Z",
+  "modified": "2025-03-14T17:56:26.095Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "FjordPhantom (malware)",
+    "GodFather (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may carry out malicious operations using virtualization solutions to escape from Android sandboxes and to avoid detection. Android uses sandboxes to separate resources and code execution between applications and the operating system.(Citation: Android Application Sandbox) There are a few virtualization solutions available on Android, such as the Android Virtualization Framework (AVF).(Citation: Android AVF Overview)  \n\n \n\nThrough virtualization solutions, adversaries may execute malicious operations without user knowledge. For example, adversaries may mimic a legitimate banking application\u2019s functionalities in a virtual environment, thanks to the virtualization solution, while malicious code captures credentials."
+}

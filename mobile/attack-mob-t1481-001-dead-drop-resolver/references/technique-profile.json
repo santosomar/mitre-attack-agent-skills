@@ -1,0 +1,32 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1481.001",
+  "name": "Dead Drop Resolver",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1481/001",
+  "stix_id": "attack-pattern--986f80f7-ff0e-4f48-87bd-0394814bbce5",
+  "attack_version": "1.2",
+  "created": "2022-04-06T15:41:03.914Z",
+  "modified": "2025-10-24T17:49:07.948Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "ANDROIDOS_ANSERVER.A (malware)",
+    "Android/SpyAgent (malware)",
+    "Anubis (malware)",
+    "Red Alert 2.0 (malware)",
+    "XLoader for Android (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use an existing, legitimate external Web service to host information that points to additional command and control (C2) infrastructure. Adversaries may post content, known as a dead drop resolver, on Web services with embedded (and often obfuscated/encoded) domains or IP addresses. Once infected, victims will reach out to and be redirected by these resolvers. \n\n \n\nPopular websites and social media, acting as a mechanism for C2, may give a significant amount of cover. This is due to the likelihood that hosts within a network are already communicating with them prior to a compromise. Using common services, such as those offered by Google or Twitter, makes it easier for adversaries to hide in expected noise. Web service providers commonly use SSL/TLS encryption, giving adversaries an added level of protection. \n\n \n\nUse of a dead drop resolver may also protect back-end C2 infrastructure from discovery through malware binary analysis, or enable operational resiliency (since this infrastructure may be dynamically changed)."
+}

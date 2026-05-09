@@ -1,0 +1,37 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1623.001",
+  "name": "Unix Shell",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1623/001",
+  "stix_id": "attack-pattern--693cdbff-ea73-49c6-ac3f-91e7285c31d1",
+  "attack_version": "1.2",
+  "created": "2022-03-30T13:59:50.479Z",
+  "modified": "2025-10-24T17:48:54.078Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "Deploy Compromised Device Detection Method"
+  ],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "BusyGasper (malware)",
+    "CHEMISTGAMES (malware)",
+    "DoubleAgent (malware)",
+    "HenBox (malware)",
+    "Sunbird (malware)",
+    "Tiktok Pro (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Unix shell commands and scripts for execution. Unix shells are the underlying command prompts on Android and iOS devices. Unix shells can control every aspect of a system, with certain commands requiring elevated privileges that are only accessible if the device has been rooted or jailbroken. \n\nUnix shells also support scripts that enable sequential execution of commands as well as other typical programming operations such as conditionals and loops. Common uses of shell scripts include long or repetitive tasks, or the need to run the same set of commands on multiple systems. \n\nAdversaries may abuse Unix shells to execute various commands or payloads. Interactive shells may be accessed through command and control channels or during lateral movement such as with SSH. Adversaries may also leverage shell scripts to deliver and execute multiple commands on victims or as part of payloads used for persistence. \n\nIf the device has been rooted or jailbroken, adversaries may locate and invoke a superuser binary to elevate their privileges and interact with the system as the root user. This dangerous level of permissions allows the adversary to run special commands and modify protected system files."
+}

@@ -1,0 +1,31 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1430.002",
+  "name": "Impersonate SS7 Nodes",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1430/002",
+  "stix_id": "attack-pattern--0f4fb01b-d57a-4375-b7a2-342c9d3248f7",
+  "attack_version": "1.1",
+  "created": "2022-04-05T19:49:58.938Z",
+  "modified": "2025-10-24T17:48:24.309Z",
+  "tactics": [
+    "collection",
+    "discovery"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Interconnection Filtering"
+  ],
+  "known_context": [
+    "Circles (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may exploit the lack of authentication in signaling system network nodes to track the location of mobile devices by impersonating a node.(Citation: Engel-SS7)(Citation: Engel-SS7-2008)(Citation: 3GPP-Security)(Citation: Positive-SS7)(Citation: CSRIC5-WG10-FinalReport) \n\n \n\nBy providing the victim\u2019s MSISDN (phone number) and impersonating network internal nodes to query subscriber information from other nodes, adversaries may use data collected from each hop to eventually determine the device\u2019s geographical cell area or nearest cell tower.(Citation: Engel-SS7)"
+}

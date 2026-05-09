@@ -1,0 +1,35 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1509",
+  "name": "Non-Standard Port",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1509",
+  "stix_id": "attack-pattern--948a447c-d783-4ba0-8516-a64140fcacd5",
+  "attack_version": "2.1",
+  "created": "2019-08-01T13:44:09.368Z",
+  "modified": "2025-10-24T17:49:07.116Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Cerberus (malware)",
+    "Chameleon (malware)",
+    "Exodus (malware)",
+    "FlexiSpy (tool)",
+    "INSOMNIA (malware)",
+    "LightSpy (malware)",
+    "Mandrake (malware)",
+    "Red Alert 2.0 (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may generate network traffic using a protocol and port pairing that are typically not associated. For example, HTTPS over port 8088 or port 587 as opposed to the traditional port 443. Adversaries may make changes to the standard port used by a protocol to bypass filtering or muddle analysis/parsing of network data."
+}

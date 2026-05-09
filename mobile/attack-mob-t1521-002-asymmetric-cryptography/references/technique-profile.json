@@ -1,0 +1,35 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1521.002",
+  "name": "Asymmetric Cryptography",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1521/002",
+  "stix_id": "attack-pattern--16d73b64-5681-4ea0-9af4-4ad86f7c96e8",
+  "attack_version": "1.0",
+  "created": "2022-04-05T20:15:43.636Z",
+  "modified": "2025-10-24T17:48:26.898Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "CHEMISTGAMES (malware)",
+    "CarbonSteal (malware)",
+    "FluBot (malware)",
+    "Operation Triangulation (campaign)",
+    "SharkBot (malware)",
+    "SilkBean (malware)",
+    "TriangleDB (malware)",
+    "eSurv (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may employ a known asymmetric encryption algorithm to conceal command and control traffic, rather than relying on any inherent protections provided by a communication protocol. Asymmetric cryptography, also known as public key cryptography, uses a keypair per party: one public that can be freely distributed, and one private that should not be distributed. Due to how asymmetric algorithms work, the sender encrypts data with the receiver\u2019s public key and the receiver decrypts the data with their private key. This ensures that only the intended recipient can read the encrypted data. Common public key encryption algorithms include RSA, ElGamal, and ECDSA.\n\nFor efficiency, many protocols (including SSL/TLS) use symmetric cryptography once a connection is established, but use asymmetric cryptography to establish or transmit a key. As such, these protocols are classified as [Asymmetric Cryptography](https://attack.mitre.org/techniques/T1521/002)."
+}

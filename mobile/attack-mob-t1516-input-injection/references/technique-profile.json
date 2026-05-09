@@ -1,0 +1,44 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1516",
+  "name": "Input Injection",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1516",
+  "stix_id": "attack-pattern--d1f1337e-aea7-454c-86bd-482a98ffaf62",
+  "attack_version": "1.2",
+  "created": "2019-09-15T15:26:22.356Z",
+  "modified": "2025-10-24T17:49:25.635Z",
+  "tactics": [
+    "defense-evasion",
+    "impact"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Enterprise Policy",
+    "User Guidance"
+  ],
+  "known_context": [
+    "BRATA (malware)",
+    "Cerberus (malware)",
+    "Crocodilus (malware)",
+    "DEFENSOR ID (malware)",
+    "Ginp (malware)",
+    "GodFather (malware)",
+    "Gustuff (malware)",
+    "Mandrake (malware)",
+    "Riltok (malware)",
+    "S.O.V.A. (malware)",
+    "SharkBot (malware)",
+    "TERRACOTTA (malware)",
+    "TrickMo (malware)",
+    "Zen (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "A malicious application can inject input to the user interface to mimic user interaction through the abuse of Android's accessibility APIs.\n\n[Input Injection](https://attack.mitre.org/techniques/T1516) can be achieved using any of the following methods:\n\n* Mimicking user clicks on the screen, for example to steal money from a user's PayPal account.(Citation: android-trojan-steals-paypal-2fa)\n* Injecting global actions, such as `GLOBAL_ACTION_BACK` (programatically mimicking a physical back button press), to trigger actions on behalf of the user.(Citation: Talos Gustuff Apr 2019)\n* Inserting input into text fields on behalf of the user. This method is used legitimately to auto-fill text fields by applications such as password managers.(Citation: bitwarden autofill logins)"
+}

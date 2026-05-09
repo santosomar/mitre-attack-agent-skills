@@ -1,0 +1,35 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1636.001",
+  "name": "Calendar Entries",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1636/001",
+  "stix_id": "attack-pattern--a9fa0d30-a8ff-45bf-922e-7720da0b7922",
+  "attack_version": "1.1",
+  "created": "2022-04-01T12:48:27.021Z",
+  "modified": "2025-10-24T17:49:12.650Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "Exodus (malware)",
+    "FlexiSpy (tool)",
+    "Monokle (malware)",
+    "Pegasus for Android (malware)",
+    "Stealth Mango (malware)",
+    "Sunbird (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may utilize standard operating system APIs to gather calendar entry data. On Android, this can be accomplished using the Calendar Content Provider. On iOS, this can be accomplished using the `EventKit` framework. \n\n \n\nIf the device has been jailbroken or rooted, an adversary may be able to access [Calendar Entries](https://attack.mitre.org/techniques/T1636/001) without the user\u2019s knowledge or approval."
+}

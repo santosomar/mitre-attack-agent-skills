@@ -1,0 +1,34 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1629",
+  "name": "Impair Defenses",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1629",
+  "stix_id": "attack-pattern--20b0931a-8952-42ca-975f-775bad295f1a",
+  "attack_version": "1.1",
+  "created": "2022-04-01T18:42:22.117Z",
+  "modified": "2025-10-24T17:48:30.589Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Deploy Compromised Device Detection Method",
+    "Enterprise Policy",
+    "Security Updates",
+    "System Partition Integrity",
+    "User Guidance"
+  ],
+  "known_context": [
+    "CherryBlos (malware)",
+    "GodFather (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may maliciously modify components of a victim environment in order to hinder or disable defensive mechanisms. This not only involves impairing preventative defenses, such as anti-virus, but also detection capabilities that defenders can use to audit activity and identify malicious behavior. This may span both native defenses as well as supplemental capabilities installed by users or mobile endpoint administrators."
+}

@@ -1,0 +1,32 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1617",
+  "name": "Hooking",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1617",
+  "stix_id": "attack-pattern--ccde43e4-78f9-4f32-b401-c081e7db71ea",
+  "attack_version": "1.0",
+  "created": "2021-09-24T14:47:34.182Z",
+  "modified": "2025-10-24T17:49:24.183Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "Deploy Compromised Device Detection Method"
+  ],
+  "known_context": [
+    "FjordPhantom (malware)",
+    "GodFather (malware)",
+    "Monokle (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may utilize hooking to hide the presence of artifacts associated with their behaviors to evade detection. Hooking can be used to modify return values or data structures of system APIs and function calls. This process typically involves using 3rd party root frameworks, such as Xposed or Magisk, with either a system exploit or pre-existing root access. By including custom modules for root frameworks, adversaries can hook system APIs and alter the return value and/or system data structures to alter functionality/visibility of various aspects of the system."
+}

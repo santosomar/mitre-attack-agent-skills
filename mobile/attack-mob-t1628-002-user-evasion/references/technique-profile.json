@@ -1,0 +1,34 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1628.002",
+  "name": "User Evasion",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1628/002",
+  "stix_id": "attack-pattern--24a77e53-0751-46fc-b207-99378fb35c08",
+  "attack_version": "1.0",
+  "created": "2022-04-11T20:05:56.069Z",
+  "modified": "2025-10-24T17:48:32.337Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Deploy Compromised Device Detection Method"
+  ],
+  "known_context": [
+    "BRATA (malware)",
+    "BusyGasper (malware)",
+    "Crocodilus (malware)",
+    "FluBot (malware)",
+    "Hornbill (malware)",
+    "SpyC23 (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to avoid detection by hiding malicious behavior from the user. By doing this, an adversary\u2019s modifications would most likely remain installed on the device for longer, allowing the adversary to continue to operate on that device. \n\nWhile there are many ways this can be accomplished, one method is by using the device\u2019s sensors. By utilizing the various motion sensors on a device, such as accelerometer or gyroscope, an application could detect that the device is being interacted with. That way, the application could continue to run while the device is not in use but cease operating while the user is using the device, hiding anything that would indicate malicious activity was ongoing. Accessing the sensors in this way does not require any permissions from the user, so it would be completely transparent."
+}

@@ -1,0 +1,43 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1633.001",
+  "name": "System Checks",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1633/001",
+  "stix_id": "attack-pattern--6ffad4be-bfe0-424f-abde-4d9a84a800ad",
+  "attack_version": "1.1",
+  "created": "2022-03-30T17:53:35.582Z",
+  "modified": "2025-10-24T17:48:56.336Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "Android/AdDisplay.Ashas (malware)",
+    "Anubis (malware)",
+    "BRATA (malware)",
+    "Cerberus (malware)",
+    "Chameleon (malware)",
+    "Dendroid (malware)",
+    "FakeSpy (malware)",
+    "Ginp (malware)",
+    "HenBox (malware)",
+    "Mandrake (malware)",
+    "Rotexy (malware)",
+    "TERRACOTTA (malware)",
+    "TrickMo (malware)",
+    "Windshift (intrusion-set)",
+    "WolfRAT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may employ various system checks to detect and avoid virtualization and analysis environments. This may include changing behavior after checking for the presence of artifacts indicative of a virtual environment or sandbox. If the adversary detects a virtual environment, they may alter their malware\u2019s behavior to disengage from the victim or conceal the core functions of the implant. They may also search for virtualization artifacts before dropping secondary or additional payloads. \n\nChecks could include generic system properties such as host/domain name and samples of network traffic. Adversaries may also check the network adapters addresses, CPU core count, and available memory/drive size. \n\nHardware checks, such as the presence of motion sensors, could also be used to gather evidence that can be indicative a virtual environment. Adversaries may also query for specific readings from these devices."
+}
