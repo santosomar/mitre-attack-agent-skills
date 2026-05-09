@@ -1,0 +1,38 @@
+{
+  "domain": "ics",
+  "attack_id": "T0858",
+  "name": "Change Operating Mode",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0858",
+  "stix_id": "attack-pattern--2883c520-7957-46ca-89bd-dab1ad53b601",
+  "attack_version": "1.0",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:11.583Z",
+  "tactics": [
+    "evasion",
+    "execution"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Access Management",
+    "Authorization Enforcement",
+    "Communication Authenticity",
+    "Human User Authentication",
+    "Network Allowlists",
+    "Network Segmentation",
+    "Software Process and Device Authentication"
+  ],
+  "known_context": [
+    "INCONTROLLER (malware)",
+    "PLC-Blaster (malware)",
+    "Triton (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may change the operating mode of a controller to gain additional access to engineering functions such as Program Download.   Programmable controllers typically have several modes of operation that control the state of the user program and control access to the controllers API. Operating modes can be physically selected using a key switch on the face of the controller but may also be selected with calls to the controllers API. Operating modes and the mechanisms by which they are selected often vary by vendor and product line. Some commonly implemented operating modes are described below:  \n\n* Program - This mode must be enabled before changes can be made to a devices program. This allows program uploads and downloads between the device and an engineering workstation. Often the PLCs logic Is halted, and all outputs may be forced off. (Citation: N.A. October 2017)  \n* Run - Execution of the devices program occurs in this mode. Input and output (values, points, tags, elements, etc.) are monitored and used according to the programs logic. [Program Upload](https://attack.mitre.org/techniques/T0845) and [Program Download](https://attack.mitre.org/techniques/T0843) are disabled while in this mode. (Citation: Omron) (Citation: Machine Information Systems 2007)  (Citation: N.A. October 2017) (Citation: PLCgurus 2021)   \n* Remote - Allows for remote changes to a PLCs operation mode. (Citation: PLCgurus 2021)    \n* Stop - The PLC and program is stopped, while in this mode, outputs are forced off. (Citation: Machine Information Systems 2007)   \n* Reset - Conditions on the PLC are reset to their original states. Warm resets may retain some memory while cold resets will reset all I/O and data registers. (Citation: Machine Information Systems 2007)   \n* Test / Monitor mode - Similar to run mode, I/O is processed, although this mode allows for monitoring, force set, resets, and more generally tuning or debugging of the system. Often monitor mode may be used as a trial for initialization. (Citation: Omron)"
+}

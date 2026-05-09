@@ -1,0 +1,35 @@
+{
+  "domain": "ics",
+  "attack_id": "T0884",
+  "name": "Connection Proxy",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0884",
+  "stix_id": "attack-pattern--d67adac8-e3b9-44f9-9e6d-6c2a7d69dbe4",
+  "attack_version": "1.1",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:19.127Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Filter Network Traffic",
+    "Network Allowlists",
+    "Network Intrusion Prevention",
+    "SSL/TLS Inspection"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "INCONTROLLER (malware)",
+    "Industroyer (malware)",
+    "Sandworm Team (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use a connection proxy to direct network traffic between systems or act as an intermediary for network communications.\n\nThe definition of a proxy can also be expanded to encompass trust relationships between networks in peer-to-peer, mesh, or trusted connections between networks consisting of hosts or systems that regularly communicate with each other.\n\nThe network may be within a single organization or across multiple organizations with trust relationships. Adversaries could use these types of relationships to manage command and control communications, to reduce the number of simultaneous outbound network connections, to provide resiliency in the face of connection loss, or to ride over existing trusted communications paths between victims to avoid suspicion. (Citation: Enterprise ATT&CK January 2018)"
+}

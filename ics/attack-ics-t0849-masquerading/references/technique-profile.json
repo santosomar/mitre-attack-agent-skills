@@ -1,0 +1,35 @@
+{
+  "domain": "ics",
+  "attack_id": "T0849",
+  "name": "Masquerading",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0849",
+  "stix_id": "attack-pattern--ba203963-3182-41ac-af14-7e7ebc83cd61",
+  "attack_version": "1.1",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:18.036Z",
+  "tactics": [
+    "evasion"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Code Signing",
+    "Execution Prevention",
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [
+    "2016 Ukraine Electric Power Attack (campaign)",
+    "EKANS (malware)",
+    "REvil (malware)",
+    "Stuxnet (malware)",
+    "Triton (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use masquerading to disguise a malicious application or executable as another file, to avoid operator and engineer suspicion. Possible disguises of these masquerading files can include commonly found programs, expected vendor executables and configuration files, and other commonplace application and naming conventions. By impersonating expected and vendor-relevant files and applications, operators and engineers may not notice the presence of the underlying malicious content and possibly end up running those masquerading as legitimate functions. \n\nApplications and other files commonly found on Windows systems or in engineering workstations have been impersonated before. This can be as simple as renaming a file to effectively disguise it in the ICS environment."
+}

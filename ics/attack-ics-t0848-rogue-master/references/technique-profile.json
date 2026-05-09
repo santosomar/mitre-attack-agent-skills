@@ -1,0 +1,33 @@
+{
+  "domain": "ics",
+  "attack_id": "T0848",
+  "name": "Rogue Master",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0848",
+  "stix_id": "attack-pattern--b14395bd-5419-4ef4-9bd8-696936f509bb",
+  "attack_version": "1.2",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:17.326Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Communication Authenticity",
+    "Filter Network Traffic",
+    "Network Allowlists",
+    "Network Segmentation",
+    "Software Process and Device Authentication"
+  ],
+  "known_context": [
+    "Maroochy Water Breach (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may setup a rogue master to leverage control server functions to communicate with outstations. A rogue master can be used to send legitimate control messages to other control system devices, affecting processes in unintended ways. It may also be used to disrupt network communications by capturing and receiving the network traffic meant for the actual master. Impersonating a master may also allow an adversary to avoid detection. \n\nIn the case of the 2017 Dallas Siren incident, adversaries used a rogue master to send command messages to the 156 distributed sirens across the city, either through a single rogue transmitter with a strong signal, or using many distributed repeaters. (Citation: Bastille April 2017) (Citation: Zack Whittaker April 2017)"
+}

@@ -1,0 +1,34 @@
+{
+  "domain": "ics",
+  "attack_id": "T0821",
+  "name": "Modify Controller Tasking",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0821",
+  "stix_id": "attack-pattern--09a61657-46e1-439e-b3ed-3e4556a78243",
+  "attack_version": "1.2",
+  "created": "2021-04-13T11:15:26.506Z",
+  "modified": "2025-04-16T21:26:10.230Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Authorization Enforcement",
+    "Code Signing",
+    "Human User Authentication"
+  ],
+  "known_context": [
+    "PLC-Blaster (malware)",
+    "Stuxnet (malware)",
+    "Triton (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify the tasking of a controller to allow for the execution of their own programs. This can allow an adversary to manipulate the execution flow and behavior of a controller. \n\nAccording to 61131-3, the association of a Task with a Program Organization Unit (POU) defines a task association. (Citation: IEC February 2013) An adversary may modify these associations or create new ones to manipulate the execution flow of a controller. Modification of controller tasking can be accomplished using a Program Download in addition to other types of program modification such as online edit and program append.\n\nTasks have properties, such as interval, frequency and priority to meet the requirements of program execution. Some controller vendors implement tasks with implicit, pre-defined properties whereas others allow for these properties to be formulated explicitly. An adversary may associate their program with tasks that have a higher priority or execute associated programs more frequently. For instance, to ensure cyclic execution of their program on a Siemens controller, an adversary may add their program to the task, Organization Block 1 (OB1)."
+}

@@ -1,0 +1,29 @@
+{
+  "domain": "ics",
+  "attack_id": "T0846.002",
+  "name": "Broadcast Discovery",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0846/002",
+  "stix_id": "attack-pattern--c55f0be5-044e-4577-8095-65b37680d28c",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:54:21.227Z",
+  "modified": "2026-04-23T19:43:10.464Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Segmentation",
+    "Static Network Configuration"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "Triton (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may perform broadcast discovery requests to enumerate systems and devices on a network. Broadcast discovery works by one system or device sending messages to all systems and devices on a network (or subnet) and then waiting for a response. If a response is received that means the system or device that responded is live and can communicate over that protocol. Adversaries may leverage different protocols supported on the network for sending broadcast messages. \n\nSome common OT protocols that have broadcast discovery mechanisms are Building Automation and Control Network (BACNet) Who-Is requests, Common Industrial Protocol (CIP) List Identity User Datagram Protocol (UDP) broadcast requests, and Siemens S7 broadcast identification requests.(Citation: Broadcasting BACnet)(Citation: Cisco Active Discovery)"
+}

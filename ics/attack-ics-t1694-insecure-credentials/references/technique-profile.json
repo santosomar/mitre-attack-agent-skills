@@ -1,0 +1,26 @@
+{
+  "domain": "ics",
+  "attack_id": "T1694",
+  "name": "Insecure Credentials",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1694",
+  "stix_id": "attack-pattern--3e9b182e-e493-49e1-9a9b-bd0dfcd34a7c",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:50:35.222Z",
+  "modified": "2026-04-23T19:29:41.601Z",
+  "tactics": [
+    "lateral-movement",
+    "persistence"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Access Management"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may target insecure credentials as a means to persist on a system or device or move laterally from one system or device to another. Insecure credentials may appear as default credentials which are pre-configured credentials on a system, device, or software that are well-known in documentation or hard-coded credentials which are built into the system, device, or software that cannot be changed or not easily changed because of the impact on control processes.(Citation: NIST SP 800-82r3)(Citation: ICS-ALERT-13-164-01)(Citation: OT IceFall)\n Adversaries often times use insecure credentials to evade detection as they are typically forgotten about by system and device owners."
+}

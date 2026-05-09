@@ -1,0 +1,33 @@
+{
+  "domain": "ics",
+  "attack_id": "T0889",
+  "name": "Modify Program",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0889",
+  "stix_id": "attack-pattern--fc5fda7e-6b2c-4457-b036-759896a2efa2",
+  "attack_version": "1.2",
+  "created": "2021-04-13T11:15:26.506Z",
+  "modified": "2025-04-15T19:59:24.213Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Authorization Enforcement",
+    "Code Signing",
+    "Human User Authentication"
+  ],
+  "known_context": [
+    "PLC-Blaster (malware)",
+    "Stuxnet (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify or add a program on a controller to affect how it interacts with the physical process, peripheral devices and other hosts on the network. Modification to controller programs can be accomplished using a Program Download in addition to other types of program modification such as online edit and program append. \n\nProgram modification encompasses the addition and modification of instructions and logic contained in Program Organization Units (POU)  (Citation: IEC February 2013) and similar programming elements found on controllers. This can include, for example, adding new functions to a controller, modifying the logic in existing functions and making new calls from one function to another. \n\nSome programs may allow an adversary to interact directly with the native API of the controller to take advantage of obscure features or vulnerabilities."
+}

@@ -1,0 +1,27 @@
+{
+  "domain": "ics",
+  "attack_id": "T0895",
+  "name": "Autorun Image",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0895",
+  "stix_id": "attack-pattern--77d9c726-b53e-481d-8bcc-1068aebfbb9d",
+  "attack_version": "1.0",
+  "created": "2024-03-26T15:39:19.473Z",
+  "modified": "2025-04-15T19:58:42.824Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Operating System Configuration"
+  ],
+  "known_context": [
+    "2022 Ukraine Electric Power Attack (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage AutoRun functionality or scripts to execute malicious code. Devices configured to enable AutoRun functionality or legacy operating systems may be susceptible to abuse of these features to run malicious code stored on various forms of removeable media (i.e., USB, Disk Images [.ISO]). Commonly, AutoRun or AutoPlay are disabled in many operating systems configurations to mitigate against this technique. If a device is configured to enable AutoRun or AutoPlay, adversaries may execute code on the device by mounting the removable media to the device, either through physical or virtual means. This may be especially relevant for virtual machine environments where disk images may be dynamically mapped to a guest system on a hypervisor.  \n\nAn example could include an adversary gaining access to a hypervisor through the management interface to modify a virtual machine\u2019s hardware configuration. They could then deploy an iso image with a malicious AutoRun script to cause the virtual machine to automatically execute the code contained on the disk image. This would enable the execution of malicious code within a virtual machine without needing any prior remote access to that system."
+}

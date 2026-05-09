@@ -1,0 +1,29 @@
+{
+  "domain": "ics",
+  "attack_id": "T0877",
+  "name": "I/O Image",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0877",
+  "stix_id": "attack-pattern--53a48c74-0025-45f4-b04a-baa853df8204",
+  "attack_version": "1.1",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:14.462Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Mitigation Limited or Not Effective"
+  ],
+  "known_context": [
+    "Stuxnet (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may seek to capture process values related to the inputs and outputs of a PLC. During the scan cycle, a PLC reads the status of all inputs and stores them in an image table. (Citation: Nanjundaiah, Vaidyanath) The image table is the PLCs internal storage location where values of inputs/outputs for one scan are stored while it executes the user program. After the PLC has solved the entire logic program, it updates the output image table. The contents of this output image table are written to the corresponding output points in I/O Modules.\n\nThe Input and Output Image tables described above make up the I/O Image on a PLC. This image is used by the user program instead of directly interacting with physical I/O. (Citation: Spenneberg, Ralf 2016) \n\nAdversaries may collect the I/O Image state of a PLC by utilizing a devices [Native API](https://attack.mitre.org/techniques/T0834) to access the memory regions directly. The collection of the PLCs I/O state could be used to replace values or inform future stages of an attack."
+}

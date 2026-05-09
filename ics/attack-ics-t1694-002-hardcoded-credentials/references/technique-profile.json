@@ -1,0 +1,29 @@
+{
+  "domain": "ics",
+  "attack_id": "T1694.002",
+  "name": "Hardcoded Credentials",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1694/002",
+  "stix_id": "attack-pattern--6b335943-c3af-430e-a135-ab09623bdc20",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:54:19.528Z",
+  "modified": "2026-04-23T19:32:38.851Z",
+  "tactics": [
+    "lateral-movement",
+    "persistence"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Access Management"
+  ],
+  "known_context": [
+    "INCONTROLLER (malware)",
+    "Stuxnet (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may leverage credentials that are hardcoded in software or firmware to gain an unauthorized interactive user session to an asset. Examples credentials that may be hardcoded in an asset include:\n\n* Username/Passwords\n* Cryptographic keys/Certificates\n* API tokens\n\nUnlike [Default Credentials](https://attack.mitre.org/techniques/T0812), these credentials are built into the system in a way that they either cannot be changed by the asset owner, or may be infeasible to change because of the impact it would cause to the control system operation. These credentials may be reused across whole product lines or device models and are often not published or known to the owner and operators of the asset.(Citation: ICS-ALERT-13-164-01)(Citation: OT IceFall)\n\nAdversaries may utilize these hardcoded credentials to move throughout the control system environment or provide reliable access for their tools to interact with industrial assets."
+}

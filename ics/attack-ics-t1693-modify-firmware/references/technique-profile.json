@@ -1,0 +1,38 @@
+{
+  "domain": "ics",
+  "attack_id": "T1693",
+  "name": "Modify Firmware",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1693",
+  "stix_id": "attack-pattern--7b4c0e19-a9b0-4a74-a196-b38c07b79f20",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:50:34.850Z",
+  "modified": "2026-04-23T19:06:21.253Z",
+  "tactics": [
+    "impair-process-control",
+    "inhibit-response-function",
+    "persistence"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Access Management",
+    "Audit",
+    "Boot Integrity",
+    "Code Signing",
+    "Communication Authenticity",
+    "Encrypt Network Traffic",
+    "Encrypt Sensitive Information",
+    "Filter Network Traffic",
+    "Human User Authentication",
+    "Network Allowlists",
+    "Network Segmentation",
+    "Software Process and Device Authentication"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Firmware is low-level software embedded in hardware that enables systems and devices to function properly and is commonly found in ICS environments. Adversaries may modify firmware on a system or device by installing malicious or vulnerable versions that enable them to achieve objectives such as [Persistence](https://attack.mitre.org/tactics/TA0110), [Impair Process Control](https://attack.mitre.org/tactics/TA0106), and [Inhibit Response Function](https://attack.mitre.org/tactics/TA0107). \n\nAdversaries may modify system and device firmware by using the built-in firmware update functionality which may support local or remote installation. The malicious or vulnerable firmware may be delivered via [Replication Through Removable Media](https://attack.mitre.org/techniques/T0847), [Supply Chain Compromise](https://attack.mitre.org/techniques/T0862), or [Remote Services](https://attack.mitre.org/techniques/T0886). Once installed, the malicious or vulnerable firmware could be used to provide [Rootkit](https://attack.mitre.org/techniques/T0851) and [Hooking](https://attack.mitre.org/techniques/T0874) functionality, [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T0890), or [Denial of Service](https://attack.mitre.org/techniques/T0814).(Citation: Basnight, Zachry, et al.)"
+}

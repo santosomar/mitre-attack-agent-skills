@@ -1,0 +1,32 @@
+{
+  "domain": "ics",
+  "attack_id": "T0871",
+  "name": "Execution through API",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0871",
+  "stix_id": "attack-pattern--5a2610f6-9fff-41e1-bc27-575ca20383d4",
+  "attack_version": "1.1",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:14.643Z",
+  "tactics": [
+    "execution"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Access Management",
+    "Authorization Enforcement",
+    "Execution Prevention",
+    "Human User Authentication"
+  ],
+  "known_context": [
+    "Triton (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to leverage Application Program Interfaces (APIs) used for communication between control software and the hardware. Specific functionality is often coded into APIs which can be called by software to engage specific functions on a device or other software."
+}

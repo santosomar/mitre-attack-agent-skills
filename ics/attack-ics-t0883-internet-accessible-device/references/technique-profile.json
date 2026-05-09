@@ -1,0 +1,30 @@
+{
+  "domain": "ics",
+  "attack_id": "T0883",
+  "name": "Internet Accessible Device",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0883",
+  "stix_id": "attack-pattern--f8df6b57-14bc-425f-9a91-6f59f6799307",
+  "attack_version": "1.0",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:20.494Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Network Segmentation"
+  ],
+  "known_context": [
+    "Fuxnet (malware)",
+    "Unitronics Defacement Campaign (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may gain access into industrial environments through systems exposed directly to the internet for remote access rather than through [External Remote Services](https://attack.mitre.org/techniques/T0822). Internet Accessible Devices are exposed to the internet unintentionally or intentionally without adequate protections. This may allow for adversaries to move directly into the control system network. Access onto these devices is accomplished without the use of exploits, these would be represented within the [Exploit Public-Facing Application](https://attack.mitre.org/techniques/T0819) technique.\n\nAdversaries may leverage built in functions for remote access which may not be protected or utilize minimal legacy protections that may be targeted. (Citation: NCCIC January 2014) These services may be discoverable through the use of online scanning tools. \n\nIn the case of the Bowman dam incident, adversaries leveraged access to the dam control network through a cellular modem. Access to the device was protected by password authentication, although the application was vulnerable to brute forcing. (Citation: NCCIC January 2014) (Citation: Danny Yadron December 2015) (Citation: Mark Thompson March 2016)\n\nIn Trend Micros manufacturing deception operations adversaries were detected leveraging direct internet access to an ICS environment through the exposure of operational protocols such as Siemens S7, Omron FINS, and EtherNet/IP, in addition to misconfigured VNC access. (Citation: Stephen Hilt, Federico Maggi, Charles Perine, Lord Remorin, Martin Rsler, and Rainer Vosseler)"
+}

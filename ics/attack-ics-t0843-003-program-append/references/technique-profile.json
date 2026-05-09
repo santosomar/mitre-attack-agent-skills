@@ -1,0 +1,36 @@
+{
+  "domain": "ics",
+  "attack_id": "T0843.003",
+  "name": "Program Append",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0843/003",
+  "stix_id": "attack-pattern--574d5bfb-9a7a-4b28-ab5c-743ac704c135",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:54:25.997Z",
+  "modified": "2026-04-23T00:18:49.737Z",
+  "tactics": [
+    "lateral-movement"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Access Management",
+    "Audit",
+    "Authorization Enforcement",
+    "Code Signing",
+    "Communication Authenticity",
+    "Filter Network Traffic",
+    "Human User Authentication",
+    "Network Allowlists",
+    "Network Segmentation",
+    "Software Process and Device Authentication"
+  ],
+  "known_context": [
+    "Triton Safety Instrumented System Attack (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may execute a program append to a PLC to update parts of an existing program. It may or may not require stopping the PLC which may allow it to continue running during transfer and reconfiguration without interruption to process control. Adversaries may leverage this approach to minimize downtime and evade detection. \n\nThe ability to perform a program append to the PLC typically relies on access to a workstation with the vendor-specific PLC programming software installed."
+}

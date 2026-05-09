@@ -1,0 +1,33 @@
+{
+  "domain": "ics",
+  "attack_id": "T0864",
+  "name": "Transient Cyber Asset",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0864",
+  "stix_id": "attack-pattern--35392fb4-a31d-4c6a-b9f2-1c65b7f5e6b9",
+  "attack_version": "1.2",
+  "created": "2021-10-14T15:25:32.143Z",
+  "modified": "2025-04-15T19:58:21.226Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Antivirus/Antimalware",
+    "Audit",
+    "Encrypt Sensitive Information",
+    "Network Segmentation",
+    "Update Software"
+  ],
+  "known_context": [
+    "Maroochy Water Breach (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may target devices that are transient across ICS networks and external networks. Normally, transient assets are brought into an environment by authorized personnel and do not remain in that environment on a permanent basis. (Citation: North American Electric Reliability Corporation June 2021) Transient assets are commonly needed to support management functions and may be more common in systems where a remotely managed asset is not feasible, external connections for remote access do not exist, or 3rd party contractor/vendor access is required. \n\nAdversaries may take advantage of transient assets in different ways. For instance, adversaries may target a transient asset when it is connected to an external network and then leverage its trusted access in another environment to launch an attack. They may also take advantage of installed applications and libraries that are used by legitimate end-users to interact with control system devices. \n\nTransient assets, in some cases, may not be deployed with a secure configuration leading to weaknesses that could allow an adversary to propagate malicious executable code, e.g., the transient asset may be infected by malware and when connected to an ICS environment the malware propagates onto other systems."
+}

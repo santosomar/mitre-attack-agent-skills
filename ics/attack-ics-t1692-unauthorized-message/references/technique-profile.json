@@ -1,0 +1,30 @@
+{
+  "domain": "ics",
+  "attack_id": "T1692",
+  "name": "Unauthorized Message",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1692",
+  "stix_id": "attack-pattern--e17cdc00-8b58-4e5f-9d50-4cad1592c4c3",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:50:34.487Z",
+  "modified": "2026-04-23T18:54:29.294Z",
+  "tactics": [
+    "evasion",
+    "impair-process-control"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Communication Authenticity",
+    "Filter Network Traffic",
+    "Network Allowlists",
+    "Network Segmentation",
+    "Software Process and Device Authentication"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may send unauthorized messages to ICS systems and devices to evade defenses or manipulate processes. Unauthorized messages can be categorized as either reporting messages that contain telemetry data about the current state of systems, devices, and processes or as command messages which instruct systems and devices on how to operate. By injecting unauthorized messages, adversaries can make it appear as if everything is working correctly when it isn\u2019t, trigger alarms to misdirect personnel or impact processes, and manipulate controls to disrupt processes.(Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011)\n\nAdversaries may send unauthorized messages in an ICS environment using software found within the environment (living-off-the-land, vendor-specific interfaces, etc.), custom tooling leveraging OT protocols and libraries, or by positioning themselves between systems and devices and injecting messages into the communications such as the case with an [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T0830) attack."
+}

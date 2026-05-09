@@ -1,0 +1,34 @@
+{
+  "domain": "ics",
+  "attack_id": "T0814",
+  "name": "Denial of Service",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0814",
+  "stix_id": "attack-pattern--1b22b676-9347-4c55-9a35-ef0dc653db5b",
+  "attack_version": "1.1",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-15T19:58:10.656Z",
+  "tactics": [
+    "inhibit-response-function"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Watchdog Timers"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "Backdoor.Oldrea (malware)",
+    "Fuxnet (malware)",
+    "Industroyer (malware)",
+    "PLC-Blaster (malware)",
+    "Unitronics Defacement Campaign (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may perform Denial-of-Service (DoS) attacks to disrupt expected device functionality. Examples of DoS attacks include overwhelming the target device with a high volume of requests in a short time period and sending the target device a request it does not know how to handle. Disrupting device state may temporarily render it unresponsive, possibly lasting until a reboot can occur. When placed in this state, devices may be unable to send and receive requests, and may not perform expected response functions in reaction to other events in the environment. \n\nSome ICS devices are particularly sensitive to DoS events, and may become unresponsive in reaction to even a simple ping sweep. Adversaries may also attempt to execute a Permanent Denial-of-Service (PDoS) against certain devices, such as in the case of the BrickerBot malware. (Citation: ICS-CERT April 2017) \n\nAdversaries may exploit a software vulnerability to cause a denial of service by taking advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code. Vulnerabilities may exist in software that can be used to cause a denial of service condition. \n\nAdversaries may have prior knowledge about industrial protocols or control devices used in the environment through [Remote System Information Discovery](https://attack.mitre.org/techniques/T0888). There are examples of adversaries remotely causing a [Device Restart/Shutdown](https://attack.mitre.org/techniques/T0816) by exploiting a vulnerability that induces uncontrolled resource consumption. (Citation: ICS-CERT August 2018) (Citation: Common Weakness Enumeration January 2019) (Citation: MITRE March 2018)"
+}

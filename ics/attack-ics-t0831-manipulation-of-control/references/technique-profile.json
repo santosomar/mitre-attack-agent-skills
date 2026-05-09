@@ -1,0 +1,33 @@
+{
+  "domain": "ics",
+  "attack_id": "T0831",
+  "name": "Manipulation of Control",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0831",
+  "stix_id": "attack-pattern--1af9e3fd-2bcc-414d-adbd-fe3b95c02ca1",
+  "attack_version": "1.0",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-16T21:26:10.752Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Communication Authenticity",
+    "Data Backup",
+    "Out-of-Band Communications Channel"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "Industroyer (malware)",
+    "Stuxnet (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may manipulate physical process control within the industrial environment. Methods of manipulating control can include changes to set point values, tags, or other parameters. Adversaries may manipulate control systems devices or possibly leverage their own, to communicate with and command physical control processes. The duration of manipulation may be temporary or longer sustained, depending on operator detection.   \n\nMethods of Manipulation of Control include: \n\n* Man-in-the-middle  \n* Spoof command message \n* Changing setpoints  \n\nA Polish student used a remote controller device to interface with the Lodz city tram system in Poland. (Citation: John Bill May 2017) (Citation: Shelley Smith February 2008) (Citation: Bruce Schneier January 2008) Using this remote, the student was able to capture and replay legitimate tram signals. As a consequence, four trams were derailed and twelve people injured due to resulting emergency stops. (Citation: Shelley Smith February 2008) The track controlling commands issued may have also resulted in tram collisions, a further risk to those on board and nearby the areas of impact. (Citation: Bruce Schneier January 2008)"
+}

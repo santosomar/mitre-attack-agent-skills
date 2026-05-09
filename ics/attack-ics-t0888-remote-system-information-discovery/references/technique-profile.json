@@ -1,0 +1,34 @@
+{
+  "domain": "ics",
+  "attack_id": "T0888",
+  "name": "Remote System Information Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0888",
+  "stix_id": "attack-pattern--2fedbe69-581f-447d-8a78-32ee7db939a9",
+  "attack_version": "1.1",
+  "created": "2021-04-13T12:45:26.506Z",
+  "modified": "2025-04-16T21:26:12.694Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Static Network Configuration"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "Backdoor.Oldrea (malware)",
+    "INCONTROLLER (malware)",
+    "Industroyer (malware)",
+    "Industroyer2 (malware)",
+    "Stuxnet (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may attempt to get detailed information about remote systems and their peripherals, such as make/model, role, and configuration. Adversaries may use information from Remote System Information Discovery to aid in targeting and shaping follow-on behaviors. For example, the system's operational role and model information can dictate whether it is a relevant target for the adversary's operational objectives. In addition, the system's configuration may be used to scope subsequent technique usage. \n\nRequests for system information are typically implemented using automation and management protocols and are often automatically requested by vendor software during normal operation. This information may be used to tailor management actions, such as program download and system or module firmware. An adversary may leverage this same information by issuing calls directly to the system's API."
+}

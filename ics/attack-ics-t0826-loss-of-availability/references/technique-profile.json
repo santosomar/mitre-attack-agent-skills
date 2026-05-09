@@ -1,0 +1,34 @@
+{
+  "domain": "ics",
+  "attack_id": "T0826",
+  "name": "Loss of Availability",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0826",
+  "stix_id": "attack-pattern--b5b9bacb-97f2-4249-b804-47fd44de1f95",
+  "attack_version": "1.0",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-15T19:59:00.088Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Data Backup",
+    "Out-of-Band Communications Channel",
+    "Redundancy of Service"
+  ],
+  "known_context": [
+    "2015 Ukraine Electric Power Attack (campaign)",
+    "Conficker (malware)",
+    "FrostyGoop Incident (campaign)",
+    "Unitronics Defacement Campaign (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to disrupt essential components or systems to prevent owner and operator from delivering products or services. (Citation: Corero) (Citation: Michael J. Assante and Robert M. Lee) (Citation: Tyson Macaulay) \n\nAdversaries may leverage malware to delete or encrypt critical data on HMIs, workstations, or databases.\n\nIn the 2021 Colonial Pipeline ransomware incident, pipeline operations were temporally halted on May 7th and were not fully restarted until May 12th. (Citation: Colonial Pipeline Company May 2021)"
+}

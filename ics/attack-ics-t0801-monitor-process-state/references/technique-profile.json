@@ -1,0 +1,32 @@
+{
+  "domain": "ics",
+  "attack_id": "T0801",
+  "name": "Monitor Process State",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0801",
+  "stix_id": "attack-pattern--2d0d40ad-22fa-4cc8-b264-072557e1364b",
+  "attack_version": "1.0",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-04-25T15:16:45.982Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Mitigation Limited or Not Effective"
+  ],
+  "known_context": [
+    "FrostyGoop (malware)",
+    "Industroyer (malware)",
+    "Industroyer2 (malware)",
+    "Stuxnet (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may gather information about the physical process state. This information may be used to gain more information about the process itself or used as a trigger for malicious actions. The sources of process state information may vary such as, OPC tags, historian data, specific PLC block information, or network traffic."
+}

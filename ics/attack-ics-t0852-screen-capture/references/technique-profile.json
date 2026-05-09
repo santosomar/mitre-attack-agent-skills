@@ -1,0 +1,31 @@
+{
+  "domain": "ics",
+  "attack_id": "T0852",
+  "name": "Screen Capture",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0852",
+  "stix_id": "attack-pattern--c5e3cdbc-0387-4be9-8f83-ff5c0865f377",
+  "attack_version": "1.0",
+  "created": "2020-05-21T17:43:26.506Z",
+  "modified": "2025-10-24T17:49:21.744Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "None"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Mitigation Limited or Not Effective"
+  ],
+  "known_context": [
+    "2025 Poland Wiper Attacks (campaign)",
+    "ALLANITE (intrusion-set)",
+    "APT33 (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to perform screen capture of devices in the control system environment. Screenshots may be taken of workstations, HMIs, or other devices that display environment-relevant process, device, reporting, alarm, or related data. These device displays may reveal information regarding the ICS process, layout, control, and related schematics. In particular, an HMI can provide a lot of important industrial process information. (Citation: ICS-CERT October 2017) Analysis of screen captures may provide the adversary with an understanding of intended operations and interactions between critical devices."
+}

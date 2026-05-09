@@ -1,0 +1,30 @@
+{
+  "domain": "ics",
+  "attack_id": "T0873.001",
+  "name": "Siemens Project File Format",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T0873/001",
+  "stix_id": "attack-pattern--354ca909-b54d-4c41-b597-9c296b344a43",
+  "attack_version": "1.0",
+  "created": "2026-04-20T20:54:20.103Z",
+  "modified": "2026-04-23T19:37:43.545Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Audit",
+    "Code Signing",
+    "Encrypt Sensitive Information",
+    "Restrict File and Directory Permissions"
+  ],
+  "known_context": [
+    "Stuxnet (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may infect Siemens PLC project files (i.e., Step 7, WinCC, etc.) to achieve [Execution](https://attack.mitre.org/tactics/TA0104), [Persistence](https://attack.mitre.org/tactics/TA0110), and [Lateral Movement](https://attack.mitre.org/tactics/TA0109) objectives. Adversaries may modify an existing project file or bring their own project files into the environment.(Citation: Nicolas Falliere, Liam O Murchu, Eric Chien February 2011)\n\nThe ability for an adversary to deploy an infected project file relies on access to a workstation with Siemens PLC programming software installed on it from which a program download can be performed."
+}
