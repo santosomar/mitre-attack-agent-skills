@@ -1,0 +1,30 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1474.001",
+  "name": "Compromise Software Dependencies and Development Tools",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1474/001",
+  "stix_id": "attack-pattern--7827ced0-95e7-4d05-bdcf-0d8f2d37a3d3",
+  "attack_version": "1.1",
+  "created": "2022-03-28T19:31:51.978Z",
+  "modified": "2025-10-24T17:48:58.857Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Application Developer Guidance"
+  ],
+  "known_context": [
+    "XcodeGhost (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise. Applications often depend on external software to function properly. Popular open source projects that are used as dependencies in many applications may be targeted as a means to add malicious code to users of the dependency.(Citation: Grace-Advertisement)"
+}

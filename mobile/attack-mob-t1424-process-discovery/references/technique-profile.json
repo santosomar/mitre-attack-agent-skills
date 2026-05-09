@@ -1,0 +1,43 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1424",
+  "name": "Process Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1424",
+  "stix_id": "attack-pattern--1b51f5bc-b97a-498a-8dbd-bc6b1901bf19",
+  "attack_version": "2.1",
+  "created": "2017-10-25T14:48:33.926Z",
+  "modified": "2025-10-24T17:48:28.244Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "Use Recent OS Version"
+  ],
+  "known_context": [
+    "Agent Smith (malware)",
+    "Anubis (malware)",
+    "Binary Validator (malware)",
+    "CherryBlos (malware)",
+    "GolfSpy (malware)",
+    "HenBox (malware)",
+    "LightSpy (malware)",
+    "Operation Triangulation (campaign)",
+    "Rotexy (malware)",
+    "SharkBot (malware)",
+    "TriangleDB (malware)",
+    "WolfRAT (malware)",
+    "YiSpecter (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to get information about running processes on a device. Information obtained could be used to gain an understanding of common software/applications running on devices within a network. Adversaries may use the information from [Process Discovery](https://attack.mitre.org/techniques/T1424) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. \n\n \n\nRecent Android security enhancements have made it more difficult to obtain a list of running processes. On Android 7 and later, there is no way for an application to obtain the process list without abusing elevated privileges. This is due to the Android kernel utilizing the `hidepid` mount feature. Prior to Android 7, applications could utilize the `ps` command or examine the `/proc` directory on the device.(Citation: Android-SELinuxChanges) \n\n \n\nIn iOS, applications have previously been able to use the `sysctl` command to obtain a list of running processes. This functionality has been removed in later iOS versions."
+}

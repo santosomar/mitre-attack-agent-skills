@@ -1,0 +1,48 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1422.001",
+  "name": "Internet Connection Discovery",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1422/001",
+  "stix_id": "attack-pattern--45a5fe76-eda3-4d40-8f22-c186efd6278d",
+  "attack_version": "1.0",
+  "created": "2024-02-20T23:39:08.047Z",
+  "modified": "2024-02-20T23:39:08.047Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Encrypt Network Traffic"
+  ],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "Asacub (malware)",
+    "BOULDSPY (malware)",
+    "CarbonSteal (malware)",
+    "Corona Updates (malware)",
+    "EventBot (malware)",
+    "Exobot (malware)",
+    "Exodus (malware)",
+    "FakeSpy (malware)",
+    "FlyTrap (malware)",
+    "Hornbill (malware)",
+    "INSOMNIA (malware)",
+    "Monokle (malware)",
+    "Pegasus for Android (malware)",
+    "RedDrop (malware)",
+    "TERRACOTTA (malware)",
+    "TianySpy (malware)",
+    "TrickMo (malware)",
+    "ViperRAT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may check for Internet connectivity on compromised systems. This may be performed during automated discovery and can be accomplished in numerous ways such as using `adb shell netstat` for Android.(Citation: adb_commands)\n\nAdversaries may use the results and responses from these requests to determine if the mobile devices are capable of communicating with adversary-owned C2 servers before attempting to connect to them. The results may also be used to identify routes, redirectors, and proxy servers."
+}

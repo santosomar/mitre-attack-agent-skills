@@ -1,0 +1,41 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1422.002",
+  "name": "Wi-Fi Discovery",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1422/002",
+  "stix_id": "attack-pattern--be63612f-a48f-44f2-a7a6-1763509fcf80",
+  "attack_version": "1.0",
+  "created": "2024-02-21T20:44:44.404Z",
+  "modified": "2024-02-21T20:44:44.404Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version"
+  ],
+  "known_context": [
+    "BOULDSPY (malware)",
+    "Corona Updates (malware)",
+    "DocSwap (malware)",
+    "Hornbill (malware)",
+    "INSOMNIA (malware)",
+    "LightSpy (malware)",
+    "Monokle (malware)",
+    "Pegasus for Android (malware)",
+    "RedDrop (malware)",
+    "TianySpy (malware)",
+    "TrickMo (malware)",
+    "VajraSpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may search for information about Wi-Fi networks, such as network names and passwords, on compromised systems. Adversaries may use Wi-Fi information as part of [Discovery](https://attack.mitre.org/tactics/TA0032) or [Credential Access](https://attack.mitre.org/tactics/TA0031) activity to support both ongoing and future campaigns."
+}

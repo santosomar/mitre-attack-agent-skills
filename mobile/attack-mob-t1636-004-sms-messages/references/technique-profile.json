@@ -1,0 +1,49 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1636.004",
+  "name": "SMS Messages",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1636/004",
+  "stix_id": "attack-pattern--c6421411-ae61-42bb-9098-73fddb315002",
+  "attack_version": "1.1",
+  "created": "2022-04-01T13:25:30.923Z",
+  "modified": "2025-10-24T17:49:22.003Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "Adups (malware)",
+    "AndroRAT (malware)",
+    "Android/Chuli.A (malware)",
+    "Android/SpyAgent (malware)",
+    "Asacub (malware)",
+    "BOULDSPY (malware)",
+    "Bread (malware)",
+    "BusyGasper (malware)",
+    "C0033 (campaign)",
+    "CarbonSteal (malware)",
+    "Cerberus (malware)",
+    "Chameleon (malware)",
+    "Corona Updates (malware)",
+    "Crocodilus (malware)",
+    "DCHSpy (malware)",
+    "Dendroid (malware)",
+    "Desert Scorpion (malware)",
+    "DocSwap (malware)",
+    "DoubleAgent (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may utilize standard operating system APIs to gather SMS messages. On Android, this can be accomplished using the SMS Content Provider. iOS provides no standard API to access SMS messages. \n\nIf the device has been jailbroken or rooted, an adversary may be able to access [SMS Messages](https://attack.mitre.org/techniques/T1636/004) without the user\u2019s knowledge or approval."
+}

@@ -1,0 +1,33 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1603",
+  "name": "Scheduled Task/Job",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1603",
+  "stix_id": "attack-pattern--00290ac5-551e-44aa-bbd8-c4b913488a6d",
+  "attack_version": "1.0",
+  "created": "2020-11-04T16:43:31.619Z",
+  "modified": "2025-10-24T17:48:18.936Z",
+  "tactics": [
+    "execution",
+    "persistence"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Chameleon (malware)",
+    "GPlayed (malware)",
+    "GodFather (malware)",
+    "TERRACOTTA (malware)",
+    "Tiktok Pro (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. On Android and iOS, APIs and libraries exist to facilitate scheduling tasks to execute at a specified date, time, or interval.\n\nOn Android, the `WorkManager` API allows asynchronous tasks to be scheduled with the system. `WorkManager` was introduced to unify task scheduling on Android, using `JobScheduler`, `GcmNetworkManager`, and `AlarmManager` internally. `WorkManager` offers a lot of flexibility for scheduling, including periodically, one time, or constraint-based (e.g. only when the device is charging).(Citation: Android WorkManager)\n\nOn iOS, the `NSBackgroundActivityScheduler` API allows asynchronous tasks to be scheduled with the system. The tasks can be scheduled to be repeating or non-repeating, however, the system chooses when the tasks will be executed. The app can choose the interval for repeating tasks, or the delay between scheduling and execution for one-time tasks.(Citation: Apple NSBackgroundActivityScheduler)"
+}

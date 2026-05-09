@@ -1,0 +1,31 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1629.002",
+  "name": "Device Lockout",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1629/002",
+  "stix_id": "attack-pattern--acf8fd2a-dc98-43b4-8d37-64e10728e591",
+  "attack_version": "1.1",
+  "created": "2022-04-01T18:49:03.892Z",
+  "modified": "2025-10-24T17:49:13.285Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version"
+  ],
+  "known_context": [
+    "AndroidOS/MalLocker.B (malware)",
+    "Rotexy (malware)",
+    "TrickMo (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "An adversary may seek to inhibit user interaction by locking the legitimate user out of the device. This is typically accomplished by requesting device administrator permissions and then locking the screen using `DevicePolicyManager.lockNow()`. Other novel techniques for locking the user out of the device have been observed, such as showing a persistent overlay, using carefully crafted \u201ccall\u201d notification screens, and locking HTML pages in the foreground. These techniques can be very difficult to get around, and typically require booting the device into safe mode to uninstall the malware.(Citation: Microsoft MalLockerB)(Citation: Talos GPlayed)(Citation: securelist rotexy 2018)\n\nPrior to Android 7, device administrators were able to reset the device lock passcode to prevent the user from unlocking the device. The release of Android 7 introduced updates that only allow device or profile owners (e.g. MDMs) to reset the device\u2019s passcode.(Citation: Android resetPassword)"
+}

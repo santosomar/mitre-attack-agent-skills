@@ -1,0 +1,47 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1660",
+  "name": "Phishing",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1660",
+  "stix_id": "attack-pattern--defc1257-4db1-4fb3-8ef5-bb77f63146df",
+  "attack_version": "1.2",
+  "created": "2023-09-21T19:35:15.552Z",
+  "modified": "2026-04-20T17:38:10.545Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Antivirus/Antimalware",
+    "User Guidance"
+  ],
+  "known_context": [
+    "APT-C-23 (intrusion-set)",
+    "BITTER (intrusion-set)",
+    "BRATA (malware)",
+    "Chameleon (malware)",
+    "CherryBlos (malware)",
+    "DocSwap (malware)",
+    "FjordPhantom (malware)",
+    "FluBot (malware)",
+    "GodFather (malware)",
+    "Kimsuky (intrusion-set)",
+    "LightSpy (malware)",
+    "Pegasus for iOS (malware)",
+    "RatMilad (malware)",
+    "Sandworm Team (intrusion-set)",
+    "Scattered Spider (intrusion-set)",
+    "UNC788 (intrusion-set)",
+    "VajraSpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may send malicious content to users in order to gain access to their mobile devices. All forms of phishing are electronically delivered social engineering. Adversaries can conduct both non-targeted phishing, such as in mass malware spam campaigns, as well as more targeted phishing tailored for a specific individual, company, or industry, known as \u201cspearphishing.\u201d Phishing often involves social engineering techniques, such as posing as a trusted source, as well as evasion techniques, such as removing or manipulating emails or metadata/headers from compromised accounts being abused to send messages.\n\nMobile phishing may take various forms. For example, adversaries may send emails containing malicious attachments or links, typically to deliver and then execute malicious code on victim devices. Phishing may also be conducted via third-party services, like social media platforms. Adversaries may also impersonate executives of organizations to persuade victims into performing some action on their behalf. For example, adversaries will often use social engineering techniques in text messages to trick the victims into acting quickly, which leads to adversaries obtaining credentials and other information. \n\nMobile devices are a particularly attractive target for adversaries executing phishing campaigns.  Due to their smaller form factor than traditional desktop endpoints, users may not be able to notice minor differences between genuine and phishing websites. Further, mobile devices have additional sensors and radios that allow adversaries to execute phishing attempts over several different vectors, such as: \n\n- SMS messages: Adversaries may send SMS messages (known as \u201csmishing\u201d) from compromised devices to potential targets to convince the target to, for example, install malware, navigate to a specific website, or enable certain insecure configurations on their device.\n- Quick Response (QR) Codes: Adversaries may use QR codes (known as \u201cquishing\u201d) to redirect users to a phishing website. For example, an adversary could replace a legitimate public QR Code with one that leads to a different destination, such as a phishing website. A malicious QR code could also be delivered via other means, such as SMS or email. In the latter case, an adversary could utilize a malicious QR code in an email to pivot from the user\u2019s desktop computer to their mobile device.\n- Phone Calls: Adversaries may call victims (known as \"vishing\") to persuade them to perform an action, such as providing login credentials or navigating to malicious websites. Common vishing targets include employees, especially executives of organizations, and help desks. This may also be used as a technique to perform the initial access on a mobile device, but then pivot to a desktop computer by having the victims perform actions on a desktop computer. With the rise of artificial intelligence (AI), adversaries may also use AI to clone a person\u2019s voice, resulting in deepfake vishing. The cloned voice provides familiarity to the victims, increasing the likelihood of successful malicious actions performed by the victims. Additionally, adversaries may leave voicemails, which may use a real person\u2019s voice or an AI-generated voice; these scams would urgently ask victims into calling back to perform an action, e.g. sending money or providing sensitive information and credentials."
+}

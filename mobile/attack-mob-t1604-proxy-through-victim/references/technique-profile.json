@@ -1,0 +1,28 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1604",
+  "name": "Proxy Through Victim",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1604",
+  "stix_id": "attack-pattern--5ca3c7ec-55b2-4587-9376-cf6c96f8047a",
+  "attack_version": "1.1",
+  "created": "2020-11-30T14:26:07.728Z",
+  "modified": "2025-10-24T17:48:50.301Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "Exobot (malware)",
+    "FluBot (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use a compromised device as a proxy server to the Internet. By utilizing a proxy, adversaries hide the true IP address of their C2 server and associated infrastructure from the destination of the network traffic. This masquerades an adversary\u2019s traffic as legitimate traffic originating from the compromised device, which can evade IP-based restrictions and alerts on certain services, such as bank accounts and social media websites.(Citation: Threat Fabric Exobot)\n\nThe most common type of proxy is a SOCKS proxy. It can typically be implemented using standard OS-level APIs and 3rd party libraries with no indication to the user. On Android, adversaries can use the `Proxy` API to programmatically establish a SOCKS proxy connection, or lower-level APIs to interact directly with raw sockets."
+}

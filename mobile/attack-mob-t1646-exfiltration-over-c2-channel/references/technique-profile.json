@@ -1,0 +1,47 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1646",
+  "name": "Exfiltration Over C2 Channel",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1646",
+  "stix_id": "attack-pattern--32063d7f-0a39-440d-a4a3-2694488f96cc",
+  "attack_version": "1.1",
+  "created": "2022-04-01T15:43:45.913Z",
+  "modified": "2025-10-24T17:48:36.720Z",
+  "tactics": [
+    "exfiltration"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "AhRat (malware)",
+    "BOULDSPY (malware)",
+    "BRATA (malware)",
+    "Binary Validator (malware)",
+    "C0033 (campaign)",
+    "Chameleon (malware)",
+    "CherryBlos (malware)",
+    "Crocodilus (malware)",
+    "DocSwap (malware)",
+    "Drinik (malware)",
+    "Fakecalls (malware)",
+    "FluBot (malware)",
+    "FlyTrap (malware)",
+    "GodFather (malware)",
+    "GoldenEagle (malware)",
+    "GolfSpy (malware)",
+    "Hornbill (malware)",
+    "LightSpy (malware)",
+    "Operation Dust Storm (campaign)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may steal data by exfiltrating it over an existing command and control channel. Stolen data is encoded into the normal communications channel using the same protocol as command and control communications."
+}

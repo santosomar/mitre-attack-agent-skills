@@ -1,0 +1,34 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1521.001",
+  "name": "Symmetric Cryptography",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1521/001",
+  "stix_id": "attack-pattern--bb4387ab-7a51-468b-bf5f-a9a8612f0303",
+  "attack_version": "1.0",
+  "created": "2022-04-05T20:14:17.310Z",
+  "modified": "2025-10-24T17:49:17.802Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "C0033 (campaign)",
+    "EventBot (malware)",
+    "Operation Triangulation (campaign)",
+    "Rotexy (malware)",
+    "SharkBot (malware)",
+    "TriangleDB (malware)",
+    "Windshift (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may employ a known symmetric encryption algorithm to conceal command and control traffic, rather than relying on any inherent protections provided by a communication protocol. Symmetric encryption algorithms use the same key for plaintext encryption and ciphertext decryption. Common symmetric encryption algorithms include AES, Blowfish, and RC4."
+}

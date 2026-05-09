@@ -1,0 +1,35 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1474.003",
+  "name": "Compromise Software Supply Chain",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1474/003",
+  "stix_id": "attack-pattern--9558a84e-2d5e-4872-918e-d847494a8ffc",
+  "attack_version": "1.1",
+  "created": "2022-03-28T19:25:17.596Z",
+  "modified": "2025-10-24T17:49:07.487Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Security Updates",
+    "System Partition Integrity"
+  ],
+  "known_context": [
+    "Adups (malware)",
+    "Allwinner (malware)",
+    "CHEMISTGAMES (malware)",
+    "Stealth Mango (malware)",
+    "Triada (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may manipulate application software prior to receipt by a final consumer for the purpose of data or system compromise. Supply chain compromise of software can take place in a number of ways, including manipulation of the application source code, manipulation of the update/distribution mechanism for that software, or replacing compiled releases with a modified version."
+}

@@ -1,0 +1,48 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1630.002",
+  "name": "File Deletion",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1630/002",
+  "stix_id": "attack-pattern--ab7400b7-3476-4776-9545-ef3fa373de63",
+  "attack_version": "1.1",
+  "created": "2022-03-30T19:36:09.691Z",
+  "modified": "2025-10-24T17:49:12.849Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "Agent Smith (malware)",
+    "Binary Validator (malware)",
+    "CarbonSteal (malware)",
+    "Desert Scorpion (malware)",
+    "DocSwap (malware)",
+    "DoubleAgent (malware)",
+    "Fakecalls (malware)",
+    "FlexiSpy (tool)",
+    "GPlayed (malware)",
+    "GolfSpy (malware)",
+    "Hornbill (malware)",
+    "Mandrake (malware)",
+    "Monokle (malware)",
+    "Operation Triangulation (campaign)",
+    "Pallas (malware)",
+    "SilkBean (malware)",
+    "Tiktok Pro (malware)",
+    "TriangleDB (malware)",
+    "ViceLeaker (malware)",
+    "WolfRAT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may wipe a device or delete individual files in order to manipulate external outcomes or hide activity. An application must have administrator access to fully wipe the device, while individual files may not require special permissions to delete depending on their storage location.(Citation: Android DevicePolicyManager 2019) \n\nStored data could include a variety of file formats, such as Office files, databases, stored emails, and custom file formats. The impact file deletion will have depends on the type of data as well as the goals and objectives of the adversary, but can include deleting update files to evade detection or deleting attacker-specified files for impact."
+}

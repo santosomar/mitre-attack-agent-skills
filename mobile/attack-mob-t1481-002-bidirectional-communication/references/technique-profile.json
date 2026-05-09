@@ -1,0 +1,31 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1481.002",
+  "name": "Bidirectional Communication",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1481/002",
+  "stix_id": "attack-pattern--939808a7-121d-467a-b028-4441ee8b7cee",
+  "attack_version": "1.2",
+  "created": "2022-04-06T15:47:06.071Z",
+  "modified": "2025-10-24T17:49:06.929Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "BusyGasper (malware)",
+    "Mandrake (malware)",
+    "TERRACOTTA (malware)",
+    "VajraSpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use an existing, legitimate external Web service channel as a means for sending commands to and receiving output from a compromised system. Compromised systems may leverage popular websites and social media to host command and control (C2) instructions. Those infected systems can then send the output from those commands back over that Web service channel. The return traffic may occur in a variety of ways, depending on the Web service being utilized. For example, the return traffic may take the form of the compromised system posting a comment on a forum, issuing a pull request to development project, updating a document hosted on a Web service, or by sending a Tweet. \n\n \n\nPopular websites and social media, acting as a mechanism for C2, may give a significant amount of cover. This is due to the likelihood that hosts within a network are already communicating with them prior to a compromise. Using common services, such as those offered by Google or Twitter, makes it easier for adversaries to hide in expected noise. Web service providers commonly use SSL/TLS encryption, giving adversaries an added level of protection."
+}

@@ -1,0 +1,32 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1451",
+  "name": "SIM Card Swap",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1451",
+  "stix_id": "attack-pattern--a64a820a-cb21-471f-920c-506a2ff04fa5",
+  "attack_version": "2.0",
+  "created": "2017-10-25T14:48:20.329Z",
+  "modified": "2025-02-12T16:26:38.632Z",
+  "tactics": [
+    "initial-access"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Enterprise Policy",
+    "User Guidance"
+  ],
+  "known_context": [
+    "LAPSUS$ (intrusion-set)",
+    "Scattered Spider (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may gain access to mobile devices through transfers or swaps from victims\u2019 phone numbers to adversary-controlled SIM cards and mobile devices.(Citation: ATT SIM Swap Scams)(Citation: Verizon SIM Swapping) \n\nThe typical process is as follows:  \n\n1. Adversaries will first gather information about victims through [Phishing](https://attack.mitre.org/techniques/T1660), social engineering, data breaches, or other avenues. \n2. Adversaries will then impersonate victims as they contact mobile carriers to request for the SIM swaps. For example, adversaries would provide victims\u2019 name and address to mobile carriers; once authenticated, adversaries would request for victims\u2019 phone numbers to be transferred to adversary-controlled SIM cards.  \n3. Once completed, victims will lose mobile data, such as text messages and phone calls, on their mobile devices. In turn, adversaries will receive mobile data that was intended for the victims.  \n\nAdversaries may use the intercepted SMS messages to log into online accounts that use SMS-based authentication. Specifically, adversaries may use SMS-based authentication to log into banking and/or cryptocurrency accounts, then transfer funds to adversary-controlled wallets."
+}

@@ -1,0 +1,33 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1406.002",
+  "name": "Software Packing",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1406/002",
+  "stix_id": "attack-pattern--51636761-2e35-44bf-9e56-e337adf97174",
+  "attack_version": "1.1",
+  "created": "2022-03-30T19:20:37.864Z",
+  "modified": "2025-10-24T17:48:46.514Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "BRATA (malware)",
+    "Bread (malware)",
+    "CherryBlos (malware)",
+    "Crocodilus (malware)",
+    "Gustuff (malware)",
+    "S.O.V.A. (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may perform software packing to conceal their code. Software packing is a method of compressing or encrypting an executable. Packing an executable changes the file signature in an attempt to avoid signature-based detection. Most decompression techniques decompress the executable code in memory. \n\nUtilities used to perform software packing are called packers. An example packer is FTT. A more comprehensive list of known packers is available, but adversaries may create their own packing techniques that do not leave the same artifacts as well-known packers to evade defenses."
+}

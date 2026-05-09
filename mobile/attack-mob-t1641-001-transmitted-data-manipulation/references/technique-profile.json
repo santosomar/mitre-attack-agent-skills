@@ -1,0 +1,30 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1641.001",
+  "name": "Transmitted Data Manipulation",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1641/001",
+  "stix_id": "attack-pattern--74e6003f-c7f4-4047-983b-708cc19b96b6",
+  "attack_version": "1.1",
+  "created": "2022-04-06T13:39:39.779Z",
+  "modified": "2025-10-24T17:48:57.794Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version"
+  ],
+  "known_context": [
+    "BRATA (malware)",
+    "S.O.V.A. (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may alter data en route to storage or other systems in order to manipulate external outcomes or hide activity. By manipulating transmitted data, adversaries may attempt to affect a business process, organizational understanding, or decision making.\n\nManipulation may be possible over a network connection or between system processes where there is an opportunity to deploy a tool that will intercept and change information. The type of modification and the impact it will have depends on the target transmission mechanism as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system, typically gained through a prolonged information gathering campaign, in order to have the desired impact.\n\nOne method to achieve [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1641/001) is by modifying the contents of the device clipboard. Malicious applications may monitor clipboard activity through the `ClipboardManager.OnPrimaryClipChangedListener` interface on Android to determine when clipboard contents have changed. Listening to clipboard activity, reading clipboard contents, and modifying clipboard contents requires no explicit application permissions and can be performed by applications running in the background. However, this behavior has changed with the release of Android 10.\n\nAdversaries may use [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1641/001) to replace text prior to being pasted. For example, replacing a copied Bitcoin wallet address with a wallet address that is under adversarial control.\n\n[Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1641/001) was seen within the Android/Clipper.C trojan. This sample was detected by ESET in an application distributed through the Google Play Store targeting cryptocurrency wallet numbers.(Citation: ESET Clipboard Modification February 2019)"
+}

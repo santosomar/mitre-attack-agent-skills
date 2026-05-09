@@ -1,0 +1,40 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1632.001",
+  "name": "Code Signing Policy Modification",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1632/001",
+  "stix_id": "attack-pattern--fcb11f06-ce0e-490b-bcc1-04a1623579f0",
+  "attack_version": "1.1",
+  "created": "2022-03-30T18:13:26.003Z",
+  "modified": "2025-10-24T17:49:39.422Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Enterprise Policy",
+    "Use Recent OS Version",
+    "User Guidance"
+  ],
+  "known_context": [
+    "Desert Scorpion (malware)",
+    "Dvmap (malware)",
+    "GoldenEagle (malware)",
+    "Mandrake (malware)",
+    "SilkBean (malware)",
+    "TianySpy (malware)",
+    "Windshift (intrusion-set)",
+    "XLoader for iOS (malware)",
+    "YiSpecter (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may modify code signing policies to enable execution of applications signed with unofficial or unknown keys. Code signing provides a level of authenticity on an app from a developer, guaranteeing that the program has not been tampered with and comes from an official source. Security controls can include enforcement mechanisms to ensure that only valid, signed code can be run on a device. \n\nMobile devices generally enable these security controls by default, such as preventing the installation of unknown applications on Android. Adversaries may modify these policies in a number of ways, including [Input Injection](https://attack.mitre.org/techniques/T1516) or malicious configuration profiles."
+}

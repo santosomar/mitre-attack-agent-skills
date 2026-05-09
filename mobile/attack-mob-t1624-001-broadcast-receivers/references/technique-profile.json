@@ -1,0 +1,48 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1624.001",
+  "name": "Broadcast Receivers",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1624/001",
+  "stix_id": "attack-pattern--3775a580-a1d1-46c4-8147-c614a715f2e9",
+  "attack_version": "1.1",
+  "created": "2022-03-30T14:41:00.672Z",
+  "modified": "2025-10-24T17:48:39.155Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version"
+  ],
+  "known_context": [
+    "AhRat (malware)",
+    "Android/AdDisplay.Ashas (malware)",
+    "AndroidOS/MalLocker.B (malware)",
+    "C0033 (campaign)",
+    "DEFENSOR ID (malware)",
+    "DocSwap (malware)",
+    "EventBot (malware)",
+    "Exobot (malware)",
+    "FakeSpy (malware)",
+    "FlexiSpy (tool)",
+    "FlixOnline (malware)",
+    "GPlayed (malware)",
+    "GolfSpy (malware)",
+    "HenBox (malware)",
+    "Pegasus for Android (malware)",
+    "SimBad (malware)",
+    "SpyC23 (malware)",
+    "SpyDealer (malware)",
+    "SpyNote RAT (malware)",
+    "TERRACOTTA (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may establish persistence using system mechanisms that trigger execution based on specific events. Mobile operating systems have means to subscribe to events such as receiving an SMS message, device boot completion, or other device activities. \n\nAn intent is a message passed between Android applications or system components. Applications can register to receive broadcast intents at runtime, which are system-wide intents delivered to each app when certain events happen on the device, such as network changes or the user unlocking the screen. Malicious applications can then trigger certain actions within the app based on which broadcast intent was received. \n\nIn addition to Android system intents, malicious applications can register for intents broadcasted by other applications. This allows the malware to respond based on actions in other applications. This behavior typically indicates a more intimate knowledge, or potentially the targeting of specific devices, users, or applications. \n\nIn Android 8 (API level 26), broadcast intent behavior was changed, limiting the implicit intents that applications can register for in the manifest. In most cases, applications that register through the manifest will no longer receive the broadcasts. Now, applications must register context-specific broadcast receivers while the user is actively using the app.(Citation: Android Changes to System Broadcasts)"
+}

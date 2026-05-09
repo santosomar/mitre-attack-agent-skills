@@ -1,0 +1,47 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1616",
+  "name": "Call Control",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1616",
+  "stix_id": "attack-pattern--351ddf79-2d3a-41b4-9bef-82ea5d3ccd69",
+  "attack_version": "1.2",
+  "created": "2021-09-20T13:42:20.824Z",
+  "modified": "2025-10-24T17:48:38.183Z",
+  "tactics": [
+    "collection",
+    "command-and-control",
+    "impact"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "AndroRAT (malware)",
+    "Android/SpyAgent (malware)",
+    "Anubis (malware)",
+    "BRATA (malware)",
+    "BusyGasper (malware)",
+    "CarbonSteal (malware)",
+    "Chameleon (malware)",
+    "Crocodilus (malware)",
+    "DocSwap (malware)",
+    "Drinik (malware)",
+    "Escobar (malware)",
+    "Fakecalls (malware)",
+    "GodFather (malware)",
+    "Monokle (malware)",
+    "SpyC23 (malware)",
+    "TangleBot (malware)",
+    "VajraSpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may make, forward, or block phone calls without user authorization. This could be used for adversary goals such as audio surveillance, blocking or forwarding calls from the device owner, or C2 communication.\n\nSeveral permissions may be used to programmatically control phone calls, including:\n\n* `ANSWER_PHONE_CALLS` - Allows the application to answer incoming phone calls(Citation: Android Permissions)\n* `CALL_PHONE` - Allows the application to initiate a phone call without going through the Dialer interface(Citation: Android Permissions)\n* `PROCESS_OUTGOING_CALLS` - Allows the application to see the number being dialed during an outgoing call with the option to redirect the call to a different number or abort the call altogether(Citation: Android Permissions)\n* `MANAGE_OWN_CALLS` - Allows a calling application which manages its own calls through the self-managed `ConnectionService` APIs(Citation: Android Permissions)\n* `BIND_TELECOM_CONNECTION_SERVICE` - Required permission when using a `ConnectionService`(Citation: Android Permissions)\n* `WRITE_CALL_LOG` - Allows an application to write to the device call log, potentially to hide malicious phone calls(Citation: Android Permissions)\n\nWhen granted some of these permissions, an application can make a phone call without opening the dialer first. However, if an application desires to simply redirect the user to the dialer with a phone number filled in, it can launch an Intent using `Intent.ACTION_DIAL`, which requires no specific permissions. This then requires the user to explicitly initiate the call or use some form of [Input Injection](https://attack.mitre.org/techniques/T1516) to programmatically initiate it."
+}

@@ -1,0 +1,32 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1663",
+  "name": "Remote Access Software",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1663",
+  "stix_id": "attack-pattern--0b761f2b-197a-40f2-b100-8152cb957c0c",
+  "attack_version": "1.0",
+  "created": "2023-09-25T19:53:07.406Z",
+  "modified": "2025-04-16T21:21:44.009Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Enterprise Policy",
+    "User Guidance"
+  ],
+  "known_context": [
+    "BRATA (malware)",
+    "Escobar (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use legitimate remote access software, such as `VNC`, `TeamViewer`, `AirDroid`, `AirMirror`, etc., to establish an interactive command and control channel to target mobile devices.  \n\nRemote access applications may be installed and used post-compromise as an alternate communication channel for redundant access or as a way to establish an interactive remote session with the target device. They may also be used as a component of malware to establish a reverse connection to an adversary-controlled system or service. Installation of remote access tools may also include persistence."
+}

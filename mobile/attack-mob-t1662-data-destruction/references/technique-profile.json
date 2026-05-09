@@ -1,0 +1,32 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1662",
+  "name": "Data Destruction",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1662",
+  "stix_id": "attack-pattern--9ef14445-6f35-4ed0-a042-5024f13a9242",
+  "attack_version": "1.0",
+  "created": "2023-09-22T19:09:15.698Z",
+  "modified": "2023-09-27T21:09:27.288Z",
+  "tactics": [
+    "impact"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "BRATA (malware)",
+    "LightSpy (malware)",
+    "RatMilad (malware)",
+    "SameCoin (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may destroy data and files on specific devices or in large numbers to interrupt availability to systems, services, and network resources. Data destruction is likely to render stored data irrecoverable by forensic techniques through overwriting files or data on local and remote drives.  \n\nTo achieve data destruction, adversaries may use the `pm uninstall` command to uninstall packages or the `rm` command to remove specific files. For example, adversaries may first use `pm uninstall` to uninstall non-system apps, and then use `rm (-f) <file(s)>` to delete specific files, further hiding malicious activity.(Citation: rootnik_rooting_tool)(Citation: abuse_native_linux_tools)"
+}

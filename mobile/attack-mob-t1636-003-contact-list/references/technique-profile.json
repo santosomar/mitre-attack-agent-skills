@@ -1,0 +1,49 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1636.003",
+  "name": "Contact List",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1636/003",
+  "stix_id": "attack-pattern--e0b9ecb8-a7d1-43c7-aa30-8e19c6a92c86",
+  "attack_version": "1.1",
+  "created": "2022-04-01T13:17:52.740Z",
+  "modified": "2025-10-24T17:49:30.430Z",
+  "tactics": [
+    "collection"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "Adups (malware)",
+    "AhRat (malware)",
+    "AndroRAT (malware)",
+    "Android/Chuli.A (malware)",
+    "Anubis (malware)",
+    "Asacub (malware)",
+    "BOULDSPY (malware)",
+    "C0033 (campaign)",
+    "Cerberus (malware)",
+    "Charger (malware)",
+    "Corona Updates (malware)",
+    "Crocodilus (malware)",
+    "DCHSpy (malware)",
+    "Desert Scorpion (malware)",
+    "DocSwap (malware)",
+    "DoubleAgent (malware)",
+    "Exobot (malware)",
+    "Exodus (malware)",
+    "FakeSpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may utilize standard operating system APIs to gather contact list data. On Android, this can be accomplished using the Contacts Content Provider. On iOS, this can be accomplished using the `Contacts` framework. \n\n \n\nIf the device has been jailbroken or rooted, an adversary may be able to access the [Contact List](https://attack.mitre.org/techniques/T1636/003) without the user\u2019s knowledge or approval."
+}

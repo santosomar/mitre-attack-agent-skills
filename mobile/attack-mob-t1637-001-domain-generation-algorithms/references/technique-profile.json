@@ -1,0 +1,31 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1637.001",
+  "name": "Domain Generation Algorithms",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1637/001",
+  "stix_id": "attack-pattern--fd211238-f767-4599-8c0d-9dca36624626",
+  "attack_version": "1.1",
+  "created": "2022-04-05T19:59:03.161Z",
+  "modified": "2025-10-24T17:49:39.530Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "FluBot (malware)",
+    "Mandrake (malware)",
+    "Rotexy (malware)",
+    "SharkBot (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use [Domain Generation Algorithms](https://attack.mitre.org/techniques/T1637/001) (DGAs) to procedurally generate domain names for uses such as command and control communication   or malicious application distribution.(Citation: securelist rotexy 2018)\n\nDGAs increase the difficulty for defenders to block, track, or take over the command and control channel, as there could potentially be thousands of domains that malware can check for instructions."
+}

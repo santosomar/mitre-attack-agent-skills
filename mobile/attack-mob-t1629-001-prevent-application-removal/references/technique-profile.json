@@ -1,0 +1,39 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1629.001",
+  "name": "Prevent Application Removal",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1629/001",
+  "stix_id": "attack-pattern--dc01774a-d1c1-45fb-b506-0a5d1d6593d9",
+  "attack_version": "1.2",
+  "created": "2022-04-01T18:44:32.808Z",
+  "modified": "2025-10-24T17:49:28.687Z",
+  "tactics": [
+    "defense-evasion"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Enterprise Policy",
+    "Use Recent OS Version",
+    "User Guidance"
+  ],
+  "known_context": [
+    "Anubis (malware)",
+    "Chameleon (malware)",
+    "Crocodilus (malware)",
+    "FluBot (malware)",
+    "GodFather (malware)",
+    "Gustuff (malware)",
+    "Mandrake (malware)",
+    "OBAD (malware)",
+    "S.O.V.A. (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse the Android device administration API to prevent the user from uninstalling a target application. In earlier versions of Android, device administrator applications needed their administration capabilities explicitly deactivated by the user before the application could be uninstalled. This was later updated so the user could deactivate and uninstall the administrator application in one step.\n\nAdversaries may also abuse the device accessibility APIs to prevent removal. This set of APIs allows the application to perform certain actions on behalf of the user and programmatically determine what is being shown on the screen. The malicious application could monitor the device screen for certain modals (e.g., the confirmation modal to uninstall an application) and inject screen input or a back button tap to close the modal. For example, Android's `performGlobalAction(int)` API could be utilized to prevent the user from removing the malicious application from the device after installation. If the user wants to uninstall the malicious application, two cases may occur, both preventing the user from removing the application.\n\n* Case 1: If the integer argument passed to the API call is `2` or `GLOBAL_ACTION_HOME`, the malicious application may direct the user to the home screen from settings screen \n\n* Case 2: If the integer argument passed to the API call is `1` or `GLOBAL_ACTION_BACK`, the malicious application may emulate the back press event"
+}

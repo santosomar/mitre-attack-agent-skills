@@ -1,0 +1,32 @@
+# Known Threat Context
+
+Use this file as a contextual lead list, not attribution evidence. ATT&CK relationships indicate that groups, campaigns, or software have been associated with this technique in ATT&CK data, but an observed event still requires independent evidence.
+
+## Associated context from STIX relationships
+
+- Agent Smith (malware)
+- Android/AdDisplay.Ashas (malware)
+- BusyGasper (malware)
+- Cerberus (malware)
+- Desert Scorpion (malware)
+- DoubleAgent (malware)
+- Drinik (malware)
+- FakeSpy (malware)
+- FlexiSpy (tool)
+- FlixOnline (malware)
+- Ginp (malware)
+- Gustuff (malware)
+- Mandrake (malware)
+- Rotexy (malware)
+- S.O.V.A. (malware)
+- SimBad (malware)
+- SpyC23 (malware)
+- Tiktok Pro (malware)
+- Twitoor (malware)
+- ViceLeaker (malware)
+
+## Attribution caution
+
+- Do not infer a threat actor from a technique match alone.
+- Combine multiple independent signals, such as infrastructure, tooling, targeting, language artifacts, timing, malware families, and victimology.
+- Prefer phrasing such as "consistent with" or "overlaps with" unless attribution is independently confirmed.

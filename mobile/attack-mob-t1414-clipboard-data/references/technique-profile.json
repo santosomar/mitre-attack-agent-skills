@@ -1,0 +1,35 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1414",
+  "name": "Clipboard Data",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1414",
+  "stix_id": "attack-pattern--c4b96c0b-cb58-497a-a1c2-bb447d79d692",
+  "attack_version": "3.1",
+  "created": "2017-10-25T14:48:19.996Z",
+  "modified": "2025-10-24T17:49:21.369Z",
+  "tactics": [
+    "collection",
+    "credential-access"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version"
+  ],
+  "known_context": [
+    "BOULDSPY (malware)",
+    "GolfSpy (malware)",
+    "RCSAndroid (malware)",
+    "RatMilad (malware)",
+    "XcodeGhost (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse clipboard manager APIs to obtain sensitive information copied to the device clipboard. For example, passwords being copied and pasted from a password manager application could be captured by a malicious application installed on the device.(Citation: Fahl-Clipboard) \n\n \n\nOn Android, applications can use the `ClipboardManager.OnPrimaryClipChangedListener()` API to register as a listener and monitor the clipboard for changes. However, starting in Android 10, this can only be used if the application is in the foreground, or is set as the device\u2019s default input method editor (IME).(Citation: Github Capture Clipboard 2019)(Citation: Android 10 Privacy Changes) \n\n \n\nOn iOS, this can be accomplished by accessing the `UIPasteboard.general.string` field. However, starting in iOS 14, upon accessing the clipboard, the user will be shown a system notification if the accessed text originated in a different application. For example, if the user copies the text of an iMessage from the Messages application, the notification will read \u201capplication_name has pasted from Messages\u201d when the text was pasted in a different application.(Citation: UIPPasteboard)"
+}

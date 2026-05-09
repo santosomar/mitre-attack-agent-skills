@@ -1,0 +1,30 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1625",
+  "name": "Hijack Execution Flow",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1625",
+  "stix_id": "attack-pattern--670a4d75-103b-4b14-8a9e-4652fa795edd",
+  "attack_version": "1.1",
+  "created": "2022-03-30T14:49:18.650Z",
+  "modified": "2025-10-24T17:48:53.101Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "System Partition Integrity"
+  ],
+  "known_context": [
+    "YiSpecter (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may execute their own malicious payloads by hijacking the way operating systems run applications. Hijacking execution flow can be for the purposes of persistence since this hijacked execution may reoccur over time. \n\nThere are many ways an adversary may hijack the flow of execution. A primary way is by manipulating how the operating system locates programs to be executed. How the operating system locates libraries to be used by a program can also be intercepted. Locations where the operating system looks for programs or resources, such as file directories, could also be poisoned to include malicious payloads."
+}

@@ -1,0 +1,28 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1423",
+  "name": "Network Service Scanning",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1423",
+  "stix_id": "attack-pattern--2de38279-043e-47e8-aaad-1b07af6d0790",
+  "attack_version": "1.1",
+  "created": "2017-10-25T14:48:26.890Z",
+  "modified": "2025-10-24T17:48:35.175Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [],
+  "known_context": [
+    "LightSpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may attempt to get a listing of services running on remote hosts, including those that may be vulnerable to remote software exploitation. Methods to acquire this information include port scans and vulnerability scans from the mobile device. This technique may take advantage of the mobile device's access to an internal enterprise network either through local connectivity or through a Virtual Private Network (VPN)."
+}

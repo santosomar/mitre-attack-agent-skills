@@ -1,0 +1,49 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1420",
+  "name": "File and Directory Discovery",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1420",
+  "stix_id": "attack-pattern--cf28ca46-1fd3-46b4-b1f6-ec0b72361848",
+  "attack_version": "1.2",
+  "created": "2017-10-25T14:48:21.965Z",
+  "modified": "2025-10-24T17:49:24.899Z",
+  "tactics": [
+    "discovery"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version"
+  ],
+  "known_context": [
+    "AhRat (malware)",
+    "C0033 (campaign)",
+    "CarbonSteal (malware)",
+    "CherryBlos (malware)",
+    "Desert Scorpion (malware)",
+    "DocSwap (malware)",
+    "DoubleAgent (malware)",
+    "Escobar (malware)",
+    "FrozenCell (malware)",
+    "Golden Cup (malware)",
+    "GoldenEagle (malware)",
+    "Hornbill (malware)",
+    "Operation Dust Storm (campaign)",
+    "Operation Triangulation (campaign)",
+    "RatMilad (malware)",
+    "SameCoin (malware)",
+    "SilkBean (malware)",
+    "Tiktok Pro (malware)",
+    "TriangleDB (malware)",
+    "VajraSpy (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may enumerate files and directories or search in specific device locations for desired information within a filesystem. Adversaries may use the information from [File and Directory Discovery](https://attack.mitre.org/techniques/T1420) during automated discovery to shape follow-on behaviors, including deciding if the adversary should fully infect the target and/or attempt specific actions. \n\nOn Android, Linux file permissions and SELinux policies typically stringently restrict what can be accessed by apps without taking advantage of a privilege escalation exploit. The contents of the external storage directory are generally visible, which could present concerns if sensitive data is inappropriately stored there. iOS's security architecture generally restricts the ability to perform any type of [File and Directory Discovery](https://attack.mitre.org/techniques/T1420) without use of escalated privileges."
+}

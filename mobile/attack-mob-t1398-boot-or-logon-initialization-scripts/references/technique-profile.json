@@ -1,0 +1,36 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1398",
+  "name": "Boot or Logon Initialization Scripts",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1398",
+  "stix_id": "attack-pattern--46d818a5-67fa-4585-a7fc-ecf15376c8d5",
+  "attack_version": "2.1",
+  "created": "2017-10-25T14:48:31.294Z",
+  "modified": "2025-10-24T17:48:43.758Z",
+  "tactics": [
+    "persistence"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Attestation",
+    "Lock Bootloader",
+    "Security Updates",
+    "System Partition Integrity"
+  ],
+  "known_context": [
+    "AhRat (malware)",
+    "BOULDSPY (malware)",
+    "LightSpy (malware)",
+    "OldBoot (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may use scripts automatically executed at boot or logon initialization to establish persistence. Initialization scripts are part of the underlying operating system and are not accessible to the user unless the device has been rooted or jailbroken."
+}

@@ -1,0 +1,38 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1626.001",
+  "name": "Device Administrator Permissions",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1626/001",
+  "stix_id": "attack-pattern--9c049d7b-c92a-4733-9381-27e2bd2ccadc",
+  "attack_version": "1.1",
+  "created": "2022-04-01T15:59:05.830Z",
+  "modified": "2025-10-24T17:49:08.587Z",
+  "tactics": [
+    "privilege-escalation"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Use Recent OS Version",
+    "User Guidance"
+  ],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "Asacub (malware)",
+    "Crocodilus (malware)",
+    "Exobot (malware)",
+    "GPlayed (malware)",
+    "Hornbill (malware)",
+    "Red Alert 2.0 (malware)",
+    "Sunbird (malware)",
+    "XLoader for Android (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may abuse Android\u2019s device administration API to obtain a higher degree of control over the device. By abusing the API, adversaries can perform several nefarious actions, such as resetting the device\u2019s password for [Endpoint Denial of Service](https://attack.mitre.org/techniques/T1642), factory resetting the device for [File Deletion](https://attack.mitre.org/techniques/T1630/002) and to delete any traces of the malware, disabling all the device\u2019s cameras, or to make it more difficult to uninstall the app.\n\nDevice administrators must be approved by the user at runtime, with a system popup showing which actions have been requested by the app. In conjunction with other techniques, such as [Input Injection](https://attack.mitre.org/techniques/T1516), an app can programmatically grant itself administrator permissions without any user input."
+}

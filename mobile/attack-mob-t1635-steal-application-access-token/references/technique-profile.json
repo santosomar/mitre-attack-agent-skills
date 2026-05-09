@@ -1,0 +1,30 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1635",
+  "name": "Steal Application Access Token",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1635",
+  "stix_id": "attack-pattern--233fe2c0-cb41-4765-b454-e0087597fbce",
+  "attack_version": "1.2",
+  "created": "2022-04-01T15:12:50.740Z",
+  "modified": "2025-10-24T17:48:31.876Z",
+  "tactics": [
+    "credential-access"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Application Developer Guidance",
+    "Use Recent OS Version",
+    "User Guidance"
+  ],
+  "known_context": [],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries can steal user application access tokens as a means of acquiring credentials to access remote systems and resources. This can occur through social engineering or URI hijacking and typically requires user action to grant access, such as through a system \u201cOpen With\u201d dialogue.  \n\nApplication access tokens are used to make authorized API requests on behalf of a user and are commonly used as a way to access resources in cloud-based applications and software-as-a-service (SaaS).(Citation: Auth0 - Why You Should Always Use Access Tokens to Secure APIs Sept 2019) OAuth is one commonly implemented framework used to issue tokens to users for access to systems. An application desiring access to cloud-based services or protected APIs can gain entry through OAuth 2.0 using a variety of authorization protocols. An example of a commonly-used sequence is Microsoft's Authorization Code Grant flow.(Citation: Microsoft Identity Platform Protocols May 2019)(Citation: Microsoft - OAuth Code Authorization flow - June 2019) An OAuth access token enables a third-party application to interact with resources containing user data in the ways requested without requiring user credentials."
+}

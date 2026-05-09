@@ -1,0 +1,47 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1644",
+  "name": "Out of Band Data",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1644",
+  "stix_id": "attack-pattern--ec4c4baa-026f-43e8-8f56-58c36f3162dd",
+  "attack_version": "2.1",
+  "created": "2022-04-06T15:27:34.300Z",
+  "modified": "2025-10-24T17:49:34.162Z",
+  "tactics": [
+    "command-and-control"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "User Guidance"
+  ],
+  "known_context": [
+    "Android/Chuli.A (malware)",
+    "BOULDSPY (malware)",
+    "BusyGasper (malware)",
+    "CarbonSteal (malware)",
+    "Desert Scorpion (malware)",
+    "Gustuff (malware)",
+    "Monokle (malware)",
+    "Pegasus for Android (malware)",
+    "Pegasus for iOS (malware)",
+    "RCSAndroid (malware)",
+    "Rotexy (malware)",
+    "SharkBot (malware)",
+    "Skygofree (malware)",
+    "SpyC23 (malware)",
+    "SpyDealer (malware)",
+    "Stealth Mango (malware)",
+    "TriangleDB (malware)",
+    "TrickMo (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may communicate with compromised devices using out of band data streams. This could be done for a variety of reasons, including evading network traffic monitoring, as a backup method of command and control, or for data exfiltration if the device is not connected to any Internet-providing networks (i.e. cellular or Wi-Fi). Several out of band data streams exist, such as SMS messages, NFC, and Bluetooth. \n\n \n\nOn Android, applications can read push notifications to capture content from SMS messages, or other out of band data streams. This requires that the user manually grant notification access to the application via the settings menu. However, the application could launch an Intent to take the user directly there. \n\n \n\nOn iOS, there is no way to programmatically read push notifications."
+}

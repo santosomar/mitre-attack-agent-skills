@@ -1,0 +1,46 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1517",
+  "name": "Access Notifications",
+  "type": "technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1517",
+  "stix_id": "attack-pattern--39dd7871-f59b-495f-a9a5-3cb8cc50c9b2",
+  "attack_version": "1.2",
+  "created": "2019-09-15T15:26:08.183Z",
+  "modified": "2025-10-24T17:48:40.140Z",
+  "tactics": [
+    "collection",
+    "credential-access"
+  ],
+  "platforms": [
+    "Android"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Application Developer Guidance",
+    "Enterprise Policy",
+    "User Guidance"
+  ],
+  "known_context": [
+    "AbstractEmu (malware)",
+    "Bread (malware)",
+    "C0033 (campaign)",
+    "Chameleon (malware)",
+    "Corona Updates (malware)",
+    "Escobar (malware)",
+    "FlixOnline (malware)",
+    "FluBot (malware)",
+    "Hornbill (malware)",
+    "Mandrake (malware)",
+    "S.O.V.A. (malware)",
+    "SharkBot (malware)",
+    "SpyC23 (malware)",
+    "VajraSpy (malware)",
+    "WolfRAT (malware)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may collect data within notifications sent by the operating system or other applications. Notifications may contain sensitive data such as one-time authentication codes sent over SMS, email, or other mediums. In the case of Credential Access, adversaries may attempt to intercept one-time code sent to the device. Adversaries can also dismiss notifications to prevent the user from noticing that the notification has arrived and can trigger action buttons contained within notifications.(Citation: ESET 2FA Bypass)"
+}

@@ -1,0 +1,51 @@
+{
+  "domain": "mobile",
+  "attack_id": "T1417.001",
+  "name": "Keylogging",
+  "type": "sub-technique",
+  "attack_url": "https://attack.mitre.org/techniques/T1417/001",
+  "stix_id": "attack-pattern--b1c95426-2550-4621-8028-ceebf28b3a47",
+  "attack_version": "1.1",
+  "created": "2022-04-05T19:45:03.000Z",
+  "modified": "2025-10-24T17:49:14.276Z",
+  "tactics": [
+    "collection",
+    "credential-access"
+  ],
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "permissions_required": [],
+  "effective_permissions": [],
+  "defenses_bypassed": [],
+  "data_sources": [],
+  "mitigations": [
+    "Enterprise Policy",
+    "User Guidance"
+  ],
+  "known_context": [
+    "Anubis (malware)",
+    "BOULDSPY (malware)",
+    "BRATA (malware)",
+    "BusyGasper (malware)",
+    "Cerberus (malware)",
+    "Chameleon (malware)",
+    "Crocodilus (malware)",
+    "DocSwap (malware)",
+    "Drinik (malware)",
+    "Escobar (malware)",
+    "EventBot (malware)",
+    "Exobot (malware)",
+    "FlexiSpy (tool)",
+    "GodFather (malware)",
+    "Gustuff (malware)",
+    "Monokle (malware)",
+    "S.O.V.A. (malware)",
+    "SharkBot (malware)",
+    "VajraSpy (malware)",
+    "Windshift (intrusion-set)"
+  ],
+  "detection": "No ATT&CK detection guidance was present in the source STIX object.",
+  "description": "Adversaries may log user keystrokes to intercept credentials or other information from the user as the user types them.\n\nSome methods of keylogging include:\n\n* Masquerading as a legitimate third-party keyboard to record user keystrokes.(Citation: Zeltser-Keyboard) On both Android and iOS, users must explicitly authorize the use of third-party keyboard apps. Users should be advised to use extreme caution before granting this authorization when it is requested.\n* Abusing accessibility features. On Android, adversaries may abuse accessibility features to record keystrokes by registering an `AccessibilityService` class, overriding the `onAccessibilityEvent` method, and listening for the `AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED` event type. The event object passed into the function will contain the data that the user typed. \n*Additional methods of keylogging may be possible if root access is available."
+}
