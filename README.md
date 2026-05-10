@@ -5,10 +5,21 @@ This package contains one Agent Skill per non-revoked, non-deprecated [MITRE ATT
 
 ## Counts
 
-- enterprise: 697
-- ics: 97
-- mobile: 124
-- Total: 918
+```mermaid
+%%{init: {"themeVariables": {"pie1": "#1f6feb", "pie2": "#2ea043", "pie3": "#d29922"}}}%%
+pie showData
+    title 918 skills across three ATT&CK matrices
+    "Enterprise" : 697
+    "Mobile"     : 124
+    "ICS"        :  97
+```
+
+| Domain     | Techniques | Sub-techniques |     Total |
+| ---------- | ---------: | -------------: | --------: |
+| Enterprise |        222 |            475 |       697 |
+| Mobile     |         77 |             47 |       124 |
+| ICS        |         79 |             18 |        97 |
+| **Total**  |    **378** |        **540** |   **918** |
 
 ## Layout
 
